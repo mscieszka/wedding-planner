@@ -35,6 +35,7 @@ class RatingsController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $rating = $this->Ratings->get($id, [
             'contain' => ['Users', 'Offers'],
         ]);
@@ -50,6 +51,7 @@ class RatingsController extends AppController
     public function add()
     {
         $rating = $this->Ratings->newEmptyEntity();
+        $this->Authorization->authorize($rating);
         if ($this->request->is('post')) {
             $rating = $this->Ratings->patchEntity($rating, $this->request->getData());
             if ($this->Ratings->save($rating)) {
@@ -76,6 +78,7 @@ class RatingsController extends AppController
         $rating = $this->Ratings->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($rating);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $rating = $this->Ratings->patchEntity($rating, $this->request->getData());
             if ($this->Ratings->save($rating)) {
@@ -101,6 +104,7 @@ class RatingsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $rating = $this->Ratings->get($id);
+        $this->Authorization->authorize($rating);
         if ($this->Ratings->delete($rating)) {
             $this->Flash->success(__('The rating has been deleted.'));
         } else {

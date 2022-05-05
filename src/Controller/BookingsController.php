@@ -35,6 +35,7 @@ class BookingsController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $booking = $this->Bookings->get($id, [
             'contain' => ['Users', 'Offers', 'Payments', 'SavedUserBookings'],
         ]);
@@ -50,6 +51,7 @@ class BookingsController extends AppController
     public function add()
     {
         $booking = $this->Bookings->newEmptyEntity();
+        $this->Authorization->authorize($booking);
         if ($this->request->is('post')) {
             $booking = $this->Bookings->patchEntity($booking, $this->request->getData());
             if ($this->Bookings->save($booking)) {
@@ -63,6 +65,9 @@ class BookingsController extends AppController
         $offers = $this->Bookings->Offers->find('list', ['limit' => 200])->all();
         $payments = $this->Bookings->Payments->find('list', ['limit' => 200])->all();
         $this->set(compact('booking', 'users', 'offers', 'payments'));
+
+
+
     }
 
     /**
@@ -74,9 +79,11 @@ class BookingsController extends AppController
      */
     public function edit($id = null)
     {
+
         $booking = $this->Bookings->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($booking);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $booking = $this->Bookings->patchEntity($booking, $this->request->getData());
             if ($this->Bookings->save($booking)) {
@@ -103,6 +110,7 @@ class BookingsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $booking = $this->Bookings->get($id);
+        $this->Authorization->authorize($booking);
         if ($this->Bookings->delete($booking)) {
             $this->Flash->success(__('The booking has been deleted.'));
         } else {
