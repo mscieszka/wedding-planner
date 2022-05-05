@@ -35,13 +35,18 @@ use Authentication\Middleware\AuthenticationMiddleware;
 use Cake\Routing\Router;
 use Psr\Http\Message\ServerRequestInterface;
 
+use Authorization\AuthorizationService;
+use Authorization\AuthorizationServiceInterface;
+use Authorization\AuthorizationServiceProviderInterface;
+use Authorization\Middleware\AuthorizationMiddleware;
+use Authorization\Policy\OrmResolver;
 /**
  * Application setup class.
  *
  * This defines the bootstrapping logic and middleware layers you
  * want to use in your application.
  */
-class Application extends BaseApplication implements AuthenticationServiceProviderInterface
+class Application extends BaseApplication implements AuthenticationServiceProviderInterface,AuthorizationServiceProviderInterface
 {
     /**
      * Load all the application configuration and bootstrap logic.
@@ -53,6 +58,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
         // Call parent to load bootstrap from files.
         parent::bootstrap();
 
+        $this->addPlugin('Authorization');
         if (PHP_SAPI === 'cli') {
             $this->bootstrapCli();
         } else {
@@ -92,7 +98,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             ->add(new RoutingMiddleware($this))
             ->add(new AuthenticationMiddleware($this))
             // Handle plugin/theme assets like CakePHP normally does.
-
+            ->add(new AuthorizationMiddleware($this))
 
             // Add routing middleware.
             // If you have a large number of routes connected, turning on routes
@@ -140,6 +146,12 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             'loginUrl' => Router::url('/users/login'),
         ]);
         return $authenticationService;
+    }
+
+    public function getAuthorizationService(ServerRequestInterface $request):AuthorizationServiceInterface
+    {
+        $resolver = new OrmResolver();
+        return new AuthorizationService($resolver);
     }
 
 

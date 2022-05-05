@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1bfdec42a77559f345c6f4351cc81fc42c5d4c4e',
+        'reference' => 'e3087cb2fd146313d4c50457864c88a24f80a048',
         'name' => 'cakephp/app',
         'dev' => true,
     ),
@@ -25,7 +25,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1bfdec42a77559f345c6f4351cc81fc42c5d4c4e',
+            'reference' => 'e3087cb2fd146313d4c50457864c88a24f80a048',
             'dev_requirement' => false,
         ),
         'cakephp/authentication' => array(
@@ -35,6 +35,15 @@
             'install_path' => __DIR__ . '/../cakephp/authentication',
             'aliases' => array(),
             'reference' => '71cfa8ab1b3e34699400528714a3575c5778e27d',
+            'dev_requirement' => false,
+        ),
+        'cakephp/authorization' => array(
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
+            'type' => 'cakephp-plugin',
+            'install_path' => __DIR__ . '/../cakephp/authorization',
+            'aliases' => array(),
+            'reference' => 'bb9aca461a4fe7c789ef841ca064f0577450f658',
             'dev_requirement' => false,
         ),
         'cakephp/bake' => array(

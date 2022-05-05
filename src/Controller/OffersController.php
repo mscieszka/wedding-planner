@@ -18,6 +18,7 @@ class OffersController extends AppController
      */
     public function index()
     {
+        $this->Authorization->skipAuthorization();
         $this->paginate = [
             'contain' => ['Users', 'Categories', 'Addresses'],
         ];
@@ -35,6 +36,7 @@ class OffersController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $offer = $this->Offers->get($id, [
             'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters', 'MusicFilters', 'OfferActiveDays', 'Ratings', 'SavedUserOffers'],
         ]);
@@ -50,6 +52,7 @@ class OffersController extends AppController
     public function add()
     {
         $offer = $this->Offers->newEmptyEntity();
+        $this->Authorization->authorize($offer);
         if ($this->request->is('post')) {
             $offer = $this->Offers->patchEntity($offer, $this->request->getData());
             if ($this->Offers->save($offer)) {
@@ -77,6 +80,7 @@ class OffersController extends AppController
         $offer = $this->Offers->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($offer);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $offer = $this->Offers->patchEntity($offer, $this->request->getData());
             if ($this->Offers->save($offer)) {
@@ -103,6 +107,7 @@ class OffersController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $offer = $this->Offers->get($id);
+        $this->Authorization->authorize($offer);
         if ($this->Offers->delete($offer)) {
             $this->Flash->success(__('The offer has been deleted.'));
         } else {
