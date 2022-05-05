@@ -32,7 +32,7 @@ class UsersFixture extends TestFixture
                 'nip' => 'Lorem ipsum dolor sit amet',
                 'regon' => 'Lorem ipsum dolor sit amet',
                 'account_type_id' => 1,
-                'created' => 1651575805,
+                'created' => 1651750927,
             ],
         ];
         parent::init();
