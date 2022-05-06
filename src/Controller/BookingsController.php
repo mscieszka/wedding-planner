@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Model\Entity\Booking;
+
 /**
  * Bookings Controller
  *
@@ -119,4 +121,22 @@ class BookingsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+
+
+
+    // additional functions
+
+    protected function cancelBooking(Booking $booking){
+        $booking->is_canceled = true;
+    }
+
+    protected function releaseBooking(Booking $booking){
+        $booking->is_released = true;
+    }
+
+    protected function createMultipleBookings(){
+        //TO DO
+    }
+
 }

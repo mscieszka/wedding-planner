@@ -103,4 +103,5 @@ class RatingsTable extends Table
 
         return $rules;
     }
+
 }

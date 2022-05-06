@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Model\Entity\Offer;
+use Cake\ORM\Locator\LocatorInterface;
+
 /**
  * Ratings Controller
  *
@@ -112,5 +115,23 @@ class RatingsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+
+
+
+    // additional functions
+
+    public function displayRatingsTable($id = null){
+
+        //zwroc wszystkie ratings ktore maja offer id takie jak podana oferta w parametrze
+        //pobieraj id wszytskich raitings i wsadzaj do view
+
+        $resultset = $this->fetchTable('Ratings')->find()->all();
+        foreach ($resultset as $row) {
+            if ($row->offer_id == $id){
+                $this->view($row->id);
+            }
+        }
     }
 }
