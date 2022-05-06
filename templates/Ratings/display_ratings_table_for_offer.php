@@ -8,7 +8,7 @@
 
 <div class="ratings index content">
     <?= $this->Html->link(__('New Rating'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Ratings') ?></h3>
+    <h3><?= __('Ratings for Given Offer') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>

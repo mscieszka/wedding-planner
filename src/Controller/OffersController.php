@@ -11,20 +11,33 @@ namespace App\Controller;
  */
 class OffersController extends AppController
 {
+
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->paginate = [
+            'contain' => ['Users', 'Categories', 'Addresses'],
+        ];
+
+    }
+
+
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function index()
+    public function index($offers = null)
     {
-        $this->Authorization->skipAuthorization();
-        $this->paginate = [
-            'contain' => ['Users', 'Categories', 'Addresses'],
-        ];
-        $offers = $this->paginate($this->Offers);
 
+        $this->Authorization->skipAuthorization();
+
+        //then display all offers
+        if($offers == null){
+            $offers = $this->paginate($this->Offers);
+        }
         $this->set(compact('offers'));
+
     }
 
     /**
@@ -115,5 +128,23 @@ class OffersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+
+
+
+
+    // ADDITIONAL FUNCTIONS
+
+
+    //display offers table by
+    public function displayOffersBy($attribute, $value){
+
+        $offer_attribute = 'Offers.';
+        $offer_attribute .= $attribute;
+
+      $offers = $this->paginate($this->Offers->find(
+          'all', ['conditions' => [$offer_attribute => $value]]));
+        $this->index($offers);
     }
 }
