@@ -20,6 +20,7 @@ class BookingsController extends AppController
      */
     public function index()
     {
+        $this->Authorization->skipAuthorization();
         $this->paginate = [
             'contain' => ['Users', 'Offers', 'Payments'],
         ];

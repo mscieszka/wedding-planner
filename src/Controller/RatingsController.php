@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Entity\Offer;
+use Cake\Datasource\ConnectionManager;
 use Cake\ORM\Locator\LocatorInterface;
 
 /**
@@ -14,20 +15,37 @@ use Cake\ORM\Locator\LocatorInterface;
  */
 class RatingsController extends AppController
 {
+
+
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->paginate = [
+            'contain' => ['Users', 'Offers'],
+        ];
+
+    }
+
+
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function index()
-    {
-        $this->paginate = [
-            'contain' => ['Users', 'Offers'],
-        ];
-        $ratings = $this->paginate($this->Ratings);
 
+
+
+    public function index($ratings = null)
+    {
+        $this->Authorization->skipAuthorization();
+
+        //then display all ratings
+        if($ratings == null){
+            $ratings = $this->paginate($this->Ratings);
+        }
         $this->set(compact('ratings'));
     }
+
 
     /**
      * View method
@@ -120,18 +138,16 @@ class RatingsController extends AppController
 
 
 
-    // additional functions
 
-    public function displayRatingsTable($id = null){
 
-        //zwroc wszystkie ratings ktore maja offer id takie jak podana oferta w parametrze
-        //pobieraj id wszytskich raitings i wsadzaj do view
+    // ADDITIONAL FUNCTIONS
 
-        $resultset = $this->fetchTable('Ratings')->find()->all();
-        foreach ($resultset as $row) {
-            if ($row->offer_id == $id){
-                $this->view($row->id);
-            }
-        }
+
+    //display ratings table for a given offer
+    public function displayRatingsTableForOffer($id = null){
+
+            $ratings = $this->paginate($this->Ratings->find(
+                'all', ['conditions' => ['Ratings.offer_id' => $id]]));
+            $this->index($ratings);
     }
 }
