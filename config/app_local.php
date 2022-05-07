@@ -37,7 +37,7 @@ return [
     'Datasources' => [
         'default' => [
             'driver' => Postgres::class,
-            'host'=> 'ec2-176-34-211-0.eu-west-1.compute.amazonaws.com',
+            'host'=> 'ec2-54-75-184-144.eu-west-1.compute.amazonaws.com',
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
@@ -45,10 +45,10 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            'username' => 'zjzcwjiaaojvvm',
-            'password' => '798b7e54e11f968692f1b011c6cc2d2adb68c9c46e5c06450a35856e0af008c2',
+            'username' => 'knryeurfkvlajn',
+            'password' => '672f50b09b0d3c25c7a29986c38f5f91aa6265758039dc566d647fd63acde163',
 
-            'database' => 'dfrgg2g14eu7u1',
+            'database' => 'd9jm68g6puhfl9',
             /*
              * If not using the default 'public' schema with the PostgreSQL driver
              * set it here.

@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:postgresql://ec2-176-34-211-0.eu-west-1.compute.amazonaws.com:5432/dfrgg2g14eu7u1</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="herokuwpdb [2]" uuid="6bc47991-4f95-455c-a88b-b39e3eae0334">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-75-184-144.eu-west-1.compute.amazonaws.com:5432/d9jm68g6puhfl9</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
