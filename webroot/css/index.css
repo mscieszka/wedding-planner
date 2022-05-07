@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 /* global */
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     background-color: #E4CC9F;
+}
+
+label, legend {
+    color: #1f1f1f;
+}
+
+.input input, .input select, .input textarea {
+    border-radius: 1rem;
 }
 
 /* header */

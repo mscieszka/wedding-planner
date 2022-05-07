@@ -1,0 +1,52 @@
+.form {
+    border-radius: 25px;
+    background-color: #FEF6E7;
+}
+
+.offers .input input, .offers .input select, .offers .input textarea{
+    max-width: 200px;
+    background-color: white;
+}
+
+.grid-add-offers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.add-offers-type {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+.add-offers-params {
+    grid-row: 2 / 4;
+    grid-column: 1 / -1;
+}
+.add-offers-address {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+}
+.add-offers-description {
+    grid-row: 5 / 7;
+    grid-column: 1 / 3;
+}
+.add-offers-contact {
+    grid-row: 5 / 7;
+    grid-column: 3 / -1;
+}
+.add-offers-photos {
+    grid-row: 7 / -1;
+    grid-column: 1 / -1;
+}
+
+button[type="submit"] {
+    background-color: #46755E;
+    border-radius: 50px;
+    width: 200px;
+    height: 55px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: normal;
+    border: none;
+    text-transform: none;
+}
