@@ -32,7 +32,7 @@ class RatingPolicy
      */
     public function canEdit(IdentityInterface $user, Rating $rating)
     {
-        return $this->isRatingAuthor($user, $rating); //only author of rating
+        return $this->isOwner($user, $rating); //only author of rating
     }
 
     /**
@@ -44,7 +44,7 @@ class RatingPolicy
      */
     public function canDelete(IdentityInterface $user, Rating $rating)
     {
-        return $this->isRatingAuthor($user, $rating); //only author of rating
+        return $this->isOwner($user, $rating); //only author of rating
     }
 
     /**
@@ -60,7 +60,7 @@ class RatingPolicy
     }
 
 
-    protected function isRatingAuthor(IdentityInterface $user, Rating $rating)
+    protected function isOwner(IdentityInterface $user, Rating $rating)
     {
         return $rating->user_id === $user->getIdentifier();
     }

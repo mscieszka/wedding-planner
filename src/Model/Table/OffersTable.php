@@ -80,7 +80,7 @@ class OffersTable extends Table
         $this->hasMany('MusicFilters', [
             'foreignKey' => 'offer_id',
         ]);
-        $this->hasMany('OfferActiveDays', [
+        $this->hasOne('OfferActiveDays', [
             'foreignKey' => 'offer_id',
         ]);
         $this->hasMany('Ratings', [

@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 namespace App\Controller;
+use Cake\Collection\Collection;
 
 /**
  * Offers Controller
@@ -27,16 +28,27 @@ class OffersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function index($offers = null)
+    public function index($onlymyoffer = null)
     {
 
         $this->Authorization->skipAuthorization();
-
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         //then display all offers
-        if($offers == null){
+        if($onlymyoffer == null){
             $offers = $this->paginate($this->Offers);
         }
-        $this->set(compact('offers'));
+        else {
+            $offers = $this->paginate($this->Offers->find()->where(
+                ['offers.user_id'=>$this->request->getAttribute('identity')->getIdentifier()]
+            ));
+        }
+
+        $saved_user_offers = $this->Offers->SavedUserOffers->find()
+            ->where([
+            'user_id' => $this->request->getAttribute('identity')->getIdentifier()
+        ])->toArray();
+        $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
+        $this->set(compact('offers','onlymyoffer', 'account_type_id', 'saved_user_offers'));
 
     }
 
@@ -47,11 +59,14 @@ class OffersController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view($id)
     {
         $this->Authorization->skipAuthorization();
         $offer = $this->Offers->get($id, [
-            'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters', 'MusicFilters', 'OfferActiveDays', 'Ratings', 'SavedUserOffers'],
+            'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
+                'MusicFilters', 'OfferActiveDays', 'Ratings',
+                //'SavedUserOffers'
+            ],
         ]);
 
         $this->set(compact('offer'));
@@ -88,7 +103,7 @@ class OffersController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function edit($id)
     {
         $offer = $this->Offers->get($id, [
             'contain' => [],

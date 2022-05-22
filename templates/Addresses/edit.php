@@ -28,7 +28,6 @@
                     echo $this->Form->control('house_number');
                     echo $this->Form->control('postal_code');
                     echo $this->Form->control('city');
-                    echo $this->Form->control('user_id', ['options' => $users]);
                     echo $this->Form->control('province_id', ['options' => $provinces, 'empty' => true]);
                 ?>
             </fieldset>

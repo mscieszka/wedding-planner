@@ -18,6 +18,7 @@ class UsersController extends AppController
      */
     public function index()
     {
+        $this->Authorization->skipAuthorization();
         $this->paginate = [
             'contain' => ['AccountTypes'],
         ];
@@ -38,6 +39,7 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings', 'SavedUserBookings', 'SavedUserOffers'],
         ]);
+        $this->Authorization->authorize($user);
 
         $this->set(compact('user'));
     }
@@ -50,6 +52,11 @@ class UsersController extends AppController
     public function add()
     {
         $this->Authorization->skipAuthorization();
+        if(!empty($this->request->getAttribute('identity'))){
+            $this->Flash->error(__('You are already logged in.'));
+            $this->redirect($this->referer());
+        }
+//        $this->Authorization->skipAuthorization();
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -76,6 +83,7 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($user);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
@@ -100,6 +108,7 @@ class UsersController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
+        $this->Authorization->authorize($user);
         if ($this->Users->delete($user)) {
             $this->Flash->success(__('The user has been deleted.'));
         } else {

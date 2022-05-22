@@ -126,8 +126,7 @@ class UsersTable extends Table
 
         $validator
             ->scalar('company_name')
-            ->requirePresence('company_name', 'create')
-            ->notEmptyString('company_name');
+            ->allowEmptyString('company_name');
 
         $validator
             ->scalar('krs')
@@ -135,8 +134,7 @@ class UsersTable extends Table
 
         $validator
             ->scalar('nip')
-            ->requirePresence('nip', 'create')
-            ->notEmptyString('nip');
+            ->allowEmptyString('nip');
 
         $validator
             ->scalar('regon')
@@ -157,7 +155,21 @@ class UsersTable extends Table
         $rules->add($rules->isUnique(['email']), ['errorField' => 'email']);
         $rules->add($rules->isUnique(['id']), ['errorField' => 'id']);
         $rules->add($rules->existsIn('account_type_id', 'AccountTypes'), ['errorField' => 'account_type_id']);
-
+        $rules->addCreate(function ($entity, $options) {
+            if($entity->account_type_id == 2) {
+                $isOk = true;
+                if(empty($entity->nip)) {
+                    $entity->setError('nip',['Nip is required.']);
+                    $isOk = false;
+                }
+                if(empty($entity->company_name)) {
+                    $entity->setError('company_name',['Company name is required.']);
+                    $isOk = false;
+                }
+                return $isOk;
+            }
+            return true;
+        }, 'userTypeCheck');
         return $rules;
     }
 }

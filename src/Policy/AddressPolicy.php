@@ -32,6 +32,7 @@ class AddressPolicy
      */
     public function canEdit(IdentityInterface $user, Address $address)
     {
+        return $this->isOwner($user, $address);
     }
 
     /**
@@ -43,6 +44,7 @@ class AddressPolicy
      */
     public function canDelete(IdentityInterface $user, Address $address)
     {
+        return $this->isOwner($user, $address);
     }
 
     /**
@@ -54,5 +56,11 @@ class AddressPolicy
      */
     public function canView(IdentityInterface $user, Address $address)
     {
+        return $this->isOwner($user, $address);
+    }
+
+    protected function isOwner(IdentityInterface $user, Address $address)
+    {
+        return $address->user_id === $user->getIdentifier();
     }
 }

@@ -5,7 +5,10 @@
  */
 ?>
 <div class="offers index content">
+    <?php if($account_type_id == 2): ?>
     <?= $this->Html->link(__('New Offer'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('My Offer'), ['action' => 'index',1], ['class' => 'button float-right']) ?>
+    <?php endif; ?>
     <h3><?= __('Offers') ?></h3>
     <div class="table-responsive">
         <table>
@@ -37,8 +40,18 @@
                     <td><?= h($offer->created) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $offer->id]) ?>
+                        <?php if ($onlymyoffer): ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $offer->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id)]) ?>
+                        <?php endif; ?>
+                        <?php if($account_type_id == 1): ?>
+                            <?php if(in_array($offer->id, $saved_user_offers)): ?>
+                                <?= $this->Form->postLink(__('Remove from favourites'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to remove from favourites?')]) ?>
+                                <?php else: ?>
+                        <?= $this->Html->link(__('Add to favourite'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offer->id]) ?>
+                        <?php endif; ?>
+
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -56,3 +69,4 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+

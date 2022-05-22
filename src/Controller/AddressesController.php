@@ -18,10 +18,14 @@ class AddressesController extends AppController
      */
     public function index()
     {
+//        exit;
+        $this->Authorization->skipAuthorization();
         $this->paginate = [
             'contain' => ['Users', 'Provinces'],
         ];
-        $addresses = $this->paginate($this->Addresses);
+        $addresses = $this->paginate($this->Addresses->find()->where(
+            ['user_id' => $this->request->getAttribute('identity')->getIdentifier()]
+        ));
 
         $this->set(compact('addresses'));
     }
@@ -38,7 +42,7 @@ class AddressesController extends AppController
         $address = $this->Addresses->get($id, [
             'contain' => ['Users', 'Provinces', 'Offers'],
         ]);
-
+        $this->Authorization->authorize($address);
         $this->set(compact('address'));
     }
 
@@ -50,6 +54,7 @@ class AddressesController extends AppController
     public function add()
     {
         $address = $this->Addresses->newEmptyEntity();
+        $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
         $this->Authorization->authorize($address);
         if ($this->request->is('post')) {
             $address = $this->Addresses->patchEntity($address, $this->request->getData());
@@ -60,9 +65,9 @@ class AddressesController extends AppController
             }
             $this->Flash->error(__('The address could not be saved. Please, try again.'));
         }
-        $users = $this->Addresses->Users->find('list', ['limit' => 200])->all();
+        //$users = $this->Addresses->Users->find('list', ['limit' => 200])->all();
         $provinces = $this->Addresses->Provinces->find('list', ['limit' => 200])->all();
-        $this->set(compact('address', 'users', 'provinces'));
+        $this->set(compact('address', 'provinces'));
     }
 
     /**
@@ -77,6 +82,7 @@ class AddressesController extends AppController
         $address = $this->Addresses->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($address);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $address = $this->Addresses->patchEntity($address, $this->request->getData());
             if ($this->Addresses->save($address)) {
@@ -102,6 +108,7 @@ class AddressesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $address = $this->Addresses->get($id);
+        $this->Authorization->authorize($address);
         if ($this->Addresses->delete($address)) {
             $this->Flash->success(__('The address has been deleted.'));
         } else {

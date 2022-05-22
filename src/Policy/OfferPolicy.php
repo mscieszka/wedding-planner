@@ -5,6 +5,7 @@ namespace App\Policy;
 
 use App\Model\Entity\Offer;
 use Authorization\IdentityInterface;
+use function PHPUnit\Framework\exactly;
 
 /**
  * Offer policy
@@ -20,8 +21,10 @@ class OfferPolicy
      */
     public function canAdd(IdentityInterface $user, Offer $offer)
     {
-        // All logged in users can create articles.
-        return true;
+        if($user->get('account_type_id') == 2) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -34,7 +37,7 @@ class OfferPolicy
     public function canEdit(IdentityInterface $user, Offer $offer)
     {
         // logged in users can edit their own articles.
-        return $this->isAuthor($user, $offer);
+        return $this->isOwner($user, $offer);
     }
 
     /**
@@ -47,7 +50,7 @@ class OfferPolicy
     public function canDelete(IdentityInterface $user, Offer $offer)
     {
             // logged in users can delete their own articles.
-            return $this->isAuthor($user, $offer);
+            return $this->isOwner($user, $offer);
     }
 
     /**
@@ -62,7 +65,7 @@ class OfferPolicy
         return true;
     }
 
-    protected function isAuthor(IdentityInterface $user, Offer $offer)
+    protected function isOwner(IdentityInterface $user, Offer $offer)
     {
         return $offer->user_id === $user->getIdentifier();
     }
