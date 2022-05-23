@@ -23,11 +23,14 @@ class AddressesController extends AppController
         $this->paginate = [
             'contain' => ['Users', 'Provinces'],
         ];
+
+        //wyswietla tylko swoje adresy
+
         $addresses = $this->paginate($this->Addresses->find()->where(
             ['user_id' => $this->request->getAttribute('identity')->getIdentifier()]
         ));
-
-        $this->set(compact('addresses'));
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+        $this->set(compact('addresses', 'account_type_id'));
     }
 
     /**
@@ -42,8 +45,13 @@ class AddressesController extends AppController
         $address = $this->Addresses->get($id, [
             'contain' => ['Users', 'Provinces', 'Offers'],
         ]);
+
         $this->Authorization->authorize($address);
-        $this->set(compact('address'));
+
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+        $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
+
+        $this->set(compact('address', 'account_type_id', 'id_user_log'));
     }
 
     /**
