@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Policies">
+    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Zabezpieczenie ofert w zalezności od typu konta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OffersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OffersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Policy/CategoryPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policy/CategoryPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Policy/OfferPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Policy/OfferPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Categories/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
@@ -155,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653233908639</updated>
       <workItem from="1653233912595" duration="15885000" />
-      <workItem from="1653261214286" duration="11888000" />
+      <workItem from="1653261214286" duration="12392000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>
@@ -171,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653306241779</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Zabezpieczenie ofert w zalezności od typu konta">
+      <created>1653333253298</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653333253298</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +191,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Policies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Policies" />
+    <MESSAGE value="Zabezpieczenie ofert w zalezności od typu konta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zabezpieczenie ofert w zalezności od typu konta" />
   </component>
 </project>
