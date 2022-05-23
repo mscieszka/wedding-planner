@@ -86,21 +86,48 @@ class OffersController extends AppController
      */
     public function add()
     {
+        $object = new AddressesController();
+        $address = $object->Addresses->newEmptyEntity();
+        $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
+        //$this->Authorization->authorize($address);
+
         $offer = $this->Offers->newEmptyEntity();
         $this->Authorization->authorize($offer);
-        if ($this->request->is('post')) {
-            $offer = $this->Offers->patchEntity($offer, $this->request->getData());
-            if ($this->Offers->save($offer)) {
-                $this->Flash->success(__('The offer has been saved.'));
+        $offer->user_id = $this->request->getAttribute('identity')->getIdentifier();
 
-                return $this->redirect(['action' => 'index']);
+        if ($this->request->is('post')) {
+            $address = $object->Addresses->patchEntity($address, $this->request->getData());
+
+            if ($object->Addresses->save($address)) {
+                $this->Flash->success(__('The address has been saved.'));
+
+                $offer->address_id = $address->get('id');
+                $offer = $this->Offers->patchEntity($offer, $this->request->getData());
+
+
+                if ($this->Offers->save($offer)) {
+                    $this->Flash->success(__('The offer has been saved.'));
+                    return $this->redirect(['action' => 'index']);
+                }
+                else $this->Flash->error(__('The offer could not be saved. Please, try again.'));
+
             }
-            $this->Flash->error(__('The offer could not be saved. Please, try again.'));
-        }
+            else  $this->Flash->error(__('The address could not be saved. Please, try again.'));
+
+
+
+
+
+
+            }
+
+
+
         $users = $this->Offers->Users->find('list', ['limit' => 200])->all();
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->all();
-        $addresses = $this->Offers->Addresses->find('list', ['limit' => 200])->all();
-        $this->set(compact('offer', 'users', 'categories', 'addresses'));
+        $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
+        $this->set(compact('offer', 'users', 'categories', 'provinces', 'address'));
+
     }
 
     /**
