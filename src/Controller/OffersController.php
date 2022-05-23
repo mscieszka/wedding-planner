@@ -65,7 +65,7 @@ class OffersController extends AppController
         $offer = $this->Offers->get($id, [
             'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
                 'MusicFilters', 'OfferActiveDays', 'Ratings',
-                //'SavedUserOffers'
+                'SavedUserOffers'
             ],
         ]);
 

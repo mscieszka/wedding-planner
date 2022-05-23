@@ -20,7 +20,11 @@ class SavedUserOfferPolicy
      */
     public function canAdd(IdentityInterface $user, SavedUserOffer $savedUserOffer)
     {
+
+
         //client moze dodawac do ulubionych
+
+
         if($user->get('account_type_id') == 1) {
             return true;
         }
