@@ -36,11 +36,13 @@ class CategoriesController extends AppController
     public function view($id = null)
     {
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $category = $this->Categories->get($id, [
             'contain' => ['Offers'],
         ]);
 
-        $this->set(compact('category'));
+        $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
+        $this->set(compact('category', 'id_user_log', 'account_type_id'));
     }
 
     /**
