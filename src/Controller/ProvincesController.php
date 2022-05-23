@@ -18,6 +18,7 @@ class ProvincesController extends AppController
      */
     public function index()
     {
+        $this->Authorization->skipAuthorization();
         $provinces = $this->paginate($this->Provinces);
 
         $this->set(compact('provinces'));
@@ -36,8 +37,8 @@ class ProvincesController extends AppController
         $province = $this->Provinces->get($id, [
             'contain' => ['Addresses'],
         ]);
-
-        $this->set(compact('province'));
+        $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
+        $this->set(compact('province', 'id_user_log'));
     }
 
     /**

@@ -5,7 +5,6 @@
  */
 ?>
 <div class="provinces index content">
-    <?= $this->Html->link(__('New Province'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Provinces') ?></h3>
     <div class="table-responsive">
         <table>
@@ -23,8 +22,6 @@
                     <td><?= h($province->name) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $province->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $province->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $province->id], ['confirm' => __('Are you sure you want to delete # {0}?', $province->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

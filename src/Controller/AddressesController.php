@@ -62,8 +62,8 @@ class AddressesController extends AppController
     public function add()
     {
         $address = $this->Addresses->newEmptyEntity();
-      //  $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
-        //$this->Authorization->authorize($address);
+      $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
+        $this->Authorization->authorize($address);
         if ($this->request->is('post')) {
             $address = $this->Addresses->patchEntity($address, $this->request->getData());
             if ($this->Addresses->save($address)) {
@@ -74,8 +74,8 @@ class AddressesController extends AppController
             $this->Flash->error(__('The address could not be saved. Please, try again.'));
         }
         //$users = $this->Addresses->Users->find('list', ['limit' => 200])->all();
-       // $provinces = $this->Addresses->Provinces->find('list', ['limit' => 200])->all();
-        //$this->set(compact('address', 'provinces'));
+        $provinces = $this->Addresses->Provinces->find('list', ['limit' => 200])->all();
+        $this->set(compact('address', 'provinces'));
     }
 
     /**
