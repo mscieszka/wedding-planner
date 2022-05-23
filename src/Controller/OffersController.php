@@ -33,10 +33,12 @@ class OffersController extends AppController
 
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
         //then display all offers
         if($onlymyoffer == null){
             $offers = $this->paginate($this->Offers);
         }
+        //tylko oferty providera zalogowanego "My offers"
         else {
             $offers = $this->paginate($this->Offers->find()->where(
                 ['offers.user_id'=>$this->request->getAttribute('identity')->getIdentifier()]
@@ -62,6 +64,9 @@ class OffersController extends AppController
     public function view($id)
     {
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
+
         $offer = $this->Offers->get($id, [
             'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
                 'MusicFilters', 'OfferActiveDays', 'Ratings',
@@ -69,7 +74,9 @@ class OffersController extends AppController
             ],
         ]);
 
-        $this->set(compact('offer'));
+        $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
+
+        $this->set(compact('offer', 'account_type_id', 'id_user_log'));
     }
 
     /**

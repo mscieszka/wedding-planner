@@ -18,9 +18,12 @@ class CategoriesController extends AppController
      */
     public function index()
     {
+        $this->Authorization->skipAuthorization();
         $categories = $this->paginate($this->Categories);
 
-        $this->set(compact('categories'));
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
+        $this->set(compact('categories', 'account_type_id'));
     }
 
     /**

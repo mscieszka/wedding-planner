@@ -21,7 +21,7 @@ class OfferPolicy
      */
     public function canAdd(IdentityInterface $user, Offer $offer)
     {
-        
+        return true;
     }
 
     /**
