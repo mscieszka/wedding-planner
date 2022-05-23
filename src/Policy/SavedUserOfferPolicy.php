@@ -20,6 +20,11 @@ class SavedUserOfferPolicy
      */
     public function canAdd(IdentityInterface $user, SavedUserOffer $savedUserOffer)
     {
+        //client moze dodawac do ulubionych
+        if($user->get('account_type_id') == 1) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -31,6 +36,7 @@ class SavedUserOfferPolicy
      */
     public function canEdit(IdentityInterface $user, SavedUserOffer $savedUserOffer)
     {
+        return $this->isOwner($user, $savedUserOffer);
     }
 
     /**
@@ -54,7 +60,10 @@ class SavedUserOfferPolicy
      */
     public function canView(IdentityInterface $user, SavedUserOffer $savedUserOffer)
     {
+        return $this->isOwner($user, $savedUserOffer);
     }
+
+
 
     protected function isOwner(IdentityInterface $user, SavedUserOffer $savedUserOffer)
     {

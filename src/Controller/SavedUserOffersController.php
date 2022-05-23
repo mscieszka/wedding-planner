@@ -38,7 +38,7 @@ class SavedUserOffersController extends AppController
         $savedUserOffer = $this->SavedUserOffers->get($id, [
             'contain' => ['Users', 'Offers'],
         ]);
-
+        $this->Authorization->authorize($savedUserOffer);
         $this->set(compact('savedUserOffer'));
     }
 
@@ -49,8 +49,9 @@ class SavedUserOffersController extends AppController
      */
     public function add($offer_id)
     {
-        $this->Authorization->skipAuthorization();
         $savedUserOffer = $this->SavedUserOffers->newEmptyEntity();
+        $this->Authorization->authorize($savedUserOffer);
+
         $savedUserOffer->offer_id = $offer_id;
         $savedUserOffer->user_id = $this->request->getAttribute('identity')->getIdentifier();
             $savedUserOffer = $this->SavedUserOffers->patchEntity($savedUserOffer, $this->request->getData());
@@ -76,6 +77,7 @@ class SavedUserOffersController extends AppController
         $savedUserOffer = $this->SavedUserOffers->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($savedUserOffer);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $savedUserOffer = $this->SavedUserOffers->patchEntity($savedUserOffer, $this->request->getData());
             if ($this->SavedUserOffers->save($savedUserOffer)) {

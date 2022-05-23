@@ -56,7 +56,8 @@ class AddressPolicy
      */
     public function canView(IdentityInterface $user, Address $address)
     {
-        return $this->isOwner($user, $address);
+        //kazdy powinien widziec adres i klienta i dostawcy
+        return true;
     }
 
     protected function isOwner(IdentityInterface $user, Address $address)

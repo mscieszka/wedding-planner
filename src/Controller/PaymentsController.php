@@ -35,7 +35,7 @@ class PaymentsController extends AppController
         $payment = $this->Payments->get($id, [
             'contain' => ['Bookings'],
         ]);
-
+        $this->Authorization->authorize($payment);
         $this->set(compact('payment'));
     }
 
@@ -47,6 +47,7 @@ class PaymentsController extends AppController
     public function add()
     {
         $payment = $this->Payments->newEmptyEntity();
+        $this->Authorization->authorize($payment);
         if ($this->request->is('post')) {
             $payment = $this->Payments->patchEntity($payment, $this->request->getData());
             if ($this->Payments->save($payment)) {
@@ -71,6 +72,7 @@ class PaymentsController extends AppController
         $payment = $this->Payments->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($payment);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $payment = $this->Payments->patchEntity($payment, $this->request->getData());
             if ($this->Payments->save($payment)) {
@@ -94,6 +96,7 @@ class PaymentsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $payment = $this->Payments->get($id);
+        $this->Authorization->authorize($payment);
         if ($this->Payments->delete($payment)) {
             $this->Flash->success(__('The payment has been deleted.'));
         } else {

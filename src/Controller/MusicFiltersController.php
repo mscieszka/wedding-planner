@@ -35,6 +35,8 @@ class MusicFiltersController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
+
         $musicFilter = $this->MusicFilters->get($id, [
             'contain' => ['Offers'],
         ]);
@@ -50,6 +52,7 @@ class MusicFiltersController extends AppController
     public function add()
     {
         $musicFilter = $this->MusicFilters->newEmptyEntity();
+        $this->Authorization->authorize($musicFilter);
         if ($this->request->is('post')) {
             $musicFilter = $this->MusicFilters->patchEntity($musicFilter, $this->request->getData());
             if ($this->MusicFilters->save($musicFilter)) {
@@ -75,6 +78,7 @@ class MusicFiltersController extends AppController
         $musicFilter = $this->MusicFilters->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($musicFilter);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $musicFilter = $this->MusicFilters->patchEntity($musicFilter, $this->request->getData());
             if ($this->MusicFilters->save($musicFilter)) {
@@ -99,6 +103,7 @@ class MusicFiltersController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $musicFilter = $this->MusicFilters->get($id);
+        $this->Authorization->authorize($musicFilter);
         if ($this->MusicFilters->delete($musicFilter)) {
             $this->Flash->success(__('The music filter has been deleted.'));
         } else {

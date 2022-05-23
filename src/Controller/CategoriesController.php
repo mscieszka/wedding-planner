@@ -32,6 +32,7 @@ class CategoriesController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $category = $this->Categories->get($id, [
             'contain' => ['Offers'],
         ]);
@@ -47,6 +48,7 @@ class CategoriesController extends AppController
     public function add()
     {
         $category = $this->Categories->newEmptyEntity();
+        $this->Authorization->authorize($category);
         if ($this->request->is('post')) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
@@ -71,6 +73,7 @@ class CategoriesController extends AppController
         $category = $this->Categories->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($category);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
@@ -94,6 +97,7 @@ class CategoriesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $category = $this->Categories->get($id);
+        $this->Authorization->authorize($category);
         if ($this->Categories->delete($category)) {
             $this->Flash->success(__('The category has been deleted.'));
         } else {

@@ -35,6 +35,7 @@ class HallFiltersController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $hallFilter = $this->HallFilters->get($id, [
             'contain' => ['Offers', 'HallTypes'],
         ]);
@@ -50,6 +51,7 @@ class HallFiltersController extends AppController
     public function add()
     {
         $hallFilter = $this->HallFilters->newEmptyEntity();
+        $this->Authorization->authorize($hallFilter);
         if ($this->request->is('post')) {
             $hallFilter = $this->HallFilters->patchEntity($hallFilter, $this->request->getData());
             if ($this->HallFilters->save($hallFilter)) {
@@ -76,6 +78,7 @@ class HallFiltersController extends AppController
         $hallFilter = $this->HallFilters->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($hallFilter);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $hallFilter = $this->HallFilters->patchEntity($hallFilter, $this->request->getData());
             if ($this->HallFilters->save($hallFilter)) {
@@ -101,6 +104,7 @@ class HallFiltersController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $hallFilter = $this->HallFilters->get($id);
+        $this->Authorization->authorize($hallFilter);
         if ($this->HallFilters->delete($hallFilter)) {
             $this->Flash->success(__('The hall filter has been deleted.'));
         } else {

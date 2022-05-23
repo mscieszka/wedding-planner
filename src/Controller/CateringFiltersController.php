@@ -35,6 +35,7 @@ class CateringFiltersController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $cateringFilter = $this->CateringFilters->get($id, [
             'contain' => ['Offers'],
         ]);
@@ -50,6 +51,7 @@ class CateringFiltersController extends AppController
     public function add()
     {
         $cateringFilter = $this->CateringFilters->newEmptyEntity();
+        $this->Authorization->authorize($cateringFilter);
         if ($this->request->is('post')) {
             $cateringFilter = $this->CateringFilters->patchEntity($cateringFilter, $this->request->getData());
             if ($this->CateringFilters->save($cateringFilter)) {
@@ -75,6 +77,7 @@ class CateringFiltersController extends AppController
         $cateringFilter = $this->CateringFilters->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($cateringFilter);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $cateringFilter = $this->CateringFilters->patchEntity($cateringFilter, $this->request->getData());
             if ($this->CateringFilters->save($cateringFilter)) {
@@ -99,6 +102,7 @@ class CateringFiltersController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $cateringFilter = $this->CateringFilters->get($id);
+        $this->Authorization->authorize($cateringFilter);
         if ($this->CateringFilters->delete($cateringFilter)) {
             $this->Flash->success(__('The catering filter has been deleted.'));
         } else {

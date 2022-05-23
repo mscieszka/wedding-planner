@@ -35,6 +35,8 @@ class OfferActiveDaysController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
+
         $offerActiveDay = $this->OfferActiveDays->get($id, [
             'contain' => ['Offers'],
         ]);
@@ -50,6 +52,7 @@ class OfferActiveDaysController extends AppController
     public function add()
     {
         $offerActiveDay = $this->OfferActiveDays->newEmptyEntity();
+        $this->Authorization->authorize($offerActiveDay);
         if ($this->request->is('post')) {
             $offerActiveDay = $this->OfferActiveDays->patchEntity($offerActiveDay, $this->request->getData());
             if ($this->OfferActiveDays->save($offerActiveDay)) {
@@ -75,6 +78,7 @@ class OfferActiveDaysController extends AppController
         $offerActiveDay = $this->OfferActiveDays->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($offerActiveDay);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $offerActiveDay = $this->OfferActiveDays->patchEntity($offerActiveDay, $this->request->getData());
             if ($this->OfferActiveDays->save($offerActiveDay)) {
@@ -99,6 +103,7 @@ class OfferActiveDaysController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $offerActiveDay = $this->OfferActiveDays->get($id);
+        $this->Authorization->authorize($offerActiveDay);
         if ($this->OfferActiveDays->delete($offerActiveDay)) {
             $this->Flash->success(__('The offer active day has been deleted.'));
         } else {

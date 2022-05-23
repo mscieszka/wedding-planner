@@ -21,8 +21,11 @@ class BookingPolicy
      */
     public function canAdd(IdentityInterface $user, Booking $booking)
     {
-
-        return true;  //all users can make booking
+//tylko client moze skladac zamowienie
+        if($user->get('account_type_id') == 1) {
+            return true;
+        }
+        return false;
     }
 
     /**

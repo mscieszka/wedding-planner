@@ -32,6 +32,7 @@ class HallTypesController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $hallType = $this->HallTypes->get($id, [
             'contain' => ['HallFilters'],
         ]);
@@ -47,6 +48,7 @@ class HallTypesController extends AppController
     public function add()
     {
         $hallType = $this->HallTypes->newEmptyEntity();
+        $this->Authorization->authorize($hallType);
         if ($this->request->is('post')) {
             $hallType = $this->HallTypes->patchEntity($hallType, $this->request->getData());
             if ($this->HallTypes->save($hallType)) {
@@ -71,6 +73,7 @@ class HallTypesController extends AppController
         $hallType = $this->HallTypes->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($hallType);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $hallType = $this->HallTypes->patchEntity($hallType, $this->request->getData());
             if ($this->HallTypes->save($hallType)) {
@@ -94,6 +97,7 @@ class HallTypesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $hallType = $this->HallTypes->get($id);
+        $this->Authorization->authorize($hallType);
         if ($this->HallTypes->delete($hallType)) {
             $this->Flash->success(__('The hall type has been deleted.'));
         } else {

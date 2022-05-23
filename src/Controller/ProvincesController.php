@@ -32,6 +32,7 @@ class ProvincesController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $province = $this->Provinces->get($id, [
             'contain' => ['Addresses'],
         ]);
@@ -47,6 +48,7 @@ class ProvincesController extends AppController
     public function add()
     {
         $province = $this->Provinces->newEmptyEntity();
+        $this->Authorization->authorize($province);
         if ($this->request->is('post')) {
             $province = $this->Provinces->patchEntity($province, $this->request->getData());
             if ($this->Provinces->save($province)) {
@@ -71,6 +73,7 @@ class ProvincesController extends AppController
         $province = $this->Provinces->get($id, [
             'contain' => [],
         ]);
+        $this->Authorization->authorize($province);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $province = $this->Provinces->patchEntity($province, $this->request->getData());
             if ($this->Provinces->save($province)) {
@@ -94,6 +97,8 @@ class ProvincesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $province = $this->Provinces->get($id);
+        $this->Authorization->authorize($province);
+
         if ($this->Provinces->delete($province)) {
             $this->Flash->success(__('The province has been deleted.'));
         } else {
