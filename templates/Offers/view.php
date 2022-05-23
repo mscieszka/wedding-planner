@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Address') ?></th>
-                    <td><?= $offer->has('address') ? $this->Html->link($offer->address->id, ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?></td>
+                    <td><?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Name') ?></th>
