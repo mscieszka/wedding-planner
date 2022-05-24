@@ -1,13 +1,17 @@
+<?= $this->Html->css('login') ?>
 <div class="users form">
     <?= $this->Flash->render() ?>
-    <h3>Login</h3>
+    <img src="../../webroot/img/logo_full.svg" alt=""><!--nie mogę wczytać tej grafiki-->
     <?= $this->Form->create() ?>
     <fieldset>
-        <legend><?= __('Please enter your username and password') ?></legend>
-        <?= $this->Form->control('email', ['required' => true]) ?>
-        <?= $this->Form->control('password', ['required' => true]) ?>
+        <?= $this->Form->control('email', ['required' => true, 'placeholder' => 'Wpisz adres e-mail']) ?>
+        <?= $this->Form->control('password', ['required' => true, 'placeholder' => 'Wpisz hasło']) ?>
     </fieldset>
-    <?= $this->Form->submit(__('Login')); ?>
+    <?= $this->Form->submit(__('Zaloguj się')); ?>
     <?= $this->Form->end() ?>
-    <?= $this->Html->link("Add User", ['action' => 'add']) ?>
+    <div class="users_form_links">
+        <?= $this->Html->link("Nie pamiętam hasła", ['action' => '']) ?>
+        <?= $this->Html->link("Resetuj hasło", ['action' => '']) ?>
+        <?= $this->Html->link("Zarejestruj się", ['action' => 'add']) ?>
+    </div>
 </div>
