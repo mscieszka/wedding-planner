@@ -8,10 +8,16 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Offer'), ['action' => 'edit', $offer->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Offer'), ['action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('List Offers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Offer'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <?php if($account_type_id == 2): ?>
+                <?php if($offer->user_id == $id_user_log):?>
+                    <?= $this->Html->link(__('Edit Offer'), ['action' => 'edit', $offer->id], ['class' => 'side-nav-item']) ?>
+                    <?= $this->Form->postLink(__('Delete Offer'), ['action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id), 'class' => 'side-nav-item']) ?>
+                <?php endif; ?>
+                <?= $this->Html->link(__('New Offer'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <?php endif; ?>
+
+
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -28,7 +34,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Address') ?></th>
-                    <td><?= $offer->has('address') ? $this->Html->link($offer->address->id, ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?></td>
+                    <td><?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Name') ?></th>

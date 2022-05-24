@@ -21,10 +21,7 @@ class OfferPolicy
      */
     public function canAdd(IdentityInterface $user, Offer $offer)
     {
-        if($user->get('account_type_id') == 2) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     /**

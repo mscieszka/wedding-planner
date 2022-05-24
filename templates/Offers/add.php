@@ -42,12 +42,20 @@
                     </div>
                     <div class="add-offers-address">
                         <h3>Adres</h3>
-                        <!--                    Ulica-->
-                        <!--                    Numer-->
-                        <!--                    Kod pocztowy-->
-                        <!--                    Miejscowość-->
-                        <!--                    Województwo-->
-                        <?php echo $this->Form->control('address_id', ['options' => $addresses]); ?>
+                                <?= $this->Form->create($address) ?>
+                                <fieldset>
+                                    <legend><?= __('Add Address') ?></legend>
+                                    <?php
+                                    echo $this->Form->control('street');
+                                    echo $this->Form->control('house_number');
+                                    echo $this->Form->control('postal_code');
+                                    echo $this->Form->control('city');
+                                    echo $this->Form->control('province_id', ['options' => $provinces, 'empty' => true]);
+                                    ?>
+                                </fieldset>
+                               <!-- <?= $this->Form->button(__('Submit')) ?> -->
+                                <!--<?= $this->Form->end() ?>-->
+
                     </div>
                     <div class="add-offers-description">
                         <h3>Opis</h3>

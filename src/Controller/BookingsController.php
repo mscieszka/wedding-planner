@@ -138,6 +138,9 @@ class BookingsController extends AppController
 
     protected function createMultipleBookings(){
         //TO DO
+
+
+
     }
 
 }

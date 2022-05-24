@@ -20,11 +20,7 @@ class CategoryPolicy
      */
     public function canAdd(IdentityInterface $user, Category $category)
     {
-        //tylko provider
-        if($user->get('account_type_id') == 2) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     /**

@@ -32,7 +32,7 @@
                     <td><?= $this->Number->format($offer->id) ?></td>
                     <td><?= $offer->has('user') ? $this->Html->link($offer->user->name, ['controller' => 'Users', 'action' => 'view', $offer->user->id]) : '' ?></td>
                     <td><?= $offer->has('category') ? $this->Html->link($offer->category->name, ['controller' => 'Categories', 'action' => 'view', $offer->category->id]) : '' ?></td>
-                    <td><?= $offer->has('address') ? $this->Html->link($offer->address->id, ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?></td>
+                    <td><?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?></td>
                     <td><?= h($offer->name) ?></td>
                     <td><?= $this->Number->format($offer->price) ?></td>
                     <td><?= $this->Number->format($offer->advance_payment) ?></td>
