@@ -82,6 +82,7 @@ form input[type=submit]
     color: #fff;
     border-radius: 2em;
     font-size: 1.1em;
+    font-weight: normal;
     transition: all 0.2s ease-out;
 }
 
@@ -142,4 +143,19 @@ input[type=submit]:hover
     color: #fff;
     border-color: #046206;
     transition: all 0.2s ease-out;
+}
+
+@media only screen and (max-width: 768px)
+{
+    body
+    {
+        flex-direction: column;
+    }
+
+    .top-nav
+    {
+        width: 100%;
+        justify-content: center;
+        margin: 3em 0;
+    }
 }
