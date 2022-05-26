@@ -10,8 +10,8 @@
     <?= $this->Form->submit(__('Zaloguj się')); ?>
     <?= $this->Form->end() ?>
     <div class="users_form_links">
-        <?= $this->Html->link("Nie pamiętam hasła", ['action' => '']) ?>
-        <?= $this->Html->link("Resetuj hasło", ['action' => '']) ?>
-        <?= $this->Html->link("Zarejestruj się", ['action' => 'add']) ?>
+        <p class="first_link"><?= $this->Html->link("Nie pamiętam hasła", ['action' => '']) ?></p>
+        <p class="second_link"><?= $this->Html->link("Resetuj hasło", ['action' => '']) ?></p>
+        <div class="third_link"><?= $this->Html->link("Zarejestruj się", ['action' => 'add']) ?></div>
     </div>
 </div>

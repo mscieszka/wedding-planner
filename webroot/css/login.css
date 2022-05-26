@@ -3,6 +3,8 @@ body
     display: flex;
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .top-nav
@@ -21,7 +23,7 @@ main
 {
     background-color: #fff;
     width: 25em;
-    height: 55vh ;
+    height: 60vh ;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
@@ -38,14 +40,11 @@ label
 
 form
 {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: space-around;*/
     text-align: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    height: 70%;
+    height: 60%;
 }
 form input[type=email], input[type=password]
 {
@@ -78,12 +77,10 @@ form input[type=submit]
     height: 3em;
     align-self: end;
     text-align: center;
-    margin-right: 3em;
     background-color: #046206;
     border: 0;
     color: #fff;
     border-radius: 2em;
-    margin-bottom: 2em;
     font-size: 1.1em;
     transition: all 0.2s ease-out;
 }
@@ -100,4 +97,49 @@ input[type=submit]:hover
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 0.5em;
+    height: 40%;
+}
+
+.users_form_links .first_link a
+{
+    color: #000;
+}
+
+.users_form_links .first_link a:hover
+{
+    color: #034904;
+}
+
+.users_form_links .second_link a
+{
+    color: #E4CC9F;
+}
+
+.users_form_links .second_link a:hover
+{
+    color: #d3bb8e;
+}
+
+.users_form_links .third_link a
+{
+    display: flex;
+    width: 15em;
+    height: 3em;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 2em;
+    font-size: 1.1em;
+    transition: all 0.2s ease-out;
+}
+
+.users_form_links .third_link a:hover
+{
+    background-color: #046206;
+    color: #fff;
+    border-color: #046206;
+    transition: all 0.2s ease-out;
 }
