@@ -71,14 +71,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <body>
 
     <div class="categories-nav">
-        <div class="btn-category">
-            <a href="/categories/view/1">Sale</a>
+        <div>
+            <?= $this->Html->link(__('Sale'), ['controller' => 'Categories', 'action' => 'view', 1],['class' => 'btn-category'] )?>
         </div>
-        <div class="btn-category">
-            <a href="/categories/view/2">Zespół muzyczny / DJ</a>
-        </div>
-        <div class="btn-category">
-            <a href="/categories/view/3">Katering</a>
+       <div>
+           <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['controller' => 'Categories', 'action' => 'view', 2],['class' => 'btn-category'] )?>
+       </div>
+        <div>
+        <?= $this->Html->link(__('Katering'), ['controller' => 'Categories', 'action' => 'view', 3],['class' => 'btn-category'] )?>
         </div>
     </div>
 </body>
