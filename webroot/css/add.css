@@ -4,6 +4,16 @@ body
     font-family: 'Poppins', sans-serif;
 }
 
+a
+{
+    color: #000;
+}
+
+a:hover
+{
+    color: #000;
+}
+
 aside
 {
     display: none;
@@ -29,6 +39,16 @@ fieldset div label[for=name], label[for=surname], label[for=email], label[for=ph
     margin-bottom: 3em;
     border-bottom-left-radius: 3em;
     border-bottom-right-radius: 3em;
+}
+
+.border_provider
+{
+    border-top-right-radius: 3em;
+}
+
+.border_recipient
+{
+    border-top-left-radius: 3em;
 }
 
 fieldset
@@ -172,4 +192,89 @@ button:hover
     cursor: pointer;
     background-color: #034904;
     transition: all 0.2s ease-out;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .top-nav
+    {
+        width: 100% !important;
+        justify-content: center;
+        padding: 1.5em 0;
+    }
+
+    fieldset .legend_container
+    {
+        flex-direction: column;
+    }
+
+    .border_provider
+    {
+        border-top-right-radius: 0;
+    }
+
+    .border_recipient
+    {
+        border-top-left-radius: 0;
+    }
+
+    fieldset legend.legend_first
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+    .legend_first_recipient_mobile_border
+    {
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
+
+    .background_mobile_checked
+    {
+        background-color: #eee !important;
+    }
+
+    fieldset legend.legend_second
+    {
+        width: 100%;
+        height: 5em;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .legend_second_recipient_mobile_border
+    {
+        border-top-left-radius: 2em !important;
+        border-top-right-radius: 2em !important;
+    }
+
+    .inputs_wrapper
+    {
+        flex-direction: column;
+    }
+
+    .form_column
+    {
+        width: 100%;
+        padding: 0 2em;
+    }
+
+    .form_end_content
+    {
+        padding-top: 2em;
+    }
+
+    .form_end_content label
+    {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .form_end_content button
+    {
+        justify-content: center;
+        width: 100%;
+        margin: 1.5em 0;
+    }
 }

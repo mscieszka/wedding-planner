@@ -18,10 +18,10 @@
             <fieldset>
                 <!--<legend><?= __('Add User') ?></legend>-->
                 <div class="legend_container">
-                    <legend class="legend_first" id="uslugodawca">USŁUGODAWCA</legend>
+                    <legend class="legend_first background_mobile_checked" id="uslugodawca">USŁUGODAWCA</legend>
                     <legend class="legend_second" id="uslugobiorca"><?= $this->Html->link("USŁUGOBIORCA", ['action' => 'add', 1]) ?></legend>
                 </div>
-                <div class="users form content">
+                <div class="users form content border_provider">
                     <div class="inputs_wrapper">
                         <div class="form_column">
                             <?php
