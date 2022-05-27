@@ -49,7 +49,7 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($account_type=2)
     {
         $this->Authorization->skipAuthorization();
         if(!empty($this->request->getAttribute('identity'))){
@@ -58,6 +58,7 @@ class UsersController extends AppController
         }
 //        $this->Authorization->skipAuthorization();
         $user = $this->Users->newEmptyEntity();
+        $user->account_type_id = $account_type;
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
@@ -69,6 +70,9 @@ class UsersController extends AppController
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'accountTypes'));
+        if($account_type == 1) {
+            $this->render('addrecipient');
+        }
     }
 
     /**
@@ -144,6 +148,7 @@ class UsersController extends AppController
         if ($this->request->is('post') && !$result->isValid()) {
             $this->Flash->error(__('Invalid username or password'));
         }
+        $this->viewBuilder()->setLayout('login');
     }
 
     public function logout()

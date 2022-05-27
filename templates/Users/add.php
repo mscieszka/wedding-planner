@@ -19,12 +19,13 @@
                 <!--<legend><?= __('Add User') ?></legend>-->
                 <div class="legend_container">
                     <legend class="legend_first" id="uslugodawca">USŁUGODAWCA</legend>
-                    <legend class="legend_second" id="uslugobiorca"><?= $this->Html->link("USŁUGOBIORCA", ['action' => 'addrecipient']) ?></legend>
+                    <legend class="legend_second" id="uslugobiorca"><?= $this->Html->link("USŁUGOBIORCA", ['action' => 'add', 1]) ?></legend>
                 </div>
                 <div class="users form content">
                     <div class="inputs_wrapper">
                         <div class="form_column">
                             <?php
+                                echo $this->Form->hidden('account_type_id');
                                 echo $this->Form->control('name', ['required' => false, 'placeholder' => ' Imię (opcjonalnie)']);
                                 echo $this->Form->control('surname', ['required' => true, 'placeholder' => ' Nazwisko (opcjonalnie)', 'class' => 'require_data']);
                                 echo $this->Form->control('email', ['required' => true, 'placeholder' => ' Adres e-mail', 'class' => 'require_data']);
