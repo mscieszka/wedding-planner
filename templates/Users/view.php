@@ -50,26 +50,6 @@
                     <th><?= __('Regon') ?></th>
                     <td><?= h($user->regon) ?></td>
                 </tr>
-                <tr>
-                    <th><?= __('Account Type') ?></th>
-                    <td><?= $user->has('account_type') ? $this->Html->link($user->account_type->id, ['controller' => 'AccountTypes', 'action' => 'view', $user->account_type->id]) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($user->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($user->created) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Enabled') ?></th>
-                    <td><?= $user->enabled ? __('Yes') : __('No'); ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Confirmed Email') ?></th>
-                    <td><?= $user->confirmed_email ? __('Yes') : __('No'); ?></td>
-                </tr>
             </table>
             <div class="related">
                 <h4><?= __('Related Addresses') ?></h4>
@@ -223,64 +203,8 @@
                 </div>
                 <?php endif; ?>
             </div>
-            <div class="related">
-                <h4><?= __('Related Saved User Bookings') ?></h4>
-                <?php if (!empty($user->saved_user_bookings)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('User Id') ?></th>
-                            <th><?= __('Booking Id') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($user->saved_user_bookings as $savedUserBookings) : ?>
-                        <tr>
-                            <td><?= h($savedUserBookings->id) ?></td>
-                            <td><?= h($savedUserBookings->user_id) ?></td>
-                            <td><?= h($savedUserBookings->booking_id) ?></td>
-                            <td><?= h($savedUserBookings->created) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'SavedUserBookings', 'action' => 'view', $savedUserBookings->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'SavedUserBookings', 'action' => 'edit', $savedUserBookings->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'SavedUserBookings', 'action' => 'delete', $savedUserBookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $savedUserBookings->id)]) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
-            <div class="related">
-                <h4><?= __('Related Saved User Offers') ?></h4>
-                <?php if (!empty($user->saved_user_offers)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('User Id') ?></th>
-                            <th><?= __('Offer Id') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($user->saved_user_offers as $savedUserOffers) : ?>
-                        <tr>
-                            <td><?= h($savedUserOffers->id) ?></td>
-                            <td><?= h($savedUserOffers->user_id) ?></td>
-                            <td><?= h($savedUserOffers->offer_id) ?></td>
-                            <td><?= h($savedUserOffers->created) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'SavedUserOffers', 'action' => 'view', $savedUserOffers->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'SavedUserOffers', 'action' => 'edit', $savedUserOffers->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $savedUserOffers->id], ['confirm' => __('Are you sure you want to delete # {0}?', $savedUserOffers->id)]) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
+
+
         </div>
     </div>
 </div>

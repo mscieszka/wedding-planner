@@ -36,10 +36,14 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
+
+
         $user = $this->Users->get($id, [
-            'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings', 'SavedUserBookings', 'SavedUserOffers'],
+            'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
         ]);
-        $this->Authorization->authorize($user);
+        //'SavedUserBookings',
+        //$this->Authorization->authorize($user);
+        $this->Authorization->skipAuthorization();
 
         $this->set(compact('user'));
     }
