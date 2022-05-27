@@ -1,0 +1,175 @@
+body
+{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+aside
+{
+    display: none;
+}
+
+.require_data::placeholder
+{
+    color: red;
+}
+
+fieldset div label[for=name], label[for=surname], label[for=email], label[for=phone-number], label[for=password], label[for=company-name], label[for=krs], label[for=nip], label[for=regon]
+{
+    display: none;
+}
+
+.row
+{
+    justify-content: center;
+}
+
+.users.form.content
+{
+    margin-bottom: 3em;
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+
+fieldset
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+
+fieldset .legend_container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+fieldset .legend_container a
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset legend.legend_first
+{
+    background-color: #fff;
+    width: 20vw;
+    height: 5em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    transition: all 0.2s ease-out;
+    margin: 0;
+}
+
+fieldset legend.legend_second
+{
+    background-color: #fff;
+    width: 20vw;
+    height: 4em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    transition: all 0.2s ease-out;
+}
+
+fieldset legend:hover
+{
+    cursor: pointer;
+    background-color: #eee;
+    transition: all 0.2s ease-out;
+}
+
+.inputs_wrapper
+{
+    background-color: #fff;
+    border-top-right-radius: 2em;
+    display: flex;
+}
+
+.form_column
+{
+    width: 50%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input[type=text], input[type=password], input[type=email]
+{
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+    height: 4em;
+    outline: none;
+    margin-top: 2em;
+    transition: all 0.2s ease-out;
+}
+
+input:hover
+{
+    cursor: pointer;
+    background-color: #eee;
+    transition: all 0.2s ease-out;
+}
+
+.form_end_content
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_end_content label
+{
+    font-weight: normal;
+    font-size: 1em;
+    padding-right: 2.5em;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+input[type=checkbox]
+{
+    margin: 0 0.5em;
+}
+
+.form_end_content label:hover
+{
+    cursor: pointer;
+}
+
+button
+{
+    width: 15em;
+    height: 3em;
+    align-self: end;
+    text-align: center;
+    background-color: #046206;
+    border: 0;
+    color: #fff;
+    border-radius: 2em;
+    margin: 1em 3em;
+    font-size: 1.1em;
+    font-weight: normal;
+    transition: all 0.2s ease-out;
+}
+
+button:hover
+{
+    cursor: pointer;
+    background-color: #034904;
+    transition: all 0.2s ease-out;
+}
