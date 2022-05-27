@@ -40,7 +40,7 @@ class HallTypesTable extends Table
         parent::initialize($config);
 
         $this->setTable('hall_types');
-        $this->setDisplayField('id');
+        $this->setDisplayField('type');
         $this->setPrimaryKey('id');
 
         $this->hasMany('HallFilters', [

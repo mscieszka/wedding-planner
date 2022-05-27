@@ -40,7 +40,6 @@ class Address extends Entity
         'user_id' => true,
         'province_id' => true,
         'created' => true,
-        'user' => true,
         'province' => true,
         'offers' => true,
     ];

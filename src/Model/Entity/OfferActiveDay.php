@@ -37,7 +37,7 @@ class OfferActiveDay extends Entity
         'monday' => true,
         'tuesday' => true,
         'wednesday' => true,
-        'Thursday' => true,
+        'thursday' => true,
         'friday' => true,
         'saturday' => true,
         'sunday' => true,

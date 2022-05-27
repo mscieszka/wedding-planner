@@ -82,9 +82,9 @@ class OfferActiveDaysTable extends Table
             ->notEmptyString('wednesday');
 
         $validator
-            ->boolean('Thursday')
-            ->requirePresence('Thursday', 'create')
-            ->notEmptyString('Thursday');
+            ->boolean('thursday')
+            ->requirePresence('thursday', 'create')
+            ->notEmptyString('thursday');
 
         $validator
             ->boolean('friday')

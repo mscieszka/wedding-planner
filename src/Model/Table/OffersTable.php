@@ -71,17 +71,21 @@ class OffersTable extends Table
         $this->hasMany('Bookings', [
             'foreignKey' => 'offer_id',
         ]);
-        $this->hasMany('CateringFilters', [
+        $this->hasOne('CateringFilters', [
             'foreignKey' => 'offer_id',
+            'dependent' => true,
         ]);
-        $this->hasMany('HallFilters', [
+        $this->hasOne('HallFilters', [
             'foreignKey' => 'offer_id',
+            'dependent' => true,
         ]);
-        $this->hasMany('MusicFilters', [
+        $this->hasOne('MusicFilters', [
             'foreignKey' => 'offer_id',
+            'dependent' => true,
         ]);
         $this->hasOne('OfferActiveDays', [
             'foreignKey' => 'offer_id',
+            'dependent' => true,
         ]);
         $this->hasMany('Ratings', [
             'foreignKey' => 'offer_id',
@@ -146,5 +150,10 @@ class OffersTable extends Table
         $rules->add($rules->existsIn('category_id', 'Categories'), ['errorField' => 'category_id']);
 
         return $rules;
+    }
+
+    public function afterDelete($event, $entity, $options) {
+        $address = $this->Addresses->get($entity->address_id);
+        $this->Addresses->delete($address);
     }
 }
