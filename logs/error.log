@@ -8423,3 +8423,1482 @@ Request URL: /debug-kit/toolbar/9652d6c4-daf1-4f8a-a5e2-1cf912fcba89
 Referer URL: http://localhost/wedding-planner/users
 
 
+2022-05-28 17:39:45 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/08bca25f-4b66-4a11-b685-520b0ee94194` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/08bca25f-4b66-4a11-b685-520b0ee94194',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/08bca25f-4b66-4a11-b685-520b0ee94194
+Referer URL: http://localhost/wedding-planner/users/view/14
+
+
+2022-05-28 17:40:16 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/a3d4e3c5-2431-4080-8177-769938afc361` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/a3d4e3c5-2431-4080-8177-769938afc361',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/a3d4e3c5-2431-4080-8177-769938afc361
+Referer URL: http://localhost/wedding-planner/users/view/11
+
+
+2022-05-28 17:42:20 error: [InvalidArgumentException] The `Payments` association is not defined on `Offers`.
+Valid associations are: Users, Categories, Addresses, Bookings, CateringFilters, HallFilters, MusicFilters, OfferActiveDays, Ratings, SavedUserOffers in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Table.php on line 905
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:489
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:526
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:314
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:445
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:416
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1177
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1127
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Driver.php:220
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:280
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:287
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:335
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:340
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Query.php:250
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:287
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1096
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:494
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:505
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Table.php:1541
+- C:\web\xampp\htdocs\wedding-planner\src\Controller\UsersController.php:40
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:157
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /users/view/11
+
+
+2022-05-28 17:42:20 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/43216465-6af7-485c-b026-fd39db5564c2` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/43216465-6af7-485c-b026-fd39db5564c2',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/43216465-6af7-485c-b026-fd39db5564c2
+Referer URL: http://localhost/wedding-planner/users/view/11
+
+
+2022-05-28 17:44:09 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/2e155f67-8864-43fd-ac03-0fd3aabe3785` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/2e155f67-8864-43fd-ac03-0fd3aabe3785',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/2e155f67-8864-43fd-ac03-0fd3aabe3785
+Referer URL: http://localhost/wedding-planner/users/view/11
+
+
+2022-05-28 17:47:24 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/66c41439-67f9-47c8-b3a1-24f2eadf0216` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/66c41439-67f9-47c8-b3a1-24f2eadf0216',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/66c41439-67f9-47c8-b3a1-24f2eadf0216
+Referer URL: http://localhost/wedding-planner/offers
+
+
+2022-05-28 17:47:35 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/4bbe066f-c1b0-4092-af76-eee22fe2df6f` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/4bbe066f-c1b0-4092-af76-eee22fe2df6f',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/4bbe066f-c1b0-4092-af76-eee22fe2df6f
+Referer URL: http://localhost/wedding-planner/offers/dj
+
+
+2022-05-28 17:47:42 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/30d8d432-3d0b-4745-9037-1998f925ed24` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/30d8d432-3d0b-4745-9037-1998f925ed24',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/30d8d432-3d0b-4745-9037-1998f925ed24
+Referer URL: http://localhost/wedding-planner/offers/view/2
+
+
+2022-05-28 17:52:31 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/992776c3-5b02-4d12-bb70-007bf8381aca` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/992776c3-5b02-4d12-bb70-007bf8381aca',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/992776c3-5b02-4d12-bb70-007bf8381aca
+Referer URL: http://localhost/wedding-planner/offers/view/2
+
+
+2022-05-28 17:52:36 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/4c324a8d-8a50-436e-8c1a-12daecb1788f` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/4c324a8d-8a50-436e-8c1a-12daecb1788f',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/4c324a8d-8a50-436e-8c1a-12daecb1788f
+Referer URL: http://localhost/wedding-planner/offers/view/2
+
+
+2022-05-28 18:01:55 error: [Cake\Http\Exception\MissingControllerException] Controller class Logout could not be found. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 349
+Exception Attributes: array (
+  'class' => 'Logout',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:74
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:315
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:157
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /logout
+
+
+2022-05-28 18:01:56 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/d372db28-d046-4540-950f-d264c469dd08` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/d372db28-d046-4540-950f-d264c469dd08',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/d372db28-d046-4540-950f-d264c469dd08
+Referer URL: http://localhost/wedding-planner/logout
+
+
+2022-05-28 18:02:03 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/c56a3e71-c506-4d7b-a936-15caa6f06531` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/c56a3e71-c506-4d7b-a936-15caa6f06531',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/c56a3e71-c506-4d7b-a936-15caa6f06531
+Referer URL: http://localhost/wedding-planner/users/login
+
+
+2022-05-28 18:02:10 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/8c2448f4-adef-4610-830d-ae7219104444` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/8c2448f4-adef-4610-830d-ae7219104444',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/8c2448f4-adef-4610-830d-ae7219104444
+Referer URL: http://localhost/wedding-planner/
+
+
+2022-05-28 18:02:20 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/830544cc-4e4a-4e34-8902-a7432cf40859` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/830544cc-4e4a-4e34-8902-a7432cf40859',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/830544cc-4e4a-4e34-8902-a7432cf40859
+Referer URL: http://localhost/wedding-planner/offers/add
+
+
+2022-05-28 18:02:54 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/e8c5ecb5-3e6e-479c-8a35-bc59dd2c3fbe` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/e8c5ecb5-3e6e-479c-8a35-bc59dd2c3fbe',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/e8c5ecb5-3e6e-479c-8a35-bc59dd2c3fbe
+Referer URL: http://localhost/wedding-planner/offers
+
+
+2022-05-28 18:06:18 error: [Error] Call to undefined method App\Controller\OffersController::data_range() in C:\web\xampp\htdocs\wedding-planner\src\Controller\OffersController.php on line 83
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:157
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /offers/view/30
+
+
+2022-05-28 18:06:19 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/f58cb339-e6d7-4e77-b5af-573f5a06c44e` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/f58cb339-e6d7-4e77-b5af-573f5a06c44e',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/f58cb339-e6d7-4e77-b5af-573f5a06c44e
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:32:50 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/62fb99c5-24f6-4eea-8120-1def6f8d2c6b` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/62fb99c5-24f6-4eea-8120-1def6f8d2c6b',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/62fb99c5-24f6-4eea-8120-1def6f8d2c6b
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:44:37 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/7ace630a-2c3c-4cd5-961b-72ebaebb739a` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/7ace630a-2c3c-4cd5-961b-72ebaebb739a',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/7ace630a-2c3c-4cd5-961b-72ebaebb739a
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:45:34 error: [InvalidArgumentException] Cannot convert value of type `string` to integer in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php on line 40
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php:39
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php:96
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:113
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:164
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\ValueBinder.php:148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:336
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:340
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Query.php:250
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:287
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1096
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:494
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:505
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Table.php:1541
+- C:\web\xampp\htdocs\wedding-planner\src\Controller\OffersController.php:72
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:162
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /offers/view/add
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:45:35 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/ecb3c66d-16be-4848-ab3c-e131349ff0bb` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/ecb3c66d-16be-4848-ab3c-e131349ff0bb',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/ecb3c66d-16be-4848-ab3c-e131349ff0bb
+Referer URL: http://localhost/wedding-planner/offers/view/add
+
+
+2022-05-28 18:45:54 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/a07d0cf5-7e7e-45f0-9e90-1a086a4438b6` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/a07d0cf5-7e7e-45f0-9e90-1a086a4438b6',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/a07d0cf5-7e7e-45f0-9e90-1a086a4438b6
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:46:08 error: [InvalidArgumentException] Cannot convert value of type `string` to integer in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php on line 40
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php:39
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php:96
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:113
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:164
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\ValueBinder.php:148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:336
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:340
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Query.php:250
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:287
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1096
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:494
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:505
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Table.php:1541
+- C:\web\xampp\htdocs\wedding-planner\src\Controller\OffersController.php:72
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:162
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /offers/view/add
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:46:09 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/92c4ab8c-5682-4af9-a198-132da5a45a01` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/92c4ab8c-5682-4af9-a198-132da5a45a01',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/92c4ab8c-5682-4af9-a198-132da5a45a01
+Referer URL: http://localhost/wedding-planner/offers/view/add
+
+
+2022-05-28 18:46:55 error: [InvalidArgumentException] Cannot convert value of type `string` to integer in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php on line 40
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php:39
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php:96
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:113
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:164
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\ValueBinder.php:148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:336
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:340
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Query.php:250
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:287
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1096
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:494
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:505
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Table.php:1541
+- C:\web\xampp\htdocs\wedding-planner\src\Controller\OffersController.php:72
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:162
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /offers/view/add
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:46:55 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/2b9a2ec8-d811-4c79-a4f9-387cb09e1191` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/2b9a2ec8-d811-4c79-a4f9-387cb09e1191',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/2b9a2ec8-d811-4c79-a4f9-387cb09e1191
+Referer URL: http://localhost/wedding-planner/offers/view/add
+
+
+2022-05-28 18:47:19 error: [InvalidArgumentException] Cannot convert value of type `string` to integer in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php on line 40
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Type\IntegerType.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php:39
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php:96
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:113
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:164
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\ValueBinder.php:148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:336
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Connection.php:340
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Query.php:250
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1148
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:287
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Query.php:1096
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:494
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:505
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\ORM\Table.php:1541
+- C:\web\xampp\htdocs\wedding-planner\src\Controller\OffersController.php:72
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:162
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /offers/view/add
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:47:20 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/951c7e67-68be-439d-bcfc-beb4ab4d2e5b` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/951c7e67-68be-439d-bcfc-beb4ab4d2e5b',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/951c7e67-68be-439d-bcfc-beb4ab4d2e5b
+Referer URL: http://localhost/wedding-planner/offers/view/add
+
+
+2022-05-28 18:47:36 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/201f7a92-71d2-46fd-8492-e856e8cad26a` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/201f7a92-71d2-46fd-8492-e856e8cad26a',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/201f7a92-71d2-46fd-8492-e856e8cad26a
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:47:40 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/3cc690b1-47e4-425e-808a-67172705a59a` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/3cc690b1-47e4-425e-808a-67172705a59a',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/3cc690b1-47e4-425e-808a-67172705a59a
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:49:25 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/656dc46e-ad75-4103-9cab-ce64a52b693e` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/656dc46e-ad75-4103-9cab-ce64a52b693e',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/656dc46e-ad75-4103-9cab-ce64a52b693e
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:49:48 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/05b5e813-e30e-47f7-bcc4-9126fd867044` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/05b5e813-e30e-47f7-bcc4-9126fd867044',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/05b5e813-e30e-47f7-bcc4-9126fd867044
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:50:15 error: [Authorization\Exception\ForbiddenException] Identity is not authorized to perform `add` on `App\Model\Entity\Booking`. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Controller\Component\AuthorizationComponent.php on line 83
+Exception Attributes: array (
+  0 => 'add',
+  1 => 'App\\Model\\Entity\\Booking',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\src\Controller\BookingsController.php:57
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:162
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /bookings/add
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:50:16 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/5de79254-932b-405e-838e-2e22d907ac1c` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/5de79254-932b-405e-838e-2e22d907ac1c',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/5de79254-932b-405e-838e-2e22d907ac1c
+Referer URL: http://localhost/wedding-planner/bookings/add
+
+
+2022-05-28 18:58:40 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/1b603c34-9c3b-428a-941c-63aeaaa979ba` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/1b603c34-9c3b-428a-941c-63aeaaa979ba',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/1b603c34-9c3b-428a-941c-63aeaaa979ba
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 18:58:58 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/b8d9dcc0-6e41-4b65-a1c9-625408d9f6ee` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/b8d9dcc0-6e41-4b65-a1c9-625408d9f6ee',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/b8d9dcc0-6e41-4b65-a1c9-625408d9f6ee
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:00:00 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/44d55e72-7593-4fcd-9971-4aa540a0d6ba` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/44d55e72-7593-4fcd-9971-4aa540a0d6ba',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/44d55e72-7593-4fcd-9971-4aa540a0d6ba
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:05:01 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/8a78c124-c954-4a62-bcfa-230ba1b68eb3` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/8a78c124-c954-4a62-bcfa-230ba1b68eb3',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/8a78c124-c954-4a62-bcfa-230ba1b68eb3
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:07:06 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/35c1c9ab-7b2f-48cb-a749-8294adf801b5` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/35c1c9ab-7b2f-48cb-a749-8294adf801b5',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/35c1c9ab-7b2f-48cb-a749-8294adf801b5
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:07:13 error: [InvalidArgumentException] Expression `booking_date` is missing operator (IS, IS NOT) with `null` value. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Expression\QueryExpression.php on line 844
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Expression\QueryExpression.php:759
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Expression\QueryExpression.php:133
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Query.php:2321
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Database\Query.php:1011
+- C:\web\xampp\htdocs\wedding-planner\src\Controller\BookingsController.php:63
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\Controller.php:539
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:140
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:115
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\BaseApplication.php:317
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:174
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:162
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /bookings/add
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:07:14 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/11ba7792-fecc-49bf-9912-ebffc8d2826d` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/11ba7792-fecc-49bf-9912-ebffc8d2826d',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/11ba7792-fecc-49bf-9912-ebffc8d2826d
+Referer URL: http://localhost/wedding-planner/bookings/add
+
+
+2022-05-28 19:07:35 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/431ef5bf-6986-4a34-9503-1929c58597bc` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/431ef5bf-6986-4a34-9503-1929c58597bc',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/431ef5bf-6986-4a34-9503-1929c58597bc
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:23:33 warning: Warning (512): Unable to emit headers. Headers sent in file=C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Debugger.php line=988 in [C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /offers/view/30
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 185
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 123
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2022-05-28 19:23:33 warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Debugger.php:988) in [C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /offers/view/30
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 185
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 123
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2022-05-28 19:23:33 warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Debugger.php:988) in [C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /offers/view/30
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 185
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 123
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2022-05-28 19:23:33 warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Debugger.php:988) in [C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /offers/view/30
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 185
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 123
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 128
+[main] - ROOT\webroot\index.php, line 40
+
+2022-05-28 19:23:35 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/4317259b-d3f2-4d5b-9f7f-8044f976842f` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/4317259b-d3f2-4d5b-9f7f-8044f976842f',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/4317259b-d3f2-4d5b-9f7f-8044f976842f
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:26:02 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/aa8dada0-32ca-4237-99c8-3bf005ce9e41` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/aa8dada0-32ca-4237-99c8-3bf005ce9e41',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/aa8dada0-32ca-4237-99c8-3bf005ce9e41
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:27:08 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/4544f98d-8ae3-42d1-ad12-7de5e40d4e75` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/4544f98d-8ae3-42d1-ad12-7de5e40d4e75',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/4544f98d-8ae3-42d1-ad12-7de5e40d4e75
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:28:05 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/9f3d3ec7-b585-4c82-a0b9-6fc0ced2eb27` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/9f3d3ec7-b585-4c82-a0b9-6fc0ced2eb27',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/9f3d3ec7-b585-4c82-a0b9-6fc0ced2eb27
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:29:17 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/e9ca0790-ff2b-40f1-9106-426091a7edfa` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/e9ca0790-ff2b-40f1-9106-426091a7edfa',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/e9ca0790-ff2b-40f1-9106-426091a7edfa
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:37:42 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/597b8f3c-7bc3-41a5-a7cd-b349d41a5f56` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/597b8f3c-7bc3-41a5-a7cd-b349d41a5f56',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/597b8f3c-7bc3-41a5-a7cd-b349d41a5f56
+Referer URL: http://localhost/wedding-planner/offers/add
+
+
+2022-05-28 19:39:04 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/c464689e-9678-409e-87ee-b13dab9eef89` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/c464689e-9678-409e-87ee-b13dab9eef89',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/c464689e-9678-409e-87ee-b13dab9eef89
+Referer URL: http://localhost/wedding-planner/offers/add
+
+
+2022-05-28 19:40:52 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/603513bb-fcdf-4e86-870a-6f804931571f` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/603513bb-fcdf-4e86-870a-6f804931571f',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/603513bb-fcdf-4e86-870a-6f804931571f
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:41:14 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/66ca3205-a9b7-4dd9-ac49-5dc661257256` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/66ca3205-a9b7-4dd9-ac49-5dc661257256',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/66ca3205-a9b7-4dd9-ac49-5dc661257256
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
+2022-05-28 19:41:31 error: [Authorization\Exception\AuthorizationRequiredException] The request to `/debug-kit/toolbar/d34d6958-3e7d-4b79-85f9-8594a6d81576` did not apply any authorization checks. in C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php on line 132
+Exception Attributes: array (
+  'url' => '/debug-kit/toolbar/d34d6958-3e7d-4b79-85f9-8594a6d81576',
+)
+Stack Trace:
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:161
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:126
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\web\xampp\htdocs\wedding-planner\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\web\xampp\htdocs\wedding-planner\webroot\index.php:40
+
+Request URL: /debug-kit/toolbar/d34d6958-3e7d-4b79-85f9-8594a6d81576
+Referer URL: http://localhost/wedding-planner/offers/view/30
+
+
