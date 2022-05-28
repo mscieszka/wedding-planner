@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="edited view of a offers of a type(deleted most useless items, added link at name to redirect)">
-      <change afterPath="$PROJECT_DIR$/templates/Users/change_password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Pages/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Users/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Users/viewrecipient.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/viewrecipient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/add_catering.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/add_catering.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
@@ -166,7 +162,7 @@
       <workItem from="1653233912595" duration="15885000" />
       <workItem from="1653261214286" duration="22136000" />
       <workItem from="1653721055132" duration="4785000" />
-      <workItem from="1653758523779" duration="12317000" />
+      <workItem from="1653758523779" duration="13015000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>

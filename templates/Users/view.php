@@ -211,4 +211,3 @@
         </div>
     </div>
 </div>
-<?php debug($user) ?>
