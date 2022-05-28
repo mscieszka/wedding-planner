@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Zabezpieczenie ofert w zalezności od typu konta">
-      <change afterPath="$PROJECT_DIR$/webroot/img/catering.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/img/dj.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/img/lupa.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/img/miejsce.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/img/sale.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73484597-4dd5-4a33-b380-b686da4a31ab/storage_v2/_src_/database/d9jm68g6puhfl9.2dIdmw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73484597-4dd5-4a33-b380-b686da4a31ab/storage_v2/_src_/database/d9jm68g6puhfl9.2dIdmw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wedding-planner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wedding-planner.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Added routing to offers/hall , offers/dj offers/band, offers/catering">
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Pages/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Users/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_categories" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_categories" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_offers" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_offers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_saved_user_offers" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_saved_user_offers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_users" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_users" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations.cake.en_US" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations.cake.en_US" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations.debug_kit.en_US" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations.debug_kit.en_US" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations.default.en_US" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations.default.en_US" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/debug_kit.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/debug_kit.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/css/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653342096918</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added routing to offers/hall , offers/dj offers/band, offers/catering">
+      <created>1653730912024</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653730912024</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +247,7 @@
     <MESSAGE value="Zabezpieczenie categories dla typow uzytkownikow" />
     <MESSAGE value="Zabezpieczenie addresses dla typow uzytkownikow" />
     <MESSAGE value="Dodawanie oferty - w tym dodawanie adresu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodawanie oferty - w tym dodawanie adresu" />
+    <MESSAGE value="Added routing to offers/hall , offers/dj offers/band, offers/catering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added routing to offers/hall , offers/dj offers/band, offers/catering" />
   </component>
 </project>
