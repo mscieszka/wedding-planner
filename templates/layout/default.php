@@ -46,9 +46,37 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 </a>
             </div>
         </div>
+
+        <div class="search-bar">
+            <div class="kind_of_search">
+                <?php  echo $this->Html->image('lupa.svg', ['alt' => 'Wedding Planner']); ?>
+                <input placeholder="Czego szukasz ?">
+            </div>
+            |
+            <div class="place_search">
+                <?php  echo $this->Html->image('miejsce.svg', ['alt' => 'Wedding Planner']); ?>
+                <input placeholder="Cała Polska">
+            </div>
+        </div>
+
+
         <div class="top-nav-links">
 
+            <div>
+                <?php if($account_type_id == 1): ?>
+                    <?= $this->Html->link(__('My saved offers'), ['controller' => 'Offers', 'action' => 'index', 2],  ['class' => 'button', 'id' => 'homepage-login']) ?>
+                <?php endif; ?>
+                <?php if($account_type_id == 2): ?>
+                    <?= $this->Html->link(__('My Offer'), ['controller' => 'Offers', 'action' => 'index',1],['class' => 'button', 'id' => 'homepage-login']) ?>
+                <?php endif; ?>
+
+                <?= $this->Html->link(__('Profil'), ['controller' => 'Users', 'action' => 'profile'], ['class' => 'button', 'id' => 'homepage-login']) ?>
+            </div>
+
+
         </div>
+
+
     </nav>
     <main class="main">
         <div class="container">
