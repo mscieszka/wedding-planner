@@ -46,6 +46,11 @@ class UsersController extends AppController
         $this->Authorization->skipAuthorization();
 
         $this->set(compact('user'));
+        $layout = 'view';
+        if($user->get('account_type_id') == 1) {
+            $layout = 'viewrecipient';
+        }
+        $this->render($layout);
     }
 
     /**
