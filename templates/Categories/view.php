@@ -4,11 +4,53 @@
  * @var \App\Model\Entity\Category $category
  */
 ?>
+
+
+
+
+
+
+<header>
+    <?= $this->Html->link(__('List Categories'), ['action' => 'index'], ['class' => 'button float-right']) ?>
+
+
+    <div class="search-bar">
+        <div class="kind_of_search">
+            <?php  echo $this->Html->image('lupa.svg', ['alt' => 'Wedding Planner']); ?>
+            <input placeholder="Czego szukasz ?">
+        </div>
+        |
+        <div class="place_search">
+            <?php  echo $this->Html->image('miejsce.svg', ['alt' => 'Wedding Planner']); ?>
+            <input placeholder="Cała Polska">
+        </div>
+    </div>
+
+
+    <?php if($account_type_id == 1): ?>
+        <?= $this->Html->link(__('My saved offers'), ['controller' => 'Offers', 'action' => 'index', 2],  ['class' => 'button float-right']) ?>
+    <?php endif; ?>
+    <?php if($account_type_id == 2): ?>
+        <?= $this->Html->link(__('My Offer'), ['controller' => 'Offers', 'action' => 'index',1], ['class' => 'button float-right']) ?>
+    <?php endif; ?>
+    <?= $this->Html->link(__('Profil'), ['controller' => 'Users', 'action' => 'profile'], ['class' => 'button', 'id' => 'button float-right']) ?>
+</header>
+
+
+
+
+
+
+
+
+
+
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Categories'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <!--<h4 class="heading"><?= __('Actions') ?></h4>-->
+           <!-- <h4> <?= $this->Html->link(__('List Categories'), ['action' => 'index'], ['class' => 'side-nav-item']) ?> </h4> -->
 
         </div>
     </aside>
