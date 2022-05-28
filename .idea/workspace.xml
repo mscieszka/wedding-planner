@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Added routing to offers/hall , offers/dj offers/band, offers/catering">
+    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="edited view of a offer(deleted id, and created)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Categories/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Categories/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
@@ -132,6 +136,10 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/Pages" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -224,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653730912024</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="edited view of a offer(deleted id, and created)">
+      <created>1653731130949</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653731130949</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +263,7 @@
     <MESSAGE value="Zabezpieczenie addresses dla typow uzytkownikow" />
     <MESSAGE value="Dodawanie oferty - w tym dodawanie adresu" />
     <MESSAGE value="Added routing to offers/hall , offers/dj offers/band, offers/catering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added routing to offers/hall , offers/dj offers/band, offers/catering" />
+    <MESSAGE value="edited view of a offer(deleted id, and created)" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited view of a offer(deleted id, and created)" />
   </component>
 </project>
