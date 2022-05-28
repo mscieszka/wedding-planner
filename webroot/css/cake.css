@@ -55,8 +55,14 @@ th a,
 body {
     background: #f5f7fa;
 }
+
+.column {
+    margin-top: 2rem;
+}
+
 .content {
     padding: 2rem;
+    margin-top: 2rem;
     background: #ffffff;
     border-radius: 0.4rem;
     /* Thanks Stripe */
