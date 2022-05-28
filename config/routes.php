@@ -51,6 +51,10 @@ return static function (RouteBuilder $routes) {
          * to use (in this case, templates/Pages/home.php)...
          */
         $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+        $builder->connect('/offers/hall', ['controller' => 'categories', 'action' => 'view', 1]);
+        $builder->connect('/offers/dj', ['controller' => 'categories', 'action' => 'view', 2]);
+        $builder->connect('/offers/band', ['controller' => 'categories', 'action' => 'view', 2]);
+        $builder->connect('/offers/catering', ['controller' => 'categories', 'action' => 'view', 3]);
 
         /*
          * ...and connect the rest of 'Pages' controller's URLs.
