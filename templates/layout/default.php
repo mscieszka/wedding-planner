@@ -38,7 +38,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->script('jquery-3.6.0.min.js') ?>
 </head>
 <body>
+    <nav class="top-nav">
+        <div class="top-nav-title">
+            <div class="top-nav-logo">
+                <a href="<?= $this->Url->build('/') ?>">
+                    <?php echo $this->Html->image("logo.svg")?>
+                </a>
+            </div>
+        </div>
+        <div class="top-nav-links">
 
+        </div>
+    </nav>
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>
