@@ -45,20 +45,12 @@
                     <td><?= h($offer->website) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($offer->id) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Price') ?></th>
                     <td><?= $this->Number->format($offer->price) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Advance Payment') ?></th>
                     <td><?= $this->Number->format($offer->advance_payment) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($offer->created) ?></td>
                 </tr>
             </table>
             <div class="text">

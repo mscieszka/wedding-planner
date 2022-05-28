@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Added routing to buttons on main page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="edited view of a offers of a type(deleted most useless items, added link at name to redirect)">
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
@@ -133,13 +132,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/Pages" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\web\xampp\htdocs\wedding-planner\templates\layout" />
+      <recent name="C:\SEM6\projekt\wedding-planner\templates\Pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\SEM6\projekt\wedding-planner\webroot\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -158,8 +166,7 @@
       <updated>1653233908639</updated>
       <workItem from="1653233912595" duration="15885000" />
       <workItem from="1653261214286" duration="22136000" />
-      <workItem from="1653668727136" duration="1745000" />
-      <workItem from="1653679385356" duration="109000" />
+      <workItem from="1653721055132" duration="4785000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>
@@ -217,26 +224,26 @@
       <option name="project" value="LOCAL" />
       <updated>1653342096918</updated>
     </task>
-    <task id="LOCAL-00009" summary="Added auth check to main">
-      <created>1653675901001</created>
+    <task id="LOCAL-00009" summary="Added routing to offers/hall , offers/dj offers/band, offers/catering">
+      <created>1653730912024</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1653675901001</updated>
+      <updated>1653730912024</updated>
     </task>
-    <task id="LOCAL-00010" summary="Edited user profile view">
-      <created>1653677749271</created>
+    <task id="LOCAL-00010" summary="edited view of a offer(deleted id, and created)">
+      <created>1653731130949</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1653677749271</updated>
+      <updated>1653731130949</updated>
     </task>
-    <task id="LOCAL-00011" summary="Added routing to buttons on main page">
-      <created>1653678634926</created>
+    <task id="LOCAL-00011" summary="edited view of a offers of a type(deleted most useless items, added link at name to redirect)">
+      <created>1653731871498</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1653678634926</updated>
+      <updated>1653731871498</updated>
     </task>
     <option name="localTasksCounter" value="12" />
     <servers />
@@ -261,9 +268,9 @@
     <MESSAGE value="Zabezpieczenie categories dla typow uzytkownikow" />
     <MESSAGE value="Zabezpieczenie addresses dla typow uzytkownikow" />
     <MESSAGE value="Dodawanie oferty - w tym dodawanie adresu" />
-    <MESSAGE value="Added auth check to main" />
-    <MESSAGE value="Edited user profile view" />
-    <MESSAGE value="Added routing to buttons on main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added routing to buttons on main page" />
+    <MESSAGE value="Added routing to offers/hall , offers/dj offers/band, offers/catering" />
+    <MESSAGE value="edited view of a offer(deleted id, and created)" />
+    <MESSAGE value="edited view of a offers of a type(deleted most useless items, added link at name to redirect)" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited view of a offers of a type(deleted most useless items, added link at name to redirect)" />
   </component>
 </project>
