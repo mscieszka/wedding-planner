@@ -81,6 +81,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <input placeholder="Cała Polska">
         </div>
     </div>
+    <?php if($account_type_id == 1): ?>
+        <?= $this->Html->link(__('My saved offers'), ['controller' => 'Offers', 'action' => 'index', 2],  ['class' => 'button', 'id' => 'homepage-login']) ?>
+    <?php endif; ?>
+    <?php if($account_type_id == 2): ?>
+        <?= $this->Html->link(__('My Offer'), ['controller' => 'Offers', 'action' => 'index',1],['class' => 'button', 'id' => 'homepage-login']) ?>
+    <?php endif; ?>
     <?= $this->Html->link(__('Profil'), ['controller' => 'Users', 'action' => 'profile'], ['class' => 'button', 'id' => 'homepage-login']) ?>
 </header>
 <?= $this->Flash->render() ?>
