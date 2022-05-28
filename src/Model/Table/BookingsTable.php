@@ -45,7 +45,7 @@ class BookingsTable extends Table
         parent::initialize($config);
 
         $this->setTable('bookings');
-        $this->setDisplayField('id');
+        $this->setDisplayField('booking_date');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');

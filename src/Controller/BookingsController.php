@@ -54,13 +54,32 @@ class BookingsController extends AppController
     public function add()
     {
         $booking = $this->Bookings->newEmptyEntity();
-        $this->Authorization->authorize($booking);
+        $this->Authorization->skipAuthorization();
         if ($this->request->is('post')) {
             $booking = $this->Bookings->patchEntity($booking, $this->request->getData());
+            /* date availability */
+            $check = $this->Bookings->find()->where([
+                'offer_id'=>$booking->offer_id,
+                'booking_date'=>$booking->booking_date
+            ])->count();
+            if($check > 0) {
+                $this->Flash->error(__('Date is already taken'));
+                return $this->redirect($this->referer());
+            }
+            $booking->user_id = $this->request->getAttribute('identity')->getIdentifier();
+            /*payment*/
+            $offer = $this->Bookings->Offers->get($booking->offer_id);
+            $payment = $this->Bookings->Payments->newEmptyEntity();
+            $payment->is_paid = false;
+            $payment->price = $offer->advance_payment;
+            $this->Bookings->Payments->save($payment);
+            $booking->payment_id = $payment->id;
+
+//            debug($booking); exit;
             if ($this->Bookings->save($booking)) {
                 $this->Flash->success(__('The booking has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect($this->referer());
             }
             $this->Flash->error(__('The booking could not be saved. Please, try again.'));
         }

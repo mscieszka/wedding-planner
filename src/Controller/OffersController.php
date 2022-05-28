@@ -80,8 +80,53 @@ class OffersController extends AppController
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->where(['id' => $offer_type_id]);
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
 
-        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces'));
+        $booked_dates = $this->getBookedOfferDates($offer->id);
+        $active_offer_days = $this->date_range(date('Y-m-d'), date('Y-m-d', strtotime(date('Y-m-d').' +300 days')), $offer['offer_active_day'], $booked_dates);
+        $booking = $this->getTableLocator()->get('Bookings')->newEmptyEntity();
+        $booking->offer_id = $offer->id;
 
+        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking'));
+
+    }
+
+    private function getBookedOfferDates($offer_id) {
+        $arr = [];
+        $arr = $this->Offers->Bookings->find('list')->select(['booking_date'])->where(['offer_id'=>$offer_id])->toArray();
+        $arr = json_decode(json_encode($arr), true);
+//        debug($arr); exit;
+        return $arr;
+    }
+
+    private function getActiveOfferDays($active_offer_days) {
+        $arr = [];
+        $weekdays = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+        foreach ($weekdays as $weekday) {
+            if($active_offer_days[$weekday]) {
+                $arr[] = date("N",strtotime($weekday));
+            }
+        }
+        return $arr;
+    }
+
+    private function date_range($first, $last, $active_offer_days, $booked_offer_days, $step = '+1 day', $output_format = 'Y-m-d') {
+
+//        debug($active_offer_days);
+//        debug(date("N",strtotime("wednesday")));
+//        debug(date("N",strtotime("2022-05-28")));
+//        exit;
+        $active_offer_days = $this->getActiveOfferDays($active_offer_days);
+        $dates = array();
+        $current = strtotime($first);
+        $last = strtotime($last);
+
+        while( $current <= $last ) {
+            if(in_array(date("N",$current),$active_offer_days) && !in_array(date('Y-m-d',$current), $booked_offer_days)) {
+                $dates[date($output_format, $current)] = date($output_format, $current);
+            }
+            $current = strtotime($step, $current);
+        }
+
+        return $dates;
     }
 
     /**

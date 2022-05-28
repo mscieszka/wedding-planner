@@ -37,6 +37,7 @@
 
                         <!--                    Cena za event-->
                         <?php echo $this->Form->control('price', ['min' => 1, 'max' => 100000, 'step'=>0.01]); ?>
+                        <?php echo $this->Form->control('advance_payment', ['min' => 1, 'max' => 100000, 'step'=>0.01]); ?>
 
                         <!--                    <h4>Gatunek muzyki</h4>-->
                         <!--                    <h4>Dodatkowe informacje</h4>-->
