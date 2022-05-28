@@ -27,7 +27,7 @@
                         <?php
                         echo $this->Form->hidden('account_type_id');
                         echo $this->Form->control('name', ['required' => true, 'placeholder' => ' Imię', 'class' => 'require_data']);
-                        echo $this->Form->control('surname', ['required' => true, 'placeholder' => ' Nazwisko (opcjonalnie)', 'class' => 'require_data']);
+                        echo $this->Form->control('surname', ['required' => true, 'placeholder' => ' Nazwisko', 'class' => 'require_data']);
                         echo $this->Form->control('email', ['required' => true, 'placeholder' => ' Adres e-mail', 'class' => 'require_data']);
                         //                    echo $this->Form->control('confirmed_password');
                         ?>

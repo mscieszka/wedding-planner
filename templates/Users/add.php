@@ -27,7 +27,7 @@
                             <?php
                                 echo $this->Form->hidden('account_type_id');
                                 echo $this->Form->control('name', ['required' => false, 'placeholder' => ' Imię (opcjonalnie)']);
-                                echo $this->Form->control('surname', ['required' => true, 'placeholder' => ' Nazwisko (opcjonalnie)', 'class' => 'require_data']);
+                                echo $this->Form->control('surname', ['required' => false, 'placeholder' => ' Nazwisko (opcjonalnie)']);
                                 echo $this->Form->control('email', ['required' => true, 'placeholder' => ' Adres e-mail', 'class' => 'require_data']);
                                 echo $this->Form->control('phone_number', ['required' => true, 'placeholder' => ' Numer telefonu', 'class' => 'require_data']);
                                 echo $this->Form->control('password', ['required' => true, 'placeholder' => ' Hasło', 'class' => 'require_data']);
