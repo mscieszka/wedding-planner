@@ -125,7 +125,8 @@ class OffersTable extends Table
 
         $validator
             ->decimal('advance_payment')
-            ->allowEmptyString('advance_payment');
+            ->requirePresence('name', 'advance_payment')
+            ->notEmptyString('advance_payment');
 
         $validator
             ->scalar('website')

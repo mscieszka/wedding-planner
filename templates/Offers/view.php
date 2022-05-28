@@ -53,6 +53,7 @@
                     <td><?= $this->Number->format($offer->advance_payment) ?></td>
                 </tr>
             </table>
+
             <div class="text">
                 <strong><?= __('Description') ?></strong>
                 <blockquote>
@@ -98,6 +99,25 @@
                 </div>
                 <?php endif; ?>
             </div>
+            <div class="column-responsive column-80">
+                <div class="offers booking">
+                    <h3><?= __('Booking') ?></h3>
+                    <?= $this->Form->create($booking, ['url'=>['controller'=>'Bookings','action'=>'add']]) ?>
+                    <fieldset>
+                        <legend><?= __('Booking offer') ?></legend>
+                        <?php
+                        echo $this->Form->control('booking_date', ['options' => $active_offer_days, 'required' => true, 'empty' => '--choose--']);
+                        echo $this->Form->hidden('offer_id');
+                        ?>
+                    </fieldset>
+                    <?= $this->Form->button(__('Submit')) ?>
+                    <?= $this->Form->end() ?>
+                </div>
+            </div>
+
+
+
+
             <div class="related">
                 <h4><?= __('Related Catering Filters') ?></h4>
                 <?php if (!empty($offer->catering_filters)) : ?>
