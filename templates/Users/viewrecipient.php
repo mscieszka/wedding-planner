@@ -12,6 +12,9 @@
             <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <?php if(isset($current_user) && $current_user == $user->id): ?>
+                <?= $this->Html->link(__('Change Password'), ['action' => 'changePassword'], ['class' => 'side-nav-item']) ?>
+            <?php endif; ?>
         </div>
     </aside>
     <div class="column-responsive column-80">

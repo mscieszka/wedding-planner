@@ -81,8 +81,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <input placeholder="Cała Polska">
         </div>
     </div>
-    <input id="homepage-login" type="submit" name="" value="Profil">
+    <?= $this->Html->link(__('Profil'), ['controller' => 'Users', 'action' => 'profile'], ['class' => 'button', 'id' => 'homepage-login']) ?>
 </header>
+<?= $this->Flash->render() ?>
     <div class="content_wrapper_homepage">
         <div class="logo_div" >
             <?php  echo $this->Html->image('logo_full.svg', ['alt' => 'Wedding Planner']); ?>

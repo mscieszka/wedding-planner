@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Authentication\PasswordHasher\DefaultPasswordHasher;
 /**
  * Users Controller
  *
@@ -44,6 +45,23 @@ class UsersController extends AppController
         $this->Authorization->skipAuthorization();
 
         $this->set(compact('user'));
+        $layout = 'view';
+        if($user->get('account_type_id') == 1) {
+            $layout = 'viewrecipient';
+        }
+        $this->render($layout);
+    }
+
+    public function profile()
+    {
+        $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier(), [
+            'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
+        ]);
+        //'SavedUserBookings',
+        //$this->Authorization->authorize($user);
+        $this->Authorization->skipAuthorization();
+        $current_user = $user->id;
+        $this->set(compact('user', 'current_user'));
         $layout = 'view';
         if($user->get('account_type_id') == 1) {
             $layout = 'viewrecipient';
@@ -169,6 +187,26 @@ class UsersController extends AppController
         }
     }
 
+    public function changePassword(){
+
+        $this->Authorization->skipAuthorization();
+        if ($this->request->is('post')) {
+            $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier());
+            if((new DefaultPasswordHasher())->check($this->request->getData('old_password'),$user->password)) {
+                $user->password = $this->request->getData('password');
+                if($this->Users->save($user)) {
+                    $this->Flash->success("Password has been changed.");
+                    $redirect = $this->request->getQuery('redirect', [
+                        'controller' => 'pages',
+                        'action' => 'index',
+                    ]);
+                    return $this->redirect(['controller' => 'pages', 'action' => 'index',]);
+                }
+            }
+
+            $this->Flash->error(__("Wrong password"));
+        }
+    }
 
 
 }
