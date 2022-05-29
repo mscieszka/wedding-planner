@@ -14,16 +14,16 @@
 
     <?php endif; ?>
 
-    <?php if($account_type_id == null): ?>
+    <?php if($onlymyoffer == null): ?>
     <h3><?= __('Offers') ?></h3>
     <?php endif; ?>
 
-    <?php if($account_type_id == 1): ?>
-    <h3><?= __('My saved offers') ?></h3>
+    <?php if($onlymyoffer == 1): ?>
+        <h3><?= __('My offers') ?></h3>
     <?php endif; ?>
 
-    <?php if($account_type_id == 2): ?>
-        <h3><?= __('My offers') ?></h3>
+    <?php if($onlymyoffer == 2): ?>
+        <h3><?= __('My saved offers') ?></h3>
     <?php endif; ?>
 
     <div class="table-responsive">
@@ -48,7 +48,6 @@
 
                 <?php if ($onlymyoffer == 2): ?>
                     <?php if(!(in_array($offer->id, $saved_user_offers))): continue; ?>
-
                     <?php endif; ?>
                 <?php endif; ?>
 
@@ -64,9 +63,13 @@
                     <td><?= h($offer->created) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $offer->id]) ?>
-                        <?php if ($onlymyoffer == 1): ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $offer->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id)]) ?>
+                        <?php if ($onlymyoffer == 1 || $onlymyoffer== null): ?>
+
+                            <?php if($offer->user_id == $id_user_log):?>
+                                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $offer->id]) ?>
+                                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id)]) ?>
+                            <?php endif; ?>
+
                         <?php endif; ?>
 
                         <?php if($account_type_id == 1): ?>

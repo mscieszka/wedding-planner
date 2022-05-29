@@ -35,6 +35,7 @@ class OffersController extends AppController
 
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+        $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
 
         //then display all offers
         if ($onlymyoffer == null) {
@@ -54,7 +55,7 @@ class OffersController extends AppController
                 'user_id' => $this->request->getAttribute('identity')->getIdentifier()
             ])->toArray();
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
-        $this->set(compact('offers', 'onlymyoffer', 'account_type_id', 'saved_user_offers'));
+        $this->set(compact('offers', 'onlymyoffer', 'account_type_id', 'saved_user_offers', 'id_user_log'));
 
     }
 
@@ -226,6 +227,7 @@ class OffersController extends AppController
      */
     public function edit($id)
     {
+        $onlymyoffer = 1;
         $offer = $this->Offers->get($id, [
             'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
                 'MusicFilters', 'OfferActiveDays', 'Ratings',
@@ -233,6 +235,7 @@ class OffersController extends AppController
             ]
         ]);
         $this->Authorization->authorize($offer);
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         if ($this->request->is(['patch', 'post', 'put'])) {
             $offer = $this->Offers->patchEntity($offer, $this->request->getData());
             if ($this->Offers->save($offer)) {
@@ -247,7 +250,7 @@ class OffersController extends AppController
         $addresses = $this->Offers->Addresses->find('list', ['limit' => 200])->all();
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
         $hallTypes = $this->Offers->HallFilters->HallTypes->find('list', ['limit' => 200])->all();
-        $this->set(compact('offer', 'users', 'categories', 'addresses','provinces', 'hallTypes'));
+        $this->set(compact('offer', 'users', 'categories', 'addresses','provinces', 'hallTypes', 'account_type_id', 'onlymyoffer'));
         $offer_type_id = $offer->category_id;
         $template = 'add_hall';
         if ($offer_type_id == 2) {
