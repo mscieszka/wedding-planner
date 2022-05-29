@@ -91,6 +91,8 @@ class AddressesController extends AppController
             'contain' => [],
         ]);
         $this->Authorization->authorize($address);
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $address = $this->Addresses->patchEntity($address, $this->request->getData());
             if ($this->Addresses->save($address)) {
@@ -102,7 +104,7 @@ class AddressesController extends AppController
         }
         $users = $this->Addresses->Users->find('list', ['limit' => 200])->all();
         $provinces = $this->Addresses->Provinces->find('list', ['limit' => 200])->all();
-        $this->set(compact('address', 'users', 'provinces'));
+        $this->set(compact('address', 'users', 'provinces', 'account_type_id'));
     }
 
     /**
