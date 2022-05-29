@@ -1,0 +1,19 @@
+.top-nav {
+    max-width: 95% !important;
+}
+
+.top-nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.top-nav-links > div > a {
+    width: auto !important;
+    color: white;
+}
+
+.search-bar {
+    margin-left: 500px;
+}

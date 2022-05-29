@@ -393,9 +393,28 @@ input[type=submit]:hover
 #send-msg {
     margin-right: 0;
 }
+#old-pass{
+    margin: 0;
+    background: #707070;
+    box-shadow: 2px 2px 4px rgba(108, 86, 86, 0.49);
+    border-radius: 50px;
+    color: #1e1e1e;
+    border-bottom: none;
+    padding-left: 3em;
 
+}
+#old-pass::placeholder{
+    color: #212121;
+
+}
+
+#old-pass:hover
+{
+    cursor: pointer;
+    background-color: rgb(173, 173, 173);
+    transition: all 0.2s ease-out;
+}
 #new-pass{
-    width: 70%;
     margin: 0;
     background: #CEE5D0;
     box-shadow: 2px 2px 4px rgba(82, 145, 99, 0.49);
@@ -417,7 +436,6 @@ input[type=submit]:hover
     transition: all 0.2s ease-out;
 }
 #conf-new-pass{
-    width: 70%;
     margin: 0;
     background: #CEE5D0;
     box-shadow: 2px 2px 4px rgba(82, 145, 99, 0.49);
@@ -438,18 +456,24 @@ input[type=submit]:hover
     background-color: rgb(154, 202, 162);
     transition: all 0.2s ease-out;
 }
+
+
 .first-div > .ins-pass-p {
     align-self: flex-start;
     width: 70%;
     margin-left: 10em;
 }
+#password-reset-submit > div > input[type=submit] {
+    margin-right: 0 !important;
+}
 
 .pass-div {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 80%;
-    margin-bottom: 3vh;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    margin-bottom: 1rem;
 }
 .pass-img {
     color: #af2b02;
