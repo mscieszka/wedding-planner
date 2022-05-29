@@ -1,0 +1,300 @@
+.offer-container {
+    display: flex;
+    margin: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+}
+
+.offer-gallery,
+.offer-details,
+.offer-reservation,
+.offer-owner-contacts,
+.offer-opinions {
+    width: 1390px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.offer-gallery {
+    height: 620px;
+    background: white;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    justify-content: center;
+}
+
+.title-location {
+    display: flex;
+    grid-row: 1/2;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-location > h1,
+h3,
+h3 {
+    margin: 0;
+    align-items: center;
+}
+.title-location > h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.title-location > h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.offer-gallery-img {
+    grid-row: 2/3;
+    width: 1290px;
+    height: 480px;
+}
+
+.offer-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.offer-details {
+    padding: 2rem;
+    min-height: 300px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-reservation {
+    display: grid;
+    height: 200px;
+    background: #FEF6E7;
+    grid-template-rows: 50% 50%;
+}
+.offer-reservation>h2 {
+    grid-row: 1/2;
+    margin: 1rem 1rem 1rem 30px;
+}
+
+.offer-reservation .make-reservation{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    grid-row: 2/3;
+    margin-left:30px;
+    margin-right:50px;
+}
+
+.reservation-date{
+    width: 581px;
+    height: 43px;
+    background: #FFFFFF;
+    border: 1px solid #C1C1C1;
+    border-radius: 25px;
+    padding-inline: 15px;
+}
+
+.button-reserve{
+    width: 238px;
+    height: 45px;
+    background: #46755E;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+}
+
+.button-reserve:hover{
+    background: #5C9278;
+}
+
+
+.offer-owner-contacts {
+    height: 200px;
+    background: #fef6e7;
+    display: flex;
+    flex-direction: row;
+}
+
+.owner-img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.ownerimg {
+    width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 100px;
+    margin: 20px;
+}
+.owner-data {
+    margin: 30px;
+}
+
+.offer-opinions {
+    height: 100%;
+    background: #fef6e7;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.rating,
+.opinions {
+    margin-left: 30px;
+}
+.rate-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    width: 135px;
+    height: 110px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.white-box {
+    width: 1063px;
+    min-height: 220px;
+    border-radius: 25px;
+    background: white;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+textarea {
+    width: 800px;
+    height: 135px;
+    resize: none;
+    border-radius: 25px;
+    padding: 15px;
+    font-family: "poppins", serif;
+}
+
+.white-box > h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.input-button-box {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    flex-direction: row;
+}
+
+.send-opinion {
+    width: 120px;
+    height: 40px;
+    border-radius: 25px;
+    background: #d1e4cd;
+    border: none;
+    align-self: flex-end;
+    font-size: 16px;
+    font-weight: bold;
+}
+.send-opinion:hover {
+
+    background: #84B79E;
+}
+
+.opinion-box {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    width: 1063px;
+    height: auto;
+    border-radius: 25px;
+    background: white;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.user-img {
+    width: 64px;
+    height: 64px;
+}
+
+.userimg {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+.rest-of-opinion {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-box h4 {
+    font-weight: normal;
+}
+
+.offer-price {
+    display: flex;
+    align-items: first baseline;
+}
+
+.offer-price-amount {
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    margin-left: 1rem;
+}
+
+.offer-description-main {
+    font-size: 24px;
+}
+
+.offer-description-bold {
+    height: min-content;
+}
+
+.offer-description-bold h4 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.offer-address, .offer-website {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.offer-advance-payment {
+    display: flex;
+    align-items: first baseline;
+    gap: 1rem;
+}
+
+.offer-advance-payment-price {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.owner-profile-link a {
+    color: #46755e;
+    font-size: 20px;
+}
