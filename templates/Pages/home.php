@@ -47,15 +47,13 @@ if (!Configure::read('debug')) :
     );
 endif;
 
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -73,12 +71,16 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="search-bar">
         <div class="kind_of_search">
             <?php  echo $this->Html->image('lupa.svg', ['alt' => 'Wedding Planner']); ?>
-            <input placeholder="Czego szukasz ?">
+            <label>
+                <input placeholder="Czego szukasz ?">
+            </label>
         </div>
         |
         <div class="place_search">
             <?php  echo $this->Html->image('miejsce.svg', ['alt' => 'Wedding Planner']); ?>
-            <input placeholder="Cała Polska">
+            <label>
+                <input placeholder="Cała Polska">
+            </label>
         </div>
     </div>
     <?php if($account_type_id == 1): ?>
