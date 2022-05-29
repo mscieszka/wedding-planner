@@ -21,7 +21,7 @@
         <div class="offers form content">
             <?= $this->Form->create($offer) ?>
             <fieldset>
-                <legend><?= __('Add Offer of Music') ?></legend>
+                <legend><?= __('Offer of Music') ?></legend>
 <!--                TODO: match form fields with prototype-->
 <!--                --><?php //echo $this->Form->control('user_id', ['options' => $users]); ?>
 <!--                --><?php //echo $this->Form->control('advance_payment'); ?>
