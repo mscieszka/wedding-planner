@@ -8,10 +8,24 @@
 ?>
 <div class="offers index content">
     <?php if($account_type_id == 2): ?>
-        <?= $this->Html->link(__('New Offer'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-        <?= $this->Html->link(__('My Offer'), ['action' => 'index',1], ['class' => 'button float-right']) ?>
+        <?= $this->Html->link(__('New Offer of Catering'), ['action' => 'add', 3 ], ['class' => 'button float-right']) ?>
+        <?= $this->Html->link(__('New Offer of Music'), ['action' => 'add', 2], ['class' => 'button float-right']) ?>
+        <?= $this->Html->link(__('New Offer of Hall'), ['action' => 'add', 1], ['class' => 'button float-right']) ?>
+
     <?php endif; ?>
+
+    <?php if($account_type_id == null): ?>
     <h3><?= __('Offers') ?></h3>
+    <?php endif; ?>
+
+    <?php if($account_type_id == 1): ?>
+    <h3><?= __('My saved offers') ?></h3>
+    <?php endif; ?>
+
+    <?php if($account_type_id == 2): ?>
+        <h3><?= __('My offers') ?></h3>
+    <?php endif; ?>
+
     <div class="table-responsive">
         <table>
             <thead>

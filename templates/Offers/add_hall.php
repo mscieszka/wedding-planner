@@ -11,15 +11,17 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Offers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <!--<h4 class="heading"><?= __('Actions') ?></h4> -->
+           <!-- <?= $this->Html->link(__('List Offers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?> -->
         </div>
     </aside>
     <div class="column-responsive column-80">
+        <?= $this->Html->link(__('New Offer of Catering'), ['action' => 'add', 3 ], ['class' => 'button float-right']) ?>
+        <?= $this->Html->link(__('New Offer of Music'), ['action' => 'add', 2], ['class' => 'button float-right']) ?>
         <div class="offers form content">
             <?= $this->Form->create($offer) ?>
             <fieldset>
-                <legend><?= __('Add Offer') ?></legend>
+                <legend><?= __('Add Offer of Hall') ?></legend>
 <!--                TODO: match form fields with prototype-->
 <!--                --><?php //echo $this->Form->control('user_id', ['options' => $users]); ?>
 <!--                --><?php //echo $this->Form->control('advance_payment'); ?>

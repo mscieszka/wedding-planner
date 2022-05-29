@@ -149,7 +149,7 @@ class OffersController extends AppController
         $offer = $this->Offers->newEmptyEntity();
         $this->Authorization->authorize($offer);
 
-
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         if ($this->request->is('post')) {
 
 
@@ -206,7 +206,7 @@ class OffersController extends AppController
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->where(['id' => $offer_type_id]);
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
         $hallTypes = $this->Offers->HallFilters->HallTypes->find('list', ['limit' => 200])->all();
-        $this->set(compact('offer', 'users', 'categories', 'provinces', 'hallTypes'));
+        $this->set(compact('offer', 'users', 'categories', 'provinces', 'hallTypes', 'account_type_id'));
         $template = 'add_hall';
         if ($offer_type_id == 2) {
             $template = 'add_music';

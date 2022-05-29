@@ -8,7 +8,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AddressesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AddressesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OffersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OffersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/add_catering.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/add_catering.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/add_hall.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/add_hall.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/add_music.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/add_music.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
@@ -167,7 +171,7 @@
       <workItem from="1653721055132" duration="4785000" />
       <workItem from="1653758523779" duration="13015000" />
       <workItem from="1653842274292" duration="5227000" />
-      <workItem from="1653859556452" duration="2879000" />
+      <workItem from="1653859556452" duration="4740000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>
@@ -260,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653862162724</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="naprawione warningi">
+      <created>1653863135383</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1653863135383</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
