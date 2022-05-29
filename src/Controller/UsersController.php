@@ -20,12 +20,15 @@ class UsersController extends AppController
     public function index()
     {
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
+
         $this->paginate = [
             'contain' => ['AccountTypes'],
         ];
         $users = $this->paginate($this->Users);
 
-        $this->set(compact('users'));
+        $this->set(compact('users', 'account_type_id'));
     }
 
     /**
@@ -190,6 +193,10 @@ class UsersController extends AppController
     public function changePassword(){
 
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+        $this->set(compact('account_type_id'));
+
+
         if ($this->request->is('post')) {
             $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier());
             if((new DefaultPasswordHasher())->check($this->request->getData('old_password'),$user->password)) {
@@ -200,6 +207,8 @@ class UsersController extends AppController
                         'controller' => 'pages',
                         'action' => 'index',
                     ]);
+
+
                     return $this->redirect(['controller' => 'pages', 'action' => 'index',]);
                 }
             }
