@@ -6,21 +6,80 @@
 ?>
 <?= $this->Html->css('viewUser') ?>
 <div class="row">
-    <aside class="column">
+    <!--<aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
             <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
             <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-            <?php if(isset($current_user) && $current_user == $user->id): ?>
-                <?= $this->Html->link(__('Change Password'), ['action' => 'changePassword'], ['class' => 'side-nav-item']) ?>
-            <?php endif; ?>
         </div>
-    </aside>
+    </aside>-->
+    <nav>
+        <?= $this->Html->image('logo.svg', ['alt' => 'Wedding Planner']); ?>
+    </nav>
     <div class="column-responsive column-80">
+        <div>Tutaj będą informacje profilowe zrobione przez Filipa</div>
+        <div class="bookmarks_wrapper">
+            <div class="current_bookmarks">Zarządzanie ofertami</div>
+            <div><?= $this->Html->link(__('Otrzymane oceny'), ['action' => '']) ?></div>
+            <div><?= $this->Html->link(__('Historia płatności'), ['action' => '']) ?></div>
+        </div>
         <div class="users view content">
-            <h3><?= h($user->name) ?></h3>
+            <div style="display: flex; justify-content: space-around">
+                <div class="notification">
+                    <h3>Powiadomienia</h3>
+                    <h5>Uwaga, masz <span style="color: red">4</span> zbliżające się rezerwacje</h5>
+                    <div class="notification_container">
+                        <?php //foreach ($zmienna->pole as $zmienna2) : ?>
+                            Nowa rezerwacja usługi <span style="color: red">Hotel Utopia</span> przez użytkownika <span style="color: red">Katarzyna Nowak</span> w terminie <span style="color: red">01.01.1970</span>
+                            <div class="notification_buttons_wrapper">
+                                <div class="reject"><?= $this->Html->link(__('Odrzuć'), ['action' => '']) ?></div>
+                                <div class="accept"><?= $this->Html->link(__('Dodaj termin do kalendarza'), ['action' => '']) ?></div>
+                            </div>
+                        <?//php endforeach; ?>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <div class="calendar_header">
+                        <h3>Kalendarz</h3>
+                        <div><div style="width: 2em; height: 2em; border-radius: 50%; background-color: #ff6666"></div><span style="font-size: 1.2em;">Termin zajęty</span></div>
+                    </div>
+                    <div class="calendar_legend">
+                        <div><div style="width: 1.5em; height: 1.5em; border-radius: 50%; background-color: #fff; border: 1px solid #000;"></div>Hotel Utopia</div>
+                        <div><div style="width: 1.5em; height: 1.5em; border-radius: 50%; background-color: #70947A"></div>La Bocheme Restaurant</div>
+                    </div>
+                    <div class="calendar_box">
+                        Styczeń
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer_container">
+                <div class="offer_container_header">
+                    <h3>Oferty użytkownika</h3>
+                    <div><?= $this->Html->link(__('Dodaj ofertę'), ['action' => '']) ?></div>
+                </div>
+                <div class="offer_container_wrapper">
+                    <div class="offer_container_wrapper_image">Zdjęcie</div>
+                    <div class="offer_container_wrapper_description">
+                        <div class="offer_container_wrapper_title">
+                            <div><span style="font-weight: bold;">La Boheme Restauranr</span></div>
+                            <div>Kraków, Małopolskie</div>
+                        </div>
+                        <div class="offer_container_wrapper_stars">*****</div>
+                        <div class="offer_container_wrapper_description">TWOJE WYMARZONE WESELE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                    <div class="offer_container_edit_button">
+                        <p><?= $this->Html->link(__('Edytuj ofertę'), ['action' => '']) ?></p>
+                        <p><?= $this->Html->link(__('Usuń ofertę'), ['action' => '']) ?></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+<!--            <h3><?= h($user->name) ?> To jest strona usługodawcy</h3>
             <table>
                 <tr>
                     <th><?= __('Email') ?></th>

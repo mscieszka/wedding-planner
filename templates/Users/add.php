@@ -5,7 +5,7 @@
  * @var \Cake\Collection\CollectionInterface|string[] $accountTypes
  */
 ?>
-<?= $this->Html->css('add') ?>
+<?= $this->Html->css('addUser') ?>
 <div class="row">
     <!--<aside class="column">
         <div class="side-nav">
@@ -26,8 +26,8 @@
                         <div class="form_column">
                             <?php
                                 echo $this->Form->hidden('account_type_id');
-                                echo $this->Form->control('name', ['required' => false, 'placeholder' => ' Imię (opcjonalnie)']);
-                                echo $this->Form->control('surname', ['required' => false, 'placeholder' => ' Nazwisko (opcjonalnie)']);
+                                echo $this->Form->control('name', ['required' => true, 'placeholder' => ' Imię', 'class' => 'require_data']);
+                                echo $this->Form->control('surname', ['required' => true, 'placeholder' => ' Nazwisko', 'class' => 'require_data']);
                                 echo $this->Form->control('email', ['required' => true, 'placeholder' => ' Adres e-mail', 'class' => 'require_data']);
                                 echo $this->Form->control('phone_number', ['required' => true, 'placeholder' => ' Numer telefonu', 'class' => 'require_data']);
                                 echo $this->Form->control('password', ['required' => true, 'placeholder' => ' Hasło', 'class' => 'require_data']);
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="form_end_content">
-                        <label style="color: red;"><input type="checkbox" name="">Akceptuję regulamin<br></label>
+                        <label style="color: red;"><input type="checkbox" name=""><p>Akceptuję regulamin</p></label>
                         <?= $this->Form->button(__('Zarejestruj się')) ?>
                     </div>
                 </div>

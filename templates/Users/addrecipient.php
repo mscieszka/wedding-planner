@@ -5,7 +5,7 @@
  * @var \Cake\Collection\CollectionInterface|string[] $accountTypes
  */
 ?>
-<?= $this->Html->css('add') ?>
+<?= $this->Html->css('addUser') ?>
 <div class="row">
     <!--<aside class="column">
         <div class="side-nav">

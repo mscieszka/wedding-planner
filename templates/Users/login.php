@@ -1,7 +1,7 @@
-<?= $this->Html->css('login') ?>
+<?= $this->Html->css('loginUser') ?>
 <div class="users form">
     <?= $this->Flash->render() ?>
-    <img src="../../webroot/img/logo_full.svg" alt=""><!--nie mogę wczytać tej grafiki-->
+    <?php // echo $this->Html->image('logo_full.svg', ['alt' => 'Wedding Planner']); ?>
     <?= $this->Form->create() ?>
     <fieldset>
         <?= $this->Form->control('email', ['required' => true, 'placeholder' => 'Wpisz adres e-mail']) ?>
