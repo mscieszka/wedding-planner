@@ -4,11 +4,14 @@
  * @var \App\Model\Entity\Category $category
  */
 ?>
+
+
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Categories'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <!--<h4 class="heading"><?= __('Actions') ?></h4>-->
+           <!-- <h4> <?= $this->Html->link(__('List Categories'), ['action' => 'index'], ['class' => 'side-nav-item']) ?> </h4> -->
 
         </div>
     </aside>
