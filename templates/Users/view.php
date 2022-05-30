@@ -6,17 +6,10 @@
 ?>
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
 <div class="row">
-    <!--<aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>-->
     <nav>
-        <?= $this->Html->image('logo.svg', ['alt' => 'Wedding Planner']); ?>
+        <a href="/">
+            <?= $this->Html->image('logo.svg', ['alt' => 'Wedding Planner logo']); ?>
+        </a>
     </nav>
     <div class="column-responsive column-80 " >
         <div class="provider_container">
@@ -44,9 +37,8 @@
             </div>
             </div>
                 <div class="provider_edit">
-                    <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item button float-right']) ?>
+                    <?= $this->Html->link(__('Edytuj profil'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item button float-right']) ?>
                 </div>
-
         </div>
         <div class="bookmarks_wrapper">
             <div class="current_bookmarks">Zarządzanie ofertami</div>
