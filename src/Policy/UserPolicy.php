@@ -32,6 +32,7 @@ class UserPolicy extends GlobalPolicy
      */
     public function canEdit(IdentityInterface $user, User $resource)
     {
+        return $this->isLogon($user);
     }
 
     /**

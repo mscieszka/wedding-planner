@@ -57,6 +57,15 @@ return static function (RouteBuilder $routes) {
         $builder->connect('/offers/band', ['controller' => 'categories', 'action' => 'view', 2]);
         $builder->connect('/offers/catering', ['controller' => 'categories', 'action' => 'view', 3]);
 
+        $builder->connect('/users', ['controller' => 'users', 'action' => 'profile']);
+        $builder->connect('/categories', ['controller' => 'Pages', 'action' => 'display','home']);
+        $builder->connect('/addresses', ['controller' => 'users', 'action' => 'profile']);
+        $builder->connect('/addresses/add', ['controller' => 'users', 'action' => 'profile']);
+        $builder->connect('/addresses/edit', ['controller' => 'users', 'action' => 'profile']);
+        $builder->connect('/offers', ['controller' => 'users', 'action' => 'profile']);
+
+
+
         /*
          * ...and connect the rest of 'Pages' controller's URLs.
          */
