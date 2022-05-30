@@ -12,16 +12,15 @@
                     <?= $this->Html->link(__('Edytuj adres'), ['action' => 'edit', $address->id], ['class' => 'side-nav-item']) ?>
                 <?php endif; ?>
             <?php endif; ?>
-            <?= $this->Html->link(__('Znajdź inne adresy'), ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('Pokaż moje adresy'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-
-
-
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="addresses view content">
             <table>
+                <tr>
+                    <th><?= __('Miejscowość') ?></th>
+                    <td><?= h($address->city) ?></td>
+                </tr>
                 <tr>
                     <th><?= __('Ulica') ?></th>
                     <td><?= h($address->street) ?></td>
@@ -33,10 +32,6 @@
                 <tr>
                     <th><?= __('Kod pocztowy') ?></th>
                     <td><?= h($address->postal_code) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Miejscowość') ?></th>
-                    <td><?= h($address->city) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Województwo') ?></th>
