@@ -1,0 +1,271 @@
+body {
+    background: #e4cc9f;
+    display: grid;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 100px;
+    display: grid;
+    grid-row: 1/2;
+    grid-template-columns: 40% 40% 20%;
+}
+
+header.searchbar {
+    grid-column: 2/3;
+}
+
+header.profile-button {
+    grid-column: 3/4;
+}
+
+header > a.logo {
+    grid-column: 1/2;
+}
+
+a > img.logo-img {
+    width: 499px;
+    height: 99px;
+}
+
+a.profile-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+a > img.profile-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.searchbar > .search-input {
+    height: 30%;
+    align-self: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+}
+
+.searchbar > .city-field {
+    height: 30%;
+    align-self: center;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+}
+
+.searchbar > .city-field, .search-input {
+    font-family: "Segoe UI", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+div.rest {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-row: 2/3;
+    margin-top: 15px;
+}
+
+.rest > .sidebar {
+    margin-inline: 30px;
+    display: flex;
+    grid-row: 1/2;
+    flex-direction: column;
+}
+
+.rest > .offers {
+    background: white;
+    border-radius: 25px;
+    grid-column: 2/3;
+    margin-inline: 20px;
+    padding: 20px;
+    width: 1100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.rest > .offers > .single-offer-1 {
+    background: #fef6e7;
+    display: grid;
+    grid-template-columns: 35% 50% 15%;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
+    width: 1000px;
+    height: 180px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.rest > .offers > .single-offer-2 {
+    background: white;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
+    width: 1000px;
+    max-height: 200px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.offer-img {
+    width: 300px;
+    height: 170px;
+    grid-column: 1/2;
+}
+
+.offer-img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.offer-description {
+    height: 180px;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.offer-description > h3 {
+    font-family: "Segoe UI", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.offer-description > h1 {
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+}
+.offer-description > h1 {
+    font-family: "Segoe UI", serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.fav-ratings {
+    height: 170px;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.offer-title {
+    font-family: "poppins", serif;
+    font-weight: 600;
+    font-size: 20px;
+    grid-row: 1/2;
+}
+
+.promo-offers, .regular-offers {
+    font-family: "poppins", serif;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.rates-count {
+    grid-row: 2/3;
+}
+
+.short-desc {
+    grid-row: 3/4;
+}
+
+/*--------- sidebar ----------*/
+
+.sidebar * {
+    line-height: 1;
+}
+
+.sidebar > .category {
+    margin-bottom: 10px;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #6f6454;
+}
+
+.sidebar > select {
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 25px;
+    padding-left: 10px;
+    border: none;
+}
+
+.sidebar > .filters {
+    background: white;
+    border-radius: 25px;
+    width: 220px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 10px 10px 2rem;
+}
+
+.filters h3 {
+    margin-top: 1.5rem;
+    font-size: 20px;
+}
+
+.filters h4 {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.filter_accommodations_count, .filter_people_count, .filter_extras,
+.filter_cuisine_type, .filter_catering_additional_info,
+.filter_dj_music_type, .filter_dj_additional_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.checkbox-pair {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.checkbox-pair label {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 0.4rem;
+}
+
+#label_sorting_type {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+}
