@@ -8,10 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/add_catering.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/add_catering.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/add_hall.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/add_hall.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/add_music.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/add_music.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OffersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OffersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RatingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RatingsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Offers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
@@ -136,6 +135,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -171,6 +172,7 @@
       <workItem from="1653758523779" duration="13015000" />
       <workItem from="1653842274292" duration="5227000" />
       <workItem from="1653859556452" duration="6581000" />
+      <workItem from="1653867952829" duration="4618000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>

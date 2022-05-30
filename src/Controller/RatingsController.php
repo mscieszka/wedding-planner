@@ -30,20 +30,22 @@ class RatingsController extends AppController
     /**
      * Index method
      *
-     * @return \Cake\Http\Response|null|void Renders view
+     * @return \App\Model\Entity\Rating[]|\Cake\Datasource\ResultSetInterface|\Cake\Http\Response|void|null
      */
 
 
+    //wszystkie oceny dla danej oferty od razu
 
-    public function index($ratings = null)
+    public function index($id_offer = null)
     {
         $this->Authorization->skipAuthorization();
-
+        $ratings = null;
         //then display all ratings
-        if($ratings == null){
-            $ratings = $this->paginate($this->Ratings);
+        if($id_offer != null){
+            $ratings = $this->paginate($this->Ratings->find()->where(['offer_id' => $id_offer]));
         }
-        $this->set(compact('ratings'));
+
+        //$this->set(compact('ratings'));
     }
 
 

@@ -69,10 +69,26 @@ class OffersController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
+
+
     public function view($id)
     {
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
+
+
+        //then display ratings for this offer
+
+
+        $object = new RatingsController();
+        $ratings = null;
+        if($id != null){
+            $ratings = $object->Ratings->find()->where(['offer_id' => $id]);
+        }
+
+
+
 
 
         $offer = $this->Offers->get($id, [
@@ -92,7 +108,7 @@ class OffersController extends AppController
         $booking = $this->getTableLocator()->get('Bookings')->newEmptyEntity();
         $booking->offer_id = $offer->id;
 
-        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking'));
+        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings'));
 
     }
 

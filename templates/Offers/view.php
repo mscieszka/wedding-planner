@@ -100,63 +100,32 @@
                     <button class="send-opinion">Dodaj</button>
                 </div>
             </div>
+
+
+
+            <?php foreach ($ratings as $rating): ?>
             <div class="opinion-box">
                 <a class="user-img">
                     <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg']) ?>
                 </a>
                 <div class="rest-of-opinion">
                     <div class="upper-box">
-                        <h3>Anna Nowak</h3>
-                        <h4>La Boheme Restaurant</h4>
-                        <h4>2022/04/06</h4>
+                        <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'view', $rating->user->id]) : '' ?></h3>
+                        <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
+                        <h4><?= h($rating->opinion_date) ?></h4>
                     </div>
                     <div class="opinion-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, porro ullam. Inventore, quidem?
-                            Placeat adipisci natus, deserunt deleniti quibusdam earum aspernatur illo quae, commodi
-                            similique sit, veritatis numquam libero! Consectetur sequi natus laudantium ipsum corrupti velit
-                            voluptatum excepturi possimus omnis tenetur blanditiis, hic optio inventore accusamus voluptate,
-                            culpa consequatur facere expedita veniam eveniet libero quod odio nihil saepe! Iste, error!</p>
+                        <p><strong><?= __('Description') ?></strong>
+                        <blockquote>
+                            <?= $this->Text->autoParagraph(h($rating->description)); ?>
+                        </blockquote></p>
                     </div>
                 </div>
             </div>
-            <div class="opinion-box">
-                <a class="user-img">
-                    <?= $this->Html->image('userProfileImage/userProfileImage2.jpg', ['alt' => 'User profile image', 'class' => 'userimg']) ?>
-                </a>
-                <div class="rest-of-opinion">
-                    <div class="upper-box">
-                        <h3>Anna Nowak</h3>
-                        <h4>La Boheme Restaurant</h4>
-                        <h4>2022/04/06</h4>
-                    </div>
-                    <div class="opinion-content">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In earum, sunt autem architecto ullam
-                            saepe. Nulla esse sint ipsum praesentium.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="opinion-box">
-                <a class="user-img">
-                    <?= $this->Html->image('userProfileImage/userProfileImage3.jpg', ['alt' => 'User profile image', 'class' => 'userimg']) ?>
-                </a>
-                <div class="rest-of-opinion">
-                    <div class="upper-box">
-                        <h3>Anna Nowak</h3>
-                        <h4>La Boheme Restaurant</h4>
-                        <h4>2022/04/06</h4>
-                    </div>
-                    <div class="opinion-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsam nemo sed. Veniam ipsa
-                            quos, nobis laudantium dolore quam, in neque minus facilis ullam, sint sapiente odit quo aliquam
-                            quae hic accusamus delectus ipsam autem consectetur earum velit eum. Officia, quasi nihil
-                            commodi amet veniam quas incidunt provident quis expedita deserunt deleniti rem quaerat
-                            assumenda corrupti tempora vero dolorum eligendi reiciendis esse vel eius. Delectus atque quo
-                            voluptas ex tenetur fuga voluptatum assumenda laboriosam ipsam, tempora ratione illo, architecto
-                            beatae odit iste perspiciatis. Repellendus ratione reiciendis architecto aliquid ex saepe, et
-                            quis velit aliquam tenetur nostrum iure molestiae quia obcaecati.</p>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
+
+
+
         </div>
     </div>
 </div>
