@@ -69,15 +69,15 @@ endif;
 <body>
 <header>
     <div class="search-bar">
-        <div class="kind_of_search">
-            <?php  echo $this->Html->image('lupa.svg', ['alt' => 'Wedding Planner']); ?>
+        <div class="search-description">
+            <?= $this->Html->image('lupa.svg', ['alt' => 'Provide search description']); ?>
             <label>
                 <input placeholder="Czego szukasz ?">
             </label>
         </div>
-        |
+        <div class="search-separator">|</div>
         <div class="place_search">
-            <?php  echo $this->Html->image('miejsce.svg', ['alt' => 'Wedding Planner']); ?>
+            <?php  echo $this->Html->image('miejsce.svg', ['alt' => 'Provide place to search']); ?>
             <label>
                 <input placeholder="Cała Polska">
             </label>
@@ -96,22 +96,22 @@ endif;
         <div class="logo_div" >
             <?php  echo $this->Html->image('logo_full.svg', ['alt' => 'Wedding Planner']); ?>
         </div>
-    <div class="categories-nav services">
-        <div class ="serv">
-        <div  class="service-kind">
-            <?php  echo $this->Html->image('sale.svg', ['alt' => 'Wedding Planner']); ?>
-            <?= $this->Html->link(__('Sale'), ['controller' => 'Categories', 'action' => 'view', 1],['class' => 'btn-category'] )?>
+        <div class="categories-nav services">
+            <div class ="serv">
+                <div  class="service-type">
+                    <?php  echo $this->Html->image('sale.svg', ['alt' => 'Wedding Planner']); ?>
+                    <?= $this->Html->link(__('Sale'), ['controller' => 'Categories', 'action' => 'view', 1],['class' => 'btn-category'] )?>
+                </div>
+               <div  class="service-type">
+                   <?php  echo $this->Html->image('dj.svg', ['alt' => 'Wedding Planner']); ?>
+                   <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['controller' => 'Categories', 'action' => 'view', 2],['class' => 'btn-category'] )?>
+               </div>
+                <div  class="service-type">
+                    <?php  echo $this->Html->image('catering.svg', ['alt' => 'Wedding Planner', 'class' => 'catering-img']); ?>
+                <?= $this->Html->link(__('Catering'), ['controller' => 'Categories', 'action' => 'view', 3],['class' => 'btn-category'] )?>
+                </div>
+            </div>
         </div>
-       <div  class="service-kind">
-           <?php  echo $this->Html->image('dj.svg', ['alt' => 'Wedding Planner']); ?>
-           <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['controller' => 'Categories', 'action' => 'view', 2],['class' => 'btn-category'] )?>
-       </div>
-        <div  class="service-kind">
-            <?php  echo $this->Html->image('catering.svg', ['alt' => 'Wedding Planner', 'class' => 'catering-img']); ?>
-        <?= $this->Html->link(__('Catering'), ['controller' => 'Categories', 'action' => 'view', 3],['class' => 'btn-category'] )?>
-        </div>
-    </div>
-    </div>
     </div>
 </body>
 </html>

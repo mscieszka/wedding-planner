@@ -4,9 +4,7 @@
 
 .top-nav-links {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-
 }
 
 .top-nav-links > div > a {

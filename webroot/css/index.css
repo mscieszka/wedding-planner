@@ -325,7 +325,6 @@ input[type="submit"]:hover {
 .actions-div {
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-self: end;
     justify-content: end;
     padding: 3em;
@@ -452,7 +451,6 @@ input[type="submit"]:hover {
 
 .pass-div {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     width: 100%;
     align-content: center;
@@ -482,49 +480,58 @@ input[type="submit"]:hover {
 
 .logo_div {
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
 .search-bar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     background: #ffffff;
     border-radius: 50px;
-    width: 30%;
-    height: 4.5vh;
-    align-items: center;
-    align-content: center;
+    max-width: 680px;
     margin: 1vh 1vw;
     padding: 0.5vh 0.5vw;
 }
 
-.search-bar > div > input {
+.search-bar input {
     border: none;
     align-items: center;
     align-content: center;
+    margin-bottom: 0;
+}
+
+.search-bar label {
+    margin-bottom: 0;
+}
+
+.search-separator {
+    font-size: 26px;
+
 }
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: right;
     margin-bottom: 0;
 }
 
-.kind_of_search {
+.search-description {
     display: flex;
-    flex-direction: row;
     justify-content: start;
     width: 59%;
     align-items: center;
     align-content: center;
 }
 
+.search-description > img {
+    margin-bottom: 0;
+}
+
+.search-description > input {
+    margin-bottom: 0;
+}
+
 .place_search {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -533,7 +540,6 @@ header {
 .services {
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     justify-self: center;
 }
@@ -542,16 +548,14 @@ header {
     width: 100%;
     margin: 0 20vw;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     justify-self: center;
 }
 
-.service-kind {
+.service-type {
     width: 24%;
     height: 8vh;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     background: #ffffff;
@@ -560,26 +564,23 @@ header {
     margin: 10px;
 }
 
-.service-kind > img {
-    /*padding-top: 2vh;*/
-    /*padding-bottom: 2vh;*/
+.service-type > img {
     padding-left: 1vw;
     height: 6vh;
     margin-bottom: 0;
 }
 
-.service-kind > p {
+.service-type > p {
     padding-right: 1vw;
 }
 
 input {
     background-color: white;
-    border-color: white;
-    border: none;
+    border: none white;
     align-self: center;
 }
 
-.service-kind:hover {
+.service-type:hover {
     cursor: pointer;
     background-color: #eee;
     transition: all 0.2s ease-out;
@@ -593,15 +594,7 @@ header {
     margin-bottom: 0;
 }
 
-.kind_of_search > img {
-    margin-bottom: 0;
-}
-
 .place_search > input {
-    margin-bottom: 0;
-}
-
-.kind_of_search > input {
     margin-bottom: 0;
 }
 

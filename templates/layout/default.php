@@ -46,7 +46,7 @@
         </div>
 
         <div class="search-bar">
-            <div class="kind_of_search">
+            <div class="search-description">
                 <?php  echo $this->Html->image('lupa.svg', ['alt' => 'Wedding Planner']); ?>
                 <label>
                     <input placeholder="Czego szukasz ?">
