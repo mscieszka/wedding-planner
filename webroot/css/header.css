@@ -11,22 +11,3 @@
     width: auto !important;
     color: white;
 }
-
-.search-bar {
-    margin-left: 500px;
-}
-
-.kind_of_search > label {
-    margin-bottom: 0 !important;
-}
-.place_search > label {
-    margin-bottom: 0 !important;
-}
-.kind_of_search > label > input {
-    margin-bottom: 0 !important;
-    border: 0;
-}
-.place_search > label > input {
-    margin-bottom: 0 !important;
-    border: 0;
-}
