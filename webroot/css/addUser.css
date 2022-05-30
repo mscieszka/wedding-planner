@@ -161,13 +161,6 @@ input:hover
     align-items: center;
 }
 
-.form_end_content label p
-{
-    /*width: 30%;*/
-    display: flex;
-    justify-content: end;
-}
-
 input[type=checkbox]
 {
     width: 1em;

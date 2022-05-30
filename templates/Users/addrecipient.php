@@ -40,7 +40,9 @@
                         //                    echo $this->Form->control('confirmed_email');
                         //                    echo $this->Form->control('account_type_id', ['options' => $accountTypes]);
                         ?>
-                        <input type="password" name="" placeholder=" Potwierdź hasło" class="require_data">
+                        <label>
+                            <input type="password" name="" placeholder=" Potwierdź hasło" class="require_data">
+                        </label>
                     </div>
                 </div>
                 <div class="form_end_content">

@@ -40,14 +40,14 @@ h3 {
     align-items: center;
 }
 .title-location > h3 {
-    font-family: "Poppins";
+    font-family: "Poppins", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
 }
 
 .title-location > h1 {
-    font-family: "Poppins";
+    font-family: "Poppins", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -110,7 +110,7 @@ h3 {
     background: #46755E;
     border-radius: 25px;
     color: white;
-    font-family: 'Poppins';
+    font-family: 'Poppins', serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;

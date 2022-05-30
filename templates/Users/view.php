@@ -37,7 +37,7 @@
                                 <div class="reject"><?= $this->Html->link(__('Odrzuć'), ['action' => '']) ?></div>
                                 <div class="accept"><?= $this->Html->link(__('Dodaj termin do kalendarza'), ['action' => '']) ?></div>
                             </div>
-                        <?//php endforeach; ?>
+                        <?php //php endforeach; ?>
                     </div>
                 </div>
                 <div class="calendar">

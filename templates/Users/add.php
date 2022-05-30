@@ -35,7 +35,9 @@
                             ?>
                         </div>
                         <div class="form_column">
-                            <input type="password" name="" placeholder=" Potwierdź hasło" class="require_data">
+                            <label>
+                                <input type="password" name="" placeholder=" Potwierdź hasło" class="require_data">
+                            </label>
                             <?php
                                 echo $this->Form->control('company_name', ['required' => true, 'placeholder' => ' Nazwa działalności', 'class' => 'require_data']);
                                 echo $this->Form->control('krs', ['required' => true, 'placeholder' => ' KRS', 'class' => 'require_data']);
@@ -48,7 +50,7 @@
                         </div>
                     </div>
                     <div class="form_end_content">
-                        <label style="color: red;"><input type="checkbox" name=""><p>Akceptuję regulamin</p></label>
+                        <label style="color: red;"><input type="checkbox" name="">Akceptuję regulamin</label>
                         <?= $this->Form->button(__('Zarejestruj się')) ?>
                     </div>
                 </div>
