@@ -1,75 +1,55 @@
-
-
 <?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Offer[]|\Cake\Collection\CollectionInterface $offers
  */
 ?>
+<?= $this->Html->css('offersIndex') ?>
 <div class="offers index content">
     <?php if($account_type_id == 2): ?>
-        <?= $this->Html->link(__('New Offer of Catering'), ['action' => 'add', 3 ], ['class' => 'button float-right']) ?>
-        <?= $this->Html->link(__('New Offer of Music'), ['action' => 'add', 2], ['class' => 'button float-right']) ?>
-        <?= $this->Html->link(__('New Offer of Hall'), ['action' => 'add', 1], ['class' => 'button float-right']) ?>
-
+        <h3>Dodaj ofertę z kategorii:</h3>
+        <div class="add-offer-buttons">
+            <?= $this->Html->link(__('Katering'), ['action' => 'add', 3 ], ['class' => 'button float-right']) ?>
+            <?= $this->Html->link(__('DJ / Zespół muzyczny'), ['action' => 'add', 2], ['class' => 'button float-right']) ?>
+            <?= $this->Html->link(__('Sale'), ['action' => 'add', 1], ['class' => 'button float-right']) ?>
+        </div>
     <?php endif; ?>
 
     <?php if($onlymyoffer == null): ?>
-    <h3><?= __('Offers') ?></h3>
+    <h3><?= __('Oferty') ?></h3>
     <?php endif; ?>
 
     <?php if($onlymyoffer == 1): ?>
-        <h3><?= __('My offers') ?></h3>
+        <h3><?= __('Moje oferty') ?></h3>
     <?php endif; ?>
 
     <?php if($onlymyoffer == 2): ?>
-        <h3><?= __('My saved offers') ?></h3>
+        <h3><?= __('Ulubione oferty') ?></h3>
     <?php endif; ?>
 
     <div class="table-responsive">
         <table>
             <thead>
-            <tr>
-                <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('user_id') ?></th>
-                <th><?= $this->Paginator->sort('category_id') ?></th>
-                <th><?= $this->Paginator->sort('address_id') ?></th>
-                <th><?= $this->Paginator->sort('name') ?></th>
-                <th><?= $this->Paginator->sort('price') ?></th>
-                <th><?= $this->Paginator->sort('advance_payment') ?></th>
-                <th><?= $this->Paginator->sort('website') ?></th>
-                <th><?= $this->Paginator->sort('created') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
+                <tr>
+                    <th><?= $this->Paginator->sort('name', 'Oferta') ?></th>
+                    <th><?= $this->Paginator->sort('price', 'Cena') ?></th>
+                </tr>
             </thead>
             <tbody>
             <?php foreach ($offers as $offer): ?>
-
-
                 <?php if ($onlymyoffer == 2): ?>
                     <?php if(!(in_array($offer->id, $saved_user_offers))): continue; ?>
                     <?php endif; ?>
                 <?php endif; ?>
-
                 <tr>
-                    <td><?= $this->Number->format($offer->id) ?></td>
-                    <td><?= $offer->has('user') ? $this->Html->link($offer->user->name, ['controller' => 'Users', 'action' => 'view', $offer->user->id]) : '' ?></td>
-                    <td><?= $offer->has('category') ? $this->Html->link($offer->category->name, ['controller' => 'Categories', 'action' => 'view', $offer->category->id]) : '' ?></td>
-                    <td><?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?></td>
-                    <td><?= h($offer->name) ?></td>
+                    <td><?= $this->Html->link(h($offer->name), ['action' => 'view', $offer->id]) ?></td>
                     <td><?= $this->Number->format($offer->price) ?></td>
-                    <td><?= $this->Number->format($offer->advance_payment) ?></td>
-                    <td><?= h($offer->website) ?></td>
-                    <td><?= h($offer->created) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $offer->id]) ?>
                         <?php if ($onlymyoffer == 1 || $onlymyoffer== null): ?>
-
                             <?php if($offer->user_id == $id_user_log):?>
                                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $offer->id]) ?>
                                 <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id)]) ?>
                             <?php endif; ?>
-
                         <?php endif; ?>
 
                         <?php if($account_type_id == 1): ?>
@@ -78,26 +58,11 @@
                             <?php else: ?>
                                 <?= $this->Html->link(__('Add to favourite'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offer->id]) ?>
                             <?php endif; ?>
-
                         <?php endif; ?>
                     </td>
                 </tr>
-
-
-
             <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
-    </div>
 </div>
-
