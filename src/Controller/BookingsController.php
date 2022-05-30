@@ -87,9 +87,6 @@ class BookingsController extends AppController
         $offers = $this->Bookings->Offers->find('list', ['limit' => 200])->all();
         $payments = $this->Bookings->Payments->find('list', ['limit' => 200])->all();
         $this->set(compact('booking', 'users', 'offers', 'payments'));
-
-
-
     }
 
     /**
@@ -156,9 +153,7 @@ class BookingsController extends AppController
     }
 
     protected function createMultipleBookings(){
-        //TO DO
-
-
+        //TODO
 
     }
 

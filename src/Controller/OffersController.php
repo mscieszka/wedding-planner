@@ -24,7 +24,6 @@ class OffersController extends AppController
 
     }
 
-
     /**
      * Index method
      *
@@ -51,7 +50,6 @@ class OffersController extends AppController
                 ['offers.user_id' => $this->request->getAttribute('identity')->getIdentifier()]
             ));
 
-
         $saved_user_offers = $this->Offers->SavedUserOffers->find()
             ->where([
                 'user_id' => $this->request->getAttribute('identity')->getIdentifier()
@@ -61,9 +59,6 @@ class OffersController extends AppController
 
     }
 
-
-
-
     /**
      * View method
      *
@@ -72,13 +67,10 @@ class OffersController extends AppController
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
 
-
     public function view($id)
     {
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
-
-
 
         //then display ratings for this offer
 
@@ -105,19 +97,12 @@ class OffersController extends AppController
         $users = $this->Offers->Ratings->Users->find('list', ['limit' => 200])->all();
         $offers = $this->Offers->Ratings->Offers->find('list', ['limit' => 200])->all();
 
-
-
-
-
-
-
         $offer = $this->Offers->get($id, [
             'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
                 'MusicFilters', 'OfferActiveDays', 'Ratings',
                 'SavedUserOffers'
             ],
         ]);
-
 
 //debug($offer); exit;
         $offer_type_id = $offer->category_id;
@@ -181,8 +166,6 @@ class OffersController extends AppController
      */
     public function add($offer_type_id = 1)
     {
-
-
         //$this->Authorization->authorize($address);
 
         $offer = $this->Offers->newEmptyEntity();
@@ -190,8 +173,6 @@ class OffersController extends AppController
 
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         if ($this->request->is('post')) {
-
-
             $conn = ConnectionManager::get('default');
             $conn->begin();
             try {
@@ -239,7 +220,6 @@ class OffersController extends AppController
                 $this->Flash->error(__('The address could not be saved. Please, try again.'));
             }
         }
-
 
         $users = $this->Offers->Users->find('list', ['limit' => 200])->all();
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->where(['id' => $offer_type_id]);
@@ -321,12 +301,7 @@ class OffersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-
-
-
-
     // ADDITIONAL FUNCTIONS
-
 
     //display offers table by
     public function displayOffersBy($attribute, $value)

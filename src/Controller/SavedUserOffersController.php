@@ -61,7 +61,6 @@ class SavedUserOffersController extends AppController
                 $this->Flash->error(__('The saved user offer could not be saved. Please, try again.'));
             }
 
-
         return $this->redirect($this->referer());
     }
 

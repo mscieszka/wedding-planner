@@ -112,6 +112,4 @@ class AddressesTable extends Table
 
         return $rules;
     }
-
-
 }

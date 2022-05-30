@@ -7,24 +7,12 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-
-            <?= $this->Html->link(__('See all provinces'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-
+            <?= $this->Html->link(__('Wyświetl oferty wg województwa'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="provinces view content">
             <h3>Województwo <?= h($province->name) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Name') ?></th>
-                    <td><?= h($province->name) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($province->id) ?></td>
-                </tr>
-            </table>
             <div class="related">
                 <h4><?= __('Powiązane adresy z:  województwo') ?> <?= h($province->name) ?></h4>
                 <?php if (!empty($province->addresses)) : ?>
@@ -57,9 +45,6 @@
                                     <?= $this->Html->link(__('Edit'), ['controller' => 'Addresses', 'action' => 'edit', $addresses->id]) ?>
                                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Addresses', 'action' => 'delete', $addresses->id], ['confirm' => __('Are you sure you want to delete # {0}?', $addresses->id)]) ?>
                                 <?php endif; ?>
-
-
-
                             </td>
                         </tr>
                         <?php endforeach; ?>

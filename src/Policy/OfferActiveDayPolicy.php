@@ -64,7 +64,6 @@ class OfferActiveDayPolicy
         return true;
     }
 
-
     protected function isOwner(IdentityInterface $user, OfferActiveDay $offerActiveDay)
     {
         return $offerActiveDay->user_id === $user->getIdentifier();

@@ -7,10 +7,6 @@
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
 ?>
-
-
-
-
 <?= $this->Html->css('viewOffer') ?>
 <div class="offer-container">
     <div class="offer-gallery">
@@ -118,8 +114,6 @@
                 </div>
             </div>
 
-
-
             <?php foreach ($ratings as $rating): ?>
             <div class="opinion-box">
                 <a class="user-img">
@@ -134,12 +128,11 @@
                     <div class="opinion-content">
                         <blockquote>
                             <?= $this->Text->autoParagraph(h($rating->description)); ?>
-                        </blockquote></p>
+                        </blockquote>
                     </div>
                 </div>
             </div>
             <?php endforeach; ?>
-
 
         </div>
     </div>

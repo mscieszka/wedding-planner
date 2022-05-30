@@ -65,7 +65,6 @@ class BookingPolicy
 
     }
 
-
     protected function isBookingClient(IdentityInterface $user, Booking $booking){
         return $booking->user_id === $user->getIdentifier();
     }

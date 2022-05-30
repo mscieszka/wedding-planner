@@ -15,24 +15,19 @@ use Cake\ORM\Locator\LocatorInterface;
  */
 class RatingsController extends AppController
 {
-
-
     public function initialize(): void
     {
         parent::initialize();
         $this->paginate = [
             'contain' => ['Users', 'Offers'],
         ];
-
     }
-
 
     /**
      * Index method
      *
      * @return \App\Model\Entity\Rating[]|\Cake\Datasource\ResultSetInterface|\Cake\Http\Response|void|null
      */
-
 
     //wszystkie oceny dla danej oferty od razu
 
@@ -47,7 +42,6 @@ class RatingsController extends AppController
 
         //$this->set(compact('ratings'));
     }
-
 
     /**
      * View method
@@ -137,14 +131,7 @@ class RatingsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-
-
-
-
-
-    // ADDITIONAL FUNCTIONS
-
-
+    /* ADDITIONAL FUNCTIONS */
     //display ratings table for a given offer
     public function displayRatingsTableForOffer($id = null){
 
