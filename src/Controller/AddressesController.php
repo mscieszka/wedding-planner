@@ -63,6 +63,9 @@ class AddressesController extends AppController
     {
         $address = $this->Addresses->newEmptyEntity();
       $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+        $this->set(compact('account_type_id'));
+
         $this->Authorization->authorize($address);
         if ($this->request->is('post')) {
             $address = $this->Addresses->patchEntity($address, $this->request->getData());

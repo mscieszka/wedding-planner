@@ -9,8 +9,8 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Addresses'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Znajdź inne adresy'), ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Pokaż moje adresy'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">

@@ -7,17 +7,16 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <?php if($account_type_id == 2): ?>
+            <?php if($account_type_id == 2 || $account_type_id==1): ?>
                 <?php if($address->user_id == $id_user_log):?>
                     <?= $this->Html->link(__('Edytuj adres'), ['action' => 'edit', $address->id], ['class' => 'side-nav-item']) ?>
                 <?php endif; ?>
             <?php endif; ?>
+            <?= $this->Html->link(__('Znajdź inne adresy'), ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Pokaż moje adresy'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
 
-            <?php if($account_type_id == 1): ?>
-                <?php if($address->user_id == $id_user_log):?>
-                    <?= $this->Html->link(__('Edit Address'), ['action' => 'edit', $address->id], ['class' => 'side-nav-item']) ?>
-                <?php endif; ?>
-            <?php endif; ?>
+
+
         </div>
     </aside>
     <div class="column-responsive column-80">

@@ -7,15 +7,14 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
 
-            <?= $this->Html->link(__('List Provinces'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('See all provinces'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
 
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="provinces view content">
-            <h3><?= h($province->name) ?></h3>
+            <h3>Województwo <?= h($province->name) ?></h3>
             <table>
                 <tr>
                     <th><?= __('Name') ?></th>
@@ -27,7 +26,7 @@
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Addresses') ?></h4>
+                <h4><?= __('Powiązane adresy z:  województwo') ?> <?= h($province->name) ?></h4>
                 <?php if (!empty($province->addresses)) : ?>
                 <div class="table-responsive">
                     <table>

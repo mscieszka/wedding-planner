@@ -39,16 +39,18 @@ class OffersController extends AppController
 
         //then display all offers
         if ($onlymyoffer == null) {
-            $offers = $this->paginate($this->Offers);
+            if($account_type_id == 1) $onlymyoffer = 2;
+                else if($account_type_id == 2) $onlymyoffer = 1;
+
         }
         //tylko oferty providera zalogowanego "My offers" lub tylko oferty klienta "My saved offers"
         //ale to zabezpieczone w templates
         // onlymyoffrs = 1 lub =2
-        else {
+
             $offers = $this->paginate($this->Offers->find()->where(
                 ['offers.user_id' => $this->request->getAttribute('identity')->getIdentifier()]
             ));
-        }
+
 
         $saved_user_offers = $this->Offers->SavedUserOffers->find()
             ->where([

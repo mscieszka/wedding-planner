@@ -19,9 +19,10 @@ class ProvincesController extends AppController
     public function index()
     {
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $provinces = $this->paginate($this->Provinces);
 
-        $this->set(compact('provinces'));
+        $this->set(compact('provinces', 'account_type_id'));
     }
 
     /**
@@ -34,11 +35,12 @@ class ProvincesController extends AppController
     public function view($id = null)
     {
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $province = $this->Provinces->get($id, [
             'contain' => ['Addresses'],
         ]);
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
-        $this->set(compact('province', 'id_user_log'));
+        $this->set(compact('province', 'id_user_log', 'account_type_id'));
     }
 
     /**

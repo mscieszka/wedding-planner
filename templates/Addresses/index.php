@@ -4,6 +4,9 @@
  * @var \App\Model\Entity\Address[]|\Cake\Collection\CollectionInterface $addresses
  */
 ?>
+
+<?= $this->Html->link(__('Znajdź inne adresy'), ['controller' => 'Provinces', 'action' => 'index'], ['class' => 'side-nav-item']) ?>
+
 <div class="addresses index content">
     <?php if($account_type_id == 2): ?>
         <?= $this->Html->link(__('New Address'), ['action' => 'add'], ['class' => 'button float-right']) ?>
