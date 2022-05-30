@@ -13,7 +13,7 @@
             <div class="column-responsive column-80">
             <?= $this->Html->link(__('New Offer of Catering'), ['action' => 'add', 3 ], ['class' => 'button float-right']) ?>
             <?= $this->Html->link(__('New Offer of Music'), ['action' => 'add', 2], ['class' => 'button float-right']) ?>
-                <?= $this->Html->link(__('New Offer of Hall'), ['action' => 'add', 1], ['class' => 'button float-right']) ?>
+            <?= $this->Html->link(__('New Offer of Hall'), ['action' => 'add', 1], ['class' => 'button float-right']) ?>
         </div>
 
 </div>

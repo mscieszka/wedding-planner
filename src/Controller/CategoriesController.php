@@ -54,6 +54,8 @@ class CategoriesController extends AppController
     {
         $category = $this->Categories->newEmptyEntity();
         $this->Authorization->authorize($category);
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
         if ($this->request->is('post')) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
@@ -63,7 +65,7 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $this->set(compact('category'));
+        $this->set(compact('category', 'account_type_id'));
     }
 
     /**
@@ -79,6 +81,7 @@ class CategoriesController extends AppController
             'contain' => [],
         ]);
         $this->Authorization->authorize($category);
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         if ($this->request->is(['patch', 'post', 'put'])) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
@@ -88,7 +91,7 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $this->set(compact('category'));
+        $this->set(compact('category', 'account_type_id'));
     }
 
     /**

@@ -45,8 +45,9 @@ class UsersController extends AppController
         //'SavedUserBookings',
         //$this->Authorization->authorize($user);
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
 
-        $this->set(compact('user'));
+        $this->set(compact('user', 'account_type_id'));
         $layout = 'view';
         if($user->get('account_type_id') == 1) {
             $layout = 'viewrecipient';
@@ -62,8 +63,10 @@ class UsersController extends AppController
         //'SavedUserBookings',
         //$this->Authorization->authorize($user);
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
         $current_user = $user->id;
-        $this->set(compact('user', 'current_user'));
+        $this->set(compact('user', 'current_user', 'account_type_id'));
         $layout = 'view';
         if($user->get('account_type_id') == 1) {
             $layout = 'viewrecipient';

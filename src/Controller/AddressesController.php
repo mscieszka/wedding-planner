@@ -78,7 +78,7 @@ class AddressesController extends AppController
         }
         //$users = $this->Addresses->Users->find('list', ['limit' => 200])->all();
         $provinces = $this->Addresses->Provinces->find('list', ['limit' => 200])->all();
-        $this->set(compact('address', 'provinces'));
+        $this->set(compact('address', 'provinces', 'account_type_id'));
     }
 
     /**
