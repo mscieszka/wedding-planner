@@ -39,7 +39,8 @@ input[type='submit']:hover {
 }
 
 body {
-    background-color: #E4CC9F;
+    background-color: #E4CCA0;
+    margin: 0;
 }
 
 label, legend {
@@ -70,56 +71,42 @@ label, legend {
 
 /* widoki */
 
-body
-{
-    background-color: #d5c3a7;
-    font-family: "Arial", serif;
-    margin: 0;
-}
-
-a
-{
+a {
     color: #000;
     text-decoration: none;
 }
 
 /* ------------- Register page ------------- */
-.logo_text_container
-{
+.logo_text_container {
     display: flex;
     justify-content: flex-start;
     height: 8em;
 }
 
-.form_container
-{
+.form_container {
     width: 65vw;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3em;
 }
 
-.form_container form
-{
+.form_container form {
     width: 100%;
 }
 
-.form_container form fieldset
-{
+.form_container form fieldset {
     margin: 0;
     padding: 0;
     border: 0;
     width: 100%;
 }
 
-.form_container form fieldset .legend_container
-{
+.form_container form fieldset .legend_container {
     display: flex;
     justify-content: space-between;
 }
 
-.form_container form fieldset legend.legend_first
-{
+.form_container form fieldset legend.legend_first {
     background-color: #fff;
     width: 20em;
     height: 5em;
@@ -132,8 +119,7 @@ a
     transition: all 0.2s ease-out;
 }
 
-.form_container form fieldset legend.legend_second
-{
+.form_container form fieldset legend.legend_second {
     background-color: #fff;
     width: 20em;
     height: 4em;
@@ -145,29 +131,25 @@ a
     transition: all 0.2s ease-out;
 }
 
-.form_container  form fieldset legend:hover
-{
+.form_container form fieldset legend:hover {
     cursor: pointer;
     background-color: #eee;
     transition: all 0.2s ease-out;
 }
 
-.form_container form fieldset .content_wrapper
-{
+.form_container form fieldset .content_wrapper {
     background-color: #fff;
     border-top-right-radius: 2em;
     display: flex;
 }
 
-.form_container form fieldset .content_wrapper .div1
-{
+.form_container form fieldset .content_wrapper .div1 {
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-.form_container form fieldset .content_wrapper .form_column
-{
+.form_container form fieldset .content_wrapper .form_column {
     width: 50%;
     padding: 2em;
     display: flex;
@@ -175,14 +157,13 @@ a
     justify-content: space-around;
 }
 
-.require_data::placeholder
-{
+.require_data::placeholder {
     color: red;
 }
 
 /*.form_container form fieldset .content_wrapper .form_column input*/
-input[type=text], input[type=password]
-{
+input[type="text"],
+input[type="password"] {
     width: 100%;
     box-sizing: border-box;
     border: 0;
@@ -194,15 +175,13 @@ input[type=text], input[type=password]
 }
 
 /*.form_container form fieldset .content_wrapper .form_column input:hover*/
-input:hover
-{
+input:hover {
     cursor: pointer;
     background-color: #eee;
     transition: all 0.2s ease-out;
 }
 
-.form_container form fieldset .form_end_content
-{
+.form_container form fieldset .form_end_content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -213,21 +192,18 @@ input:hover
     border-bottom-right-radius: 3em;
 }
 
-.form_container form fieldset .form_end_content label
-{
+.form_container form fieldset .form_end_content label {
     width: 50%;
     padding-right: 2.5em;
     align-self: end;
     text-align: end;
 }
 
-.form_container form fieldset .form_end_content label:hover
-{
+.form_container form fieldset .form_end_content label:hover {
     cursor: pointer;
 }
 
-input[type=submit]
-{
+input[type="submit"] {
     width: 15em;
     height: 3em;
     align-self: end;
@@ -242,8 +218,7 @@ input[type=submit]
 }
 
 /*.form_container form fieldset .form_end_content input[type=submit]:hover*/
-input[type=submit]:hover
-{
+input[type="submit"]:hover {
     cursor: pointer;
     background-color: #034904;
     transition: all 0.2s ease-out;
@@ -251,38 +226,33 @@ input[type=submit]:hover
 
 /* -------------------- Login page ----------------------- */
 
-.logo_container
-{
+.logo_container {
     display: flex;
     width: 100vw;
     height: 100vh;
 }
 
-.logo_container .logo_full_container
-{
+.logo_container .logo_full_container {
     width: 60%;
     display: flex;
     justify-content: center;
 }
 
-.logo_container .logo_full_container img
-{
+.logo_container .logo_full_container img {
     width: 80%;
 }
 
-.logo_container .logo_form_container
-{
+.logo_container .logo_form_container {
     background-color: #fff;
     width: 25em;
-    height: 55vh ;
+    height: 55vh;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
     border-radius: 3em;
 }
 
-.logo_container .logo_form_container form
-{
+.logo_container .logo_form_container form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -293,15 +263,13 @@ input[type=submit]:hover
     height: 60%;
 }
 
-.logo_container .logo_form_container form input[type=submit]
-{
+.logo_container .logo_form_container form input[type="submit"] {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
 }
 
-.logo_container .logo_form_container .form_links
-{
+.logo_container .logo_form_container .form_links {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -310,8 +278,7 @@ input[type=submit]:hover
     row-gap: 1em;
 }
 
-.logo_container .logo_form_container .form_links .sing_up
-{
+.logo_container .logo_form_container .form_links .sing_up {
     width: 15em;
     height: 3em;
     display: flex;
@@ -324,8 +291,7 @@ input[type=submit]:hover
     transition: all 0.2s ease-out;
 }
 
-.logo_container .logo_form_container .form_links .sing_up:hover
-{
+.logo_container .logo_form_container .form_links .sing_up:hover {
     background-color: #046206;
     cursor: pointer;
     color: #fff;
@@ -334,8 +300,7 @@ input[type=submit]:hover
 
 /* forgot-password */
 
-.content_wrapper_forgot_password
-{
+.content_wrapper_forgot_password {
     width: 50%;
     height: 100%;
     background-color: #fff;
@@ -345,12 +310,9 @@ input[type=submit]:hover
     justify-content: center;
     justify-self: center;
     margin: auto;
-
-
 }
 
-.first-div
-{
+.first-div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -358,8 +320,6 @@ input[type=submit]:hover
     justify-content: center;
     align-items: center;
     margin: 2em;
-
-
 }
 
 .actions-div {
@@ -371,32 +331,28 @@ input[type=submit]:hover
     padding: 3em;
 }
 
-#forgot-pass-input{
+#forgot-pass-input {
     margin: 6em 2em auto;
     width: 70%;
-    background: #CEE5D0;
+    background: #cee5d0;
     box-shadow: 2px 2px 4px rgba(82, 145, 99, 0.49);
     border-radius: 50px;
-    color: #70947A;
+    color: #70947a;
     border-bottom: none;
     padding-left: 3em;
-
-}
-#forgot-pass-input::placeholder{
-    color: #70947A;
-
 }
 
-#forgot-pass-input:hover
-{
+#forgot-pass-input::placeholder {
+    color: #70947a;
+}
+
+#forgot-pass-input:hover {
     cursor: pointer;
     background-color: rgb(154, 202, 162);
     transition: all 0.2s ease-out;
 }
 
-
-.cancel
-{
+.cancel {
     display: flex;
     flex-direction: column;
     width: 15em;
@@ -405,7 +361,7 @@ input[type=submit]:hover
     text-align: center;
     justify-content: center;
     margin-right: 3em;
-    background-color: #EE3900;
+    background-color: #ee3900;
     border: 0;
     color: #fff;
     border-radius: 2em;
@@ -414,16 +370,17 @@ input[type=submit]:hover
     transition: all 0.2s ease-out;
 }
 
-.cancel:hover
-{
+.cancel:hover {
     cursor: pointer;
     background-color: #af2b02;
     transition: all 0.2s ease-out;
 }
+
 #send-msg {
     margin-right: 0;
 }
-#old-pass{
+
+#old-pass {
     margin: 0;
     background: #707070;
     box-shadow: 2px 2px 4px rgba(108, 86, 86, 0.49);
@@ -431,69 +388,65 @@ input[type=submit]:hover
     color: #1e1e1e;
     border-bottom: none;
     padding-left: 3em;
-
 }
-#old-pass::placeholder{
+
+#old-pass::placeholder {
     color: #212121;
-
 }
 
-#old-pass:hover
-{
+#old-pass:hover {
     cursor: pointer;
     background-color: rgb(173, 173, 173);
     transition: all 0.2s ease-out;
 }
-#new-pass{
+
+#new-pass {
     margin: 0;
-    background: #CEE5D0;
+    background: #cee5d0;
     box-shadow: 2px 2px 4px rgba(82, 145, 99, 0.49);
     border-radius: 50px;
-    color: #70947A;
+    color: #70947a;
     border-bottom: none;
     padding-left: 3em;
-
-}
-#new-pass::placeholder{
-    color: #70947A;
-
 }
 
-#new-pass:hover
-{
-    cursor: pointer;
-    background-color: rgb(154, 202, 162);
-    transition: all 0.2s ease-out;
-}
-#conf-new-pass{
-    margin: 0;
-    background: #CEE5D0;
-    box-shadow: 2px 2px 4px rgba(82, 145, 99, 0.49);
-    border-radius: 50px;
-    color: #70947A;
-    border-bottom: none;
-    padding-left: 3em;
-
-}
-#conf-new-pass::placeholder{
-    color: #70947A;
-
+#new-pass::placeholder {
+    color: #70947a;
 }
 
-#conf-new-pass:hover
-{
+#new-pass:hover {
     cursor: pointer;
     background-color: rgb(154, 202, 162);
     transition: all 0.2s ease-out;
 }
 
+#conf-new-pass {
+    margin: 0;
+    background: #cee5d0;
+    box-shadow: 2px 2px 4px rgba(82, 145, 99, 0.49);
+    border-radius: 50px;
+    color: #70947a;
+    border-bottom: none;
+    padding-left: 3em;
+}
+
+#conf-new-pass::placeholder {
+    color: #70947a;
+}
+
+#conf-new-pass:hover {
+    cursor: pointer;
+    background-color: rgb(154, 202, 162);
+    transition: all 0.2s ease-out;
+}
 
 .first-div > .ins-pass-p {
     align-self: flex-start;
     width: 70%;
     margin-left: 10em;
 }
-#password-reset-submit > div > input[type=submit] {
+
+#password-reset-submit > div > input[type="submit"] {
     margin-right: 0 !important;
 }
 
@@ -505,11 +458,12 @@ input[type=submit]:hover
     align-content: center;
     margin-bottom: 1rem;
 }
+
 .pass-img {
     color: #af2b02;
 }
-.pass-img:hover
-{
+
+.pass-img:hover {
     cursor: pointer;
     filter: opacity(70%);
     fill: rgb(154, 202, 162);
@@ -517,9 +471,7 @@ input[type=submit]:hover
     transition-duration: 5s;
 }
 
-
 /* Homepage */
-
 
 .content_wrapper_homepage {
     display: flex;
@@ -535,11 +487,10 @@ input[type=submit]:hover
 }
 
 .search-bar {
-
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    background: #FFFFFF;
+    justify-content: space-between;
+    background: #ffffff;
     border-radius: 50px;
     width: 30%;
     height: 4.5vh;
@@ -558,12 +509,12 @@ input[type=submit]:hover
 header {
     display: flex;
     flex-direction: row;
-    justify-content:right;
+    justify-content: right;
     margin-bottom: 0;
 }
 
 .kind_of_search {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: start;
     width: 59%;
@@ -572,7 +523,7 @@ header {
 }
 
 .place_search {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -583,21 +534,19 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     justify-self: center;
-
-
 }
+
 .serv {
     width: 100%;
     margin: 0 20vw;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     justify-self: center;
-
-
 }
+
 .service-kind {
     width: 24%;
     height: 8vh;
@@ -605,10 +554,10 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
-    margin: 10px
+    margin: 10px;
 }
 
 .service-kind > img {
@@ -617,13 +566,11 @@ header {
     padding-left: 1vw;
     height: 6vh;
     margin-bottom: 0;
-
 }
 
 .service-kind > p {
     padding-right: 1vw;
 }
-
 
 input {
     background-color: white;
@@ -632,8 +579,7 @@ input {
     align-self: center;
 }
 
-.service-kind:hover
-{
+.service-kind:hover {
     cursor: pointer;
     background-color: #eee;
     transition: all 0.2s ease-out;
@@ -642,27 +588,30 @@ input {
 header {
     width: 95%;
 }
-.place_search > img{
+
+.place_search > img {
     margin-bottom: 0;
 }
-.kind_of_search > img{
+
+.kind_of_search > img {
     margin-bottom: 0;
 }
-.place_search > input{
+
+.place_search > input {
     margin-bottom: 0;
 }
-.kind_of_search > input{
+
+.kind_of_search > input {
     margin-bottom: 0;
 }
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 768px) {
     .services {
         flex-direction: column;
         justify-content: center;
-
     }
     .serv {
         flex-direction: column;
         justify-content: center;
     }
-
 }
