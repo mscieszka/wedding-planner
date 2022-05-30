@@ -164,7 +164,7 @@ class OffersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
-    public function add($offer_type_id = 1)
+    public function add($offer_type_id = null)
     {
         //$this->Authorization->authorize($address);
 
@@ -172,6 +172,15 @@ class OffersController extends AppController
         $this->Authorization->authorize($offer);
 
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
+        if ($offer_type_id == null) {
+            $template = 'add_home';
+            $this->set(compact('account_type_id'));
+            $this->render($template);
+            return;
+        }
+
+
         if ($this->request->is('post')) {
             $conn = ConnectionManager::get('default');
             $conn->begin();
@@ -226,7 +235,13 @@ class OffersController extends AppController
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
         $hallTypes = $this->Offers->HallFilters->HallTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('offer', 'users', 'categories', 'provinces', 'hallTypes', 'account_type_id'));
-        $template = 'add_hall';
+
+
+
+
+        if ($offer_type_id == 1) {
+            $template = 'add_hall';
+        }
         if ($offer_type_id == 2) {
             $template = 'add_music';
         }
