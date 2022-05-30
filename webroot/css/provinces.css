@@ -1,0 +1,13 @@
+.container {
+    max-width: initial;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.table-responsive {
+    max-width: 500px;
+}
