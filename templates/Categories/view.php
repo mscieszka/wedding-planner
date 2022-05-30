@@ -6,12 +6,15 @@
 ?>
 
 
-
 <div class="row">
     <aside class="column">
         <div class="side-nav">
             <!--<h4 class="heading"><?= __('Actions') ?></h4>-->
-           <!-- <h4> <?= $this->Html->link(__('List Categories'), ['action' => 'index'], ['class' => 'side-nav-item']) ?> </h4> -->
+
+            <?php if($account_type_id == 2): ?>
+                <?= $this->Html->link(__('New Offer of this category'), ['controller' => 'Offers', 'action' => 'add', h($category->id)], ['class' => 'button float-right']) ?>
+            <?php endif; ?>
+
 
         </div>
     </aside>
@@ -19,7 +22,7 @@
         <div class="categories view content">
             <h3><?= h($category->name) ?></h3>
             <div class="related">
-                <h4><?= __('Related Offers') ?></h4>
+                <h4><?= __('Powiązane oferty') ?></h4>
                 <?php if (!empty($category->offers)) : ?>
                 <div class="table-responsive">
                     <table>
@@ -35,9 +38,10 @@
                             <td><?= h($offers->description) ?></td>
 
 
-                            <?php if($account_type_id == 2): ?>
+
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?>
+                                <?php if($account_type_id == 2): ?>
                                     <?php if (($offers->user_id) == $id_user_log):?>
                                         <?= $this->Html->link(__('Edit'), ['controller' => 'Offers', 'action' => 'edit', $offers->id]) ?>
                                         <?= $this->Form->postLink(__('Delete'), ['controller' => 'Offers', 'action' => 'delete', $offers->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offers->id)]) ?>
