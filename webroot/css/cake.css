@@ -94,10 +94,7 @@ th {
 }
 .top-nav-links a {
     margin: 0 0.5rem;
-}
-.top-nav-title a,
-.top-nav-links a {
-    font-weight: bold;
+    padding: 0 2rem;
 }
 
 .side-nav-item {

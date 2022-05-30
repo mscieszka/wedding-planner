@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+/* buttons */
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    all: unset;
+    width: min-content;
+    height: fit-content;
+    background-color: #46755E;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0.5rem 2rem;
+    margin: 1rem;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap
+}
+
+.button:hover,
+button:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover {
+    background-color: #416C58;
+}
+
 /* global */
 * {
     box-sizing: border-box;
@@ -194,14 +226,12 @@ input:hover
     cursor: pointer;
 }
 
-/*.form_container form fieldset .form_end_content input[type=submit]*/
 input[type=submit]
 {
     width: 15em;
     height: 3em;
     align-self: end;
     text-align: center;
-    margin-right: 3em;
     background-color: #046206;
     border: 0;
     color: #fff;
@@ -601,14 +631,6 @@ input {
     border: none;
     align-self: center;
     width: 85%;
-}
-
-#homepage-login {
-    width: 8%;
-    height: 4.5vh;
-    padding: 0.5vh 0.5vw;
-    margin: 1vh 1vw;
-    box-sizing: border-box;
 }
 
 .service-kind:hover
