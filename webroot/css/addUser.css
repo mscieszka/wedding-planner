@@ -14,6 +14,11 @@ a:hover
     color: #000;
 }
 
+.top-nav .search-bar, .top-nav-links
+{
+    display: none;
+}
+
 aside
 {
     display: none;
