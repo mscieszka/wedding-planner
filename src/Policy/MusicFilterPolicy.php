@@ -64,7 +64,6 @@ class MusicFilterPolicy
         return true;
     }
 
-
     protected function isOwner(IdentityInterface $user, MusicFilter $musicFilter)
     {
         return $musicFilter->user_id === $user->getIdentifier();

@@ -59,7 +59,6 @@ class RatingPolicy
         return true; //everyone
     }
 
-
     protected function isOwner(IdentityInterface $user, Rating $rating)
     {
         return $rating->user_id === $user->getIdentifier();

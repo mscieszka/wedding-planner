@@ -43,9 +43,6 @@
                 </a>
             </div>
         </div>
-        <div class="top-nav-links">
-
-        </div>
     </nav>
     <main class="main">
         <div class="container">

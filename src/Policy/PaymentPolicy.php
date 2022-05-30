@@ -64,7 +64,6 @@ class PaymentPolicy
         return $this->isOwner($user, $payment);
     }
 
-
     protected function isOwner(IdentityInterface $user, Payment $payment)
     {
         return $payment->user_id === $user->getIdentifier();

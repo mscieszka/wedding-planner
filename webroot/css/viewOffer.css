@@ -1,7 +1,10 @@
+.container {
+    max-width: unset;
+    width: min-content;
+}
+
 .offer-container {
     display: flex;
-    margin: 20px;
-    justify-content: flex-start;
     flex-direction: column;
     align-content: center;
 }
@@ -78,49 +81,48 @@ h3 {
 .offer-reservation {
     display: grid;
     height: 200px;
-    background: #FEF6E7;
+    background: #fef6e7;
     grid-template-rows: 50% 50%;
 }
-.offer-reservation>h2 {
+.offer-reservation > h2 {
     grid-row: 1/2;
     margin: 1rem 1rem 1rem 30px;
 }
 
-.offer-reservation .make-reservation{
+.offer-reservation .make-reservation {
     display: flex;
     justify-content: space-between;
     align-items: end;
     grid-row: 2/3;
-    margin-left:30px;
-    margin-right:50px;
+    margin-left: 30px;
+    margin-right: 50px;
 }
 
-.reservation-date{
+.reservation-date {
     width: 581px;
     height: 43px;
-    background: #FFFFFF;
-    border: 1px solid #C1C1C1;
+    background: #ffffff;
+    border: 1px solid #c1c1c1;
     border-radius: 25px;
     padding-inline: 15px;
 }
 
-.button-reserve{
+.button-reserve {
     width: 238px;
     height: 45px;
-    background: #46755E;
+    background: #46755e;
     border-radius: 25px;
     color: white;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     border: none;
 }
 
-.button-reserve:hover{
-    background: #5C9278;
+.button-reserve:hover {
+    background: #5c9278;
 }
-
 
 .offer-owner-contacts {
     height: 200px;
@@ -210,8 +212,7 @@ textarea {
     font-weight: bold;
 }
 .send-opinion:hover {
-
-    background: #84B79E;
+    background: #84b79e;
 }
 
 .opinion-box {
@@ -278,7 +279,8 @@ textarea {
     font-size: 20px;
 }
 
-.offer-address, .offer-website {
+.offer-address,
+.offer-website {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
