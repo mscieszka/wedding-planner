@@ -115,7 +115,6 @@
                         <h4><?= h($rating->opinion_date) ?></h4>
                     </div>
                     <div class="opinion-content">
-                        <p><strong><?= __('Description') ?></strong>
                         <blockquote>
                             <?= $this->Text->autoParagraph(h($rating->description)); ?>
                         </blockquote></p>
@@ -123,7 +122,6 @@
                 </div>
             </div>
             <?php endforeach; ?>
-
 
 
         </div>

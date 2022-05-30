@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="dopracowanie widoku dla ofert">
+    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="wyświetlanie ocen dla wybranej oferty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/OffersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OffersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RatingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RatingsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Offers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
@@ -172,7 +171,7 @@
       <workItem from="1653758523779" duration="13015000" />
       <workItem from="1653842274292" duration="5227000" />
       <workItem from="1653859556452" duration="6581000" />
-      <workItem from="1653867952829" duration="4618000" />
+      <workItem from="1653867952829" duration="5985000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>
@@ -286,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653866516722</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="wyświetlanie ocen dla wybranej oferty">
+      <created>1653872783098</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1653872783098</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +323,7 @@
     <MESSAGE value="naprawione warningi" />
     <MESSAGE value="dopracowanie widoku dla dodawania ofert" />
     <MESSAGE value="dopracowanie widoku dla ofert" />
-    <option name="LAST_COMMIT_MESSAGE" value="dopracowanie widoku dla ofert" />
+    <MESSAGE value="wyświetlanie ocen dla wybranej oferty" />
+    <option name="LAST_COMMIT_MESSAGE" value="wyświetlanie ocen dla wybranej oferty" />
   </component>
 </project>

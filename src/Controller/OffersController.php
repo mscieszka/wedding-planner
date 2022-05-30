@@ -80,13 +80,7 @@ class OffersController extends AppController
 
         //then display ratings for this offer
 
-
-        $object = new RatingsController();
-        $ratings = null;
-        if($id != null){
-            $ratings = $object->Ratings->find()->where(['offer_id' => $id]);
-        }
-
+            $ratings = $this->Offers->Ratings->find()->where(['offer_id' => $id])->contain(['Offers', 'Users']);
 
 
 
@@ -97,6 +91,8 @@ class OffersController extends AppController
                 'SavedUserOffers'
             ],
         ]);
+
+
 //debug($offer); exit;
         $offer_type_id = $offer->category_id;
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
