@@ -82,6 +82,30 @@ class OffersController extends AppController
 
             $ratings = $this->Offers->Ratings->find()->where(['offer_id' => $id])->contain(['Offers', 'Users']);
 
+//dodawanie!
+
+        $rating = $this->Offers->Ratings->newEmptyEntity();
+        $this->Authorization->authorize($rating);
+        if ($this->request->is('post')) {
+            $rating = $this->Offers->Ratings->patchEntity($rating, $this->request->getData());
+           $rating->user_id = $this->request->getAttribute('identity')->getIdentifier();
+           $rating->offer_id = $id;
+           // $rating->rating = 4;
+            $rating->opinion_date = date("Y-m-d");
+
+            if ($this->Offers->Ratings->save($rating)) {
+                $this->Flash->success(__('The rating has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The rating could not be saved. Please, try again.'));
+        }
+        $users = $this->Offers->Ratings->Users->find('list', ['limit' => 200])->all();
+        $offers = $this->Offers->Ratings->Offers->find('list', ['limit' => 200])->all();
+
+
+
+
 
 
 
@@ -104,7 +128,7 @@ class OffersController extends AppController
         $booking = $this->getTableLocator()->get('Bookings')->newEmptyEntity();
         $booking->offer_id = $offer->id;
 
-        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings'));
+        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings', 'users', 'offers'));
 
     }
 

@@ -171,7 +171,7 @@
       <workItem from="1653758523779" duration="13015000" />
       <workItem from="1653842274292" duration="5227000" />
       <workItem from="1653859556452" duration="6581000" />
-      <workItem from="1653867952829" duration="5985000" />
+      <workItem from="1653867952829" duration="10316000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>
@@ -292,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653872783098</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="wyświetlanie ocen dla wybranej oferty">
+      <created>1653874039854</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1653874039854</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

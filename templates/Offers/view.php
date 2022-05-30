@@ -2,8 +2,15 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Offer $offer
+ * @var \App\Model\Entity\Rating $rating
+ * @var \Cake\Collection\CollectionInterface|string[] $users
+ * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
 ?>
+
+
+
+
 <?= $this->Html->css('viewOffer') ?>
 <div class="offer-container">
     <div class="offer-gallery">
@@ -94,9 +101,19 @@
             <div class="white-box">
                 <h3>Dodaj opinię</h3>
                 <div class="input-button-box">
-                    <label>
-                        <textarea></textarea>
-                    </label>
+
+                    <div class="ratings form content">
+                    <?= $this->Form->create() ?>
+                    <fieldset>
+
+
+                        <?php echo $this->Form->control('description', ['type'=>'textarea']); ?>
+                        <?php echo $this->Form->control('rating', ['type'=>'textarea']); ?>
+
+
+                    </fieldset>
+                        <?= $this->Form->button(__('Submit')) ?>
+                        <?= $this->Form->end() ?>
                     <button class="send-opinion">Dodaj</button>
                 </div>
             </div>
