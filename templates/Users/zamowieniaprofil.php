@@ -16,9 +16,7 @@
     <div class="column-responsive column-80 " >
         <div class="provider_container">
             <div class="provider_image">
-                <a>
-                    <img src="/img/userProfileImage/userProfileImage3.jpg" alt="Owner profile image" class="ownerimg">
-                </a>
+                <?= $this->Html->image('userProfileImage/userProfileImage3.jpg', ['alt' => 'Owner profile image', 'class' => 'ownerimg']) ?>
             </div>
             <div class="provider_info">
                 <div class="provider_name">
