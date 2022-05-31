@@ -31,8 +31,11 @@
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
+    <?= $this->Html->css('zabuto_calendar.min.css') ?>
     <?= $this->fetch('script') ?>
+
     <?= $this->Html->script('jquery-3.6.0.min.js') ?>
+    <?= $this->Html->script('zabuto_calendar.js') ?>
 </head>
 <body>
     <?php include_once('header/header-no-search.php') ?>

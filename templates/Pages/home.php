@@ -60,7 +60,7 @@ endif;
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'home', 'index', 'header']) ?>
+    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'index', 'header', 'home']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -68,7 +68,7 @@ endif;
 </head>
 <body>
 
-<?php include_once('C:/xampp/htdocs/wedding-planner/templates/layout/header/header-only-buttons.php') ?>
+<?php echo $this->element('header/header-only-buttons'); ?>
 
 
 <?= $this->Flash->render() ?>

@@ -1,0 +1,34 @@
+.dow-clickable {
+    border: 1px;
+    border-color: black;
+    border-style: groove;
+    border-radius: 8px;
+}
+
+.free {
+    border-color: lightseagreen;
+    border-style: dotted;
+    background-color: green;
+    opacity: 0.5;
+    cursor: pointer !important;
+}
+
+.occupied {
+    border-color: lightseagreen;
+    border-style: dotted;
+    background-color: red;
+    opacity: 0.5;
+}
+
+.day {
+    cursor: default;
+}
+
+.grade-1 {background-color: red;}
+.grade-2 {background-color: orange;}
+.grade-3 {background-color: yellow;}
+.grade-4 {background-color: green;}
+
+.purple {
+    background-color: purple;
+}

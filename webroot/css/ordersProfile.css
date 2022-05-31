@@ -1,0 +1,26 @@
+.profile-order-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid;
+}
+
+.profile-order-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-order-property {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.profile-order-btn {
+    min-height: 0 !important;
+}
+
+.profile-order-btn-red{
+    background-color: #d54848;
+}

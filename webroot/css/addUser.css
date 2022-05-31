@@ -1,77 +1,75 @@
-body
-{
+body {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-a
-{
+.content {
+    padding: 0;
+}
+
+a {
     color: #000;
 }
 
-a:hover
-{
+a:hover {
     color: #000;
 }
 
-.top-nav .search-bar, .top-nav-links
-{
+.top-nav .search-bar,
+.top-nav-links {
     display: none;
 }
 
-aside
-{
+aside {
     display: none;
 }
 
-.require_data::placeholder
-{
+.require_data::placeholder {
     color: red;
 }
 
-fieldset div label[for=name], label[for=surname], label[for=email], label[for=phone-number], label[for=password], label[for=company-name], label[for=krs], label[for=nip], label[for=regon]
-{
+fieldset div label[for=name],
+label[for=surname],
+label[for=email],
+label[for=phone-number],
+label[for=password],
+label[for=company-name],
+label[for=krs],
+label[for=nip],
+label[for=regon] {
     display: none;
 }
 
-.row
-{
+.row {
     justify-content: center;
 }
 
-.users.form.content
-{
+.users.form.content {
     margin-bottom: 3em;
     border-bottom-left-radius: 3em;
     border-bottom-right-radius: 3em;
 }
 
-.border_provider
-{
+.border_provider {
     border-top-right-radius: 3em;
 }
 
-.border_recipient
-{
+.border_recipient {
     border-top-left-radius: 3em;
 }
 
-fieldset
-{
-    margin: 3em 0;
+fieldset {
+    margin: 6rem 0 0 0;
     padding: 0;
     border: 0;
     width: 100%;
 }
 
-fieldset .legend_container
-{
+fieldset .legend_container {
     display: flex;
     justify-content: space-between;
 }
 
-fieldset .legend_container a
-{
+fieldset .legend_container a {
     display: flex;
     width: 100%;
     height: 100%;
@@ -79,11 +77,10 @@ fieldset .legend_container a
     align-items: center;
 }
 
-fieldset legend.legend_first
-{
+fieldset legend.legend_first {
     background-color: #fff;
-    width: 20vw;
-    height: 5em;
+    width: 17vw;
+    /*height: 5em;*/
     font-size: 1.2em;
     display: flex;
     justify-content: center;
@@ -94,10 +91,9 @@ fieldset legend.legend_first
     margin: 0;
 }
 
-fieldset legend.legend_second
-{
+fieldset legend.legend_second {
     background-color: #fff;
-    width: 20vw;
+    width: 17vw;
     height: 4em;
     font-size: 1.2em;
     display: flex;
@@ -107,31 +103,36 @@ fieldset legend.legend_second
     transition: all 0.2s ease-out;
 }
 
-fieldset legend:hover
-{
+fieldset legend:hover {
     cursor: pointer;
     background-color: #eee;
     transition: all 0.2s ease-out;
 }
 
-.inputs_wrapper
-{
+.inputs_wrapper {
     background-color: #fff;
     border-top-right-radius: 2em;
     display: flex;
 }
 
-.form_column
-{
+.form_column {
     width: 50%;
     padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+.form_column label {
+    margin-bottom: 0;
+}
 
-input[type=text], input[type=password], input[type=email]
-{
+input {
+    font-size: 16px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
     width: 100%;
     box-sizing: border-box;
     border: 0;
@@ -139,25 +140,22 @@ input[type=text], input[type=password], input[type=email]
     border-bottom: 1px solid gray;
     height: 4em;
     outline: none;
-    margin-top: 2em;
+    margin-top: 0;
     transition: all 0.2s ease-out;
 }
 
-input:hover
-{
+input:hover {
     cursor: pointer;
     background-color: #eee;
     transition: all 0.2s ease-out;
 }
 
-.form_end_content
-{
+.form_end_content {
     display: flex;
     flex-direction: column;
 }
 
-.form_end_content label
-{
+.form_end_content label {
     font-weight: normal;
     font-size: 1em;
     padding-right: 2.5em;
@@ -166,23 +164,20 @@ input:hover
     align-items: center;
 }
 
-input[type=checkbox]
-{
+input[type=checkbox] {
     width: 1em;
     display: flex;
     justify-content: start;
     margin: 0 0.5em;
 }
 
-.form_end_content label:hover
-{
+.form_end_content label:hover {
     cursor: pointer;
 }
 
-button
-{
+button {
     width: 15em;
-    height: 3em;
+    /*height: 3em;*/
     align-self: end;
     text-align: center;
     background-color: #046206;
@@ -195,92 +190,76 @@ button
     transition: all 0.2s ease-out;
 }
 
-button:hover
-{
+button:hover {
     cursor: pointer;
     background-color: #034904;
     transition: all 0.2s ease-out;
 }
 
-@media only screen and (max-width: 1000px)
-{
-    .top-nav
-    {
+@media only screen and (max-width: 1000px) {
+    .top-nav {
         width: 100% !important;
         justify-content: center;
         padding: 1.5em 0;
     }
 
-    fieldset .legend_container
-    {
+    fieldset .legend_container {
         flex-direction: column;
     }
 
-    .border_provider
-    {
+    .border_provider {
         border-top-right-radius: 0;
     }
 
-    .border_recipient
-    {
+    .border_recipient {
         border-top-left-radius: 0;
     }
 
-    fieldset legend.legend_first
-    {
+    fieldset legend.legend_first {
         width: 100%;
         padding: 0;
     }
 
-    .legend_first_recipient_mobile_border
-    {
+    .legend_first_recipient_mobile_border {
         border-top-right-radius: 0 !important;
         border-top-left-radius: 0 !important;
     }
 
-    .background_mobile_checked
-    {
+    .background_mobile_checked {
         background-color: #eee !important;
     }
 
-    fieldset legend.legend_second
-    {
+    fieldset legend.legend_second {
         width: 100%;
         height: 5em;
         border-radius: 0;
         margin: 0;
     }
 
-    .legend_second_recipient_mobile_border
-    {
+    .legend_second_recipient_mobile_border {
         border-top-left-radius: 2em !important;
         border-top-right-radius: 2em !important;
     }
 
-    .inputs_wrapper
-    {
+    .inputs_wrapper {
         flex-direction: column;
     }
 
-    .form_column
-    {
+    .form_column {
         width: 100%;
         padding: 0 2em;
     }
 
-    .form_end_content
-    {
+    .form_end_content {
         padding-top: 2em;
     }
 
-    .form_end_content label
-    {
+    .form_end_content label {
         justify-content: center;
         padding: 0;
     }
 
-    .form_end_content button
-    {
+    .form_end_content button {
         justify-content: center;
         width: 100%;
         margin: 1.5em 0;

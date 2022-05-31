@@ -8,11 +8,8 @@
 ?>
 
 
-<?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
+<?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider', 'ordersProfile']) ?>
 <div class="row">
-    <nav>
-        <?= $this->Html->link($this->Html->image('logo.svg'), array('controller' => 'Pages', 'action' => 'display', 'home'), array('escape' => false)); ?>
-    </nav>
     <div class="column-responsive column-80 " >
         <div class="provider_container">
             <div class="provider_image">
@@ -71,20 +68,32 @@
         <div class="users view content">
             <div style="display: flex; justify-content: space-around">
             </div>
+            <div class="offer_container">
             <?php foreach ($user->bookings as $savedUserBookings) : ?>
                 <tr>
-                    <td><?= h($savedUserBookings->id) ?></td>
-                    <td><?= h($savedUserBookings->user_id) ?></td>
-                    <td><?= h($savedUserBookings->booking_id) ?></td>
+                    <div class="profile-order-container">
+                        <div class="profile-order-property">
+                        <p class="property_name"><?= __('Data utworzenia:   ') ?></p>
                     <td><?= h($savedUserBookings->created) ?></td>
+                            </div>
+                        <div class="profile-order-property">
+                            <p class="property_name"><?= __('ID:   ') ?></p>
+                        <td><?= h($savedUserBookings->id) ?></td>
+                        </div>
+                        <div class="profile-order-property">
+                            <p class="property_name"><?= __('Akcje:   ') ?></p>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['controller' => 'SavedUserBookings', 'action' => 'view', $savedUserBookings->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['controller' => 'SavedUserBookings', 'action' => 'edit', $savedUserBookings->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['controller' => 'SavedUserBookings', 'action' => 'delete', $savedUserBookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $savedUserBookings->id)]) ?>
+                        <div class="profile-order-actions">
+                        <?= $this->Html->link(__('View'), ['controller' => 'SavedUserBookings', 'action' => 'view', $savedUserBookings->id], ['class' => 'button profile-order-btn']) ?>
+                        <?= $this->Html->link(__('Edit'), ['controller' => 'SavedUserBookings', 'action' => 'edit', $savedUserBookings->id], ['class' => 'button profile-order-btn']) ?>
+                        <?= $this->Form->postLink(__('Delete'), ['controller' => 'SavedUserBookings', 'action' => 'delete', $savedUserBookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $savedUserBookings->id), 'class' => 'button profile-order-btn profile-order-btn-red']) ?>
+                        </div>
                     </td>
+                        </div>
+                    </div>
                 </tr>
             <?php endforeach; ?>
-
+            </div>
         </div>
 
 
