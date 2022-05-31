@@ -111,10 +111,10 @@ class OffersController extends AppController
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->where(['id' => $offer_type_id]);
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
 
-        $booked_dates = $this->getBookedOfferDates($offer->id);
+        $booked_dates = $this->getBookedOfferDates($id);
         $active_offer_days = $this->date_range(date('Y-m-d'), date('Y-m-d', strtotime(date('Y-m-d').' +300 days')), $offer['offer_active_day'], $booked_dates);
         $booking = $this->getTableLocator()->get('Bookings')->newEmptyEntity();
-        $booking->offer_id = $offer->id;
+        $booking->offer_id = $id;
 
         $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings', 'users', 'offers'));
 

@@ -64,7 +64,7 @@
         <fieldset>
         <div class="make-reservation">
             <div>
-            <?= $this->Form->control(' ', ['options' => $active_offer_days, 'class' => 'reservation-date', 'required' => true, 'empty' => 'Wybierz datę rezerwacji']); ?>
+            <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'required' => true, 'empty' => 'Wybierz datę rezerwacji']); ?>
             <?= $this->Form->hidden('offer_id'); ?>
             </div>
             <div>
