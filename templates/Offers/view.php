@@ -127,7 +127,7 @@
             <?php foreach ($ratings as $rating): ?>
             <div class="opinion-box">
                 <a class="user-img">
-                    <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg']) ?>
+                    <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
                 </a>
                 <div class="rest-of-opinion">
                     <div class="upper-box">
