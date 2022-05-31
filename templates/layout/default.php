@@ -29,14 +29,13 @@
 
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'index', 'header']) ?>
 
-
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
     <?= $this->Html->script('jquery-3.6.0.min.js') ?>
 </head>
 <body>
-    <?php include_once('header/header-full.php') ?>
+    <?php include_once('header/header-no-search.php') ?>
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>

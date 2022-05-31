@@ -5,16 +5,15 @@
  */
 ?>
 <?= $this->Html->css('viewOffers') ?>
+<?php include_once('./templates/layout/header/header-only-search.php') ?>
 <div class="row">
     <aside class="column">
-
-        <?php
+    <?php
         if ($category->id == 1) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_hall.php');
         elseif ($category->id == 2) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_dj.php');
         elseif ($category->id == 3) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_catering.php');
-        ?>
+    ?>
     </aside>
-
     <div class="column-responsive column-80">
         <div class="categories-view-content">
             <div class="related">
@@ -34,8 +33,6 @@
                             <td class="offer-name"><?= $this->Html->link(__('Add to favourite'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id]) ?></td>
                                 <?php endif; ?>
                             <?php endif; ?>
-
-
                         </tr>
                         <?php endforeach; ?>
                     </table>
