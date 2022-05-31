@@ -18,7 +18,7 @@
         <div class="provider_container">
             <div class="provider_image">
                 <a>
-                <img src="/img/userProfileImage/userProfileImage3.jpg" alt="Owner profile image" class="ownerimg">
+                    <img src="/img/userProfileImage/userProfileImage3.jpg" alt="Owner profile image" class="ownerimg">
                 </a>
             </div>
             <div class="provider_info">

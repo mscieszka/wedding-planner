@@ -98,15 +98,15 @@ endif;
         </div>
         <div class="categories-nav services">
             <div class ="serv">
-                <div  class="service-type">
+                <div class="service-type">
                     <?php  echo $this->Html->image('sale.svg', ['alt' => 'Wedding Planner']); ?>
                     <?= $this->Html->link(__('Sale'), ['controller' => 'Categories', 'action' => 'view', 1],['class' => 'btn-category'] )?>
                 </div>
-               <div  class="service-type">
+                <div class="service-type">
                    <?php  echo $this->Html->image('dj.svg', ['alt' => 'Wedding Planner']); ?>
                    <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['controller' => 'Categories', 'action' => 'view', 2],['class' => 'btn-category'] )?>
-               </div>
-                <div  class="service-type">
+                </div>
+                <div class="service-type">
                     <?php  echo $this->Html->image('catering.svg', ['alt' => 'Wedding Planner', 'class' => 'catering-img']); ?>
                 <?= $this->Html->link(__('Catering'), ['controller' => 'Categories', 'action' => 'view', 3],['class' => 'btn-category'] )?>
                 </div>
