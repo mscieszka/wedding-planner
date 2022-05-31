@@ -95,22 +95,21 @@
         <div class="opinions">
             <h2>Opinie</h2>
             <div class="white-box">
-                <h3>Dodaj opinię</h3>
-                <div class="input-button-box">
 
-                    <div class="ratings form content">
+                <div class="input-button-box">
+                    <h3>Dodaj opinię</h3>
+                    <div >
                     <?= $this->Form->create() ?>
                     <fieldset>
 
 
                         <?php echo $this->Form->control('description', ['type'=>'textarea']); ?>
-                        <?php echo $this->Form->control('rating', ['type'=>'textarea']); ?>
+                        <?php echo $this->Form->control('rating', ['type'=>'number','min'=>1,'max'=>'5' ,'class' => 'rating-selection']); ?>
 
 
                     </fieldset>
                         <?= $this->Form->button(__('Submit')) ?>
                         <?= $this->Form->end() ?>
-                    <button class="send-opinion">Dodaj</button>
                 </div>
             </div>
 
