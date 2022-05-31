@@ -8,21 +8,14 @@
  */
 ?>
 <?= $this->Html->css('viewOffer') ?>
+<div class="go-back-to-parent-category">
+        <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
+</div>
 <div class="offer-container">
     <div class="offer-gallery">
         <div class="title-location">
             <div class="offer-title">
-                <h3>
-                    <?php if ($offer->category_id == 2): ?>
-                Zespół muzyczny/DJ
-                    <?php elseif ($offer->category_id == 1): ?>
-                Sale
-                    <?php elseif ($offer->category_id == 3): ?>
-                Catering
-                </h3>
-                <?php endif; ?>
-
-                    <h3><?= h($offer->name) ?></h3>
+                <h3><?= h($offer->name) ?></h3>
             </div>
             <div class="offer-location">
                 <?=  h($offer->address->city) ?>
@@ -44,7 +37,9 @@
             <?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?>
         </div>
         <div class="offer-website">
-            <?= h($offer->website) ?>
+            <h4>
+                <?= "Nasza strona: " . h($offer->website) ?>
+            </h4>
         </div>
         <div class="offer-price">
             <div class="offer-description-bold">
@@ -69,18 +64,15 @@
         </div>
     </div>
     <div class="offer-reservation">
-        <h2>Dokonaj rezerwacji</h2>
         <?= $this->Form->create($booking, ['url'=>['controller'=>'Bookings','action'=>'add']]) ?>
         <fieldset>
-        <div class="make-reservation">
-            <div>
-            <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'required' => true, 'empty' => 'Wybierz datę rezerwacji']); ?>
-            <?= $this->Form->hidden('offer_id'); ?>
+            <div class="make-reservation">
+                <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'label' => 'Dokonaj rezerwacji', 'empty' => 'Wybierz datę rezerwacji', 'required' => true]); ?>
+                <?= $this->Form->hidden('offer_id'); ?>
+                <div>
+                <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
+                </div>
             </div>
-            <div>
-            <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
-            </div>
-        </div>
         </fieldset>
         <?= $this->Form->end() ?>
     </div>
@@ -106,26 +98,17 @@
         <div class="opinions">
             <h2>Opinie</h2>
             <div class="white-box">
-
-                <?php if($account_type_id == 1) : ?>
-
                 <div class="input-button-box">
-                    <h3>Dodaj opinię</h3>
                     <div >
                     <?= $this->Form->create() ?>
                     <fieldset>
-
-
-                        <?php echo $this->Form->control('description', ['type'=>'textarea']); ?>
-                        <?php echo $this->Form->control('rating', ['type'=>'number','min'=>1,'max'=>'5' ,'class' => 'rating-selection']); ?>
-
-
+                        <?php echo $this->Form->control('description', ['type'=>'textarea', 'label' => 'Dodaj opinię']); ?>
+                        <?php echo $this->Form->control('rating',
+                            ['type' => 'number', 'min' => 1,'max' => '5','class' => 'rating-selection', 'label' => 'Ocena']); ?>
                     </fieldset>
-                        <?= $this->Form->button(__('Submit')) ?>
+                        <?= $this->Form->button(__('Dodaj opinię'), ['type' => 'submit']) ?>
                         <?= $this->Form->end() ?>
                 </div>
-
-                    <?php endif; ?>
             </div>
 
             <?php foreach ($ratings as $rating): ?>
@@ -143,7 +126,6 @@
                         <blockquote>
                             <?= $this->Text->autoParagraph(h($rating->description)); ?>
                         </blockquote>
-
                     </div>
                 </div>
             </div>
@@ -151,6 +133,6 @@
         </div>
     </div>
 </div>
-    <div>
-        <?= $this->Html->link(__('Wroć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
-    </div>
+<div>
+    <?= $this->Html->link(__('Wroć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
+</div>

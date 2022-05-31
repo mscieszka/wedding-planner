@@ -1,3 +1,10 @@
+.go-back-to-parent-category .button {
+    background-color: transparent;
+    color: #6f6454;
+    font-weight: 600;
+    font-size: 24px;
+}
+
 .container {
     max-width: unset;
     width: min-content;
@@ -7,6 +14,22 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+.offer-container label {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.offer-container p {
+    font-family: 'Segoe UI', serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.offer-title h3 {
+    font-size: 32px;
 }
 
 .offer-gallery,
@@ -36,12 +59,12 @@
     align-items: center;
 }
 
-.title-location > h1,
-h3,
-h3 {
+.title-location > h1, h3 {
     margin: 0;
     align-items: center;
+    color: black;
 }
+
 .title-location > h3 {
     font-family: "Poppins", serif;
     font-style: normal;
@@ -71,11 +94,15 @@ h3 {
 }
 
 .offer-details {
-    padding: 2rem;
+    padding: 3rem;
     min-height: 300px;
     background: white;
     display: flex;
     flex-direction: column;
+}
+
+.offer-details a {
+    font-size: 2rem;
 }
 
 .offer-reservation {
@@ -84,7 +111,8 @@ h3 {
     background: #fef6e7;
     grid-template-rows: 50% 50%;
 }
-.offer-reservation > h2 {
+
+.offer-reservation>h2 {
     grid-row: 1/2;
     margin: 1rem 1rem 1rem 30px;
 }
@@ -94,8 +122,7 @@ h3 {
     justify-content: space-between;
     align-items: end;
     grid-row: 2/3;
-    margin-left: 30px;
-    margin-right: 50px;
+    margin: 2rem;
 }
 
 .reservation-date {
@@ -129,8 +156,8 @@ h3 {
     background: #fef6e7;
     display: grid;
     grid-template-columns: 15% 40% 45%;
-
 }
+
 .owner-img {
     width: 150px;
     height: 150px;
@@ -144,16 +171,16 @@ h3 {
     border-radius: 100px;
 }
 
-.owner-name{
+.owner-name {
     margin: 20px;
-    font-family: 'Poppins';
+    font-family: 'Poppins', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     color: black;
 }
 
-.owner-profile-link{
+.owner-profile-link {
     margin: 30px;
     display: flex;
     align-items: flex-end;
@@ -166,10 +193,12 @@ h3 {
     display: flex;
     justify-content: flex-start;
 }
+
 .rating,
 .opinions {
     margin-left: 30px;
 }
+
 .rate-box {
     display: flex;
     justify-content: center;
@@ -181,7 +210,6 @@ h3 {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-
 textarea {
     width: 800px;
     height: 135px;
@@ -191,7 +219,7 @@ textarea {
     font-family: "poppins", serif;
 }
 
-.input-button-box > h3 {
+.input-button-box>h3 {
     margin-top: 0;
     margin-bottom: 15px;
 }
@@ -219,6 +247,7 @@ textarea {
     font-size: 16px;
     font-weight: bold;
 }
+
 .send-opinion:hover {
     background: #84b79e;
 }
@@ -235,7 +264,7 @@ textarea {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.input-button-box .rating-selection{
+.input-button-box .rating-selection {
     width: 800px;
 }
 
@@ -250,6 +279,7 @@ textarea {
     object-fit: cover;
     border-radius: 100px;
 }
+
 .rest-of-opinion {
     display: flex;
     flex-direction: column;
@@ -293,7 +323,6 @@ textarea {
 .offer-address,
 .offer-website {
     margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .offer-advance-payment {
