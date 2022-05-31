@@ -1,5 +1,10 @@
 <div class="sidebar">
     <a class="category">Sala</a>
+    <div class="side-nav">
+        <?php if($account_type_id == 2): ?>
+            <?= $this->Html->link(__('Dodaj nową ofertę'), ['controller' => 'Offers', 'action' => 'add', h($category->id)]) ?>
+        <?php endif; ?>
+    </div>
     <label id="label_sorting_type" for="select_sorting_type">Sortowanie</label>
     <select name="sorting_types" id="select_sorting_type">
         <option value="by_popularity">Domyślnie</option>

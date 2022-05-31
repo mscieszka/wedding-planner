@@ -200,6 +200,32 @@ div.rest {
 
 /*--------- sidebar ----------*/
 
+
+.side-nav{
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 50px;
+    height: 40px;
+    padding: 10px 7px 7px 15px;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.side-nav a{
+    color: black;
+}
+
+tr{
+    background: #FEF6E7;
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
+    width: 800px;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .sidebar * {
     line-height: 1;
 }
@@ -219,6 +245,7 @@ div.rest {
     border-radius: 25px;
     padding-left: 10px;
     border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .sidebar > .filters {
@@ -268,4 +295,44 @@ div.rest {
     margin-bottom: 1rem;
     font-weight: 400;
     font-size: 16px;
+}
+
+.categories-view-content{
+    background: white;
+    border-radius: 25px;
+    grid-column: 2/3;
+    margin-inline: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    width: 900px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.offer-img {
+    width: 230px;
+    height: 150px;
+    grid-column: 1/2;
+
+}
+
+
+.offerimg{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.offer-price{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color:black;
+}
+
+.offer-name{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
 }

@@ -7,11 +7,7 @@
 <?= $this->Html->css('viewOffers') ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <?php if($account_type_id == 2): ?>
-                <?= $this->Html->link(__('Dodaj nową ofertę'), ['controller' => 'Offers', 'action' => 'add', h($category->id)]) ?>
-            <?php endif; ?>
-        </div>
+
         <?php
         if ($category->id == 1) include_once('./templates/Offers/offers_filters/offers_filters_hall.php');
         elseif ($category->id == 2) include_once('./templates/Offers/offers_filters/offers_filters_dj.php');
@@ -20,16 +16,16 @@
     </aside>
 
     <div class="column-responsive column-80">
-        <div class="categories view content">
+        <div class="categories-view-content">
             <div class="related">
                 <?php if (!empty($category->offers)) : ?>
                 <div class="table-responsive">
                     <table>
                         <?php foreach ($category->offers as $offers) : ?>
                         <tr>
-                            <td><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></td>
-                            <td><?= h($offers->price) ?></td>
-                            <td><?= h($offers->description) ?></td>
+                            <td class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offerimg']) ?></td>
+                            <td class="offer-name"><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></td>
+                            <td class="offer-price"><?= h($offers->price) . " zł" ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </table>
