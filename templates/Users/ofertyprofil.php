@@ -67,4 +67,81 @@
 
 
 
+        <div class="users view content">
+            <div style="display: flex; justify-content: space-around">
+            </div>
+
+            <?php if($account_type_id == 2): ?>
+            <div class="offer_container">
+                <div class="offer_container_header">
+                    <h3>Oferty użytkownika</h3>
+                    <div><?= $this->Html->link(__('Dodaj ofertę'), ['controller' => 'Offers', 'action' => 'add']) ?></div>
+                </div>
+                <div class="offer_container_wrapper">
+
+                    <div class="related">
+                        <?php if (!empty($user->offers)) : ?>
+                            <?php foreach ($user->offers as $offers) : ?>
+
+                                <div class="offer_container_wrapper_image">Zdjęcie</div>
+                                <div class="offer_container_wrapper_description">
+                                    <div class="offer_container_wrapper_title">
+                                        <div><span style="font-weight: bold;"><?= h($offers->name) ?></span></div>
+                                        <?= $offers->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offers->address->id]) : '' ?>
+                                    </div>
+                                    <div class="offer_container_wrapper_stars">*****</div>
+                                    <div class="offer_container_wrapper_description"><?= h($offers->description) ?></div>
+                                </div>
+                                <div class="offer_container_edit_button">
+                                    <?= $this->Html->link(__('Edit Offer'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right']) ?>
+                                    <?= $this->Html->link(__('Delete Offer'), ['controller' => 'Offers','action' => 'delete', $offers->id], ['class' => 'button float-right']) ?>
+                                </div>
+
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
+
+
+
+
+
+            <?php if($account_type_id == 1): ?>
+                <div class="offer_container">
+                    <div class="offer_container_header">
+                        <h3>Ulubione oferty użytkownika</h3>
+                    </div>
+                    <div class="offer_container_wrapper">
+
+                        <div class="related">
+                            <?php if (!empty($user->saved_user_offers)) : ?>
+                                <?php foreach ($offersliked as $offers) : ?>
+
+                                    <div class="offer_container_wrapper_image">Zdjęcie</div>
+                                    <div class="offer_container_wrapper_description">
+                                        <div class="offer_container_wrapper_title">
+                                            <div><span style="font-weight: bold;"><?= h($offers->name) ?></span></div>
+                                            <?= $offers->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offers->address->id]) : '' ?>
+                                        </div>
+                                        <div class="offer_container_wrapper_stars">*****</div>
+                                        <div class="offer_container_wrapper_description"><?= h($offers->description) ?></div>
+                                    </div>
+                                    <div class="offer_container_edit_button">
+                                        <?= $this->Html->link(__('Edit Offer'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right']) ?>
+                                        <?= $this->Html->link(__('Delete Offer'), ['controller' => 'Offers','action' => 'delete', $offers->id], ['class' => 'button float-right']) ?>
+                                    </div>
+
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+
+
+
 

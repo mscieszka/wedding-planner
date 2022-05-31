@@ -60,10 +60,7 @@
             <div style="display: flex; justify-content: space-around">
             </div>
 
-
             <?php if($account_type_id == 2): ?>
-
-
 
             <div class="offer_container">
                 <div class="offer_container_header">

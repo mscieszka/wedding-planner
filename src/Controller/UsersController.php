@@ -109,13 +109,25 @@ class UsersController extends AppController
         }
 
 
+        $saved_user_offers = $this->Offers->SavedUserOffers->find()
+            ->where([
+                'user_id' => $this->request->getAttribute('identity')->getIdentifier()
+            ])->toArray();
+        $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
+
+
+
+
+
+
+
         //'SavedUserBookings',
         //$this->Authorization->authorize($user);
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
 
-        $this->set(compact('user', 'account_type_id', 'id_user_log'));
+        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offersliked'));
 
 
         $layout = '';
