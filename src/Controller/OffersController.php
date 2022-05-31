@@ -125,6 +125,7 @@ class OffersController extends AppController
         $booking = $this->getTableLocator()->get('Bookings')->newEmptyEntity();
         $booking->offer_id = $id;
 
+
         $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings', 'users', 'offers'));
 
     }

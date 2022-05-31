@@ -107,6 +107,8 @@
             <h2>Opinie</h2>
             <div class="white-box">
 
+                <?php if($account_type_id == 1) : ?>
+
                 <div class="input-button-box">
                     <h3>Dodaj opinię</h3>
                     <div >
@@ -122,6 +124,8 @@
                         <?= $this->Form->button(__('Submit')) ?>
                         <?= $this->Form->end() ?>
                 </div>
+
+                    <?php endif; ?>
             </div>
 
             <?php foreach ($ratings as $rating): ?>
