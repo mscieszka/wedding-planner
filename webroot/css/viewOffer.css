@@ -149,9 +149,10 @@ h3 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 34px;
+    font-size: 28px;
     color: black;
 }
+
 .owner-profile-link{
     margin: 30px;
     display: flex;

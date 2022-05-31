@@ -80,6 +80,7 @@
         </a>
         <div class="owner-name">
             <?= $offer->user->name; ?>
+            <?= $offer->user->surname; ?>
         </div>
         <div class="owner-profile-link">
             <?= $offer->has('user') ? $this->Html->link("Zobacz więcej ofert użytkownika", ['controller' => 'Users', 'action' => 'view', $offer->user->id]) : '' ?>
