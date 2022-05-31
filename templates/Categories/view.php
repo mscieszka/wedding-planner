@@ -9,15 +9,15 @@
 <div class="row">
     <?php if ($category->id == 1): ?>
     <aside class="column">
-        <?= $this->element('offers_filters\offers_filters_hall'); ?>
+        <?= $this->element('offers_filters/offers_filters_hall'); ?>
     </aside>
     <?php elseif ($category->id == 2): ?>
     <aside class="column">
-        <?= $this->element('offers_filters\offers_filters_dj'); ?>
+        <?= $this->element('offers_filters/offers_filters_dj'); ?>
     </aside>
     <?php elseif ($category->id == 3): ?>
     <aside class="column">
-        <?= $this->element('offers_filters\offers_filters_catering'); ?>
+        <?= $this->element('offers_filters/offers_filters_catering'); ?>
     </aside>
     <?php endif; ?>
     <div class="column-responsive column-80">
@@ -27,7 +27,32 @@
                 <div class="table-responsive">
                     <table>
                         <?php foreach ($category->offers as $offers) : ?>
-                        <tr>
+                        <?php
+                            $search_param = '';
+                            if($category->id == 2) {
+                                if($offers['music_filter']->disco_polo) {
+                                    $search_param .= ' music_type_disco_polo = "1" ';
+                                }
+                                if($offers['music_filter']->pop) {
+                                    $search_param .= ' music_type_pop = "1" ';
+                                }
+                                if($offers['music_filter']->rock) {
+                                    $search_param .= ' music_type_rock = "1" ';
+                                }
+                                if($offers['music_filter']->oldies) {
+                                    $search_param .= ' music_type_oldies = "1" ';
+                                }
+                                if($offers['music_filter']->world_music) {
+                                    $search_param .= ' music_type_global = "1" ';
+                                }
+                                if($offers['music_filter']->running_games) {
+                                    $search_param .= ' dj_additional_info_wedding_games = "1" ';
+                                }
+                                $search_param .= ' info = "'.$offers->name.'" ';
+
+                            }
+                            ?>
+                        <tr class="offer" <?= $search_param ?>>
                             <td class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offerimg']) ?></td>
                             <td class="offer-name"><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></td>
                             <td class="offer-price">

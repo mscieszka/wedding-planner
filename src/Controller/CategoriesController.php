@@ -41,7 +41,7 @@ class CategoriesController extends AppController
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $category = $this->Categories->get($id, [
-            'contain' => ['Offers'],
+            'contain' => ['Offers', 'Offers.MusicFilters', 'Offers.HallFilters', 'Offers.CateringFilters'],
         ]);
 
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
