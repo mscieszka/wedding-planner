@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Fixed user view, and deleting account">
+    <list default="true" id="23ca932e-b0b0-428f-9ccb-4e62b493592a" name="Changes" comment="profil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Offers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Users/zamowieniaprofil.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/zamowieniaprofil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
@@ -317,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653990646127</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="profil">
+      <created>1654001444857</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654001444857</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +342,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Policies" />
@@ -351,6 +361,7 @@
     <MESSAGE value="naprawienie rezerwacji" />
     <MESSAGE value="dodawanie do ulubionych dla klienta" />
     <MESSAGE value="Fixed user view, and deleting account" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed user view, and deleting account" />
+    <MESSAGE value="profil" />
+    <option name="LAST_COMMIT_MESSAGE" value="profil" />
   </component>
 </project>

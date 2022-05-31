@@ -93,7 +93,7 @@
             <?= $offer->user->surname; ?>
         </div>
         <div class="owner-profile-link">
-            <?= $offer->has('user') ? $this->Html->link("Zobacz więcej ofert użytkownika", ['controller' => 'Users', 'action' => 'view', $offer->user->id]) : '' ?>
+            <?= $offer->has('user') ? $this->Html->link("Zobacz więcej ofert użytkownika", ['controller' => 'Users', 'action' => 'profile', 1 , $offer->user->id]) : '' ?>
         </div>
     </div>
     <div class="offer-opinions">
@@ -131,7 +131,7 @@
                 </a>
                 <div class="rest-of-opinion">
                     <div class="upper-box">
-                        <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', $rating->user->id]) : '' ?></h3>
+                        <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
                         <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
                         <h4><?= h($rating->opinion_date) ?></h4>
                     </div>

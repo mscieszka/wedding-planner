@@ -41,8 +41,10 @@
                 </div>
             </div>
             <div class="provider_edit">
+                <?php if($user->id == $id_user_log):?>
                 <?= $this->Html->link(__('Edytuj profil'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item button float-right']) ?>
                 <?= $this->Html->link(__('Wyloguj'), ['action' => 'logout'], ['class' => 'side-nav-item button float-right']) ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="bookmarks_wrapper">

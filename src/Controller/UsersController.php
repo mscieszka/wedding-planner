@@ -88,7 +88,7 @@ class UsersController extends AppController
 
 
 
-    public function profile( $id_user = null, $argument = null)
+    public function profile($argument = 1, $id_user = null)
     {
         //wlasny profil zalogowanego uzytkownika
 
