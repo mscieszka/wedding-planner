@@ -44,6 +44,7 @@ class UserPolicy extends GlobalPolicy
      */
     public function canDelete(IdentityInterface $user, User $resource)
     {
+        return $this->isLogon($user);
     }
 
     /**
