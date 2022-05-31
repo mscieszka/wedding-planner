@@ -127,14 +127,14 @@ h3 {
 .offer-owner-contacts {
     height: 200px;
     background: #fef6e7;
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 40% 45%;
 
 }
-
 .owner-img {
     width: 150px;
     height: 150px;
-    margin: 10px;
+    margin: 20px;
 }
 
 .ownerimg {
@@ -142,10 +142,21 @@ h3 {
     max-height: 150px;
     object-fit: cover;
     border-radius: 100px;
-    margin: 20px;
 }
-.owner-data {
+
+.owner-name{
+    margin: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    color: black;
+}
+.owner-profile-link{
     margin: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .offer-opinions {
@@ -169,15 +180,6 @@ h3 {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.white-box {
-    width: 1063px;
-    min-height: 220px;
-    border-radius: 25px;
-    background: white;
-    margin-bottom: 20px;
-    padding: 30px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-}
 
 textarea {
     width: 800px;
@@ -188,15 +190,22 @@ textarea {
     font-family: "poppins", serif;
 }
 
-.white-box > h3 {
+.input-button-box > h3 {
     margin-top: 0;
     margin-bottom: 15px;
 }
 
 .input-button-box {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-content: flex-end;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 7px 14px 0 rgb(60 66 87 / 10%), 0 3px 6px 0 rgb(0 0 0 / 7%);
+    width: 1000px;
+    margin-bottom: 15px;
 }
 
 .send-opinion {
@@ -216,13 +225,17 @@ textarea {
 .opinion-box {
     display: grid;
     grid-template-columns: 10% 90%;
-    width: 1063px;
+    width: 1000px;
     height: auto;
     border-radius: 25px;
     background: white;
     margin-bottom: 20px;
     padding: 30px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-button-box .rating-selection{
+    width: 800px;
 }
 
 .user-img {
