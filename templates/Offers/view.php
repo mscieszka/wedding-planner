@@ -67,6 +67,15 @@
                 <?= $this->Number->format($offer->advance_payment) . " %" ?>
             </div>
         </div>
+        <div>
+            <?php if($account_type_id == 1): ?>
+                <?php if(in_array($offer->id, $saved_user_offers)): ?>
+                    <?= $this->Form->postLink(__('Usun z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy napewno chcesz usunac te oferte z ulubionych?'),'class' => 'button',]) ?>
+                <?php else: ?>
+                    <?= $this->Html->link(__('Dodaj do ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offer->id],['class' => 'button']) ?>
+                <?php endif; ?>
+            <?php endif; ?>
+        </div>
     </div>
     <div class="offer-reservation">
         <h2>Dokonaj rezerwacji</h2>

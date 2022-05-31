@@ -9,9 +9,6 @@
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/OffersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OffersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/offers_filters/offers_filters_catering.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/offers_filters/offers_filters_catering.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/offers_filters/offers_filters_dj.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/offers_filters/offers_filters_dj.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Offers/offers_filters/offers_filters_hall.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/offers_filters/offers_filters_hall.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Offers/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Offers/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
@@ -365,7 +362,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Policies" />

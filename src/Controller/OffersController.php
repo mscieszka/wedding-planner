@@ -126,7 +126,15 @@ class OffersController extends AppController
         $booking->offer_id = $id;
 
 
-        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings', 'users', 'offers'));
+
+        $saved_user_offers = $this->Offers->SavedUserOffers->find()
+            ->where([
+                'user_id' => $this->request->getAttribute('identity')->getIdentifier()
+            ])->toArray();
+        $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
+
+
+        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings', 'users', 'offers','saved_user_offers'));
 
     }
 
