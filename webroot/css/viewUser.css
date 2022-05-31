@@ -1,53 +1,20 @@
-body
-{
-
-}
-
-.container
-{
+.container {
     max-width: none;
     padding: 0 3em;
 }
 
-.column-responsive.column-80
-{
+.column-responsive.column-80 {
     max-width: 112rem !important;
     align-self: center;
 }
 
-.top-nav
-{
-    display: none;
-}
-
-.row
-{
+.row {
     flex-direction: column;
     width: 100%;
     margin: 0;
 }
 
-nav
-{
-    display: flex;
-    margin: 1em 0;
-}
-/*Filip*/
-header
-{
-    justify-content: flex-end;
-    align-items: center;
-    column-gap: 2em;
-}
-
-.search-bar
-{
-    width: 30em;
-    margin: 0;
-}
-
-.icon_user
-{
+.icon_user {
     color: #fff;
     width: 3em;
     height: 3em;
@@ -62,14 +29,12 @@ header
 
 /* PROVIDER */
 
-.bookmarks_wrapper
-{
+.bookmarks_wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.bookmarks_wrapper div
-{
+.bookmarks_wrapper div {
     background-color: #f8ead3;
     width: 15em;
     height: 3em;
@@ -81,8 +46,7 @@ header
     margin: 0.5em 0;
 }
 
-.bookmarks_wrapper div.current_bookmarks
-{
+.bookmarks_wrapper div.current_bookmarks {
     background-color: #bdd4b9;
     color: #000;
     border-radius: 1.5em 1.5em 0 0;
@@ -90,8 +54,7 @@ header
     margin-bottom: 0;
 }
 
-.bookmarks_wrapper div a
-{
+.bookmarks_wrapper div a {
     display: flex;
     width: 100%;
     height: 100%;
@@ -99,20 +62,17 @@ header
     align-items: center;
 }
 
-.bookmarks_wrapper div a:hover
-{
+.bookmarks_wrapper div a:hover {
     background-color: #e7d9c2;
     border-radius: 3em;
 }
 
-.users.view.content
-{
+.users.view.content {
     background-color: #bdd4b9;
     border-radius: 0 0 2em 2em;
 }
 
-.notification
-{
+.notification {
     background-color: #fff;
     width: 48%;
     min-height: 40em;
@@ -123,27 +83,23 @@ header
     padding: 1em;
 }
 
-.notification h5
-{
+.notification h5 {
     align-self: center;
 }
 
-.notification_container
-{
+.notification_container {
     width: 100%;
     padding: 0.5em;
     border-bottom: 1px solid gray;
 }
 
-.notification_container .notification_buttons_wrapper
-{
+.notification_container .notification_buttons_wrapper {
     display: flex;
     justify-content: space-around;
     padding: 0.5em 0;
 }
 
-.notification_container .notification_buttons_wrapper .reject
-{
+.notification_container .notification_buttons_wrapper .reject {
     background-color: red;
     width: 6em;
     height: 2.5em;
@@ -153,8 +109,7 @@ header
     align-items: center;
 }
 
-.notification_container .notification_buttons_wrapper .reject a
-{
+.notification_container .notification_buttons_wrapper .reject a {
     color: #fff;
     width: 6em;
     height: 2.5em;
@@ -163,16 +118,14 @@ header
     align-items: center;
 }
 
-.notification_container .notification_buttons_wrapper .reject a:hover
-{
+.notification_container .notification_buttons_wrapper .reject a:hover {
     background-color: darkred;
     width: 6em;
     height: 2.5em;
     border-radius: 2em;
 }
 
-.notification_container .notification_buttons_wrapper .accept
-{
+.notification_container .notification_buttons_wrapper .accept {
     background-color: #046206;
     width: 17em;
     height: 2.5em;
@@ -182,8 +135,7 @@ header
     align-items: center;
 }
 
-.notification_container .notification_buttons_wrapper .accept a
-{
+.notification_container .notification_buttons_wrapper .accept a {
     color: #fff;
     width: 17em;
     height: 2.5em;
@@ -192,16 +144,14 @@ header
     align-items: center;
 }
 
-.notification_container .notification_buttons_wrapper .accept a:hover
-{
+.notification_container .notification_buttons_wrapper .accept a:hover {
     background-color: #034904;
     width: 17em;
     height: 2.5em;
     border-radius: 2em;
 }
 
-.calendar
-{
+.calendar {
     background-color: #fff;
     width: 48%;
     min-height: 40em;
@@ -209,31 +159,26 @@ header
     padding: 1em;
 }
 
-.calendar .calendar_header
-{
+.calendar .calendar_header {
     display: flex;
     justify-content: space-between;
 }
 
-.calendar .calendar_header div
-{
+.calendar .calendar_header div {
     display: flex;
 }
 
-.calendar .calendar_legend
-{
+.calendar .calendar_legend {
     display: flex;
     justify-content: space-around;
     padding: 2em 0;
 }
 
-.calendar .calendar_legend div
-{
+.calendar .calendar_legend div {
     display: flex;
 }
 
-.calendar .calendar_box
-{
+.calendar .calendar_box {
     width: 90%;
     height: 25em;
     margin-left: auto;
@@ -241,8 +186,7 @@ header
     border: 1px solid gray;
 }
 
-.offer_container
-{
+.offer_container {
     background-color: #fff;
     width: 98%;
     min-height: 20em;
@@ -256,14 +200,12 @@ header
     margin-top: 1.2em;
 }
 
-.offer_container_header
-{
+.offer_container_header {
     display: flex;
     justify-content: space-between;
 }
 
-.offer_container_header div
-{
+.offer_container_header div {
     width: 8em;
     height: 2.5em;
     background-color: #bdd4b9;
@@ -273,8 +215,7 @@ header
     align-items: center;
 }
 
-.offer_container_header div a
-{
+.offer_container_header div a {
     color: #3f5f3a;
     width: 8em;
     height: 2.5em;
@@ -283,8 +224,7 @@ header
     align-items: center;
 }
 
-.offer_container_header div a:hover
-{
+.offer_container_header div a:hover {
     background-color: #97bb90;
     width: 8em;
     height: 2.5em;
@@ -294,38 +234,32 @@ header
     border-radius: 1em;
 }
 
-.offer_container_wrapper
-{
+.offer_container_wrapper {
     width: 100%;
     display: flex;
     column-gap: 1em;
 }
 
-.offer_container_wrapper_image
-{
+.offer_container_wrapper_image {
     width: 25%;
     height: 10em;
     border: 1px solid grey;
 }
 
-.offer_container_wrapper_description
-{
+.offer_container_wrapper_description {
     width: 50%;
 }
 
-.offer_container_wrapper_title
-{
+.offer_container_wrapper_title {
     display: flex;
     justify-content: space-between;
 }
 
-.offer_container_wrapper_description
-{
+.offer_container_wrapper_description {
     width: 100%;
 }
 
-.offer_container_edit_button
-{
+.offer_container_edit_button {
     width: 15%;
     display: flex;
     flex-direction: column;

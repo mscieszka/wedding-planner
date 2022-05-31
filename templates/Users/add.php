@@ -7,16 +7,9 @@
 ?>
 <?= $this->Html->css('addUser') ?>
 <div class="row">
-    <!--<aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>-->
     <div class="column-responsive column-80">
             <?= $this->Form->create($user) ?>
             <fieldset>
-                <!--<legend><?= __('Add User') ?></legend>-->
                 <div class="legend_container">
                     <legend class="legend_first background_mobile_checked" id="uslugodawca">USŁUGODAWCA</legend>
                     <legend class="legend_second" id="uslugobiorca"><?= $this->Html->link("USŁUGOBIORCA", ['action' => 'add', 1]) ?></legend>
@@ -31,7 +24,6 @@
                                 echo $this->Form->control('email', ['required' => true, 'placeholder' => ' Adres e-mail', 'class' => 'require_data']);
                                 echo $this->Form->control('phone_number', ['required' => true, 'placeholder' => ' Numer telefonu', 'class' => 'require_data']);
                                 echo $this->Form->control('password', ['required' => true, 'placeholder' => ' Hasło', 'class' => 'require_data']);
-            //                    echo $this->Form->control('confirmed_password');
                             ?>
                         </div>
                         <div class="form_column">
@@ -43,9 +35,6 @@
                                 echo $this->Form->control('krs', ['required' => true, 'placeholder' => ' KRS', 'class' => 'require_data']);
                                 echo $this->Form->control('nip', ['required' => true, 'placeholder' => ' NIP', 'class' => 'require_data']);
                                 echo $this->Form->control('regon', ['required' => false, 'placeholder' => ' REGON (opcjonalnie)']);
-            //                    echo $this->Form->control('enabled');
-            //                    echo $this->Form->control('confirmed_email');
-            //                    echo $this->Form->control('account_type_id', ['options' => $accountTypes]);
                             ?>
                         </div>
                     </div>
@@ -55,7 +44,6 @@
                     </div>
                 </div>
             </fieldset>
-
             <?= $this->Form->end() ?>
     </div>
 </div>
