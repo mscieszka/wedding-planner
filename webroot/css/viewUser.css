@@ -15,11 +15,6 @@ body
     align-self: center;
 }
 
-.top-nav
-{
-    display: none;
-}
-
 .row
 {
     flex-direction: column;
@@ -33,13 +28,6 @@ nav
     margin: 1em 0;
 }
 /*Filip*/
-header
-{
-    justify-content: flex-end;
-    align-items: center;
-    column-gap: 2em;
-}
-
 .search-bar
 {
     width: 30em;
