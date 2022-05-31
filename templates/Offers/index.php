@@ -36,11 +36,14 @@
                 </tr>
             </thead>
             <tbody>
+
             <?php foreach ($offers as $offer): ?>
+
                 <?php if ($onlymyoffer == 2): ?>
                     <?php if(!(in_array($offer->id, $saved_user_offers))): continue; ?>
                     <?php endif; ?>
                 <?php endif; ?>
+
                 <tr>
                     <td><?= $this->Html->link(h($offer->name), ['action' => 'view', $offer->id]) ?></td>
                     <td><?= $this->Number->format($offer->price) ?></td>

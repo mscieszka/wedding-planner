@@ -46,9 +46,18 @@ class OffersController extends AppController
         //ale to zabezpieczone w templates
         // onlymyoffrs = 1 lub =2
 
+
+        //provider
+        if($onlymyoffer == 1){
             $offers = $this->paginate($this->Offers->find()->where(
                 ['offers.user_id' => $this->request->getAttribute('identity')->getIdentifier()]
             ));
+        }
+
+        //klient
+            else if($onlymyoffer == 2){
+                $offers = $this->paginate($this->Offers->find());
+            }
 
         $saved_user_offers = $this->Offers->SavedUserOffers->find()
             ->where([
@@ -278,6 +287,7 @@ class OffersController extends AppController
                 $this->Flash->success(__('The offer has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
+
             }
             $this->Flash->error(__('The offer could not be saved. Please, try again.'));
         }

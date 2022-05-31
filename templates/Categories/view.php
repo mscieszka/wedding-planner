@@ -9,11 +9,10 @@
     <aside class="column">
 
         <?php
-         if ($category->id == 1) include_once('./templates/Offers/offers_filters/offers_filters_hall.php');
-        elseif ($category->id == 2) include_once('./templates/Offers/offers_filters/offers_filters_dj.php');
-        elseif ($category->id == 3) include_once('./templates/Offers/offers_filters/offers_filters_catering.php');
+        if ($category->id == 1) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_hall.php');
+        elseif ($category->id == 2) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_dj.php');
+        elseif ($category->id == 3) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_catering.php');
         ?>
-
     </aside>
 
     <div class="column-responsive column-80">
