@@ -12,7 +12,17 @@
     <div class="offer-gallery">
         <div class="title-location">
             <div class="offer-title">
-                <h3><?= h($offer->name) ?></h3>
+                <h3>
+                    <?php if ($offer->category_id == 2): ?>
+                Zespół muzyczny/DJ
+                    <?php elseif ($offer->category_id == 1): ?>
+                Sale
+                    <?php elseif ($offer->category_id == 3): ?>
+                Catering
+                </h3>
+                <?php endif; ?>
+
+                    <h3><?= h($offer->name) ?></h3>
             </div>
             <div class="offer-location">
                 <?=  h($offer->address->city) ?>
@@ -129,11 +139,14 @@
                         <blockquote>
                             <?= $this->Text->autoParagraph(h($rating->description)); ?>
                         </blockquote>
+
                     </div>
                 </div>
             </div>
             <?php endforeach; ?>
-
         </div>
     </div>
 </div>
+    <div>
+        <?= $this->Html->link(__('Wroć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
+    </div>
