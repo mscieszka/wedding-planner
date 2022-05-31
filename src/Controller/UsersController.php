@@ -151,7 +151,8 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
 
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['controller' => 'Users', 'action' => 'logout']);
+
     }
 
     public function beforeFilter(\Cake\Event\EventInterface $event)
