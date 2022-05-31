@@ -80,7 +80,17 @@ a {
     text-decoration: none;
 }
 
-/* ------------- Register page ------------- */
+.profile-icon img {
+    margin-top: 10px;
+    border-radius: 50%;
+    transition: transform .4s;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.05);
+}
+
+    /* ------------- Register page ------------- */
 .logo_text_container {
     display: flex;
     justify-content: flex-start;

@@ -19,6 +19,10 @@ header {
     justify-content: flex-end;
 }
 
+.top-nav-links {
+    display: flex;
+}
+
 img {
     margin-bottom: 0;
 }

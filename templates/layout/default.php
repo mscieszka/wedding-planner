@@ -38,14 +38,12 @@
     <?= $this->Html->script('zabuto_calendar.js') ?>
 </head>
 <body>
-    <?php include_once('header/header-no-search.php') ?>
+    <?= $this->element('header/header-no-search'); ?>
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
         </div>
     </main>
-    <footer>
-    </footer>
 </body>
 </html>

@@ -5,15 +5,21 @@
  */
 ?>
 <?= $this->Html->css('viewOffers') ?>
-<?php include_once('C:\xampp\htdocs\wedding-planner\templates\layout\header\header-only-search.php'); ?>
+<?php $this->element('header/header-only-search'); ?>
 <div class="row">
+    <?php if ($category->id == 1): ?>
     <aside class="column">
-    <?php
-        if ($category->id == 1) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_hall.php');
-        elseif ($category->id == 2) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_dj.php');
-        elseif ($category->id == 3) include_once('C:\xampp\htdocs\wedding-planner\templates\Offers\offers_filters\offers_filters_catering.php');
-    ?>
+        <?= $this->element('offers_filters\offers_filters_hall'); ?>
     </aside>
+    <?php elseif ($category->id == 2): ?>
+    <aside class="column">
+        <?= $this->element('offers_filters\offers_filters_dj'); ?>
+    </aside>
+    <?php elseif ($category->id == 3): ?>
+    <aside class="column">
+        <?= $this->element('offers_filters\offers_filters_catering'); ?>
+    </aside>
+    <?php endif; ?>
     <div class="column-responsive column-80">
         <div class="categories-view-content">
             <div class="related">
