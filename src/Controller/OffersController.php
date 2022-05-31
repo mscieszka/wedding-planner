@@ -223,7 +223,9 @@ class OffersController extends AppController
                 $conn->commit();
 
                 $this->Flash->success(__('The offer has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Offers', 'action' => 'index', null]);
+
+
 
             } catch (\Cake\ORM\Exception\PersistanceFailedException $e) {
                 $conn -> rollback();
