@@ -39,26 +39,28 @@
                 </div>
             </div>
             <div class="provider_edit">
+                <?php if($user->id == $id_user_log):?>
                 <?= $this->Html->link(__('Edytuj profil'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item button float-right']) ?>
                 <?= $this->Html->link(__('Wyloguj'), ['action' => 'logout'], ['class' => 'side-nav-item button float-right']) ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="bookmarks_wrapper">
 
-            <?php if($account_type_id == 2): ?>
+            <?php if($user->account_type_id == 2): ?>
             <div class="current_bookmarks">Oferty użytkownika</div>
-            <div><?= $this->Html->link(__('Otrzymane oceny'), ['action' => 'profile', 2]) ?></div>
+            <div><?= $this->Html->link(__('Otrzymane oceny'), ['action' => 'profile', 2, $user->id]) ?></div>
             <?php if($user->id == $id_user_log):?>
-            <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3]) ?></div>
+            <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3, $user->id]) ?></div>
                 <?php endif; ?>
             <?php endif; ?>
 
 
-            <?php if($account_type_id==1): ?>
+            <?php if($user->account_type_id==1): ?>
                 <div class="current_bookmarks">Oferty obserwowane</div>
-                <div><?= $this->Html->link(__('Dodane oceny'), ['action' => 'profile', 2]) ?></div>
+                <div><?= $this->Html->link(__('Dodane oceny'), ['action' => 'profile', 2, $user->id]) ?></div>
                 <?php if($user->id == $id_user_log):?>
-                <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3]) ?></div>
+                <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3, $user->id]) ?></div>
                 <?php endif; ?>
                 <?php endif;?>
 

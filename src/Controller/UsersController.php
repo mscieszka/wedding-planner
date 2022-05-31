@@ -94,6 +94,8 @@ class UsersController extends AppController
 
         $user = null;
 
+
+
         if($id_user == null) {
             $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier(), [
                 'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],

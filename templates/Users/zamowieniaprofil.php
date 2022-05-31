@@ -48,18 +48,18 @@
         <div class="bookmarks_wrapper">
 
 
-            <?php if($account_type_id == 2): ?>
-                <div><?= $this->Html->link(__('Oferty użytkownika'), ['action' => 'profile', 1]) ?></div>
-                <div><?= $this->Html->link(__('Otrzymane oceny'), ['action' => 'profile', 2]) ?></div>
+            <?php if($user->account_type_id == 2): ?>
+                <div><?= $this->Html->link(__('Oferty użytkownika'), ['action' => 'profile', 1, $user->id]) ?></div>
+                <div><?= $this->Html->link(__('Otrzymane oceny'), ['action' => 'profile', 2, $user->id]) ?></div>
                 <?php if($user->id == $id_user_log):?>
                 <div class="current_bookmarks">Zamówienia</div>
                 <?php endif; ?>
             <?php endif; ?>
 
 
-            <?php if($account_type_id==1): ?>
-                <div><?= $this->Html->link(__('Oferty obserwowane'), ['action' => 'profile', 1]) ?></div>
-                <div><?= $this->Html->link(__('Dodane oceny'), ['action' => 'profile', 2]) ?></div>
+            <?php if($user->account_type_id==1): ?>
+                <div><?= $this->Html->link(__('Oferty obserwowane'), ['action' => 'profile', 1, $user->id]) ?></div>
+                <div><?= $this->Html->link(__('Dodane oceny'), ['action' => 'profile', 2, $user->id]) ?></div>
                 <?php if($user->id == $id_user_log):?>
                 <div class="current_bookmarks">Zamówienia</div>
             <?php endif;?>

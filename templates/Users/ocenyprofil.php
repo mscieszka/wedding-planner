@@ -39,27 +39,29 @@
                 </div>
             </div>
             <div class="provider_edit">
+                <?php if($user->id == $id_user_log):?>
                 <?= $this->Html->link(__('Edytuj profil'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item button float-right']) ?>
                 <?= $this->Html->link(__('Wyloguj'), ['action' => 'logout'], ['class' => 'side-nav-item button float-right']) ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="bookmarks_wrapper">
 
 
-            <?php if($account_type_id == 2): ?>
-                <div><?= $this->Html->link(__('Oferty użytkownika'), ['action' => 'profile', 1]) ?></div>
+            <?php if($user->account_type_id == 2): ?>
+                <div><?= $this->Html->link(__('Oferty użytkownika'), ['action' => 'profile', 1, $user->id]) ?></div>
                 <div class="current_bookmarks">Otrzymane oceny</div>
                 <?php if($user->id == $id_user_log):?>
-                <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3]) ?></div>
+                <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3, $user->id]) ?></div>
             <?php endif; ?>
             <?php endif; ?>
 
 
-            <?php if($account_type_id==1): ?>
-                <div><?= $this->Html->link(__('Oferty obserwowane'), ['action' => 'profile', 1]) ?></div>
+            <?php if($user->account_type_id==1): ?>
+                <div><?= $this->Html->link(__('Oferty obserwowane'), ['action' => 'profile', 1, $user->id]) ?></div>
                 <div class="current_bookmarks">Dodane oceny</div>
                 <?php if($user->id == $id_user_log):?>
-                <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3]) ?></div>
+                <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3, $user->id]) ?></div>
             <?php endif; ?>
             <?php endif;?>
 
