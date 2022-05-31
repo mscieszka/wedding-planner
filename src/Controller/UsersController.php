@@ -37,42 +37,119 @@ class UsersController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view($id = null, $argument = null)
     {
         $user = $this->Users->get($id, [
             'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
         ]);
+
         //'SavedUserBookings',
         //$this->Authorization->authorize($user);
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
-
-        $this->set(compact('user', 'account_type_id'));
-        $layout = 'view';
-        if($user->get('account_type_id') == 1) {
-            $layout = 'viewrecipient';
-        }
-        $this->render($layout);
-    }
-
-    public function profile()
-    {
-        $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier(), [
-            'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
-        ]);
-        //'SavedUserBookings',
-        //$this->Authorization->authorize($user);
-        $this->Authorization->skipAuthorization();
-        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+        $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
 
         $current_user = $user->id;
-        $this->set(compact('user', 'current_user', 'account_type_id'));
-        $layout = 'view';
+        $this->set(compact('user', 'current_user', 'account_type_id', 'id_user_log'));
+
+
+        $layout = '';
+
+
+        //oferty domyslnie
+        if ($argument == null) $argumetn =1;
+
+        //oferty
+        if ($argument == 1){
+            $layout = 'ofertyprofil';
+        }
+
+        //oceny
+        if ($argument == 2){
+            $layout = 'ocenyprofil';
+        }
+
+
+        //zamowienia
+        if ($argument == 3){
+            $layout = 'zamowieniaprofil';
+        }
+
+        /*
         if($user->get('account_type_id') == 1) {
             $layout = 'viewrecipient';
         }
+        */
+
         $this->render($layout);
     }
+
+
+
+
+
+    public function profile( $id_user = null, $argument = null)
+    {
+        //wlasny profil zalogowanego uzytkownika
+
+        $user = null;
+
+        if($id_user == null) {
+            $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier(), [
+                'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
+            ]);
+        }
+
+        else {
+            $user = $this->Users->get($id_user, [
+                'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
+            ]);
+        }
+
+
+        //'SavedUserBookings',
+        //$this->Authorization->authorize($user);
+        $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+        $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
+
+        $this->set(compact('user', 'account_type_id', 'id_user_log'));
+
+
+        $layout = '';
+
+
+        //oferty domyslnie
+        if ($argument == null) $argument = 1;
+
+        //oferty
+        if ($argument == 1){
+            $layout = 'ofertyprofil';
+        }
+
+            //oceny
+            if ($argument == 2){
+                $layout = 'ocenyprofil';
+            }
+
+
+                //zamowienia
+                if ($argument == 3){
+                    $layout = 'zamowieniaprofil';
+                }
+
+        /*
+        if($user->get('account_type_id') == 1) {
+            $layout = 'viewrecipient';
+        }
+        */
+
+        $this->render($layout);
+    }
+
+
+
+
 
     /**
      * Add method

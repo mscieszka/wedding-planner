@@ -131,7 +131,7 @@
                 </a>
                 <div class="rest-of-opinion">
                     <div class="upper-box">
-                        <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'view', $rating->user->id]) : '' ?></h3>
+                        <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', $rating->user->id]) : '' ?></h3>
                         <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
                         <h4><?= h($rating->opinion_date) ?></h4>
                     </div>
