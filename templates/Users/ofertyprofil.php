@@ -11,9 +11,7 @@
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
 <div class="row">
     <nav>
-        <a href="/">
-            <?= $this->Html->image('logo.svg', ['alt' => 'Wedding Planner logo']); ?>
-        </a>
+        <?= $this->Html->link($this->Html->image('logo.svg'), array('controller' => 'Pages', 'action' => 'display', 'home'), array('escape' => false)); ?>
     </nav>
     <div class="column-responsive column-80 " >
         <div class="provider_container">

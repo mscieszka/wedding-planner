@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Added Category name before offer name, added return to categories button">
+    <list default="true" id="5ad944fe-c1a2-426c-a7d3-20ba3a3906ae" name="Changes" comment="Fixed logo redirect in user profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Users/ocenyprofil.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/ocenyprofil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Users/ofertyprofil.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/ofertyprofil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Users/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Users/zamowieniaprofil.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Users/zamowieniaprofil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_addresses" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_categories" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_categories" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_offers" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_offers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_saved_user_offers" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_saved_user_offers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_users" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_users" afterDir="false" />
@@ -171,7 +173,7 @@
       <workItem from="1653758523779" duration="13015000" />
       <workItem from="1653842274292" duration="5227000" />
       <workItem from="1653951070525" duration="5203000" />
-      <workItem from="1654000754764" duration="1019000" />
+      <workItem from="1654000754764" duration="1240000" />
     </task>
     <task id="LOCAL-00001" summary="Policies">
       <created>1653300077266</created>
@@ -327,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653992603951</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed logo redirect in user profile">
+      <created>1654001840502</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1654001840502</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +371,7 @@
     <MESSAGE value="dodawanie do ulubionych dla klienta" />
     <MESSAGE value="Fixed user view, and deleting account" />
     <MESSAGE value="Added Category name before offer name, added return to categories button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Category name before offer name, added return to categories button" />
+    <MESSAGE value="Fixed logo redirect in user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed logo redirect in user profile" />
   </component>
 </project>
