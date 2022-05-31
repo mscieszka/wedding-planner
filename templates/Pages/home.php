@@ -67,30 +67,9 @@ endif;
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<header>
-    <div class="search-bar">
-        <div class="search-description">
-            <?= $this->Html->image('lupa.svg', ['alt' => 'Provide search description']); ?>
-            <label>
-                <input placeholder="Czego szukasz ?">
-            </label>
-        </div>
-        <div class="search-separator">|</div>
-        <div class="place_search">
-            <?php  echo $this->Html->image('miejsce.svg', ['alt' => 'Provide place to search']); ?>
-            <label>
-                <input placeholder="Cała Polska">
-            </label>
-        </div>
-    </div>
-    <?php if($account_type_id == 1): ?>
-        <?= $this->Html->link(__('My saved offers'), ['controller' => 'Offers', 'action' => 'index', 2],  ['class' => 'button']) ?>
-    <?php endif; ?>
-    <?php if($account_type_id == 2): ?>
-        <?= $this->Html->link(__('My Offer'), ['controller' => 'Offers', 'action' => 'index',1],['class' => 'button']) ?>
-    <?php endif; ?>
-    <?= $this->Html->link(__('Profil'), ['controller' => 'Users', 'action' => 'profile'], ['class' => 'button']) ?>
-</header>
+
+<?php include_once('./templates/layout/header/header-only-buttons.php') ?>
+
 <?= $this->Flash->render() ?>
     <div class="content_wrapper_homepage">
         <div class="logo_div" >
