@@ -63,8 +63,32 @@
             <?php endif; ?>
             <?php endif;?>
 
-
-
-
         </div>
 
+
+
+        <div class="users view content">
+            <div style="display: flex; justify-content: space-around">
+            </div>
+
+         <?php foreach ($user->ratings as $rating): ?>
+            <div class="opinion-box">
+                <a class="user-img">
+                    <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
+                </a>
+                <div class="rest-of-opinion">
+                    <div class="upper-box">
+                        <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
+                        <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
+                        <h4><?= h($rating->opinion_date) ?></h4>
+                    </div>
+                    <div class="opinion-content">
+                        <blockquote>
+                            <?= $this->Text->autoParagraph(h($rating->description)); ?>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
+
+        </div>

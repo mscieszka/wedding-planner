@@ -5,7 +5,9 @@
  */
 ?>
 <?= $this->Html->css('viewOffers') ?>
-<?php include_once('./templates/layout/header/header-only-search.php') ?>
+
+
+<?php include_once('C:\xampp\htdocs\wedding-planner\templates\layout\header\header-only-search.php'); ?>
 <div class="row">
     <aside class="column">
     <?php

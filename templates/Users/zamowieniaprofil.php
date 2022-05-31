@@ -68,4 +68,25 @@
 
 
 
+        <div class="users view content">
+            <div style="display: flex; justify-content: space-around">
+            </div>
+            <?php foreach ($user->bookings as $savedUserBookings) : ?>
+                <tr>
+                    <td><?= h($savedUserBookings->id) ?></td>
+                    <td><?= h($savedUserBookings->user_id) ?></td>
+                    <td><?= h($savedUserBookings->booking_id) ?></td>
+                    <td><?= h($savedUserBookings->created) ?></td>
+                    <td class="actions">
+                        <?= $this->Html->link(__('View'), ['controller' => 'SavedUserBookings', 'action' => 'view', $savedUserBookings->id]) ?>
+                        <?= $this->Html->link(__('Edit'), ['controller' => 'SavedUserBookings', 'action' => 'edit', $savedUserBookings->id]) ?>
+                        <?= $this->Form->postLink(__('Delete'), ['controller' => 'SavedUserBookings', 'action' => 'delete', $savedUserBookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $savedUserBookings->id)]) ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+
+        </div>
+
+
+
 

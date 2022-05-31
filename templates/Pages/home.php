@@ -68,7 +68,8 @@ endif;
 </head>
 <body>
 
-<?php include_once('./templates/layout/header/header-only-buttons.php') ?>
+<?php include_once('C:/xampp/htdocs/wedding-planner/templates/layout/header/header-only-buttons.php') ?>
+
 
 <?= $this->Flash->render() ?>
     <div class="content_wrapper_homepage">
