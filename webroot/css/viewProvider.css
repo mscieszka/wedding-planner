@@ -68,3 +68,110 @@
     flex-direction: row;
 
 }
+
+/* Otrzymane oceny */
+
+.users.view.content
+{
+
+}
+
+.users.view.content_header
+{
+    display: flex;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #000;
+    padding: 1em 0;
+}
+
+.users.view.content_header_first
+{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.container_box
+{
+    display: flex;
+}
+
+.users.view.content .users.view.content_wrapper
+{
+    width: 25%;
+    height: 20em;
+    display: flex;
+}
+
+.users.view.content .opinion-box-wrapper
+{
+    width: 75%;
+}
+
+.users.view.content .users.view.content_wrapper_box
+{
+    background-color: #fff;
+    width: 12em;
+    height: 10em;
+    border-radius: 1em;
+}
+
+.users.view.content .users.view.content_wrapper_box div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.opinion-box_provider
+{
+    background-color: #fff;
+    width: 100%;
+    min-height: 8em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    display: flex;
+}
+
+.user-img_provider
+{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-img_provider img
+{
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+
+.upper-box_provider
+{
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+
+.upper-box_provider blockquote
+{
+    margin: 0;
+}
+
+.opinion-content_provider
+{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opinion-content_provider h4
+{
+    margin: 0;
+}

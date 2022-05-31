@@ -299,19 +299,21 @@ header
     width: 100%;
     display: flex;
     column-gap: 1em;
+    margin: 3em 0;
 }
 
 .offer_container_wrapper_image
 {
-    width: 25%;
-    height: 10em;
-    border: 1px solid grey;
+    width: 30%;
+    border-radius: 3em;
 }
 
-.offer_container_wrapper_description
+.offer_container_wrapper_image img
 {
-    width: 50%;
+    border-radius: 2em;
 }
+
+
 
 .offer_container_wrapper_title
 {
@@ -322,13 +324,20 @@ header
 .offer_container_wrapper_description
 {
     width: 100%;
+    font-size: 0.9em;
 }
 
 .offer_container_edit_button
 {
+
     width: 15%;
     display: flex;
     flex-direction: column;
     row-gap: 1em;
     justify-content: center;
+}
+
+.offer_container_edit_button a
+{
+    font-size: 0.9em;
 }
