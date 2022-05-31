@@ -21,7 +21,7 @@ input[type='reset'],
 input[type='submit'] {
     all: unset;
     min-width: 120px;
-    min-height: 40px;
+    min-height: 45px;
     width: min-content;
     height: fit-content;
     background-color: #46755E;
@@ -67,24 +67,6 @@ label, legend {
 
 .input input, .input select, .input textarea {
     border-radius: 1rem;
-}
-
-/* header */
-
-.top-nav {
-    margin-bottom: 1rem;
-    margin-top: 0;
-    padding: 0;
-}
-
-.top-nav-logo img {
-    width: 423px;
-    height: 73px;
-}
-
-.top-nav-logo {
-    width: 423px;
-    height: 73px;
 }
 
 /* widoki */
@@ -505,8 +487,9 @@ input[type="submit"]:hover {
     display: flex;
     background: #ffffff;
     border-radius: 50px;
-    max-width: 680px;
-    margin: 1vh 1vw;
+    max-width: 900px;
+    margin-left: auto;
+    height: 50px;
     padding: 0.5vh 0.5vw;
 }
 
@@ -515,21 +498,20 @@ input[type="submit"]:hover {
     align-items: center;
     align-content: center;
     margin-bottom: 0;
+    background-color: transparent;
+    width: 100%;
 }
 
 .search-bar label {
     margin-bottom: 0;
+    padding-left: 1rem;
 }
 
-.search-separator {
-    font-size: 26px;
-
-}
-
-header {
-    display: flex;
-    justify-content: right;
-    margin-bottom: 0;
+.search-separator h3 {
+    padding-top: 0.2rem;
+    font-size: 30px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
 }
 
 .search-description {
@@ -540,11 +522,11 @@ header {
     align-content: center;
 }
 
-.search-description > img {
-    margin-bottom: 0;
+.search-description img, .place_search img {
+    margin-top: 1.1rem;
 }
 
-.search-description > input {
+.search-description input {
     margin-bottom: 0;
 }
 
@@ -608,10 +590,6 @@ input {
     cursor: pointer;
     background-color: #CEE5D0;
     transition: all 0.2s ease-out;
-}
-
-header {
-    width: 95%;
 }
 
 .place_search > img {

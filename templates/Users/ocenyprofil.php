@@ -10,9 +10,6 @@
 
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
 <div class="row">
-    <nav>
-        <?= $this->Html->link($this->Html->image('logo.svg'), array('controller' => 'Pages', 'action' => 'display', 'home'), array('escape' => false)); ?>
-    </nav>
     <div class="column-responsive column-80 " >
         <div class="provider_container">
             <div class="provider_image">

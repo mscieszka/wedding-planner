@@ -1,7 +1,6 @@
 <?= $this->Html->css('loginUser') ?>
-<div class="users form">
+<div class="users form flex-col">
     <?= $this->Flash->render() ?>
-    <?php // echo $this->Html->image('logo_full.svg', ['alt' => 'Wedding Planner']); ?>
     <?= $this->Form->create() ?>
     <fieldset>
         <?= $this->Form->control('email', ['required' => true, 'placeholder' => 'Wpisz adres e-mail']) ?>
@@ -11,7 +10,6 @@
     <?= $this->Form->end() ?>
     <div class="users_form_links">
         <p class="first_link"><?= $this->Html->link("Nie pamiętam hasła", ['action' => 'change_password']) ?></p>
-        <!--<p class="second_link"><?= $this->Html->link("Resetuj hasło", ['action' => 'change_password']) ?></p>-->
         <div class="third_link"><?= $this->Html->link("Zarejestruj się", ['action' => 'add']) ?></div>
     </div>
 </div>

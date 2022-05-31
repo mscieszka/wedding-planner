@@ -29,28 +29,27 @@
 
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'index']) ?>
 
-
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <div class="top-nav-logo">
-                <a href="<?= $this->Url->build('/') ?>">
-                    <?php echo $this->Html->image("logo_full.svg")?>
-                </a>
+    <div class="login-content flex-row">
+        <nav class="top-nav">
+            <div class="top-nav-title">
+                <div class="top-nav-logo">
+                    <a href="<?= $this->Url->build('/') ?>">
+                        <?php echo $this->Html->image("logo_full.svg")?>
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
-    <main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
-        </div>
-    </main>
-    <footer>
-    </footer>
+        </nav>
+        <main class="main">
+            <div class="container">
+                <?= $this->Flash->render() ?>
+                <?= $this->fetch('content') ?>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

@@ -1,16 +1,16 @@
 <header>
     <nav class="top-nav">
-        <div class="top-nav-links">
-            <div>
-                <?php if($account_type_id == 1): ?>
+        <div class="top-nav-links flex-row">
+            <?php if($account_type_id == 1): ?>
+                <div>
                     <?= $this->Html->link(__('My saved offers'), ['controller' => 'Offers', 'action' => 'index', 2],  ['class' => 'button']) ?>
-                <?php endif; ?>
-            </div>
-            <div>
-                <?php if($account_type_id == 2): ?>
+                </div>
+            <?php endif; ?>
+            <?php if($account_type_id == 2): ?>
+                <div>
                     <?= $this->Html->link(__('My Offer'), ['controller' => 'Offers', 'action' => 'index',1],['class' => 'button']) ?>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
             <div>
                 <?= $this->Html->link(__('Profil'), ['controller' => 'Users', 'action' => 'profile'], ['class' => 'button']) ?>
             </div>

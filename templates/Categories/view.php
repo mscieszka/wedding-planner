@@ -5,8 +5,6 @@
  */
 ?>
 <?= $this->Html->css('viewOffers') ?>
-
-
 <?php include_once('C:\xampp\htdocs\wedding-planner\templates\layout\header\header-only-search.php'); ?>
 <div class="row">
     <aside class="column">
@@ -26,8 +24,9 @@
                         <tr>
                             <td class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offerimg']) ?></td>
                             <td class="offer-name"><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></td>
-                            <td class="offer-price"><?= h($offers->price) . " zł" ?></td>
-
+                            <td class="offer-price">
+                                <h3><?= h($offers->price) . " zł" ?></h3>
+                            </td>
                             <?php if($account_type_id == 1): ?>
                                 <?php if(in_array($offers->id, $saved_user_offers)): ?>
                             <td class="offer-name"><?= $this->Form->postLink(__('Remove from favourites'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offers->id], ['confirm' => __('Are you sure you want to remove from favourites?')]) ?></td>

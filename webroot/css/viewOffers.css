@@ -9,26 +9,7 @@ body {
     height: 100%;
 }
 
-header {
-    height: 100px;
-    display: grid;
-    grid-row: 1/2;
-    grid-template-columns: 40% 40% 20%;
-}
-
-header.searchbar {
-    grid-column: 2/3;
-}
-
-header.profile-button {
-    grid-column: 3/4;
-}
-
-header > a.logo {
-    grid-column: 1/2;
-}
-
-a > img.logo-img {
+a>img.logo-img {
     width: 499px;
     height: 99px;
 }
@@ -40,7 +21,7 @@ a.profile-button {
     margin-right: 20px;
 }
 
-a > img.profile-icon {
+a>img.profile-icon {
     width: 50px;
     height: 50px;
 }
@@ -51,7 +32,7 @@ a > img.profile-icon {
     align-content: center;
 }
 
-.searchbar > .search-input {
+.searchbar>.search-input {
     height: 30%;
     align-self: center;
     border-top-left-radius: 25px;
@@ -61,7 +42,7 @@ a > img.profile-icon {
     padding-left: 20px;
 }
 
-.searchbar > .city-field {
+.searchbar>.city-field {
     height: 30%;
     align-self: center;
     border-top-right-radius: 25px;
@@ -71,7 +52,8 @@ a > img.profile-icon {
     padding-left: 20px;
 }
 
-.searchbar > .city-field, .search-input {
+.searchbar>.city-field,
+.search-input {
     font-family: "Segoe UI", serif;
     font-style: normal;
     font-weight: 400;
@@ -85,14 +67,14 @@ div.rest {
     margin-top: 15px;
 }
 
-.rest > .sidebar {
+.rest>.sidebar {
     margin-inline: 30px;
     display: flex;
     grid-row: 1/2;
     flex-direction: column;
 }
 
-.rest > .offers {
+.rest>.offers {
     background: white;
     border-radius: 25px;
     grid-column: 2/3;
@@ -102,7 +84,7 @@ div.rest {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.rest > .offers > .single-offer-1 {
+.rest>.offers>.single-offer-1 {
     background: #fef6e7;
     display: grid;
     grid-template-columns: 35% 50% 15%;
@@ -114,7 +96,7 @@ div.rest {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.rest > .offers > .single-offer-2 {
+.rest>.offers>.single-offer-2 {
     background: white;
     display: grid;
     grid-template-columns: 35% 65%;
@@ -132,7 +114,7 @@ div.rest {
     grid-column: 1/2;
 }
 
-.offer-img > img {
+.offer-img>img {
     width: 100%;
     height: 100%;
     border-radius: 25px;
@@ -147,20 +129,20 @@ div.rest {
     align-content: flex-start;
 }
 
-.offer-description > h3 {
+.offer-description>h3 {
     font-family: "Segoe UI", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
 }
 
-.offer-description > h1 {
-    font-family: "Poppins", serif;
+.offer-description>h1 {
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
 }
-.offer-description > h1 {
+
+.offer-description>h1 {
     font-family: "Segoe UI", serif;
     font-style: normal;
     font-weight: 600;
@@ -178,14 +160,13 @@ div.rest {
 }
 
 .offer-title {
-    font-family: "poppins", serif;
     font-weight: 600;
     font-size: 20px;
     grid-row: 1/2;
 }
 
-.promo-offers, .regular-offers {
-    font-family: "poppins", serif;
+.promo-offers,
+.regular-offers {
     font-weight: 1000;
     font-size: 20px;
 }
@@ -200,8 +181,7 @@ div.rest {
 
 /*--------- sidebar ----------*/
 
-
-.side-nav{
+.side-nav {
     margin-bottom: 15px;
     background: white;
     border-radius: 50px;
@@ -211,11 +191,12 @@ div.rest {
     justify-content: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.side-nav a{
+
+.side-nav a {
     color: black;
 }
 
-tr{
+tr {
     background: #FEF6E7;
     display: grid;
     grid-template-columns: 35% 35% 30%;
@@ -226,20 +207,20 @@ tr{
     height: auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 .sidebar * {
     line-height: 1;
 }
 
-.sidebar > .category {
+.sidebar>.category {
     margin-bottom: 10px;
-    font-family: "Poppins", serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     color: #6f6454;
 }
 
-.sidebar > select {
+.sidebar>select {
     margin-bottom: 10px;
     background: white;
     border-radius: 25px;
@@ -248,7 +229,7 @@ tr{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.sidebar > .filters {
+.sidebar>.filters {
     background: white;
     border-radius: 25px;
     width: 220px;
@@ -265,14 +246,17 @@ tr{
 }
 
 .filters h4 {
-    font-family: "Poppins", serif;
     font-size: 16px;
     font-weight: 600;
 }
 
-.filter_accommodations_count, .filter_people_count, .filter_extras,
-.filter_cuisine_type, .filter_catering_additional_info,
-.filter_dj_music_type, .filter_dj_additional_info {
+.filter_accommodations_count,
+.filter_people_count,
+.filter_extras,
+.filter_cuisine_type,
+.filter_catering_additional_info,
+.filter_dj_music_type,
+.filter_dj_additional_info {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -297,7 +281,7 @@ tr{
     font-size: 16px;
 }
 
-.categories-view-content{
+.categories-view-content {
     background: white;
     border-radius: 25px;
     grid-column: 2/3;
@@ -315,23 +299,21 @@ tr{
 
 }
 
-
-.offerimg{
+.offerimg {
     width: 100%;
     height: 100%;
     border-radius: 25px;
 }
 
-.offer-price{
-    font-family: 'Poppins';
+.offer-price {
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
-    color:black;
+    color: black;
 }
 
-.offer-name{
-    font-family: 'Segoe UI';
+.offer-name {
+    font-family: 'Segoe UI', serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

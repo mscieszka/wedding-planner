@@ -66,14 +66,12 @@
 }
 
 .title-location > h3 {
-    font-family: "Poppins", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
 }
 
 .title-location > h1 {
-    font-family: "Poppins", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -140,7 +138,6 @@
     background: #46755e;
     border-radius: 25px;
     color: white;
-    font-family: "Poppins", serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -173,7 +170,6 @@
 
 .owner-name {
     margin: 20px;
-    font-family: 'Poppins', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -216,7 +212,6 @@ textarea {
     resize: none;
     border-radius: 25px;
     padding: 15px;
-    font-family: "poppins", serif;
 }
 
 .input-button-box>h3 {

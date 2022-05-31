@@ -7,17 +7,17 @@
                 </a>
             </div>
         </div>
-        <div class="top-nav-links">
+        <div class="top-nav-links flex-row">
+        <?php if($account_type_id == 1): ?>
             <div>
-                <?php if($account_type_id == 1): ?>
-                    <?= $this->Html->link(__('My saved offers'), ['controller' => 'Offers', 'action' => 'index', 2],  ['class' => 'button']) ?>
-                <?php endif; ?>
+                <?= $this->Html->link(__('My saved offers'), ['controller' => 'Offers', 'action' => 'index', 2],  ['class' => 'button']) ?>
             </div>
+        <?php endif; ?>
+        <?php if($account_type_id == 2): ?>
             <div>
-                <?php if($account_type_id == 2): ?>
-                    <?= $this->Html->link(__('My Offer'), ['controller' => 'Offers', 'action' => 'index',1],['class' => 'button']) ?>
-                <?php endif; ?>
+                <?= $this->Html->link(__('My Offer'), ['controller' => 'Offers', 'action' => 'index',1],['class' => 'button']) ?>
             </div>
+        <?php endif; ?>
             <div>
                 <?= $this->Html->link(__('Profil'), ['controller' => 'Users', 'action' => 'profile'], ['class' => 'button']) ?>
             </div>
