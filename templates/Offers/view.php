@@ -8,6 +8,7 @@
  */
 ?>
 <?= $this->Html->css('viewOffer') ?>
+<?= $this->Html->css('calendar') ?>
 <div class="go-back-to-parent-category">
         <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
 </div>
@@ -82,6 +83,7 @@
                 <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
                 </div>
             </div>
+
         </fieldset>
         <?= $this->Form->end() ?>
     </div>
@@ -141,7 +143,51 @@
             <?php endforeach; ?>
         </div>
     </div>
+
 </div>
 <div>
     <?= $this->Html->link(__('Wroć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
 </div>
+    <div class="">
+        <div id="my-calendar"></div>
+    </div>
+
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+
+
+
+            $("#my-calendar").zabuto_calendar({
+                year: 2022,
+                month: 5,
+                show_previous: false,
+                show_next: 12,
+                language: "pl",
+                data:  <?php echo json_encode($calendar_data) ?> ,
+                today: true,
+                show_days: true,
+                cell_border: true,
+                nav_icon: {
+                    prev: 'PREV',
+                    next: 'NEXT'
+                },
+
+                action: function() {
+                    myDateFunction(this.id);
+                }
+            });
+
+            function myDateFunction(id) {
+                var e = $("#" + id).children('div').hasClass('free');
+                var date = $("#" + id).data("date");
+                //var hasEvent = $("#" + id).data("hasEvent");
+                // console.log(e);
+                // console.log(date);
+                // console.log(hasEvent);
+                if(e) {
+                    $("#booking-date").val(date);
+                }
+            }
+        });
+    </script>

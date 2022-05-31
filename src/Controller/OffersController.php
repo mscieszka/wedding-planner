@@ -121,9 +121,27 @@ class OffersController extends AppController
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
 
         $booked_dates = $this->getBookedOfferDates($id);
-        $active_offer_days = $this->date_range(date('Y-m-d'), date('Y-m-d', strtotime(date('Y-m-d').' +300 days')), $offer['offer_active_day'], $booked_dates);
+        //debug($booked_dates); exit;
+        $active_offer_days = $this->date_range(date('Y-m-d'), date('Y-m-d', strtotime(date('Y-m-d').' +600 days')), $offer['offer_active_day'], $booked_dates);
         $booking = $this->getTableLocator()->get('Bookings')->newEmptyEntity();
         $booking->offer_id = $id;
+        $calendar_data = [];
+
+        foreach($active_offer_days as $key => $value) {
+            $d = [
+                'date' => $value,
+                'classname' => 'free'
+            ];
+            $calendar_data[]=$d;
+        }
+
+        foreach($booked_dates as $key => $value) {
+            $d = [
+                'date' => $value,
+                'classname' => 'occupied'
+            ];
+            $calendar_data[]=$d;
+        }
 
 
 
@@ -134,7 +152,8 @@ class OffersController extends AppController
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
 
 
-        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces', 'active_offer_days', 'booking', 'ratings', 'users', 'offers','saved_user_offers'));
+        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces',
+            'active_offer_days', 'booking', 'ratings', 'users', 'offers','saved_user_offers', 'calendar_data'));
 
     }
 
