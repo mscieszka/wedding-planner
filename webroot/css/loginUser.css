@@ -3,7 +3,12 @@ body {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row {
+    gap: 6rem;
 }
 
 .top-nav {
@@ -47,13 +52,11 @@ label {
     display: none;
 }
 
-form {
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60%;
+.submit {
+    width: min-content;
+    margin-left: 2.5rem;
 }
+
 form input[type="email"],
 input[type="password"] {
     border-radius: 0;
@@ -77,13 +80,11 @@ form input[type="password"]:hover {
     transition: all 0.2s ease-out;
 }
 
+
 form input[type="submit"] {
     width: 15em;
     height: 3em;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
     background-color: #046206;
     border: 0;
     color: #fff;
@@ -149,13 +150,10 @@ input[type="submit"]:hover {
     transition: all 0.2s ease-out;
 }
 
-@media only screen and (max-width: 768px) {
-    body {
+@media only screen and (max-width: 1000px) {
+    .flex-row {
         flex-direction: column;
-    }
-
-    .top-nav {
-        width: 100% !important;
+        gap: 1rem;
     }
 
     .top-nav-logo img {
@@ -166,5 +164,19 @@ input[type="submit"]:hover {
     .top-nav-logo {
         width: 300px;
         height: 250px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    input[type="submit"] {
+        margin: 0;
+        padding: 0;
+    }
+
+    .submit {
+        width: min-content;
+        margin-left: 2rem;
     }
 }
