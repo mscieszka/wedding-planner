@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\Collection\Collection;
+use Cake\Datasource\ConnectionManager;
+
 /**
  * Categories Controller
  *
@@ -42,7 +45,14 @@ class CategoriesController extends AppController
         ]);
 
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
-        $this->set(compact('category', 'id_user_log', 'account_type_id'));
+
+
+        $saved_user_offers = $this->Categories->Offers->SavedUserOffers->find()
+            ->where([
+                'user_id' => $this->request->getAttribute('identity')->getIdentifier()
+            ])->toArray();
+        $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
+        $this->set(compact('category', 'id_user_log', 'account_type_id', 'saved_user_offers'));
     }
 
     /**
