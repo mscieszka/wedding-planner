@@ -7,6 +7,7 @@
  */
 ?>
 
+
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
 <div class="row">
     <nav>
@@ -24,7 +25,7 @@
             <div class="provider_info">
             <div class="provider_name">
                  <p class="property_name"><?= __('Name:   ') ?></p>
-                    <p><?= h($user->name) ?></p>
+                    <p><?= h($user->name) ."   " ?></p>
                     <p><?= h($user->surname) ?></p>
             </div>
             <div class="provider_contact">
@@ -41,6 +42,7 @@
             </div>
                 <div class="provider_edit">
                     <?= $this->Html->link(__('Edytuj profil'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item button float-right']) ?>
+                    <?= $this->Html->link(__('Wyloguj'), ['action' => 'logout'], ['class' => 'side-nav-item button float-right']) ?>
                 </div>
         </div>
         <div class="bookmarks_wrapper">
@@ -289,7 +291,6 @@
                 </div>
                 <?php endif; ?>
             </div>
-
 
         </div>
     </div>
