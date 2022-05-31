@@ -45,8 +45,9 @@ class UsersController extends AppController
         //'SavedUserBookings',
         //$this->Authorization->authorize($user);
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
 
-        $this->set(compact('user'));
+        $this->set(compact('user', 'account_type_id'));
         $layout = 'view';
         if($user->get('account_type_id') == 1) {
             $layout = 'viewrecipient';
@@ -62,8 +63,10 @@ class UsersController extends AppController
         //'SavedUserBookings',
         //$this->Authorization->authorize($user);
         $this->Authorization->skipAuthorization();
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
         $current_user = $user->id;
-        $this->set(compact('user', 'current_user'));
+        $this->set(compact('user', 'current_user', 'account_type_id'));
         $layout = 'view';
         if($user->get('account_type_id') == 1) {
             $layout = 'viewrecipient';
@@ -115,6 +118,8 @@ class UsersController extends AppController
             'contain' => [],
         ]);
         $this->Authorization->authorize($user);
+        $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
@@ -125,7 +130,7 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
-        $this->set(compact('user', 'accountTypes'));
+        $this->set(compact('user', 'accountTypes', 'account_type_id'));
     }
 
     /**
