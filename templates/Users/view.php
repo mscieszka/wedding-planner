@@ -2,8 +2,11 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
+ * @var \App\Model\Entity\Offer $offer
+ * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
 ?>
+
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
 <div class="row">
     <nav>
@@ -15,7 +18,7 @@
         <div class="provider_container">
             <div class="provider_image">
                 <a>
-                <img src="/img/userProfileImage/userProfileImage3.jpg" alt="Owner profile image" class="ownerimg">
+                    <img src="/img/userProfileImage/userProfileImage3.jpg" alt="Owner profile image" class="ownerimg">
                 </a>
             </div>
             <div class="provider_info">
@@ -41,61 +44,91 @@
                 </div>
         </div>
         <div class="bookmarks_wrapper">
-            <div class="current_bookmarks">Zarządzanie ofertami</div>
+            <div class="current_bookmarks">Oferty użytkownika</div>
             <div><?= $this->Html->link(__('Otrzymane oceny'), ['action' => '']) ?></div>
             <div><?= $this->Html->link(__('Historia płatności'), ['action' => '']) ?></div>
         </div>
+
+
+
+
+
+
+
+
+
         <div class="users view content">
             <div style="display: flex; justify-content: space-around">
-                <div class="notification">
-                    <h3>Powiadomienia</h3>
-                    <h5>Uwaga, masz <span style="color: red">4</span> zbliżające się rezerwacje</h5>
-                    <div class="notification_container">
-                        <?php //foreach ($zmienna->pole as $zmienna2) : ?>
-                            Nowa rezerwacja usługi <span style="color: red">Hotel Utopia</span> przez użytkownika <span style="color: red">Katarzyna Nowak</span> w terminie <span style="color: red">01.01.1970</span>
-                            <div class="notification_buttons_wrapper">
-                                <div class="reject"><?= $this->Html->link(__('Odrzuć'), ['action' => '']) ?></div>
-                                <div class="accept"><?= $this->Html->link(__('Dodaj termin do kalendarza'), ['action' => '']) ?></div>
-                            </div>
-                        <?php //php endforeach; ?>
-                    </div>
-                </div>
-                <div class="calendar">
-                    <div class="calendar_header">
-                        <h3>Kalendarz</h3>
-                        <div><div style="width: 2em; height: 2em; border-radius: 50%; background-color: #ff6666"></div><span style="font-size: 1.2em;">Termin zajęty</span></div>
-                    </div>
-                    <div class="calendar_legend">
-                        <div><div style="width: 1.5em; height: 1.5em; border-radius: 50%; background-color: #fff; border: 1px solid #000;"></div>Hotel Utopia</div>
-                        <div><div style="width: 1.5em; height: 1.5em; border-radius: 50%; background-color: #70947A"></div>La Bocheme Restaurant</div>
-                    </div>
-                    <div class="calendar_box">
-                        Styczeń
-                    </div>
-                </div>
             </div>
+
+
+            <?php if($account_type_id == 2): ?>
+
+
 
             <div class="offer_container">
                 <div class="offer_container_header">
                     <h3>Oferty użytkownika</h3>
-                    <div><?= $this->Html->link(__('Dodaj ofertę'), ['action' => '']) ?></div>
+                    <div><?= $this->Html->link(__('Dodaj ofertę'), ['controller' => 'Offers', 'action' => 'add']) ?></div>
                 </div>
                 <div class="offer_container_wrapper">
+
+                    <div class="related">
+                    <?php if (!empty($user->offers)) : ?>
+                        <?php foreach ($user->offers as $offers) : ?>
+
                     <div class="offer_container_wrapper_image">Zdjęcie</div>
                     <div class="offer_container_wrapper_description">
                         <div class="offer_container_wrapper_title">
-                            <div><span style="font-weight: bold;">La Boheme Restauranr</span></div>
-                            <div>Kraków, Małopolskie</div>
+                            <div><span style="font-weight: bold;"><?= h($offers->name) ?></span></div>
+                            <?= $offers->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offers->address->id]) : '' ?>
                         </div>
                         <div class="offer_container_wrapper_stars">*****</div>
-                        <div class="offer_container_wrapper_description">TWOJE WYMARZONE WESELE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="offer_container_wrapper_description"><?= h($offers->description) ?></div>
                     </div>
                     <div class="offer_container_edit_button">
-                        <p><?= $this->Html->link(__('Edytuj ofertę'), ['action' => '']) ?></p>
-                        <p><?= $this->Html->link(__('Usuń ofertę'), ['action' => '']) ?></p>
+                            <?= $this->Html->link(__('Edit Offer'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right']) ?>
+                            <?= $this->Html->link(__('Delete Offer'), ['controller' => 'Offers','action' => 'delete', $offers->id], ['class' => 'button float-right']) ?>
+                    </div>
+
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                     </div>
                 </div>
             </div>
+
+
+            <?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -210,47 +243,17 @@
                 </div>
                 <?php endif; ?>
             </div>
-            <div class="related">
-                <h4><?= __('Related Offers') ?></h4>
-                <?php if (!empty($user->offers)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('User Id') ?></th>
-                            <th><?= __('Category Id') ?></th>
-                            <th><?= __('Address Id') ?></th>
-                            <th><?= __('Name') ?></th>
-                            <th><?= __('Price') ?></th>
-                            <th><?= __('Description') ?></th>
-                            <th><?= __('Advance Payment') ?></th>
-                            <th><?= __('Website') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($user->offers as $offers) : ?>
-                        <tr>
-                            <td><?= h($offers->id) ?></td>
-                            <td><?= h($offers->user_id) ?></td>
-                            <td><?= h($offers->category_id) ?></td>
-                            <td><?= h($offers->address_id) ?></td>
-                            <td><?= h($offers->name) ?></td>
-                            <td><?= h($offers->price) ?></td>
-                            <td><?= h($offers->description) ?></td>
-                            <td><?= h($offers->advance_payment) ?></td>
-                            <td><?= h($offers->website) ?></td>
-                            <td><?= h($offers->created) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Offers', 'action' => 'edit', $offers->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Offers', 'action' => 'delete', $offers->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offers->id)]) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
             <div class="related">
                 <h4><?= __('Related Ratings') ?></h4>
                 <?php if (!empty($user->ratings)) : ?>

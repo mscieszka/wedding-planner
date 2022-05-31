@@ -8,12 +8,20 @@
  * @var \Cake\Collection\CollectionInterface|string[] $addresses
  */
 ?>
-<div class="row">
 
-            <div class="column-responsive column-80">
-            <?= $this->Html->link(__('New Offer of Catering'), ['action' => 'add', 3 ], ['class' => 'button float-right']) ?>
-            <?= $this->Html->link(__('New Offer of Music'), ['action' => 'add', 2], ['class' => 'button float-right']) ?>
-            <?= $this->Html->link(__('New Offer of Hall'), ['action' => 'add', 1], ['class' => 'button float-right']) ?>
+<div class="categories-nav services">
+    <div class ="serv">
+        <div  class="service-type">
+            <?= $this->Html->image('sale.svg', ['alt' => 'Wedding Planner']); ?>
+            <?= $this->Html->link(__('Sale'), ['action' => 'add', 1], ['class' => 'btn-category'] )?>
         </div>
-
+        <div  class="service-type">
+            <?= $this->Html->image('dj.svg', ['alt' => 'Wedding Planner']); ?>
+            <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['action' => 'add', 2],['class' => 'btn-category'] )?>
+        </div>
+        <div  class="service-type">
+            <?= $this->Html->image('catering.svg', ['alt' => 'Wedding Planner', 'class' => 'catering-img']); ?>
+            <?= $this->Html->link(__('Catering'), ['action' => 'add', 3], ['class' => 'btn-category'] )?>
+        </div>
+    </div>
 </div>
