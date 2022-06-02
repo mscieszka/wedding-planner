@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Authentication\PasswordHasher\DefaultPasswordHasher;
+use Cake\Collection\Collection;
+
 /**
  * Users Controller
  *
@@ -93,8 +95,8 @@ class UsersController extends AppController
         //wlasny profil zalogowanego uzytkownika
 
         $user = null;
-
-
+        $offers = null;
+        $saved_user_offers = null;
 
         if($id_user == null) {
             $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier(), [
@@ -108,26 +110,23 @@ class UsersController extends AppController
             ]);
         }
 
-/*
-        $saved_user_offers = $this->Offers->SavedUserOffers->find()
-            ->where([
-                'user_id' => $this->request->getAttribute('identity')->getIdentifier()
-            ])->toArray();
-        $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
 
-*/
-
-
-
-
-
-        //'SavedUserBookings',
-        //$this->Authorization->authorize($user);
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
 
-        $this->set(compact('user', 'account_type_id', 'id_user_log'));
+
+        //jesli klient
+        if($account_type_id == 1){
+            $offers = $this->paginate($this->Users->Offers->find());
+            $saved_user_offers = $this->Users->Offers->SavedUserOffers->find()
+                ->where([
+                    'user_id' => $this->request->getAttribute('identity')->getIdentifier()
+                ])->toArray();
+            $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
+        }
+
+        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'saved_user_offers'));
 
 
         $layout = '';
