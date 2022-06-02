@@ -5,7 +5,7 @@
  */
 ?>
 <?= $this->Html->css('viewOffers') ?>
-<?php $this->element('header/header-only-search'); ?>
+<?= $this->element('header/header-only-search'); ?>
 <div class="row">
     <?php if ($category->id == 1): ?>
     <aside class="column">
