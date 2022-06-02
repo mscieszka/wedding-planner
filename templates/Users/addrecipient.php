@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="form_end_content">
-                    <label style="color: red;"><input type="checkbox" name="">Akceptuję regulamin<br></label>
+                    <label style="color: #FF7A7A;"><input type="checkbox" name="">Akceptuję regulamin<br></label>
                     <?= $this->Form->button(__('Zarejestruj się')) ?>
                 </div>
             </div>

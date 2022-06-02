@@ -20,7 +20,7 @@ aside
 
 .require_data::placeholder
 {
-    color: red;
+    color: #FF7A7A;
 }
 
 fieldset div label[for=name], label[for=surname], label[for=email], label[for=phone-number], label[for=password], label[for=company-name], label[for=krs], label[for=nip], label[for=regon]
@@ -176,7 +176,7 @@ button
     height: 3em;
     align-self: end;
     text-align: center;
-    background-color: #046206;
+    background-color: #46755E;
     border: 0;
     color: #fff;
     border-radius: 2em;
@@ -189,7 +189,7 @@ button
 button:hover
 {
     cursor: pointer;
-    background-color: #034904;
+    background-color: #3B6350;
     transition: all 0.2s ease-out;
 }
 

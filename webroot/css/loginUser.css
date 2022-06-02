@@ -85,7 +85,7 @@ form input[type="submit"] {
     width: 15em;
     height: 3em;
     padding: 0;
-    background-color: #046206;
+    background-color: #46755E;
     border: 0;
     color: #fff;
     border-radius: 2em;
@@ -96,7 +96,7 @@ form input[type="submit"] {
 
 input[type="submit"]:hover {
     cursor: pointer;
-    background-color: #034904;
+    background-color: #3B6350;
     transition: all 0.2s ease-out;
 }
 
@@ -118,7 +118,7 @@ input[type="submit"]:hover {
 }
 
 .users_form_links .first_link a:hover {
-    color: #034904;
+    color: #3B6350;
 }
 
 .users_form_links .second_link a {
@@ -144,9 +144,9 @@ input[type="submit"]:hover {
 }
 
 .users_form_links .third_link a:hover {
-    background-color: #046206;
+    background-color: #46755E;
     color: #fff;
-    border-color: #046206;
+    border-color: #46755E;
     transition: all 0.2s ease-out;
 }
 

@@ -41,7 +41,7 @@ nav
     height: 3em;
     border-radius: 50%;
     margin: 0;
-    background-color: #034904;
+    background-color: #3B6350;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +132,7 @@ nav
 
 .notification_container .notification_buttons_wrapper .reject
 {
-    background-color: red;
+    background-color: #FF7A7A;
     width: 6em;
     height: 2.5em;
     border-radius: 2em;
@@ -153,7 +153,7 @@ nav
 
 .notification_container .notification_buttons_wrapper .reject a:hover
 {
-    background-color: darkred;
+    background-color: #FF7A7A;
     width: 6em;
     height: 2.5em;
     border-radius: 2em;
@@ -161,7 +161,7 @@ nav
 
 .notification_container .notification_buttons_wrapper .accept
 {
-    background-color: #046206;
+    background-color: #46755E;
     width: 17em;
     height: 2.5em;
     border-radius: 2em;
@@ -182,7 +182,7 @@ nav
 
 .notification_container .notification_buttons_wrapper .accept a:hover
 {
-    background-color: #034904;
+    background-color: #3B6350;
     width: 17em;
     height: 2.5em;
     border-radius: 2em;
