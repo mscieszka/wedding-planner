@@ -11,10 +11,11 @@
 <div class="offers form content">
     <?php include('offer_add_categories.php') ?>
 
-    <?= $this->Form->create($offer) ?>
+     <?= $this->Form->create($offer, ['type' => 'file']) ?>
+
 
     <fieldset>
-        <legend><?= __('Zdjęcie') ?></legend>
+        <legend><?= __('Zdjecie') ?></legend>
         <?php
         echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
         ?>
