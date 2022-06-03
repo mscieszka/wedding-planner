@@ -1,0 +1,91 @@
+/* owner banner */
+
+.profile-banner {
+    width: 1390px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    height: 200px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-banner .user-image {
+    width: 150px;
+    height: 150px;
+    margin: 20px 20px 20px 100px;
+}
+
+.user-profile-picture {
+    width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: -26rem;
+}
+
+.user-name {
+    display: flex;
+    gap: 8px;
+}
+
+.user-name h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    color: black;
+}
+
+.user-contact-info {
+    display: flex;
+    gap: 64px;
+}
+
+.user-contact-info h2 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.user-contact-info .flex-row {
+    gap: 11px;
+}
+
+.owner-profile-link {
+    margin-right: 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* users profile banner adjustments */
+
+.users-profile-banner .profile-banner {
+    width: 1100px;
+}
+
+.users-profile-banner .user-details {
+    margin-left: -64px;
+}
+.users-profile-banner img {
+    max-width: revert;
+}
+
+.users-profile-banner .profile-banner .user-image {
+    margin: 20px 20px 20px 50px;
+}
+
+.users-profile-banner .user-contact-info {
+    gap: 48px;
+}
+
+.users-profile-banner .provider-buttons {
+    margin-right: 16px;
+}

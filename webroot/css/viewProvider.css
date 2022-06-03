@@ -1,13 +1,4 @@
-.ownerimg {
-    width: 150px;
-    max-height: 150px;
-    object-fit: cover;
-    border-radius: 100px;
-    margin: 20px;
-    padding-top:10px;
-}
-
-.provider_container {
+.provider-container {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,43 +11,12 @@
     border-radius: 25px;
 }
 
-.provider_image {
-    display: flex;
-    justify-content: flex-start;
-    align-items:center;
-}
-.provider_name {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 3em;
-}
-.provider_contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.provider_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%
-}
-
-.provider_edit {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
 .property_name {
     font-weight: 700;
     margin-right: 1em;
 }
 
-.provider_contact_detail{
+.provider_contact_detail {
     display: flex;
     flex-direction: row;
 }

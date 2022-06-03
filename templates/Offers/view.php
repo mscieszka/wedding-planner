@@ -9,6 +9,7 @@
 ?>
 <?= $this->Html->css('viewOffer') ?>
 <?= $this->Html->css('calendar') ?>
+<?= $this->Html->css('profile-banner') ?>
 <div class="go-back-to-parent-category">
     <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
 </div>
@@ -79,6 +80,7 @@
             <?php endif; ?>
         </div>
     </div>
+
     <div class="offer-reservation">
         <?= $this->Form->create($booking, ['url' => ['controller' => 'Bookings', 'action' => 'add']]) ?>
         <fieldset>
@@ -93,18 +95,9 @@
         </fieldset>
         <?= $this->Form->end() ?>
     </div>
-    <div class="offer-owner-contacts">
-        <a class="owner-img">
-            <?= $this->Html->image('userProfileImage/userProfileImage3.jpg', ['alt' => 'Owner profile image', 'class' => 'ownerimg']) ?>
-        </a>
-        <div class="owner-name">
-            <?= $offer->user->name; ?>
-            <?= $offer->user->surname; ?>
-        </div>
-        <div class="owner-profile-link">
-            <?= $offer->has('user') ? $this->Html->link("Zobacz więcej ofert użytkownika", ['controller' => 'Users', 'action' => 'profile', 1, $offer->user->id]) : '' ?>
-        </div>
-    </div>
+
+    <?= $this->element('profile-banners/offer-owner-profile-banner'); ?>
+
     <div class="offer-opinions">
         <div class="rating">
             <h2>Ocena</h2>
@@ -163,7 +156,7 @@
 
     </div>
     <div>
-        <?= $this->Html->link(__('Wroć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
+        <?= $this->Html->link(__('Wróć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
     </div>
     <div class="">
         <div id="my-calendar"></div>

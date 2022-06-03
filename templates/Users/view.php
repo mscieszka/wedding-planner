@@ -7,10 +7,11 @@
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
 ?>
-<?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
+<?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider', 'profile-banner']) ?>
 <div class="row">
     <div class="column-responsive column-80">
-        <?= $this->element('user-profile-banner'); ?>
+        <?= $this->element('profile-banners/user-profile-banner'); ?>
+
         <div class="bookmarks_wrapper">
             <div class="current_bookmarks">Oferty użytkownika</div>
             <div><?= $this->Html->link(__('Otrzymane oceny'), ['action' => '']) ?></div>

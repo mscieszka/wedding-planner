@@ -35,7 +35,6 @@
 .offer-gallery,
 .offer-details,
 .offer-reservation,
-.offer-owner-contacts,
 .offer-opinions {
     width: 1390px;
     border-radius: 25px;
@@ -149,40 +148,7 @@ h3 {
     background: #5c9278;
 }
 
-.offer-owner-contacts {
-    height: 200px;
-    background: #fef6e7;
-    display: grid;
-    grid-template-columns: 15% 40% 45%;
-}
-
-.owner-img {
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-}
-
-.ownerimg {
-    width: 150px;
-    max-height: 150px;
-    object-fit: cover;
-    border-radius: 100px;
-}
-
-.owner-name {
-    margin: 20px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    color: black;
-}
-
-.owner-profile-link {
-    margin: 30px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
+/* rating */
 
 .offer-opinions {
     height: 100%;
