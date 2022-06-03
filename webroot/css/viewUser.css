@@ -278,6 +278,7 @@ nav {
     flex-direction: column;
     row-gap: 1em;
     justify-content: center;
+    text-align: center;
 }
 
 .offer_container_edit_button a {

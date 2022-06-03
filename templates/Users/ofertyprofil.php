@@ -87,8 +87,8 @@
                                 </div>
                                 <div class="offer_container_edit_button">
                                     <?php if($user->id == $id_user_log):?>
-                                    <?= $this->Html->link(__('Edit Offer'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right']) ?>
-                                    <?= $this->Html->link(__('Delete Offer'), ['controller' => 'Offers','action' => 'delete', $offers->id], ['class' => 'button float-right']) ?>
+                                    <?= $this->Html->link(__('Edit Offer'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right override_button']) ?>
+                                    <?= $this->Html->link(__('Delete Offer'), ['controller' => 'Offers','action' => 'delete', $offers->id], ['class' => 'button float-right override_button']) ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
