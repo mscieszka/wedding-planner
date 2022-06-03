@@ -65,11 +65,14 @@ body {
     margin: 0;
 }
 
-label, legend {
+label,
+legend {
     color: #1f1f1f;
 }
 
-.input input, .input select, .input textarea {
+.input input,
+.input select,
+.input textarea {
     border-radius: 1rem;
 }
 
@@ -90,7 +93,7 @@ a {
     transform: scale(1.05);
 }
 
-    /* ------------- Register page ------------- */
+/* ------------- Register page ------------- */
 .logo_text_container {
     display: flex;
     justify-content: flex-start;
@@ -363,13 +366,13 @@ input[type="submit"]:hover {
     transition: all 0.2s ease-out;
 }
 
-.first-div > .ins-pass-p {
+.first-div>.ins-pass-p {
     align-self: flex-start;
     width: 70%;
     margin-left: 10em;
 }
 
-#password-reset-submit > div > input[type="submit"] {
+#password-reset-submit>div>input[type="submit"] {
     margin-right: 0 !important;
 }
 
@@ -434,7 +437,8 @@ input[type="submit"]:hover {
     align-content: center;
 }
 
-.search-description img, .place_search img {
+.search-description img,
+.place_search img {
     margin-top: 1.1rem;
 }
 
@@ -471,14 +475,14 @@ input[type="submit"]:hover {
     background: #fff;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
-    gap:3rem;
+    gap: 3rem;
     min-width: 330px;
     padding-bottom: 1rem;
     padding-top: 1rem;
     margin: 10px;
 }
 
-.service-type > img {
+.service-type>img {
     padding-left: 1vw;
     height: 6vh;
     margin-bottom: 0;
@@ -488,7 +492,7 @@ input[type="submit"]:hover {
     color: black;
 }
 
-.service-type > p {
+.service-type>p {
     padding-right: 1vw;
 }
 
@@ -504,11 +508,11 @@ input {
     transition: all 0.2s ease-out;
 }
 
-.place_search > img {
+.place_search>img {
     margin-bottom: 0;
 }
 
-.place_search > input {
+.place_search>input {
     margin-bottom: 0;
 }
 
@@ -517,6 +521,7 @@ input {
         flex-direction: column;
         justify-content: center;
     }
+
     .serv {
         flex-direction: column;
         justify-content: center;
