@@ -48,7 +48,13 @@
     display: grid;
     grid-template-rows: 15% 85%;
     justify-content: center;
+
 }
+
+.offer-gallery-img {
+    overflow: scroll;
+}
+
 
 .title-location {
     display: flex;

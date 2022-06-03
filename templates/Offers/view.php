@@ -24,12 +24,10 @@
             </div>
         </div>
         <div class="offer-gallery-img">
-
             <?php foreach($files as $file): ?>
                 <?php $filePath = 'offerImages/'.(int)$offer->get('id').'/'.$file; ?>
                 <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
             <?php endforeach; ?>
-
         </div>
     </div>
 
