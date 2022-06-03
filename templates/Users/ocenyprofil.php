@@ -79,15 +79,24 @@
                     </div>
                 </div>
                 <div class="opinion-box-wrapper">
-             <?php foreach ($user->ratings as $rating): ?>
+
+
+
+                    <?php if($account_type_id == 2): ?>
+
+                    <?php if (!empty($ratings)) : ?>
+             <?php foreach ($ratings as $rating): ?>
+
+                            <?php if(!(in_array($rating->offer_id, $his_offers))): continue; ?>
+                            <?php endif; ?>
 
                     <div class="opinion-box_provider">
                         <a class="user-img_provider">
                             <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
                         </a>
                         <div class="upper-box_provider">
-                            <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
-                            <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
+                            <h2><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h2>
+                            <h2><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h2>
                             <blockquote>
                                 <?= $this->Text->autoParagraph(h($rating->description)); ?>
                             </blockquote>
@@ -98,6 +107,50 @@
 
                     </div>
                 <?php endforeach; ?>
+
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+
+
+
+
+
+
+                    <?php if($account_type_id == 1): ?>
+
+                        <?php if (!empty($ratings)) : ?>
+                            <?php foreach ($ratings as $rating): ?>
+
+                                <?php if($rating->user_id == $user->id):  ?>
+
+
+                                <div class="opinion-box_provider">
+                                    <a class="user-img_provider">
+                                        <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
+                                    </a>
+                                    <div class="upper-box_provider">
+                                        <h2><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h2>
+                                        <h2><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h2>
+                                        <blockquote>
+                                            <?= $this->Text->autoParagraph(h($rating->description)); ?>
+                                        </blockquote>
+                                    </div>
+                                    <div class="opinion-content_provider">
+                                        <h4><?= h($rating->opinion_date) ?></h4>
+                                    </div>
+
+                                    <div class="offer_container_edit_button">
+                                        <?php if($user->id == $id_user_log):?>
+                                            <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+
+                        <?php endif; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

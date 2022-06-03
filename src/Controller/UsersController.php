@@ -98,35 +98,73 @@ class UsersController extends AppController
         $offers = null;
         $saved_user_offers = null;
 
+        //czyli uzytkownik zalogowany
         if($id_user == null) {
             $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier(), [
                 'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
             ]);
+
+            $id_user = $user->id;
         }
 
+
+        //czyli obcy uzytkownik
         else {
             $user = $this->Users->get($id_user, [
                 'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
             ]);
         }
 
+        //do tego momentu my nie wiemy jeszcze czy to provider czy klient
 
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
 
 
+        $offers = $this->Users->Offers->find()->all();
+        $ratings =  $this->Users->Ratings->find('all', ['contain' => ['Users', 'Offers']]);
+
+
+
+
+
         //jesli klient
         if($account_type_id == 1){
-            $offers = $this->paginate($this->Users->Offers->find());
+
+            //dla ofert
             $saved_user_offers = $this->Users->Offers->SavedUserOffers->find()
                 ->where([
-                    'user_id' => $this->request->getAttribute('identity')->getIdentifier()
+                    'user_id' => $id_user
                 ])->toArray();
             $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
+
+
+            //dla ocen niepotrzebne
+
         }
 
-        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'saved_user_offers'));
+$his_offers = null;
+
+        //jesli provider
+        if($account_type_id == 2) {
+
+            //dla ofert niepotrzebne
+
+            //dla ocen
+            $his_offers = $this->Users->Offers->find()
+                ->where([
+                    'user_id' => $id_user //czyli wszystkie oferty tego uzytkownika
+                ])->toArray();
+            $his_offers = (new Collection($his_offers))->extract('id')->toList();
+
+
+
+        }
+
+
+
+        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'ratings', 'saved_user_offers', 'his_offers'));
 
 
         $layout = '';

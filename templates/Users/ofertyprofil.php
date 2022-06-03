@@ -90,8 +90,10 @@
                                     <div class="offer_container_wrapper_description"><?= h($offers->description) ?></div>
                                 </div>
                                 <div class="offer_container_edit_button">
+                                    <?php if($user->id == $id_user_log):?>
                                     <?= $this->Html->link(__('Edit Offer'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right']) ?>
                                     <?= $this->Html->link(__('Delete Offer'), ['controller' => 'Offers','action' => 'delete', $offers->id], ['class' => 'button float-right']) ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <?php endforeach; ?>
@@ -131,7 +133,9 @@
                                             <div class="offer_container_wrapper_description"><?= h($offer->description) ?></div>
                                         </div>
                                         <div class="offer_container_edit_button">
+                                            <?php if($user->id == $id_user_log):?>
                                                     <td class="offer-name"><?= $this->Form->postLink(__('Remove from favourites'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to remove from favourites?')]) ?></td>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
 
