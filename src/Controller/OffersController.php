@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -21,7 +22,6 @@ class OffersController extends AppController
         $this->paginate = [
             'contain' => ['Users', 'Categories', 'Addresses'],
         ];
-
     }
 
     /**
@@ -38,25 +38,24 @@ class OffersController extends AppController
 
         //then display all offers
         if ($onlymyoffer == null) {
-            if($account_type_id == 1) $onlymyoffer = 2;
-                else if($account_type_id == 2) $onlymyoffer = 1;
-
+            if ($account_type_id == 1) $onlymyoffer = 2;
+            else if ($account_type_id == 2) $onlymyoffer = 1;
         }
         //tylko oferty providera zalogowanego "My offers" lub tylko oferty klienta "My saved offers"
         //ale to zabezpieczone w templates
         // onlymyoffrs = 1 lub =2
 
         //provider
-        if($onlymyoffer == 1){
+        if ($onlymyoffer == 1) {
             $offers = $this->paginate($this->Offers->find()->where(
                 ['offers.user_id' => $this->request->getAttribute('identity')->getIdentifier()]
             ));
         }
 
         //klient
-            else if($onlymyoffer == 2){
-                $offers = $this->paginate($this->Offers->find());
-            }
+        else if ($onlymyoffer == 2) {
+            $offers = $this->paginate($this->Offers->find());
+        }
 
         $saved_user_offers = $this->Offers->SavedUserOffers->find()
             ->where([
@@ -64,7 +63,6 @@ class OffersController extends AppController
             ])->toArray();
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
         $this->set(compact('offers', 'onlymyoffer', 'account_type_id', 'saved_user_offers', 'id_user_log'));
-
     }
 
     /**
@@ -82,17 +80,17 @@ class OffersController extends AppController
 
         //then display ratings for this offer
 
-            $ratings = $this->Offers->Ratings->find()->where(['offer_id' => $id])->contain(['Offers', 'Users']);
+        $ratings = $this->Offers->Ratings->find()->where(['offer_id' => $id])->contain(['Offers', 'Users']);
 
-//dodawanie!
+        //dodawanie!
 
         $rating = $this->Offers->Ratings->newEmptyEntity();
         $this->Authorization->authorize($rating);
         if ($this->request->is('post')) {
             $rating = $this->Offers->Ratings->patchEntity($rating, $this->request->getData());
-           $rating->user_id = $this->request->getAttribute('identity')->getIdentifier();
-           $rating->offer_id = $id;
-           // $rating->rating = 4;
+            $rating->user_id = $this->request->getAttribute('identity')->getIdentifier();
+            $rating->offer_id = $id;
+            // $rating->rating = 4;
             $rating->opinion_date = date("Y-m-d");
 
             if ($this->Offers->Ratings->save($rating)) {
@@ -106,13 +104,14 @@ class OffersController extends AppController
         $offers = $this->Offers->Ratings->Offers->find('list', ['limit' => 200])->all();
 
         $offer = $this->Offers->get($id, [
-            'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
+            'contain' => [
+                'Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
                 'MusicFilters', 'OfferActiveDays', 'Ratings',
                 'SavedUserOffers'
             ],
         ]);
 
-//debug($offer); exit;
+        //debug($offer); exit;
         $offer_type_id = $offer->category_id;
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->where(['id' => $offer_type_id]);
@@ -120,25 +119,25 @@ class OffersController extends AppController
 
         $booked_dates = $this->getBookedOfferDates($id);
         //debug($booked_dates); exit;
-        $active_offer_days = $this->date_range(date('Y-m-d'), date('Y-m-d', strtotime(date('Y-m-d').' +600 days')), $offer['offer_active_day'], $booked_dates);
+        $active_offer_days = $this->date_range(date('Y-m-d'), date('Y-m-d', strtotime(date('Y-m-d') . ' +600 days')), $offer['offer_active_day'], $booked_dates);
         $booking = $this->getTableLocator()->get('Bookings')->newEmptyEntity();
         $booking->offer_id = $id;
         $calendar_data = [];
 
-        foreach($active_offer_days as $key => $value) {
+        foreach ($active_offer_days as $key => $value) {
             $d = [
                 'date' => $value,
                 'classname' => 'free'
             ];
-            $calendar_data[]=$d;
+            $calendar_data[] = $d;
         }
 
-        foreach($booked_dates as $key => $value) {
+        foreach ($booked_dates as $key => $value) {
             $d = [
                 'date' => $value,
                 'classname' => 'occupied'
             ];
-            $calendar_data[]=$d;
+            $calendar_data[] = $d;
         }
 
         $saved_user_offers = $this->Offers->SavedUserOffers->find()
@@ -147,42 +146,57 @@ class OffersController extends AppController
             ])->toArray();
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
 
-        $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces',
-            'active_offer_days', 'booking', 'ratings', 'users', 'offers','saved_user_offers', 'calendar_data'));
+        $this->set(compact(
+            'offer',
+            'account_type_id',
+            'id_user_log',
+            'categories',
+            'provinces',
+            'active_offer_days',
+            'booking',
+            'ratings',
+            'users',
+            'offers',
+            'saved_user_offers',
+            'calendar_data'
+        ));
     }
 
-    private function getBookedOfferDates($offer_id) {
+    private function getBookedOfferDates($offer_id)
+    {
         $arr = [];
-        $arr = $this->Offers->Bookings->find('list')->select(['booking_date'])->where(['offer_id'=>$offer_id])->toArray();
+        $arr = $this->Offers->Bookings->find('list')->select(['booking_date'])->where(['offer_id' => $offer_id])->toArray();
         $arr = json_decode(json_encode($arr), true);
-//        debug($arr); exit;
+        //        debug($arr); exit;
         return $arr;
     }
 
-    private function getActiveOfferDays($active_offer_days) {
+    private function getActiveOfferDays($active_offer_days)
+    {
         $arr = [];
-        $weekdays = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+        $weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
         foreach ($weekdays as $weekday) {
-            if($active_offer_days[$weekday]) {
-                $arr[] = date("N",strtotime($weekday));
+            if ($active_offer_days[$weekday]) {
+                $arr[] = date("N", strtotime($weekday));
             }
         }
         return $arr;
     }
 
-    private function date_range($first, $last, $active_offer_days, $booked_offer_days, $step = '+1 day', $output_format = 'Y-m-d') {
+    private function date_range($first, $last, $active_offer_days, $booked_offer_days, $step = '+1 day', $output_format = 'Y-m-d')
+    {
 
-//        debug($active_offer_days);
-//        debug(date("N",strtotime("wednesday")));
-//        debug(date("N",strtotime("2022-05-28")));
-//        exit;
+        //        debug($active_offer_days);
+        //        debug(date("N",strtotime("wednesday")));
+        //        debug(date("N",strtotime("2022-05-28")));
+        //        exit;
         $active_offer_days = $this->getActiveOfferDays($active_offer_days);
         $dates = array();
         $current = strtotime($first);
         $last = strtotime($last);
 
-        while( $current <= $last ) {
-            if(in_array(date("N",$current),$active_offer_days) && !in_array(date('Y-m-d',$current), $booked_offer_days)) {
+        while ($current <= $last) {
+            if (in_array(date("N", $current), $active_offer_days) && !in_array(date('Y-m-d', $current), $booked_offer_days)) {
                 $dates[date($output_format, $current)] = date($output_format, $current);
             }
             $current = strtotime($step, $current);
@@ -223,7 +237,7 @@ class OffersController extends AppController
 
                 $data = $this->request->getData();
                 unset($data['address']);
-                $offer = $this->Offers->patchEntity($offer, $data );
+                $offer = $this->Offers->patchEntity($offer, $data);
                 $offer->address_id = $address->get('id');
                 $offer->user_id = $this->request->getAttribute('identity')->getIdentifier();
                 $offer->category_id = $offer_type_id;
@@ -254,9 +268,8 @@ class OffersController extends AppController
 
                 $this->Flash->success(__('The offer has been saved.'));
                 return $this->redirect(['controller' => 'Offers', 'action' => 'index', null]);
-
             } catch (\Cake\ORM\Exception\PersistanceFailedException $e) {
-                $conn -> rollback();
+                $conn->rollback();
                 $this->Flash->error(__('The address could not be saved. Please, try again.'));
             }
         }
@@ -290,7 +303,8 @@ class OffersController extends AppController
     {
         $onlymyoffer = 1;
         $offer = $this->Offers->get($id, [
-            'contain' => ['Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
+            'contain' => [
+                'Users', 'Categories', 'Addresses', 'Bookings', 'CateringFilters', 'HallFilters',
                 'MusicFilters', 'OfferActiveDays', 'Ratings',
                 'SavedUserOffers'
             ]
@@ -303,7 +317,6 @@ class OffersController extends AppController
                 $this->Flash->success(__('The offer has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
-
             }
             $this->Flash->error(__('The offer could not be saved. Please, try again.'));
         }
@@ -312,7 +325,7 @@ class OffersController extends AppController
         $addresses = $this->Offers->Addresses->find('list', ['limit' => 200])->all();
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
         $hallTypes = $this->Offers->HallFilters->HallTypes->find('list', ['limit' => 200])->all();
-        $this->set(compact('offer', 'users', 'categories', 'addresses','provinces', 'hallTypes', 'account_type_id', 'onlymyoffer'));
+        $this->set(compact('offer', 'users', 'categories', 'addresses', 'provinces', 'hallTypes', 'account_type_id', 'onlymyoffer'));
         $offer_type_id = $offer->category_id;
         $template = 'add_hall';
         if ($offer_type_id == 2) {
@@ -355,7 +368,9 @@ class OffersController extends AppController
         $offer_attribute .= $attribute;
 
         $offers = $this->paginate($this->Offers->find(
-            'all', ['conditions' => [$offer_attribute => $value]]));
+            'all',
+            ['conditions' => [$offer_attribute => $value]]
+        ));
         $this->index($offers);
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -57,20 +58,20 @@ class UsersController extends AppController
         $layout = '';
 
         //oferty domyslnie
-        if ($argument == null) $argumetn =1;
+        if ($argument == null) $argumetn = 1;
 
         //oferty
-        if ($argument == 1){
+        if ($argument == 1) {
             $layout = 'ofertyprofil';
         }
 
         //oceny
-        if ($argument == 2){
+        if ($argument == 2) {
             $layout = 'ocenyprofil';
         }
 
         //zamowienia
-        if ($argument == 3){
+        if ($argument == 3) {
             $layout = 'zamowieniaprofil';
         }
 
@@ -92,7 +93,7 @@ class UsersController extends AppController
         $saved_user_offers = null;
 
         //czyli uzytkownik zalogowany
-        if($id_user == null) {
+        if ($id_user == null) {
             $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier(), [
                 'contain' => ['AccountTypes', 'Addresses', 'Bookings', 'Offers', 'Ratings',  'SavedUserOffers'],
             ]);
@@ -120,7 +121,7 @@ class UsersController extends AppController
         $saved_user_bookings = null;
 
         //jesli klient
-        if(($user->account_type_id) == 1){
+        if (($user->account_type_id) == 1) {
 
             //dla ofert
             $saved_user_offers = $this->Users->Offers->SavedUserOffers->find()
@@ -137,7 +138,7 @@ class UsersController extends AppController
         $his_offers = null;
 
         //jesli provider
-        if(($user->account_type_id) == 2) {
+        if (($user->account_type_id) == 2) {
 
             //dla ofert niepotrzebne
 
@@ -159,7 +160,7 @@ class UsersController extends AppController
         if ($argument == null) $argument = 1;
 
         //oferty
-        if ($argument == 1){
+        if ($argument == 1) {
             $layout = 'ofertyprofil';
         }
 
@@ -169,7 +170,7 @@ class UsersController extends AppController
         }
 
         //zamowienia
-        if ($argument == 3){
+        if ($argument == 3) {
             $layout = 'zamowieniaprofil';
         }
 
@@ -187,14 +188,14 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
-    public function add($account_type=2)
+    public function add($account_type = 2)
     {
         $this->Authorization->skipAuthorization();
-        if(!empty($this->request->getAttribute('identity'))){
+        if (!empty($this->request->getAttribute('identity'))) {
             $this->Flash->error(__('You are already logged in.'));
             $this->redirect($this->referer());
         }
-//        $this->Authorization->skipAuthorization();
+        //        $this->Authorization->skipAuthorization();
         $user = $this->Users->newEmptyEntity();
         $user->account_type_id = $account_type;
         if ($this->request->is('post')) {
@@ -208,7 +209,7 @@ class UsersController extends AppController
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'accountTypes'));
-        if($account_type == 1) {
+        if ($account_type == 1) {
             $this->render('addrecipient');
         }
     }
@@ -260,7 +261,6 @@ class UsersController extends AppController
         }
 
         return $this->redirect(['controller' => 'Users', 'action' => 'logout']);
-
     }
 
     public function beforeFilter(\Cake\Event\EventInterface $event)
@@ -303,17 +303,17 @@ class UsersController extends AppController
         }
     }
 
-    public function changePassword(){
-
+    public function changePassword()
+    {
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $this->set(compact('account_type_id'));
 
         if ($this->request->is('post')) {
             $user = $this->Users->get($this->request->getAttribute('identity')->getIdentifier());
-            if((new DefaultPasswordHasher())->check($this->request->getData('old_password'),$user->password)) {
+            if ((new DefaultPasswordHasher())->check($this->request->getData('old_password'), $user->password)) {
                 $user->password = $this->request->getData('password');
-                if($this->Users->save($user)) {
+                if ($this->Users->save($user)) {
                     $this->Flash->success("Hasło zostało pomyślnie zmienione.");
                     $redirect = $this->request->getQuery('redirect', [
                         'controller' => 'pages',

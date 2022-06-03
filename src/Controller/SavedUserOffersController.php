@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -54,12 +55,12 @@ class SavedUserOffersController extends AppController
 
         $savedUserOffer->offer_id = $offer_id;
         $savedUserOffer->user_id = $this->request->getAttribute('identity')->getIdentifier();
-            $savedUserOffer = $this->SavedUserOffers->patchEntity($savedUserOffer, $this->request->getData());
-            if ($this->SavedUserOffers->save($savedUserOffer)) {
-                $this->Flash->success(__('Oferta została pomyślnie dodana do ulubionych'));
-            } else {
-                $this->Flash->error(__('Nie można dodać oferty do ulubionych. Proszę spróbować ponownie.'));
-            }
+        $savedUserOffer = $this->SavedUserOffers->patchEntity($savedUserOffer, $this->request->getData());
+        if ($this->SavedUserOffers->save($savedUserOffer)) {
+            $this->Flash->success(__('Oferta została pomyślnie dodana do ulubionych'));
+        } else {
+            $this->Flash->error(__('Nie można dodać oferty do ulubionych. Proszę spróbować ponownie.'));
+        }
 
         return $this->redirect($this->referer());
     }
@@ -102,8 +103,8 @@ class SavedUserOffersController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $saved_user_offer = $this->SavedUserOffers->find()->where([
-            'user_id'=>$this->request->getAttribute('identity')->getIdentifier(),
-            'offer_id'=>$offer_id
+            'user_id' => $this->request->getAttribute('identity')->getIdentifier(),
+            'offer_id' => $offer_id
         ])->first();
         $this->Authorization->authorize($saved_user_offer);
         if ($this->SavedUserOffers->delete($saved_user_offer)) {
