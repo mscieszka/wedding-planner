@@ -62,7 +62,7 @@ return static function (RouteBuilder $routes) {
         $builder->connect('/addresses', ['controller' => 'users', 'action' => 'profile']);
         $builder->connect('/addresses/add', ['controller' => 'users', 'action' => 'profile']);
         $builder->connect('/addresses/edit', ['controller' => 'users', 'action' => 'profile']);
-        $builder->connect('/offers', ['controller' => 'users', 'action' => 'profile']);
+        $builder->connect('/offers', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
 
 
