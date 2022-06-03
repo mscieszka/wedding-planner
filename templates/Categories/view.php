@@ -30,6 +30,34 @@
                             <?php foreach ($category->offers as $offers) : ?>
                             <?php
                                 $search_param = '';
+                                if ($category->id == 1) {
+                                    if ($offers['hall_filter']->air_conditioning) {
+                                        $search_param .= ' extras_air_conditioning = "1" ';
+                                    }
+                                    if ($offers['hall_filter']->garden) {
+                                        $search_param .= ' extras_garden = "1" ';
+                                    }
+                                    if ($offers['hall_filter']->terrace) {
+                                        $search_param .= ' extras_terrace = "1" ';
+                                    }
+                                    if ($offers['hall_filter']->bar) {
+                                        $search_param .= ' extras_bar = "1" ';
+                                    }
+                                    if ($offers['hall_filter']->stage) {
+                                        $search_param .= ' extras_stage = "1" ';
+                                    }
+
+                                    if ($offers['hall_filter']->hall_type_id == 1) {
+                                        $search_param .= ' business_type_restaurant = "1" ';
+                                    }
+                                    if ($offers['hall_filter']->hall_type_id == 2) {
+                                        $search_param .= ' business_type_wedding_hall = "1" ';
+                                    }
+                                    if ($offers['hall_filter']->hall_type_id == 3) {
+                                        $search_param .= ' business_type_wedding_house = "1" ';
+                                    }
+                                    $search_param .= ' info = "' . $offers->name . '" ';
+                                }
                                 if ($category->id == 2) {
                                     if ($offers['music_filter']->disco_polo) {
                                         $search_param .= ' music_type_disco_polo = "1" ';
@@ -48,6 +76,33 @@
                                     }
                                     if ($offers['music_filter']->running_games) {
                                         $search_param .= ' dj_additional_info_wedding_games = "1" ';
+                                    }
+                                    $search_param .= ' info = "' . $offers->name . '" ';
+                                }
+                                if ($category->id == 3) {
+                                    if ($offers['catering_filter']->polish) {
+                                        $search_param .= ' cuisine_type_polish = "1" ';
+                                    }
+                                    if ($offers['catering_filter']->italian) {
+                                        $search_param .= ' cuisine_type_italian = "1" ';
+                                    }
+                                    if ($offers['catering_filter']->american) {
+                                        $search_param .= ' cuisine_type_usa = "1" ';
+                                    }
+                                    if ($offers['catering_filter']->french) {
+                                        $search_param .= ' cuisine_type_french = "1" ';
+                                    }
+                                    if ($offers['catering_filter']->asian) {
+                                        $search_param .= ' cuisine_type_asian = "1" ';
+                                    }
+                                    if ($offers['catering_filter']->vegan) {
+                                        $search_param .= ' additional_info_wegan = "1" ';
+                                    }
+                                    if ($offers['catering_filter']->vegetarian) {
+                                        $search_param .= ' additional_info_wegetarian = "1" ';
+                                    }
+                                    if ($offers['catering_filter']->gluten_free) {
+                                        $search_param .= ' additional_info_gluten_free = "1" ';
                                     }
                                     $search_param .= ' info = "' . $offers->name . '" ';
                                 }
