@@ -128,7 +128,6 @@ use Cake\Filesystem\Folder;
                                         $files = $path->find();
                                         ?>
 
-
                                         <?php if (empty($files)) : ?>
                                             <div class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offer-img']) ?></div>
                                             <?php endif; ?>
@@ -137,6 +136,7 @@ use Cake\Filesystem\Folder;
                                         <?php foreach($files as $file): ?>
                                             <?php $filePath = 'offerImages/'.(int)$offers->get('id').'/'.$file; ?>
                                             <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
+                                                        <?php  break; ?>
                                         <?php endforeach; ?>
                                                 <?php endif; ?>
 
