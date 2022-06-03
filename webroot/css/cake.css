@@ -20,7 +20,8 @@ a {
     transition: all 0.2s linear;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
     color: #000000;
 }
 

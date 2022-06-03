@@ -1,7 +1,5 @@
 .dow-clickable {
-    border: 1px;
-    border-color: black;
-    border-style: groove;
+    border: 1px groove black;
     border-radius: 8px;
 }
 
@@ -24,10 +22,21 @@
     cursor: default;
 }
 
-.grade-1 {background-color: red;}
-.grade-2 {background-color: orange;}
-.grade-3 {background-color: yellow;}
-.grade-4 {background-color: green;}
+.grade-1 {
+    background-color: red;
+}
+
+.grade-2 {
+    background-color: orange;
+}
+
+.grade-3 {
+    background-color: yellow;
+}
+
+.grade-4 {
+    background-color: green;
+}
 
 .purple {
     background-color: purple;

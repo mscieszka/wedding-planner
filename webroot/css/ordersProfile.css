@@ -11,16 +11,18 @@
     justify-content: center;
     align-items: center;
 }
+
 .profile-order-property {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 .profile-order-btn {
     min-height: 0 !important;
 }
 
-.profile-order-btn-red{
+.profile-order-btn-red {
     background-color: #d54848;
 }
