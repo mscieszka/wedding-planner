@@ -46,7 +46,6 @@ class CategoriesController extends AppController
 
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
 
-
         $saved_user_offers = $this->Categories->Offers->SavedUserOffers->find()
             ->where([
                 'user_id' => $this->request->getAttribute('identity')->getIdentifier()

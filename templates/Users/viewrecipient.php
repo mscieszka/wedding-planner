@@ -124,7 +124,7 @@
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookings->id)]) ?>
+                                <?= $this->Form->postLink(__('Anuluj'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Czy na pewno chcesz anulować rezerwację?', $bookings->id)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -165,7 +165,7 @@
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Offers', 'action' => 'edit', $offers->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Offers', 'action' => 'delete', $offers->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offers->id)]) ?>
+                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Offers', 'action' => 'delete', $offers->id], ['confirm' => __('Czy na pewno chcesz usunąć ofertę?')]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -200,7 +200,7 @@
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Ratings', 'action' => 'view', $ratings->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Ratings', 'action' => 'edit', $ratings->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Ratings', 'action' => 'delete', $ratings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ratings->id)]) ?>
+                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Ratings', 'action' => 'delete', $ratings->id], ['confirm' => __('Czy na pewno chcesz usunąć opinię?')]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

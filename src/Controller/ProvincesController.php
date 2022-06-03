@@ -45,7 +45,6 @@ class ProvincesController extends AppController
 
         $this->set(compact('province', 'id_user_log', 'account_type_id', 'offers'));
 
-
 /*
 <?php if($addresses->user_id == $id_user_log):?>
                                     <?= $this->Html->link(__('Edit'), ['controller' => 'Addresses', 'action' => 'edit', $addresses->id]) ?>

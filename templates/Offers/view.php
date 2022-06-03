@@ -10,7 +10,7 @@
 <?= $this->Html->css('viewOffer') ?>
 <?= $this->Html->css('calendar') ?>
 <div class="go-back-to-parent-category">
-        <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
+    <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
 </div>
 <div class="offer-container">
     <div class="offer-gallery">

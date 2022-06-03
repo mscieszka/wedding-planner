@@ -1,11 +1,10 @@
 <div class="sidebar">
     <a class="category">DJ / zespół muzyczny</a>
-
-        <?php if($account_type_id == 2): ?>
-    <div class="side-nav">
-            <?= $this->Html->link(__('Dodaj nową ofertę'), ['controller' => 'Offers', 'action' => 'add', h($category->id)]) ?>
-    </div>
-        <?php endif; ?>
+    <?php if($account_type_id == 2): ?>
+        <div class="side-nav">
+                <?= $this->Html->link(__('Dodaj nową ofertę'), ['controller' => 'Offers', 'action' => 'add', h($category->id)]) ?>
+        </div>
+    <?php endif; ?>
 
     <label id="label_sorting_type" for="select_sorting_type">Sortowanie</label>
     <select name="sorting_types" id="select_sorting_type">
@@ -54,7 +53,6 @@
     $(document).ready(function() {
 
         function showOffer(category, elem) {
-
             var showOffer = false;
             if( $('#'+category).is(':checked') ) {
                 var attr = elem.attr(category);
@@ -74,13 +72,8 @@
                         elem.show();
                     }
                 }
-
             }
-
-
         }
-
-
 
         $('#input_search_description').change(function(){
             var isCategoryChecked = false;
@@ -96,8 +89,6 @@
             } else {
                 searchInfo();
             }
-
-
         })
 
         function searchInfo() {
@@ -111,7 +102,6 @@
                     $(this).show();
                 }
             });
-
         }
 
         function search() {

@@ -28,4 +28,3 @@
     <?php include('offer_add_contents.php') ?>
     <?= $this->Form->end() ?>
 </div>
-

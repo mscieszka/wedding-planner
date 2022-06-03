@@ -6,8 +6,6 @@
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
 ?>
-
-
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
 <div class="row">
     <div class="column-responsive column-80 " >
@@ -41,8 +39,6 @@
             </div>
         </div>
         <div class="bookmarks_wrapper">
-
-
             <?php if($user->account_type_id == 2): ?>
                 <div><?= $this->Html->link(__('Oferty użytkownika'), ['action' => 'profile', 1, $user->id]) ?></div>
                 <div class="current_bookmarks">Otrzymane oceny</div>
@@ -50,7 +46,6 @@
                 <div><?= $this->Html->link(__('Zamowienia'), ['action' => 'profile', 3, $user->id]) ?></div>
             <?php endif; ?>
             <?php endif; ?>
-
 
             <?php if($user->account_type_id==1): ?>
                 <div><?= $this->Html->link(__('Oferty obserwowane'), ['action' => 'profile', 1, $user->id]) ?></div>
@@ -106,7 +101,7 @@
                         </div>
 
                         <?php if($rating->user_id == $id_user_log):?>
-                            <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
+                            <td class="offer-name"><?= $this->Form->postLink(__('Usuń komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Czy na pewno chcesz usunąć ten komentarz?')]) ?></td>
                         <?php endif; ?>
 
                     </div>
@@ -146,7 +141,7 @@
 
                                     <div class="offer_container_edit_button">
                                         <?php if($rating->user_id == $id_user_log):?>
-                                            <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
+                                            <td class="offer-name"><?= $this->Form->postLink(__('Usuń opinię'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Czy na pewno chcesz usunąć opinię?')]) ?></td>
                                         <?php endif; ?>
                                     </div>
                                 </div>

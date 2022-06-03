@@ -14,7 +14,7 @@
             <?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $offer->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Czy na pewno chcesz usunąć ofertę?'), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('List Offers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('New Offer'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>

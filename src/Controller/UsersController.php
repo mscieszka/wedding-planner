@@ -54,9 +54,7 @@ class UsersController extends AppController
         $current_user = $user->id;
         $this->set(compact('user', 'current_user', 'account_type_id', 'id_user_log'));
 
-
         $layout = '';
-
 
         //oferty domyslnie
         if ($argument == null) $argumetn =1;
@@ -71,7 +69,6 @@ class UsersController extends AppController
             $layout = 'ocenyprofil';
         }
 
-
         //zamowienia
         if ($argument == 3){
             $layout = 'zamowieniaprofil';
@@ -85,10 +82,6 @@ class UsersController extends AppController
 
         $this->render($layout);
     }
-
-
-
-
 
     public function profile($argument = 1, $id_user = null)
     {
@@ -107,7 +100,6 @@ class UsersController extends AppController
             $id_user = $user->id;
         }
 
-
         //czyli obcy uzytkownik
         else {
             $user = $this->Users->get($id_user, [
@@ -121,14 +113,11 @@ class UsersController extends AppController
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
 
-
         $offers = $this->Users->Offers->find()->all();
         $ratings =  $this->Users->Ratings->find('all', ['contain' => ['Users', 'Offers']]);
         $bookings = $this->Users->Bookings->find('all', ['contain' => ['Users', 'Offers']]);
 
         $saved_user_bookings = null;
-
-
 
         //jesli klient
         if(($user->account_type_id) == 1){
@@ -140,14 +129,12 @@ class UsersController extends AppController
                 ])->toArray();
             $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
 
-
             //dla ocen niepotrzebne
             //dla zamowien niepotrzebne
 
         }
 
-$his_offers = null;
-
+        $his_offers = null;
 
         //jesli provider
         if(($user->account_type_id) == 2) {
@@ -162,17 +149,11 @@ $his_offers = null;
             $his_offers = (new Collection($his_offers))->extract('id')->toList();
 
             //dla bookingu niepotrzebne
-
-
         }
-
-
 
         $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'ratings', 'saved_user_offers', 'his_offers', 'saved_user_bookings', 'bookings'));
 
-
         $layout = '';
-
 
         //oferty domyslnie
         if ($argument == null) $argument = 1;
@@ -182,16 +163,15 @@ $his_offers = null;
             $layout = 'ofertyprofil';
         }
 
-            //oceny
-            if ($argument == 2){
-                $layout = 'ocenyprofil';
-            }
+        //oceny
+        if ($argument == 2) {
+            $layout = 'ocenyprofil';
+        }
 
-
-                //zamowienia
-                if ($argument == 3){
-                    $layout = 'zamowieniaprofil';
-                }
+        //zamowienia
+        if ($argument == 3){
+            $layout = 'zamowieniaprofil';
+        }
 
         /*
         if($user->get('account_type_id') == 1) {
@@ -201,10 +181,6 @@ $his_offers = null;
 
         $this->render($layout);
     }
-
-
-
-
 
     /**
      * Add method
@@ -255,11 +231,11 @@ $his_offers = null;
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('Rejestracja zakończona pomyślnie'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('Wystąpił błąd podczas próby rejestracji. Spróbuj ponownie'));
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'accountTypes', 'account_type_id'));
@@ -311,7 +287,7 @@ $his_offers = null;
         }
         // display error if user submitted and authentication failed
         if ($this->request->is('post') && !$result->isValid()) {
-            $this->Flash->error(__('Invalid username or password'));
+            $this->Flash->error(__('Podano nieprawidłowy email lub hasło'));
         }
         $this->viewBuilder()->setLayout('login');
     }
@@ -338,7 +314,7 @@ $his_offers = null;
             if((new DefaultPasswordHasher())->check($this->request->getData('old_password'),$user->password)) {
                 $user->password = $this->request->getData('password');
                 if($this->Users->save($user)) {
-                    $this->Flash->success("Password has been changed.");
+                    $this->Flash->success("Hasło zostało pomyślnie zmienione.");
                     $redirect = $this->request->getQuery('redirect', [
                         'controller' => 'pages',
                         'action' => 'index',

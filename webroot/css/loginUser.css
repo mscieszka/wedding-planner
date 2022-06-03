@@ -80,7 +80,6 @@ form input[type="password"]:hover {
     transition: all 0.2s ease-out;
 }
 
-
 form input[type="submit"] {
     width: 15em;
     height: 3em;

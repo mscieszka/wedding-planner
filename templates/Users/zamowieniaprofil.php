@@ -92,7 +92,7 @@
                             <?php if($booking->user_id == $id_user_log):?>
 
                             <?php if($booking->booking_date < date("Y-m-d")) : ?>
-                        <?= $this->Form->postLink(__('Anuluj'), ['controller' => 'Bookings', 'action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id), 'class' => 'button profile-order-btn profile-order-btn-red']) ?>
+                        <?= $this->Form->postLink(__('Anuluj'), ['controller' => 'Bookings', 'action' => 'delete', $booking->id], ['confirm' => __('Czy na pewno chcesz anulować rezerwację?'), 'class' => 'button profile-order-btn profile-order-btn-red']) ?>
                                 <?php endif; ?>
                                     <?php if($booking->booking_date >= date("Y-m-d")) : ?>
                                     <p>Zamowienie zakonczone </p>
@@ -158,7 +158,7 @@
 
 
                                           <!--  <?= $this->Html->link(__('Edit'), ['controller' => 'SavedUserBookings', 'action' => 'edit', $booking->id], ['class' => 'button profile-order-btn']) ?> -->
-                                           <!-- <?= $this->Form->postLink(__('Delete'), ['controller' => 'SavedUserBookings', 'action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id), 'class' => 'button profile-order-btn profile-order-btn-red']) ?> -->
+                                           <!-- <?= $this->Form->postLink(__('Delete'), ['controller' => 'SavedUserBookings', 'action' => 'delete', $booking->id], ['confirm' => __('Czy na pewno chcesz anulować rezerwację?'), 'class' => 'button profile-order-btn profile-order-btn-red']) ?> -->
 
 
 

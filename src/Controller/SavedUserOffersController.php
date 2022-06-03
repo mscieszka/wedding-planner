@@ -56,9 +56,9 @@ class SavedUserOffersController extends AppController
         $savedUserOffer->user_id = $this->request->getAttribute('identity')->getIdentifier();
             $savedUserOffer = $this->SavedUserOffers->patchEntity($savedUserOffer, $this->request->getData());
             if ($this->SavedUserOffers->save($savedUserOffer)) {
-                $this->Flash->success(__('The saved user offer has been saved.'));
+                $this->Flash->success(__('Oferta została pomyślnie dodana do ulubionych'));
             } else {
-                $this->Flash->error(__('The saved user offer could not be saved. Please, try again.'));
+                $this->Flash->error(__('Nie można dodać oferty do ulubionych. Proszę spróbować ponownie.'));
             }
 
         return $this->redirect($this->referer());
@@ -80,11 +80,11 @@ class SavedUserOffersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $savedUserOffer = $this->SavedUserOffers->patchEntity($savedUserOffer, $this->request->getData());
             if ($this->SavedUserOffers->save($savedUserOffer)) {
-                $this->Flash->success(__('The saved user offer has been saved.'));
+                $this->Flash->success(__('Oferta została pomyślnie dodana do ulubionych'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The saved user offer could not be saved. Please, try again.'));
+            $this->Flash->error(__('Nie można dodać oferty do ulubionych. Proszę spróbować ponownie'));
         }
         $users = $this->SavedUserOffers->Users->find('list', ['limit' => 200])->all();
         $offers = $this->SavedUserOffers->Offers->find('list', ['limit' => 200])->all();

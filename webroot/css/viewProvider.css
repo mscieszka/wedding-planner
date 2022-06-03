@@ -10,8 +10,6 @@
 }
 
 .provider_container {
-
-
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,14 +21,12 @@
     justify-items: center;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-
 }
 
 .provider_image {
     display: flex;
     justify-content: flex-start;
     align-items:center;
-
 }
 .provider_name {
     display: flex;
@@ -66,7 +62,6 @@
 .provider_contact_detail{
     display: flex;
     flex-direction: row;
-
 }
 
 /* Otrzymane oceny */

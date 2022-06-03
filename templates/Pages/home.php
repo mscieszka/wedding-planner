@@ -67,10 +67,7 @@ endif;
     <?= $this->fetch('script') ?>
 </head>
 <body>
-
 <?php echo $this->element('header/header-only-buttons'); ?>
-
-
 <?= $this->Flash->render() ?>
     <div class="content_wrapper_homepage">
         <div class="logo_div" >

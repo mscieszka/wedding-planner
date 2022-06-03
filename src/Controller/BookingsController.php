@@ -139,9 +139,6 @@ class BookingsController extends AppController
         return $this->redirect($this->referer());
     }
 
-
-
-
     // additional functions
 
     protected function cancelBooking(Booking $booking){
@@ -156,5 +153,4 @@ class BookingsController extends AppController
         //TODO
 
     }
-
 }

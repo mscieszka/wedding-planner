@@ -46,7 +46,6 @@ class OffersController extends AppController
         //ale to zabezpieczone w templates
         // onlymyoffrs = 1 lub =2
 
-
         //provider
         if($onlymyoffer == 1){
             $offers = $this->paginate($this->Offers->find()->where(
@@ -99,7 +98,6 @@ class OffersController extends AppController
             if ($this->Offers->Ratings->save($rating)) {
                 $this->Flash->success(__('The rating has been saved.'));
 
-
                 return $this->redirect(['controller' => 'Offers', 'action' => 'view', $id]);
             }
             $this->Flash->error(__('The rating could not be saved. Please, try again.'));
@@ -143,24 +141,15 @@ class OffersController extends AppController
             $calendar_data[]=$d;
         }
 
-
-
         $saved_user_offers = $this->Offers->SavedUserOffers->find()
             ->where([
                 'user_id' => $this->request->getAttribute('identity')->getIdentifier()
             ])->toArray();
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
 
-
         $this->set(compact('offer', 'account_type_id', 'id_user_log', 'categories', 'provinces',
             'active_offer_days', 'booking', 'ratings', 'users', 'offers','saved_user_offers', 'calendar_data'));
-
     }
-
-
-
-
-
 
     private function getBookedOfferDates($offer_id) {
         $arr = [];
@@ -223,7 +212,6 @@ class OffersController extends AppController
             return;
         }
 
-
         if ($this->request->is('post')) {
             $conn = ConnectionManager::get('default');
             $conn->begin();
@@ -267,8 +255,6 @@ class OffersController extends AppController
                 $this->Flash->success(__('The offer has been saved.'));
                 return $this->redirect(['controller' => 'Offers', 'action' => 'index', null]);
 
-
-
             } catch (\Cake\ORM\Exception\PersistanceFailedException $e) {
                 $conn -> rollback();
                 $this->Flash->error(__('The address could not be saved. Please, try again.'));
@@ -280,9 +266,6 @@ class OffersController extends AppController
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
         $hallTypes = $this->Offers->HallFilters->HallTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('offer', 'users', 'categories', 'provinces', 'hallTypes', 'account_type_id'));
-
-
-
 
         if ($offer_type_id == 1) {
             $template = 'add_hall';
