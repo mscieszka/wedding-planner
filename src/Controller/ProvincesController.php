@@ -40,7 +40,19 @@ class ProvincesController extends AppController
             'contain' => ['Addresses'],
         ]);
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
-        $this->set(compact('province', 'id_user_log', 'account_type_id'));
+
+        $offers =  $this->Provinces->Addresses->Offers->find('all', ['contain' => ['Users', 'Categories', 'Addresses']]);
+
+        $this->set(compact('province', 'id_user_log', 'account_type_id', 'offers'));
+
+
+/*
+<?php if($addresses->user_id == $id_user_log):?>
+                                    <?= $this->Html->link(__('Edit'), ['controller' => 'Addresses', 'action' => 'edit', $addresses->id]) ?>
+                                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Addresses', 'action' => 'delete', $addresses->id], ['confirm' => __('Are you sure you want to delete # {0}?', $addresses->id)]) ?>
+                                <?php endif; ?>
+
+*/
     }
 
     /**

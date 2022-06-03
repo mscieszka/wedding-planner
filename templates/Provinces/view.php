@@ -20,35 +20,30 @@
 
             <h3>Województwo <?= h($province->name) ?></h3>
             <div class="related">
-                <h4><?= __('Powiązane adresy z:  województwo') ?> <?= h($province->name) ?></h4>
+                <h4><?= __('Powiązane oferty z:  województwo') ?> <?= h($province->name) ?></h4>
                 <?php if (!empty($province->addresses)) : ?>
                 <div class="table-responsive">
                     <table>
-                        <tr>
 
-                            <th><?= __('Ulica') ?></th>
-                            <th><?= __('Numer Domu') ?></th>
-                            <th><?= __('Kod Pocztowy') ?></th>
-                            <th><?= __('Miasto') ?></th>
 
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
                         <?php foreach ($province->addresses as $addresses) : ?>
+
+                        <?php foreach ($offers as $offert) : ?>
+                        <?php if($addresses->id == $offert->address_id) : ?>
+
+
                         <tr>
+                            <td><?= $this->Html->link($offert->name, ['controller' => 'Offers', 'action' => 'view', $offert->id])?></td>
+                            <td><?= $this->Html->link($offert->category->name, ['controller' => 'Categories', 'action' => 'view', $offert->category->id])?></td>
+                            <td><?= $offert->has('user') ? $this->Html->link($offert->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $offert->user->id]) : '' ?></td>
+                            <td><?= h($offert->price) ?></td>
+                            <td><?= $this->Html->link(__('Zobacz Adres'), ['controller' => 'Addresses', 'action' => 'view', $addresses->id]) ?></td>
 
-                            <td><?= h($addresses->street) ?></td>
-                            <td><?= h($addresses->house_number) ?></td>
-                            <td><?= h($addresses->postal_code) ?></td>
-                            <td><?= h($addresses->city) ?></td>
-
-                            <td class="actions">
-                                <?= $this->Html->link(__('Zobacz'), ['controller' => 'Addresses', 'action' => 'view', $addresses->id]) ?>
-                                <?php if($addresses->user_id == $id_user_log):?>
-                                    <?= $this->Html->link(__('Edit'), ['controller' => 'Addresses', 'action' => 'edit', $addresses->id]) ?>
-                                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Addresses', 'action' => 'delete', $addresses->id], ['confirm' => __('Are you sure you want to delete # {0}?', $addresses->id)]) ?>
-                                <?php endif; ?>
-                            </td>
                         </tr>
+                                <?php endif; ?>
+                        <?php endforeach; ?>
+
+
                         <?php endforeach; ?>
                     </table>
                 </div>
