@@ -28,9 +28,6 @@
             <h3>Dane kontaktowe</h3>
             <?php echo $this->Form->control('website'); ?>
         </div>
-        <div class="add-offers-photos">
-            <h3>Zdjęcia</h3>
-        </div>
     </div>
 </fieldset>
 <fieldset>

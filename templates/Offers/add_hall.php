@@ -12,6 +12,15 @@
     <?php include('offer_add_categories.php') ?>
 
     <?= $this->Form->create($offer) ?>
+
+    <fieldset>
+        <legend><?= __('Zdjęcie') ?></legend>
+        <?php
+        echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
+        ?>
+    </fieldset>
+
+
     <fieldset>
         <legend><?= __('Add Hall Filter') ?></legend>
         <?php
