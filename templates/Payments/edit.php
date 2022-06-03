@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Payment $payment
@@ -22,9 +23,9 @@
             <fieldset>
                 <legend><?= __('Edit Payment') ?></legend>
                 <?php
-                    echo $this->Form->control('is_paid');
-                    echo $this->Form->control('is_returned');
-                    echo $this->Form->control('price');
+                echo $this->Form->control('is_paid');
+                echo $this->Form->control('is_returned');
+                echo $this->Form->control('price');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

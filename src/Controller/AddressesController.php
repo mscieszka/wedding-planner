@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -18,7 +19,7 @@ class AddressesController extends AppController
      */
     public function index()
     {
-//        exit;
+        //        exit;
         $this->Authorization->skipAuthorization();
         $this->paginate = [
             'contain' => ['Users', 'Provinces'],
@@ -62,7 +63,7 @@ class AddressesController extends AppController
     public function add()
     {
         $address = $this->Addresses->newEmptyEntity();
-      $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
+        $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
         $this->set(compact('account_type_id'));
 
@@ -131,3 +132,4 @@ class AddressesController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 }
+

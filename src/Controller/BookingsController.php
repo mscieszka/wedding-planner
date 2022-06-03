@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -59,10 +60,10 @@ class BookingsController extends AppController
             $booking = $this->Bookings->patchEntity($booking, $this->request->getData());
             /* date availability */
             $check = $this->Bookings->find()->where([
-                'offer_id'=>$booking->offer_id,
-                'booking_date'=>$booking->booking_date
+                'offer_id' => $booking->offer_id,
+                'booking_date' => $booking->booking_date
             ])->count();
-            if($check > 0) {
+            if ($check > 0) {
                 $this->Flash->error(__('Date is already taken'));
                 return $this->redirect($this->referer());
             }
@@ -75,7 +76,7 @@ class BookingsController extends AppController
             $this->Bookings->Payments->save($payment);
             $booking->payment_id = $payment->id;
 
-//            debug($booking); exit;
+            //            debug($booking); exit;
             if ($this->Bookings->save($booking)) {
                 $this->Flash->success(__('The booking has been saved.'));
 
@@ -139,22 +140,21 @@ class BookingsController extends AppController
         return $this->redirect($this->referer());
     }
 
-
-
-
     // additional functions
 
-    protected function cancelBooking(Booking $booking){
+    protected function cancelBooking(Booking $booking)
+    {
         $booking->is_canceled = true;
     }
 
-    protected function releaseBooking(Booking $booking){
+    protected function releaseBooking(Booking $booking)
+    {
         $booking->is_released = true;
     }
 
-    protected function createMultipleBookings(){
+    protected function createMultipleBookings()
+    {
         //TODO
 
     }
-
 }

@@ -122,6 +122,7 @@ fieldset legend:hover {
     flex-direction: column;
     justify-content: space-around;
 }
+
 .form_column label {
     margin-bottom: 0;
 }

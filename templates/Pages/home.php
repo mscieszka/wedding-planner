@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -13,6 +14,7 @@
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  * @var \App\View\AppView $this
  */
+
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
@@ -50,6 +52,7 @@ endif;
 ?>
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,32 +69,31 @@ endif;
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body>
-
 <?php echo $this->element('header/header-only-buttons'); ?>
-
-
 <?= $this->Flash->render() ?>
-    <div class="content_wrapper_homepage">
-        <div class="logo_div" >
-            <?php  echo $this->Html->image('logo_full.svg', ['alt' => 'Wedding Planner']); ?>
-        </div>
-        <div class="categories-nav services">
-            <div class ="serv">
-                <div class="service-type">
-                    <?php  echo $this->Html->image('sale.svg', ['alt' => 'Wedding Planner']); ?>
-                    <?= $this->Html->link(__('Sale'), ['controller' => 'Categories', 'action' => 'view', 1],['class' => 'btn-category'] )?>
-                </div>
-                <div class="service-type">
-                   <?php  echo $this->Html->image('dj.svg', ['alt' => 'Wedding Planner']); ?>
-                   <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['controller' => 'Categories', 'action' => 'view', 2],['class' => 'btn-category'] )?>
-                </div>
-                <div class="service-type">
-                    <?php  echo $this->Html->image('catering.svg', ['alt' => 'Wedding Planner', 'class' => 'catering-img']); ?>
-                <?= $this->Html->link(__('Catering'), ['controller' => 'Categories', 'action' => 'view', 3],['class' => 'btn-category'] )?>
-                </div>
+<div class="content_wrapper_homepage">
+    <div class="logo_div">
+        <?php echo $this->Html->image('logo_full.svg', ['alt' => 'Wedding Planner']); ?>
+    </div>
+    <div class="categories-nav services">
+        <div class="serv">
+            <div class="service-type">
+                <?php echo $this->Html->image('sale.svg', ['alt' => 'Wedding Planner']); ?>
+                <?= $this->Html->link(__('Sale'), ['controller' => 'Categories', 'action' => 'view', 1], ['class' => 'btn-category']) ?>
+            </div>
+            <div class="service-type">
+                <?php echo $this->Html->image('dj.svg', ['alt' => 'Wedding Planner']); ?>
+                <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['controller' => 'Categories', 'action' => 'view', 2], ['class' => 'btn-category']) ?>
+            </div>
+            <div class="service-type">
+                <?php echo $this->Html->image('catering.svg', ['alt' => 'Wedding Planner', 'class' => 'catering-img']); ?>
+                <?= $this->Html->link(__('Catering'), ['controller' => 'Categories', 'action' => 'view', 3], ['class' => 'btn-category']) ?>
             </div>
         </div>
     </div>
+</div>
 </body>
+
 </html>

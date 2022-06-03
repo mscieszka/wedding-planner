@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -45,7 +46,6 @@ class CategoriesController extends AppController
         ]);
 
         $id_user_log = $this->request->getAttribute('identity')->getIdentifier();
-
 
         $saved_user_offers = $this->Categories->Offers->SavedUserOffers->find()
             ->where([

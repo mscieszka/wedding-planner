@@ -10,7 +10,7 @@
 <?= $this->Html->css('viewOffer') ?>
 <?= $this->Html->css('calendar') ?>
 <div class="go-back-to-parent-category">
-        <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
+    <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
 </div>
 <div class="offer-container">
     <div class="offer-gallery">
@@ -19,7 +19,7 @@
                 <h3><?= h($offer->name) ?></h3>
             </div>
             <div class="offer-location">
-                <?=  h($offer->address->city) ?>
+                <?= h($offer->address->city) ?>
             </div>
         </div>
         <div class="offer-gallery-img">
@@ -44,10 +44,11 @@
         </div>
         <div class="offer-price">
             <div class="offer-description-bold">
-                <?php if ($offer->category_id == 2): ?> <!-- DJ -->
-                <h4>Cena za godzinę: </h4>
-                <?php else: ?>
-                <h4>Cena za osobę: </h4>
+                <?php if ($offer->category_id == 2) : ?>
+                    <!-- DJ -->
+                    <h4>Cena za godzinę: </h4>
+                <?php else : ?>
+                    <h4>Cena za osobę: </h4>
                 <?php endif; ?>
             </div>
             <div class="offer-price-amount">
@@ -64,23 +65,23 @@
             </div>
         </div>
         <div>
-            <?php if($account_type_id == 1): ?>
-                <?php if(in_array($offer->id, $saved_user_offers)): ?>
-                    <?= $this->Form->postLink(__('Usun z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy napewno chcesz usunac te oferte z ulubionych?'),'class' => 'button',]) ?>
-                <?php else: ?>
-                    <?= $this->Html->link(__('Dodaj do ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offer->id],['class' => 'button']) ?>
+            <?php if ($account_type_id == 1) : ?>
+                <?php if (in_array($offer->id, $saved_user_offers)) : ?>
+                    <?= $this->Form->postLink(__('Usun z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy napewno chcesz usunac te oferte z ulubionych?'), 'class' => 'button',]) ?>
+                <?php else : ?>
+                    <?= $this->Html->link(__('Dodaj do ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offer->id], ['class' => 'button']) ?>
                 <?php endif; ?>
             <?php endif; ?>
         </div>
     </div>
     <div class="offer-reservation">
-        <?= $this->Form->create($booking, ['url'=>['controller'=>'Bookings','action'=>'add']]) ?>
+        <?= $this->Form->create($booking, ['url' => ['controller' => 'Bookings', 'action' => 'add']]) ?>
         <fieldset>
             <div class="make-reservation">
                 <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'label' => 'Dokonaj rezerwacji', 'empty' => 'Wybierz datę rezerwacji', 'required' => true]); ?>
                 <?= $this->Form->hidden('offer_id'); ?>
                 <div>
-                <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
+                    <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
                 </div>
             </div>
 
@@ -96,7 +97,7 @@
             <?= $offer->user->surname; ?>
         </div>
         <div class="owner-profile-link">
-            <?= $offer->has('user') ? $this->Html->link("Zobacz więcej ofert użytkownika", ['controller' => 'Users', 'action' => 'profile', 1 , $offer->user->id]) : '' ?>
+            <?= $offer->has('user') ? $this->Html->link("Zobacz więcej ofert użytkownika", ['controller' => 'Users', 'action' => 'profile', 1, $offer->user->id]) : '' ?>
         </div>
     </div>
     <div class="offer-opinions">
@@ -110,70 +111,68 @@
             <h2>Opinie</h2>
             <div class="white-box">
 
-                <?php if($account_type_id == 1) : ?>
+                <?php if ($account_type_id == 1) : ?>
                 <div class="input-button-box">
-                    <div >
-                    <?= $this->Form->create() ?>
-                    <fieldset>
-                        <?php echo $this->Form->control('description', ['type'=>'textarea', 'label' => 'Dodaj opinię']); ?>
-                        <?php echo $this->Form->control('rating',
-                            ['type' => 'number', 'min' => 1,'max' => '5','class' => 'rating-selection', 'label' => 'Ocena']); ?>
-                    </fieldset>
+                    <div>
+                        <?= $this->Form->create() ?>
+                        <fieldset>
+                            <?php echo $this->Form->control('description', ['type' => 'textarea', 'label' => 'Dodaj opinię']); ?>
+                            <?php echo $this->Form->control(
+                                'rating',
+                                ['type' => 'number', 'min' => 1, 'max' => '5', 'class' => 'rating-selection', 'label' => 'Ocena']
+                            ); ?>
+                        </fieldset>
                         <?= $this->Form->button(__('Dodaj opinię'), ['type' => 'submit']) ?>
                         <?= $this->Form->end() ?>
+                    </div>
+
+                    <?php endif; ?>
+
                 </div>
 
-            <?php endif; ?>
+                <?php foreach ($ratings as $rating) : ?>
+                    <div class="opinion-box">
+                        <a class="user-img">
+                            <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
+                        </a>
+                        <div class="rest-of-opinion">
+                            <div class="upper-box">
+                                <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
+                                <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
+                                <h4><?= h($rating->opinion_date) ?></h4>
+                            </div>
+                            <div class="opinion-content">
+                                <blockquote>
+                                    <?= $this->Text->autoParagraph(h($rating->description)); ?>
+                                </blockquote>
 
-            </div>
-
-            <?php foreach ($ratings as $rating): ?>
-            <div class="opinion-box">
-                <a class="user-img">
-                    <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
-                </a>
-                <div class="rest-of-opinion">
-                    <div class="upper-box">
-                        <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
-                        <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
-                        <h4><?= h($rating->opinion_date) ?></h4>
+                                <?php if ($rating->user_id == $id_user_log) : ?>
+                                    <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                     </div>
-                    <div class="opinion-content">
-                        <blockquote>
-                            <?= $this->Text->autoParagraph(h($rating->description)); ?>
-                        </blockquote>
-
-                        <?php if($rating->user_id == $id_user_log ):?>
-                        <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
-                        <?php endif; ?>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
         </div>
-    </div>
 
-</div>
-<div>
-    <?= $this->Html->link(__('Wroć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
-</div>
+    </div>
+    <div>
+        <?= $this->Html->link(__('Wroć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
+    </div>
     <div class="">
         <div id="my-calendar"></div>
     </div>
 
-
     <script type="application/javascript">
         $(document).ready(function() {
-
-
-
             $("#my-calendar").zabuto_calendar({
                 year: 2022,
                 month: 5,
                 show_previous: false,
                 show_next: 12,
                 language: "pl",
-                data:  <?php echo json_encode($calendar_data) ?> ,
+                data: <?php echo json_encode($calendar_data) ?>,
                 today: true,
                 show_days: true,
                 cell_border: true,
@@ -194,9 +193,10 @@
                 // console.log(e);
                 // console.log(date);
                 // console.log(hasEvent);
-                if(e) {
+                if (e) {
                     $("#booking-date").val(date);
                 }
             }
         });
     </script>
+</div>

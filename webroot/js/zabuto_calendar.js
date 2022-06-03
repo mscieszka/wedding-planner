@@ -768,5 +768,4 @@ $.fn.zabuto_calendar_language = function (lang) {
             };
             break;
     }
-
 };

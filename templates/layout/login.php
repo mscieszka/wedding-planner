@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -17,6 +18,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,23 +35,25 @@
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body>
-    <div class="login-content flex-row">
-        <nav class="top-nav">
-            <div class="top-nav-title">
-                <div class="top-nav-logo">
-                    <a href="<?= $this->Url->build('/') ?>">
-                        <?php echo $this->Html->image("logo_full.svg")?>
-                    </a>
-                </div>
+<div class="login-content flex-row">
+    <nav class="top-nav">
+        <div class="top-nav-title">
+            <div class="top-nav-logo">
+                <a href="<?= $this->Url->build('/') ?>">
+                    <?php echo $this->Html->image("logo_full.svg") ?>
+                </a>
             </div>
-        </nav>
-        <main class="main">
-            <div class="container">
-                <?= $this->Flash->render() ?>
-                <?= $this->fetch('content') ?>
-            </div>
-        </main>
-    </div>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="container">
+            <?= $this->Flash->render() ?>
+            <?= $this->fetch('content') ?>
+        </div>
+    </main>
+</div>
 </body>
+
 </html>

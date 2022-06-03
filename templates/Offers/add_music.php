@@ -15,12 +15,12 @@
     <fieldset>
         <legend><?= __('Add Music Filter') ?></legend>
         <?php
-        echo $this->Form->control('music_filter.disco_polo', ['type'=>'checkbox']);
-        echo $this->Form->control('music_filter.pop', ['type'=>'checkbox']);
-        echo $this->Form->control('music_filter.rock', ['type'=>'checkbox']);
-        echo $this->Form->control('music_filter.oldies', ['type'=>'checkbox']);
-        echo $this->Form->control('music_filter.world_music', ['type'=>'checkbox']);
-        echo $this->Form->control('music_filter.running_games', ['type'=>'checkbox']);
+        echo $this->Form->control('music_filter.disco_polo', ['type' => 'checkbox']);
+        echo $this->Form->control('music_filter.pop', ['type' => 'checkbox']);
+        echo $this->Form->control('music_filter.rock', ['type' => 'checkbox']);
+        echo $this->Form->control('music_filter.oldies', ['type' => 'checkbox']);
+        echo $this->Form->control('music_filter.world_music', ['type' => 'checkbox']);
+        echo $this->Form->control('music_filter.running_games', ['type' => 'checkbox']);
         ?>
     </fieldset>
     <?php include('offer_add_contents.php') ?>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Offer[]|\Cake\Collection\CollectionInterface $offers
@@ -10,21 +11,21 @@
     <div class="table-responsive">
         <table>
             <thead>
-                <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('user_id') ?></th>
-                    <th><?= $this->Paginator->sort('category_id') ?></th>
-                    <th><?= $this->Paginator->sort('address_id') ?></th>
-                    <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('price') ?></th>
-                    <th><?= $this->Paginator->sort('advance_payment') ?></th>
-                    <th><?= $this->Paginator->sort('website') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
-                </tr>
+            <tr>
+                <th><?= $this->Paginator->sort('id') ?></th>
+                <th><?= $this->Paginator->sort('user_id') ?></th>
+                <th><?= $this->Paginator->sort('category_id') ?></th>
+                <th><?= $this->Paginator->sort('address_id') ?></th>
+                <th><?= $this->Paginator->sort('name') ?></th>
+                <th><?= $this->Paginator->sort('price') ?></th>
+                <th><?= $this->Paginator->sort('advance_payment') ?></th>
+                <th><?= $this->Paginator->sort('website') ?></th>
+                <th><?= $this->Paginator->sort('created') ?></th>
+                <th class="actions"><?= __('Actions') ?></th>
+            </tr>
             </thead>
             <tbody>
-                <?php foreach ($offers as $offer): ?>
+            <?php foreach ($offers as $offer) : ?>
                 <tr>
                     <td><?= $this->Number->format($offer->id) ?></td>
                     <td><?= $offer->has('user') ? $this->Html->link($offer->user->name, ['controller' => 'Users', 'action' => 'view', $offer->user->id]) : '' ?></td>
@@ -41,7 +42,7 @@
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id)]) ?>
                     </td>
                 </tr>
-                <?php endforeach; ?>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>

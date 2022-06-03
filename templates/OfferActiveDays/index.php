@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\OfferActiveDay[]|\Cake\Collection\CollectionInterface $offerActiveDays
@@ -10,22 +11,22 @@
     <div class="table-responsive">
         <table>
             <thead>
-                <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('offer_id') ?></th>
-                    <th><?= $this->Paginator->sort('monday') ?></th>
-                    <th><?= $this->Paginator->sort('tuesday') ?></th>
-                    <th><?= $this->Paginator->sort('wednesday') ?></th>
-                    <th><?= $this->Paginator->sort('Thursday') ?></th>
-                    <th><?= $this->Paginator->sort('friday') ?></th>
-                    <th><?= $this->Paginator->sort('saturday') ?></th>
-                    <th><?= $this->Paginator->sort('sunday') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
-                </tr>
+            <tr>
+                <th><?= $this->Paginator->sort('id') ?></th>
+                <th><?= $this->Paginator->sort('offer_id') ?></th>
+                <th><?= $this->Paginator->sort('monday') ?></th>
+                <th><?= $this->Paginator->sort('tuesday') ?></th>
+                <th><?= $this->Paginator->sort('wednesday') ?></th>
+                <th><?= $this->Paginator->sort('Thursday') ?></th>
+                <th><?= $this->Paginator->sort('friday') ?></th>
+                <th><?= $this->Paginator->sort('saturday') ?></th>
+                <th><?= $this->Paginator->sort('sunday') ?></th>
+                <th><?= $this->Paginator->sort('created') ?></th>
+                <th class="actions"><?= __('Actions') ?></th>
+            </tr>
             </thead>
             <tbody>
-                <?php foreach ($offerActiveDays as $offerActiveDay): ?>
+            <?php foreach ($offerActiveDays as $offerActiveDay) : ?>
                 <tr>
                     <td><?= $this->Number->format($offerActiveDay->id) ?></td>
                     <td><?= $offerActiveDay->has('offer') ? $this->Html->link($offerActiveDay->offer->name, ['controller' => 'Offers', 'action' => 'view', $offerActiveDay->offer->id]) : '' ?></td>
@@ -43,7 +44,7 @@
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $offerActiveDay->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offerActiveDay->id)]) ?>
                     </td>
                 </tr>
-                <?php endforeach; ?>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>

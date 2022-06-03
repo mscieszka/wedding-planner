@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -36,7 +37,7 @@ class RatingsController extends AppController
         $this->Authorization->skipAuthorization();
         $ratings = null;
         //then display all ratings
-        if($id_offer != null){
+        if ($id_offer != null) {
             $ratings = $this->paginate($this->Ratings->find()->where(['offer_id' => $id_offer]));
         }
 
@@ -133,10 +134,13 @@ class RatingsController extends AppController
 
     /* ADDITIONAL FUNCTIONS */
     //display ratings table for a given offer
-    public function displayRatingsTableForOffer($id = null){
+    public function displayRatingsTableForOffer($id = null)
+    {
 
-            $ratings = $this->paginate($this->Ratings->find(
-                'all', ['conditions' => ['Ratings.offer_id' => $id]]));
-            $this->index($ratings);
+        $ratings = $this->paginate($this->Ratings->find(
+            'all',
+            ['conditions' => ['Ratings.offer_id' => $id]]
+        ));
+        $this->index($ratings);
     }
 }

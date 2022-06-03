@@ -6,8 +6,6 @@
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
 ?>
-
-
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider']) ?>
 <div class="row">
     <div class="column-responsive column-80 " >
@@ -50,7 +48,6 @@
                 <?php endif; ?>
             <?php endif; ?>
 
-
             <?php if($user->account_type_id==1): ?>
                 <div class="current_bookmarks">Oferty obserwowane</div>
                 <div><?= $this->Html->link(__('Dodane oceny'), ['action' => 'profile', 2, $user->id]) ?></div>
@@ -60,9 +57,6 @@
                 <?php endif;?>
 
         </div>
-
-
-
 
         <div class="users view content">
             <div style="display: flex; justify-content: space-around">
@@ -105,11 +99,6 @@
             </div>
             <?php endif; ?>
 
-
-
-
-
-
             <?php if($user->account_type_id == 1): ?>
                 <div class="offer_container">
                     <div class="offer_container_header">
@@ -136,7 +125,7 @@
                                         </div>
                                         <div class="offer_container_edit_button">
                                             <?php if($user->id == $id_user_log):?>
-                                                    <td class="offer-name"><?= $this->Form->postLink(__('Remove from favourites'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Are you sure you want to remove from favourites?')]) ?></td>
+                                                    <td class="offer-name"><?= $this->Form->postLink(__('Usuń z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy na pewno chcesz usunąć ofertę z ulubionych?')]) ?></td>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -148,7 +137,3 @@
                 </div>
             <?php endif; ?>
         </div>
-
-
-
-

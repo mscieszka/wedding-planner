@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Offer $offer
@@ -14,7 +15,7 @@
             <?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $offer->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $offer->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Czy na pewno chcesz usunąć ofertę?'), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('List Offers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('New Offer'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
@@ -26,14 +27,14 @@
             <fieldset>
                 <legend><?= __('Edit Offer') ?></legend>
                 <?php
-                    echo $this->Form->control('user_id', ['options' => $users]);
-                    echo $this->Form->control('category_id', ['options' => $categories]);
-                    echo $this->Form->control('address_id', ['options' => $addresses]);
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('price');
-                    echo $this->Form->control('description');
-                    echo $this->Form->control('advance_payment');
-                    echo $this->Form->control('website');
+                echo $this->Form->control('user_id', ['options' => $users]);
+                echo $this->Form->control('category_id', ['options' => $categories]);
+                echo $this->Form->control('address_id', ['options' => $addresses]);
+                echo $this->Form->control('name');
+                echo $this->Form->control('price');
+                echo $this->Form->control('description');
+                echo $this->Form->control('advance_payment');
+                echo $this->Form->control('website');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
