@@ -117,14 +117,13 @@
                                     <div class="offer-fav">
                                         <?php if($account_type_id == 1): ?>
                                             <?php if(in_array($offers->id, $saved_user_offers)): ?>
-                                                <i class="fa-solid fa-heart"><?= $this->Form->postLink(__('Remove from favourites'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offers->id], ['confirm' => __('Are you sure you want to remove from favourites?')]) ?></i>
+                                                <?= $this->Form->postLink(__($this->Html->image('heart-icon.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offers->id],['escape' => false]) ?>
                                             <?php else: ?>
-                                                <i class="fa-solid fa-heart"><?= $this->Html->link(__(''), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id]) ?></i>
+                                                <?= $this->Html->link(__($this->Html->image('heart-icon2.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id], ['escape' => false]) ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
                                         <h4>232 ocen</h4>
                                     </div>
-
                                 </div>
                             <?php endforeach; ?>
                         </table>
@@ -134,3 +133,5 @@
         </div>
     </div>
 </div>
+
+
