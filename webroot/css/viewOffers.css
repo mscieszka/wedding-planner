@@ -182,18 +182,18 @@ div.rest {
 /*--------- sidebar ----------*/
 
 .side-nav {
-    margin-bottom: 15px;
-    background: white;
+    margin-block: 10px;
+    background: #46755E;
     border-radius: 50px;
     height: 40px;
-    padding: 10px 7px 7px 15px;
+    padding: 10px 7px 7px 10px;
     display: flex;
     justify-content: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .side-nav a {
-    color: black;
+    color: white;
 }
 
 tr {
@@ -248,6 +248,7 @@ tr {
 .filters h4 {
     font-size: 16px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .filter_accommodations_count,
@@ -292,10 +293,27 @@ tr {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+/*box z pojedyncza ofertą  */
+
+.offer {
+    background: #FEF6E7;
+    display: grid;
+    grid-template-columns: 35% 45% 20%;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
+    width: 840px;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
 .offer-img {
     width: 230px;
     height: 150px;
     grid-column: 1/2;
+
 }
 
 .offerimg {
@@ -304,16 +322,45 @@ tr {
     border-radius: 25px;
 }
 
-.offer-price {
+.offer-desc {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.offer-desc h1, h3, h4{
+    margin: 0;
+    font-family: 'Segoe UI';
     font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
     color: black;
 }
-
-.offer-name {
-    font-family: 'Segoe UI', serif;
-    font-style: normal;
+.offer-desc h1{
     font-weight: 600;
     font-size: 24px;
+}
+.offer-desc h3{
+    font-weight: 600;
+    font-size: 30px;
+}
+.offer-desc h4{
+    font-weight: 400;
+    font-size: 20px;
+}
+.offer-fav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.offer-fav .favourite-button {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+i.fa-solid.fa-heart{
+    font-family: "FontAwesome 6 Free";
+    font-size: 20px;
+    color: #FF7A7A;
 }

@@ -11,7 +11,7 @@
 <div class="offers form content">
     <?php include('offer_add_categories.php') ?>
 
-    <?= $this->Form->create($offer) ?>
+    <?= $this->Form->create($offer, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Add Music Filter') ?></legend>
         <?php
@@ -21,6 +21,7 @@
         echo $this->Form->control('music_filter.oldies', ['type' => 'checkbox']);
         echo $this->Form->control('music_filter.world_music', ['type' => 'checkbox']);
         echo $this->Form->control('music_filter.running_games', ['type' => 'checkbox']);
+        echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true]);
         ?>
     </fieldset>
     <?php include('offer_add_contents.php') ?>

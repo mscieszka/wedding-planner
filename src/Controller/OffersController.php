@@ -6,6 +6,8 @@ namespace App\Controller;
 
 use Cake\Collection\Collection;
 use Cake\Datasource\ConnectionManager;
+use Cake\Filesystem\Folder;
+use Cake\Filesystem\File;
 
 /**
  * Offers Controller
@@ -100,6 +102,9 @@ class OffersController extends AppController
             }
             $this->Flash->error(__('The rating could not be saved. Please, try again.'));
         }
+
+
+
         $users = $this->Offers->Ratings->Users->find('list', ['limit' => 200])->all();
         $offers = $this->Offers->Ratings->Offers->find('list', ['limit' => 200])->all();
 
@@ -146,6 +151,15 @@ class OffersController extends AppController
             ])->toArray();
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
 
+        $path = WWW_ROOT.'img'.DS.'offerImages'.DS. $id;
+        if(!file_exists($path)) {
+            $path = new Folder($path, true, 777);
+        } else {
+            $path = new Folder($path);
+        }
+
+        $files = $path->find();
+
         $this->set(compact(
             'offer',
             'account_type_id',
@@ -158,7 +172,8 @@ class OffersController extends AppController
             'users',
             'offers',
             'saved_user_offers',
-            'calendar_data'
+            'calendar_data',
+            'files'
         ));
     }
 
@@ -230,7 +245,6 @@ class OffersController extends AppController
             $conn = ConnectionManager::get('default');
             $conn->begin();
             try {
-
                 $address = $this->Offers->Addresses->newEntity($this->request->getData('address'));
                 $address->user_id = $this->request->getAttribute('identity')->getIdentifier();
                 $this->Offers->Addresses->saveOrFail($address);
@@ -244,6 +258,8 @@ class OffersController extends AppController
 
                 $this->Offers->saveOrFail($offer);
                 $offer_id = $offer->get('id');
+
+
 
                 $offer_active_days = $this->Offers->OfferActiveDays->newEntity($this->request->getData('offer_active_day'));
                 $offer_active_days->offer_id = $offer_id;
@@ -265,6 +281,19 @@ class OffersController extends AppController
                     $this->Offers->CateringFilters->saveOrFail($catering_filters);
                 }
                 $conn->commit();
+
+                /*Attachments*/
+                $path = WWW_ROOT.'img'.DS.'offerImages'.DS. $offer_id;
+                if(!file_exists($path)) {
+                    $folder = new Folder($path, true, 777);
+                }
+                $attachment = $this->request->getData('attachment');
+
+                foreach($attachment as $file) {
+                    $name = $file->getClientFilename();
+                    $p = $path.DS.$name;
+                    $file->moveTo($p);
+                }
 
                 $this->Flash->success(__('The offer has been saved.'));
                 return $this->redirect(['controller' => 'Offers', 'action' => 'index', null]);
@@ -314,6 +343,7 @@ class OffersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $offer = $this->Offers->patchEntity($offer, $this->request->getData());
             if ($this->Offers->save($offer)) {
+
                 $this->Flash->success(__('The offer has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
