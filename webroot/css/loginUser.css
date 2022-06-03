@@ -59,6 +59,7 @@ label {
 
 form input[type="email"],
 input[type="password"] {
+    height: 4em;
     border-radius: 0;
     border-top: 0;
     border-left: 0;
@@ -68,15 +69,8 @@ input[type="password"] {
     transition: all 0.2s ease-out;
 }
 
-form input[type="email"]:hover {
-    cursor: pointer;
-    background-color: #eee;
-    transition: all 0.2s ease-out;
-}
-
+form input[type="email"]:hover,
 form input[type="password"]:hover {
-    cursor: pointer;
-    background-color: #eee;
     transition: all 0.2s ease-out;
 }
 
@@ -94,7 +88,6 @@ form input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    cursor: pointer;
     background-color: #3B6350;
     transition: all 0.2s ease-out;
 }

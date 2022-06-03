@@ -177,8 +177,8 @@ input[type=checkbox] {
 }
 
 button {
-    width: 15em;
-    /*height: 3em;*/
+    width: 240px;
+    height: 57px;
     align-self: end;
     text-align: center;
     background-color: #46755E;
@@ -186,7 +186,7 @@ button {
     color: #fff;
     border-radius: 2em;
     margin: 1em 3em;
-    font-size: 1.1em;
+    font-size: 20px;
     font-weight: normal;
     transition: all 0.2s ease-out;
 }
@@ -262,7 +262,8 @@ button:hover {
 
     .form_end_content button {
         justify-content: center;
-        width: 100%;
+        width: 240px;
+        height: 57px;
         margin: 1.5em 0;
     }
 }
