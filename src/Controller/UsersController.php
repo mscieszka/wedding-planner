@@ -324,7 +324,7 @@ class UsersController extends AppController
                 }
             }
 
-            $this->Flash->error(__("Wrong password"));
+            $this->Flash->error(__("Podano nieprawidłowe hasło do konta"));
         }
     }
 }
