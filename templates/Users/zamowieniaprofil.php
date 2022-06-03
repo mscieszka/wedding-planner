@@ -66,48 +66,55 @@
 
 
         <div class="users view content">
-            <div style="display: flex; justify-content: space-around">
-            </div>
+            <!--<div style="display: flex; justify-content: space-around">
+            </div>-->
             <div class="offer_container">
-
+                <table class="order_client">
+                    <tr>
+                        <th>Data złożenia zamówienia</th>
+                        <th>Data wykonania usługi</th>
+                        <th>Oferta</th>
+                        <th>Status</th>
+                    </tr>
                 <?php if($user->account_type_id == 1): ?>
-
-            <?php foreach ($bookings as $booking) : ?>
+                    <?php foreach ($bookings as $booking) : ?>
                         <?php if($booking->user_id == $user->id): ?>
+                            <tr>
+                                <!--<div class="profile-order-container">-->
+                                    <!--<div class="profile-order-property">-->
+                                        <!--<p class="property_name"><?= __('Data zlozenia zamowienia:   ') ?></p>-->
+                                <td><?= h($booking->created) ?></td>
+                                        <!--<p class="property_name"><?= __('Data wykonania uslugi:   ') ?></p>-->
+                                <td><?= h($booking->booking_date) ?></td>
+                                    <!--</div>-->
+                                    <!--<div class="profile-order-property">-->
+                                <td><?= $booking->has('offer') ? $this->Html->link($booking->offer->name, ['controller' => 'Offers', 'action' => 'view',  $booking->offer->id]) : '' ?></td>
+                                    <!--</div>-->
+                                    <!--<div class="profile-order-property">-->
+                                        <!--<td class="actions">-->
+                                            <!--<div class="profile-order-actions">-->
+                                                <?php if($booking->user_id == $id_user_log):?>
+                                                    <?php if($booking->booking_date < date("Y-m-d")) : ?>
 
-                <tr>
-                    <div class="profile-order-container">
-                        <div class="profile-order-property">
-                        <p class="property_name"><?= __('Data zlozenia zamowienia:   ') ?></p>
-                    <td><?= h($booking->created) ?></td>
-                            <p class="property_name"><?= __('Data wykonania uslugi:   ') ?></p>
-                            <td><?= h($booking->booking_date) ?></td>
-                            </div>
-                        <div class="profile-order-property">
-                            <h2><?= $booking->has('offer') ? $this->Html->link($booking->offer->name, ['controller' => 'Offers', 'action' => 'view',  $booking->offer->id]) : '' ?></h2>
-                        </div>
-                        <div class="profile-order-property">
-                    <td class="actions">
-                        <div class="profile-order-actions">
-                            <?php if($booking->user_id == $id_user_log):?>
+                                                        <td class="order_client_button"><?= $this->Form->postLink(__('Anuluj'), ['controller' => 'Bookings', 'action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id), 'class' => 'button profile-order-btn profile-order-btn-red override_button']) ?></td>
 
-                            <?php if($booking->booking_date < date("Y-m-d")) : ?>
-                        <?= $this->Form->postLink(__('Anuluj'), ['controller' => 'Bookings', 'action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id), 'class' => 'button profile-order-btn profile-order-btn-red']) ?>
-                                <?php endif; ?>
-                                    <?php if($booking->booking_date >= date("Y-m-d")) : ?>
-                                    <p>Zamowienie zakonczone </p>
-                                    <?php endif; ?>
+                                                    <?php endif; ?>
 
+                                                    <?php if($booking->booking_date >= date("Y-m-d")) : ?>
+                                                        <td><p>Zamowienie zakonczone </p></td>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <!--</div>-->
+                                        <!--</td>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </tr>
                         <?php endif; ?>
-                                </div>
-                    </td>
-                        </div>
-                    </div>
-                </tr>
-                        <?php endif; ?>
-            <?php endforeach; ?>
+
+                    <?php endforeach; ?>
 
                 <?php endif; ?>
+                </table>
 
 
 

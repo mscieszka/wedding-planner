@@ -24,3 +24,24 @@
 .profile-order-btn-red{
     background-color: #d54848;
 }
+
+.order_client th, td
+{
+    text-align: center;
+}
+
+.order_client
+{
+    border-spacing: 0 2em;
+}
+
+.order_client .override_button
+{
+    margin: 0;
+}
+
+.order_client .order_client_button
+{
+    display: flex;
+    justify-content: center;
+}
