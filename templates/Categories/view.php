@@ -107,20 +107,25 @@
                                     $search_param .= ' info = "' . $offers->name . '" ';
                                 }
                             ?>
-                                <tr class="offer" <?= $search_param ?>>
-                                    <td class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offerimg']) ?></td>
-                                    <td class="offer-name"><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></td>
-                                    <td class="offer-price">
+                                <div class="offer" <?= $search_param ?>>
+                                    <div class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offerimg']) ?></div>
+                                    <div class="offer-desc">
+                                        <h1><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></h1>
                                         <h3><?= h($offers->price) . " zł" ?></h3>
-                                    </td>
-                                    <?php if ($account_type_id == 1) : ?>
-                                        <?php if (in_array($offers->id, $saved_user_offers)) : ?>
-                                            <td class="offer-name"><?= $this->Form->postLink(__('Remove from favourites'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offers->id], ['confirm' => __('Are you sure you want to remove from favourites?')]) ?></td>
-                                        <?php else : ?>
-                                            <td class="offer-name"><?= $this->Html->link(__('Add to favourite'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id]) ?></td>
+                                        <h4>Kraków, Małopolska</h4>
+                                    </div>
+                                    <div class="offer-fav">
+                                        <?php if($account_type_id == 1): ?>
+                                            <?php if(in_array($offers->id, $saved_user_offers)): ?>
+                                                <i class="fa-solid fa-heart"><?= $this->Form->postLink(__('Remove from favourites'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offers->id], ['confirm' => __('Are you sure you want to remove from favourites?')]) ?></i>
+                                            <?php else: ?>
+                                                <i class="fa-solid fa-heart"><?= $this->Html->link(__(''), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id]) ?></i>
+                                            <?php endif; ?>
                                         <?php endif; ?>
-                                    <?php endif; ?>
-                                </tr>
+                                        <h4>232 ocen</h4>
+                                    </div>
+
+                                </div>
                             <?php endforeach; ?>
                         </table>
                     </div>

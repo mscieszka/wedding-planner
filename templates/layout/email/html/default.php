@@ -18,6 +18,7 @@
 <html lang="pl">
 <head>
     <title><?= $this->fetch('title') ?></title>
+    <script src="https://kit.fontawesome.com/c7d1b0ffc1.js" crossorigin="anonymous" ></script>
 </head>
 <body>
     <?= $this->fetch('content') ?>
