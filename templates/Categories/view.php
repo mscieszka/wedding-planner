@@ -4,6 +4,9 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Category $category
  */
+
+use Cake\Filesystem\Folder;
+
 ?>
 <?= $this->Html->css('viewOffers') ?>
 <?= $this->element('header/header-only-search'); ?>
@@ -23,6 +26,9 @@
     <?php endif; ?>
     <div class="column-responsive column-80">
         <div class="categories-view-content">
+
+
+
             <div class="related">
                 <?php if (!empty($category->offers)) : ?>
                     <div class="table-responsive">
@@ -108,7 +114,35 @@
                                 }
                             ?>
                                 <div class="offer" <?= $search_param ?>>
-                                    <div class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offerimg']) ?></div>
+
+
+                                    <div class="offer-img">
+
+                                        <?php
+                                        $path = WWW_ROOT.'img'.DS.'offerImages'.DS. $offers->id;
+                                        if(!file_exists($path)) {
+                                        $path = new Folder($path, true, 777);
+                                        } else {
+                                        $path = new Folder($path);
+                                        }
+                                        $files = $path->find();
+                                        ?>
+
+
+                                        <?php if (empty($files)) : ?>
+                                            <div class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offer-img']) ?></div>
+                                            <?php endif; ?>
+
+                                                <?php if (!empty($files)) : ?>
+                                        <?php foreach($files as $file): ?>
+                                            <?php $filePath = 'offerImages/'.(int)$offers->get('id').'/'.$file; ?>
+                                            <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
+                                        <?php endforeach; ?>
+                                                <?php endif; ?>
+
+                                    </div>
+
+
                                     <div class="offer-desc">
                                         <h1><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></h1>
                                         <h3><?= h($offers->price) . " zł" ?></h3>

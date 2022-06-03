@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use Cake\Collection\Collection;
 use Cake\Datasource\ConnectionManager;
+use Cake\Filesystem\Folder;
 
 /**
  * Categories Controller
@@ -52,6 +53,10 @@ class CategoriesController extends AppController
                 'user_id' => $this->request->getAttribute('identity')->getIdentifier()
             ])->toArray();
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
+
+
+
+
         $this->set(compact('category', 'id_user_log', 'account_type_id', 'saved_user_offers'));
     }
 
