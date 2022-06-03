@@ -23,7 +23,12 @@
             </div>
         </div>
         <div class="offer-gallery-img">
-            <?= $this->Html->image('offerImages/hall2_1.jpg', ['alt' => 'Offer main image', 'class' => 'offer-pic']) ?>
+
+            <?php foreach($files as $file): ?>
+                <?php $filePath = 'offerImages/'.(int)$offer->get('id').'/'.$file; ?>
+                <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
+            <?php endforeach; ?>
+
         </div>
     </div>
 
