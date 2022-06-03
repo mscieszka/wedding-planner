@@ -358,8 +358,8 @@ class OffersController extends AppController
         } else {
             $this->Flash->error(__('The offer could not be deleted. Please, try again.'));
         }
-
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect($this->referer());
+        //return $this->redirect(['action' => 'index']);
     }
 
     // ADDITIONAL FUNCTIONS

@@ -68,11 +68,13 @@
             <div style="display: flex; justify-content: space-around">
             </div>
 
-            <?php if($account_type_id == 2): ?>
+            <?php if($user->account_type_id == 2): ?>
             <div class="offer_container">
                 <div class="offer_container_header">
                     <h3>Oferty użytkownika</h3>
+                    <?php if($user->id == $id_user_log):?>
                     <div><?= $this->Html->link(__('Dodaj ofertę'), ['controller' => 'Offers', 'action' => 'add']) ?></div>
+                    <?php endif; ?>
                 </div>
 
                     <div class="related">
@@ -108,7 +110,7 @@
 
 
 
-            <?php if($account_type_id == 1): ?>
+            <?php if($user->account_type_id == 1): ?>
                 <div class="offer_container">
                     <div class="offer_container_header">
                         <h3>Ulubione oferty użytkownika</h3>

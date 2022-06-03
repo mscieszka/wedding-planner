@@ -124,13 +124,14 @@ class UsersController extends AppController
 
         $offers = $this->Users->Offers->find()->all();
         $ratings =  $this->Users->Ratings->find('all', ['contain' => ['Users', 'Offers']]);
+        $bookings = $this->Users->Bookings->find('all', ['contain' => ['Users', 'Offers']]);
 
-
+        $saved_user_bookings = null;
 
 
 
         //jesli klient
-        if($account_type_id == 1){
+        if(($user->account_type_id) == 1){
 
             //dla ofert
             $saved_user_offers = $this->Users->Offers->SavedUserOffers->find()
@@ -141,13 +142,15 @@ class UsersController extends AppController
 
 
             //dla ocen niepotrzebne
+            //dla zamowien niepotrzebne
 
         }
 
 $his_offers = null;
 
+
         //jesli provider
-        if($account_type_id == 2) {
+        if(($user->account_type_id) == 2) {
 
             //dla ofert niepotrzebne
 
@@ -158,13 +161,14 @@ $his_offers = null;
                 ])->toArray();
             $his_offers = (new Collection($his_offers))->extract('id')->toList();
 
+            //dla bookingu niepotrzebne
 
 
         }
 
 
 
-        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'ratings', 'saved_user_offers', 'his_offers'));
+        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'ratings', 'saved_user_offers', 'his_offers', 'saved_user_bookings', 'bookings'));
 
 
         $layout = '';

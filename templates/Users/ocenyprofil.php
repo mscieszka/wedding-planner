@@ -82,7 +82,7 @@
 
 
 
-                    <?php if($account_type_id == 2): ?>
+                    <?php if($user->account_type_id == 2): ?>
 
                     <?php if (!empty($ratings)) : ?>
              <?php foreach ($ratings as $rating): ?>
@@ -105,6 +105,10 @@
                             <h4><?= h($rating->opinion_date) ?></h4>
                         </div>
 
+                        <?php if($rating->user_id == $id_user_log):?>
+                            <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
+                        <?php endif; ?>
+
                     </div>
                 <?php endforeach; ?>
 
@@ -117,7 +121,7 @@
 
 
 
-                    <?php if($account_type_id == 1): ?>
+                    <?php if($user->account_type_id == 1): ?>
 
                         <?php if (!empty($ratings)) : ?>
                             <?php foreach ($ratings as $rating): ?>
@@ -141,7 +145,7 @@
                                     </div>
 
                                     <div class="offer_container_edit_button">
-                                        <?php if($user->id == $id_user_log):?>
+                                        <?php if($rating->user_id == $id_user_log):?>
                                             <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
                                         <?php endif; ?>
                                     </div>

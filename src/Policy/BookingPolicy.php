@@ -49,7 +49,7 @@ class BookingPolicy
      */
     public function canDelete(IdentityInterface $user, Booking $booking)
     {
-        return $this->isOfferAuthor($user, $booking->offer); //only author of offer
+        return true;
     }
 
     /**
