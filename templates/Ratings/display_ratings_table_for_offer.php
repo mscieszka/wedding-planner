@@ -4,8 +4,6 @@
  * @var \App\Model\Entity\Rating $rating
  */
 ?>
-
-
 <div class="ratings index content">
     <?= $this->Html->link(__('New Rating'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Ratings for Given Offer') ?></h3>
@@ -52,6 +50,4 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
-
-
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Province $province
@@ -22,7 +23,7 @@
             <fieldset>
                 <legend><?= __('Edit Province') ?></legend>
                 <?php
-                    echo $this->Form->control('name');
+                echo $this->Form->control('name');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

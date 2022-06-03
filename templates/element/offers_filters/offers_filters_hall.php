@@ -1,11 +1,11 @@
 <div class="sidebar">
     <a class="category">Sala</a>
 
-        <?php if($account_type_id == 2): ?>
-    <div class="side-nav">
+    <?php if ($account_type_id == 2) : ?>
+        <div class="side-nav">
             <?= $this->Html->link(__('Dodaj nową ofertę'), ['controller' => 'Offers', 'action' => 'add', h($category->id)]) ?>
-    </div>
-        <?php endif; ?>
+        </div>
+    <?php endif; ?>
 
     <label id="label_sorting_type" for="select_sorting_type">Sortowanie</label>
     <select name="sorting_types" id="select_sorting_type">

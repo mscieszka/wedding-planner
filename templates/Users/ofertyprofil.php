@@ -125,7 +125,7 @@
                                         </div>
                                         <div class="offer_container_edit_button">
                                             <?php if($user->id == $id_user_log):?>
-                                                    <td class="offer-name"><?= $this->Form->postLink(__('Usuń z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy na pewno chcesz usunąć ofertę z ulubionych??')]) ?></td>
+                                                    <td class="offer-name"><?= $this->Form->postLink(__('Usuń z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy na pewno chcesz usunąć ofertę z ulubionych?')]) ?></td>
                                             <?php endif; ?>
                                         </div>
                                     </div>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\OfferActiveDay $offerActiveDay
@@ -18,14 +19,14 @@
             <fieldset>
                 <legend><?= __('Add Offer Active Day') ?></legend>
                 <?php
-                    echo $this->Form->control('offer_id', ['options' => $offers]);
-                    echo $this->Form->control('monday');
-                    echo $this->Form->control('tuesday');
-                    echo $this->Form->control('wednesday');
-                    echo $this->Form->control('Thursday');
-                    echo $this->Form->control('friday');
-                    echo $this->Form->control('saturday');
-                    echo $this->Form->control('sunday');
+                echo $this->Form->control('offer_id', ['options' => $offers]);
+                echo $this->Form->control('monday');
+                echo $this->Form->control('tuesday');
+                echo $this->Form->control('wednesday');
+                echo $this->Form->control('Thursday');
+                echo $this->Form->control('friday');
+                echo $this->Form->control('saturday');
+                echo $this->Form->control('sunday');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

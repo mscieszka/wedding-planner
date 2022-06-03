@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Offer $offer
@@ -26,14 +27,14 @@
             <fieldset>
                 <legend><?= __('Edit Offer') ?></legend>
                 <?php
-                    echo $this->Form->control('user_id', ['options' => $users]);
-                    echo $this->Form->control('category_id', ['options' => $categories]);
-                    echo $this->Form->control('address_id', ['options' => $addresses]);
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('price');
-                    echo $this->Form->control('description');
-                    echo $this->Form->control('advance_payment');
-                    echo $this->Form->control('website');
+                echo $this->Form->control('user_id', ['options' => $users]);
+                echo $this->Form->control('category_id', ['options' => $categories]);
+                echo $this->Form->control('address_id', ['options' => $addresses]);
+                echo $this->Form->control('name');
+                echo $this->Form->control('price');
+                echo $this->Form->control('description');
+                echo $this->Form->control('advance_payment');
+                echo $this->Form->control('website');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

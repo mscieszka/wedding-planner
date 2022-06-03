@@ -1,8 +1,8 @@
 <div class="sidebar">
     <a class="category">DJ / zespół muzyczny</a>
-    <?php if($account_type_id == 2): ?>
+    <?php if ($account_type_id == 2) : ?>
         <div class="side-nav">
-                <?= $this->Html->link(__('Dodaj nową ofertę'), ['controller' => 'Offers', 'action' => 'add', h($category->id)]) ?>
+            <?= $this->Html->link(__('Dodaj nową ofertę'), ['controller' => 'Offers', 'action' => 'add', h($category->id)]) ?>
         </div>
     <?php endif; ?>
 
@@ -49,12 +49,13 @@
         </div>
     </div>
 </div>
+
 <script>
     $(document).ready(function() {
 
         function showOffer(category, elem) {
             var showOffer = false;
-            if( $('#'+category).is(':checked') ) {
+            if ($('#' + category).is(':checked')) {
                 var attr = elem.attr(category);
                 if (typeof attr !== 'undefined' && attr !== false) {
                     showOffer = true;
@@ -64,11 +65,11 @@
             var searchInfo = $('#input_search_description').val();
             console.log(searchInfo);
             console.log(elem.attr('info'));
-            if(showOffer) {
+            if (showOffer) {
                 if (searchInfo == '') {
                     elem.show();
                 } else {
-                    if( elem.attr('info').toLowerCase().indexOf( searchInfo.toLowerCase() ) >= 0 ) {
+                    if (elem.attr('info').toLowerCase().indexOf(searchInfo.toLowerCase()) >= 0) {
                         elem.show();
                     }
                 }
@@ -92,7 +93,7 @@
         })
 
         function searchInfo() {
-            $('.offer').each(function(index, element) {
+            $('.offer').each(function (index, element) {
                 $(this).hide();
             });
 
@@ -105,7 +106,7 @@
         }
 
         function search() {
-            $('.offer').each(function(index, element) {
+            $('.offer').each(function (index, element) {
                 $(this).hide();
             });
 
@@ -127,7 +128,7 @@
             })
             console.log(showAll);
             if(showAll) {
-                $('.offer').each(function(index, element) {
+                $('.offer').each(function (index, element) {
                     $(this).show();
                 });
                 $('#input_search_description').trigger('change');
