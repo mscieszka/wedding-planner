@@ -108,9 +108,9 @@ class SavedUserOffersController extends AppController
         ])->first();
         $this->Authorization->authorize($saved_user_offer);
         if ($this->SavedUserOffers->delete($saved_user_offer)) {
-            $this->Flash->success(__('The offer removed from favourites'));
+            $this->Flash->success(__('Oferta została usunięta z ulubionych'));
         } else {
-            $this->Flash->error(__('Offer cannot be removed from favourites'));
+            $this->Flash->error(__('Błąd, nie można usunąć oferty z ulubionych'));
         }
 
         return $this->redirect($this->referer());
