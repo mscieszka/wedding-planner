@@ -232,11 +232,11 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Rejestracja zakończona pomyślnie'));
+                $this->Flash->success(__('Edycja profilu zakończona sukcesem'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Wystąpił błąd podczas próby rejestracji. Spróbuj ponownie'));
+            $this->Flash->error(__('Wystąpił błąd podczas próby edycji profilu. Spróbuj ponownie'));
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'accountTypes', 'account_type_id'));

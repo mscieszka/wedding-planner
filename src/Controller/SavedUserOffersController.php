@@ -59,7 +59,7 @@ class SavedUserOffersController extends AppController
         if ($this->SavedUserOffers->save($savedUserOffer)) {
             $this->Flash->success(__('Oferta została pomyślnie dodana do ulubionych'));
         } else {
-            $this->Flash->error(__('Nie można dodać oferty do ulubionych. Proszę spróbować ponownie.'));
+            $this->Flash->error(__('Nie można dodać oferty do ulubionych. Spróbuj ponownie'));
         }
 
         return $this->redirect($this->referer());
@@ -85,7 +85,7 @@ class SavedUserOffersController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Nie można dodać oferty do ulubionych. Proszę spróbować ponownie'));
+            $this->Flash->error(__('Nie można dodać oferty do ulubionych. Spróbuj ponownie'));
         }
         $users = $this->SavedUserOffers->Users->find('list', ['limit' => 200])->all();
         $offers = $this->SavedUserOffers->Offers->find('list', ['limit' => 200])->all();
@@ -108,9 +108,9 @@ class SavedUserOffersController extends AppController
         ])->first();
         $this->Authorization->authorize($saved_user_offer);
         if ($this->SavedUserOffers->delete($saved_user_offer)) {
-            $this->Flash->success(__('The offer removed from favourites'));
+            $this->Flash->success(__('Oferta została usunięta z ulubionych'));
         } else {
-            $this->Flash->error(__('Offer cannot be removed from favourites'));
+            $this->Flash->error(__('Błąd, nie można usunąć oferty z ulubionych'));
         }
 
         return $this->redirect($this->referer());
