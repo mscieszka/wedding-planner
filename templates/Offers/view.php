@@ -109,6 +109,8 @@
         <div class="opinions">
             <h2>Opinie</h2>
             <div class="white-box">
+
+                <?php if($account_type_id == 1) : ?>
                 <div class="input-button-box">
                     <div >
                     <?= $this->Form->create() ?>
@@ -120,6 +122,9 @@
                         <?= $this->Form->button(__('Dodaj opinię'), ['type' => 'submit']) ?>
                         <?= $this->Form->end() ?>
                 </div>
+
+            <?php endif; ?>
+
             </div>
 
             <?php foreach ($ratings as $rating): ?>
@@ -137,6 +142,10 @@
                         <blockquote>
                             <?= $this->Text->autoParagraph(h($rating->description)); ?>
                         </blockquote>
+
+                        <?php if($rating->user_id == $id_user_log ):?>
+                        <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

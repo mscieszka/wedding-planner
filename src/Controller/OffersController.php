@@ -157,6 +157,11 @@ class OffersController extends AppController
 
     }
 
+
+
+
+
+
     private function getBookedOfferDates($offer_id) {
         $arr = [];
         $arr = $this->Offers->Bookings->find('list')->select(['booking_date'])->where(['offer_id'=>$offer_id])->toArray();
