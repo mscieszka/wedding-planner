@@ -9,7 +9,7 @@
 <?= $this->Html->css('addUser') ?>
 <div class="row">
     <div class="column-responsive column-80">
-        <?= $this->Form->create($user) ?>
+        <?= $this->Form->create($user,  ['type' => 'file']) ?>
 
 
 
