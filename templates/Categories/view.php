@@ -153,7 +153,7 @@ use Cake\Filesystem\Folder;
                                         <?php endif; ?>
 
                                         <?php foreach ($averages as $average) : ?>
-                                            <h3><?php if ($average['offer_id'] == $offers->id) : ?></h3>
+                                            <?php if ($average['offer_id'] == $offers->id) : ?>
                                                 <h3>Ocena : <?= $average['avg'] ?></h3>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
