@@ -21,7 +21,9 @@ class ProvincesController extends AppController
     {
         $this->Authorization->skipAuthorization();
         $account_type_id = $this->request->getAttribute('identity')->get('account_type_id');
-        $provinces = $this->paginate($this->Provinces);
+        $provinces = $this->paginate($this->Provinces->find()->order(['name' => 'ASC']));
+
+
 
         $this->set(compact('provinces', 'account_type_id'));
     }
