@@ -219,18 +219,28 @@ class UsersController extends AppController
 
 
                 $conn->commit();
+
                 /*Attachments*/
                 $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $user->id;
                 if(!file_exists($path)) {
                     $folder = new Folder($path, true, 777);
                 }
+
                 $attachment = $this->request->getData('attachment');
 
-                foreach($attachment as $file) {
-                    $name = $file->getClientFilename();
-                    $p = $path.DS.$name;
-                    $file->moveTo($p);
+
+                if ($attachment != null) {
+                    foreach ($attachment as $file) {
+                        if($file->getClientFilename() != null){
+                            $name = $file->getClientFilename();
+                            $p = $path . DS . $name;
+                            $file->moveTo($p);
+                        }
+
+                    }
                 }
+
+
 
 
 

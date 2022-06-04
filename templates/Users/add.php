@@ -9,7 +9,7 @@
 <?= $this->Html->css('addUser') ?>
 <div class="row">
     <div class="column-responsive column-80">
-        <?= $this->Form->create($user, ['type' => 'file']) ?>
+        <?= $this->Form->create($user) ?>
 
 
 
@@ -44,7 +44,7 @@
                         <fieldset>
                             <legend><?= __('Zdjecie profilowe') ?></legend>
                             <?php
-                            echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
+                            echo $this->Form->control('attachment[]', ['required' => false, 'type' => 'file','multiple'=>true, 'label' => '']);
                             ?>
                         </fieldset>
                     </div>
