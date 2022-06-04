@@ -14,15 +14,6 @@
      <?= $this->Form->create($offer, ['type' => 'file']) ?>
 
     <fieldset>
-        <h3><?= __('Zdjęcia') ?></h3>
-        <?= $this->Form->control('attachment[]', [
-            'type' => 'file',
-            'multiple'=>true,
-            'label' => false
-        ]); ?>
-    </fieldset>
-
-    <fieldset>
         <label for="filter-additional">Dodatki</label>
         <div class="filter-additional">
             <?php
