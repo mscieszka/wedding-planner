@@ -9,7 +9,7 @@
 use Cake\Filesystem\Folder;
 
 ?>
-<?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider', 'profile-banner']) ?>
+<?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider', 'profile-banner','viewOffer']) ?>
 <div class="row">
     <div class="column-responsive column-80 " >
         <?= $this->element('profile-banners/user-profile-banner'); ?>
@@ -120,9 +120,33 @@ use Cake\Filesystem\Folder;
                                     <?php endif; ?>
 
                                     <div class="offer_container_wrapper">
-                                        <div class="offer_container_wrapper_image">
-                                            <?= $this->Html->image('offerImages/hall2_1.jpg', ['alt' => 'Owner profile image']) ?>
-                                        </div>
+                                        <?php
+                                        $path = WWW_ROOT.'img'.DS.'offerImages'.DS. $offer->id;
+                                        if(!file_exists($path)) {
+                                            $path = new Folder($path, true, 777);
+                                        } else {
+                                            $path = new Folder($path);
+                                        }
+                                        $files = $path->find();
+                                        ?>
+
+                                        <?php if (empty($files)) : ?>
+                                            <?= $this->Html->image('offerImages/cat1_1.jpg', [
+                                                'alt' => 'Owner profile image'
+                                            ]) ?>
+                                        <?php endif; ?>
+
+
+                                        <?php if (!empty($files)) : ?>
+                                            <?php foreach($files as $file): ?>
+                                                <?php $filePath = 'offerImages/'.(int)$offer->get('id').'/'.$file; ?>
+                                                <?= $this->Html->image($filePath, [
+                                                    'alt' => 'Owner profile image',
+                                                    'class' => 'offer-img'
+                                                ]) ?>
+                                                <?php break; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
                                         <div class="offer_container_wrapper_description">
                                             <div class="offer_container_wrapper_title">
                                                 <?= $this->Html->link(__(h($offer->name)), ['controller' => 'Offers', 'action' => 'view', $offer->id]) ?>
