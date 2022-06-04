@@ -181,7 +181,7 @@ use Cake\Filesystem\Folder;
                                     </div>
                                     <div class="offer_container_edit_button">
                                         <?php if ($user->id == $id_user_log) : ?>
-                                            <td class="offer-name"><?= $this->Form->postLink(__('Usuń z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy na pewno chcesz usunąć ofertę z ulubionych?')]) ?></td>
+                                            <?= $this->Form->postLink(__($this->Html->image('heart-icon.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy napewno chcesz usunac te oferte z ulubionych?'), 'escape' => false]) ?>
                                         <?php endif; ?>
                                     </div>
                                 </div>
