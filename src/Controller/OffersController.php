@@ -96,7 +96,7 @@ class OffersController extends AppController
             $rating->opinion_date = date("Y-m-d");
 
             if ($this->Offers->Ratings->save($rating)) {
-                $this->Flash->success(__('The rating has been saved.'));
+                $this->Flash->success(__('Opinia dodana pomyślnie'));
 
                 return $this->redirect(['controller' => 'Offers', 'action' => 'view', $id]);
             }

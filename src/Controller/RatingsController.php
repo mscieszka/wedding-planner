@@ -73,7 +73,7 @@ class RatingsController extends AppController
         if ($this->request->is('post')) {
             $rating = $this->Ratings->patchEntity($rating, $this->request->getData());
             if ($this->Ratings->save($rating)) {
-                $this->Flash->success(__('The rating has been saved.'));
+                $this->Flash->success(__('Opinia dodana pomyślnie'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -100,7 +100,7 @@ class RatingsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $rating = $this->Ratings->patchEntity($rating, $this->request->getData());
             if ($this->Ratings->save($rating)) {
-                $this->Flash->success(__('The rating has been saved.'));
+                $this->Flash->success(__('Opinia dodana pomyślnie'));
 
                 return $this->redirect(['action' => 'index']);
             }
