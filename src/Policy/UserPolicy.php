@@ -32,7 +32,9 @@ class UserPolicy extends GlobalPolicy
      */
     public function canEdit(IdentityInterface $user, User $resource)
     {
-        return $this->isLogon($user);
+
+        return $this->isOwner($user,$resource);
+
     }
 
     /**
@@ -56,5 +58,10 @@ class UserPolicy extends GlobalPolicy
      */
     public function canView(IdentityInterface $user, User $resource)
     {
+    }
+
+    protected function isOwner(IdentityInterface $user,User $resource)
+    {
+        return $resource->id === $user->getIdentifier();
     }
 }
