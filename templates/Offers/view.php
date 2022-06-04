@@ -55,17 +55,17 @@ use Cake\Filesystem\Folder;
             <?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?>
         </div>
         <div class="offer-website">
-            <h4>
+            <h5>
                 <?= "Nasza strona: " . h($offer->website) ?>
-            </h4>
+            </h5>
         </div>
         <div class="offer-price">
             <div class="offer-description-bold">
                 <?php if ($offer->category_id == 2) : ?>
                     <!-- DJ -->
-                    <h4>Cena za godzinę: </h4>
+                    <h5>Cena za godzinę: </h5>
                 <?php else : ?>
-                    <h4>Cena za osobę: </h4>
+                    <h5>Cena za osobę: </h5>
                 <?php endif; ?>
             </div>
             <div class="offer-price-amount">
@@ -75,7 +75,7 @@ use Cake\Filesystem\Folder;
 
         <div class="offer-advance-payment">
             <div class="offer-description-bold">
-                <h4>Wysokość zaliczki: </h4>
+                <h5>Wysokość zaliczki: </h5>
             </div>
             <div class="offer-advance-payment-price">
                 <?= $this->Number->format($offer->advance_payment) . " %" ?>
@@ -151,13 +151,13 @@ use Cake\Filesystem\Folder;
 
     <div class="offer-opinions">
         <div class="rating">
-            <h2>Ocena</h2>
+            <h4>Ocena</h4>
             <div class="rate-box">
                 <h1>5,0</h1>
             </div>
         </div>
         <div class="opinions">
-            <h2>Opinie</h2>
+            <h4>Opinie</h4>
             <div class="white-box">
 
                 <?php if ($account_type_id == 1) : ?>
@@ -194,7 +194,7 @@ use Cake\Filesystem\Folder;
                             ?>
 
                             <?php if (empty($files)) : ?>
-                                <?= $this->Html->image('userProfileImage/brak_zdjecia.png', [
+                                <?= $this->Html->image('userProfileImage/no-profile-img.png', [
                                     'alt' => 'User profile image',
                                     'class' => 'userimg'
                                 ]) ?>
@@ -218,8 +218,8 @@ use Cake\Filesystem\Folder;
                         <div class="rest-of-opinion">
                             <div class="upper-box">
                                 <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
-                                <h4><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h4>
-                                <h4><?= h($rating->opinion_date) ?></h4>
+                                <h5><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h5>
+                                <h5><?= h($rating->opinion_date) ?></h5>
                             </div>
                             <div class="opinion-content">
                                 <blockquote>

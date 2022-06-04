@@ -69,7 +69,7 @@ use Cake\Filesystem\Folder;
                                         ?>
 
                                         <?php if (empty($files)) : ?>
-                                            <?= $this->Html->image('userProfileImage/brak_zdjecia.png', [
+                                            <?= $this->Html->image('userProfileImage/no-profile-img.png', [
                                                 'alt' => 'User profile image',
                                                 'class' => 'userimg'
                                             ]) ?>

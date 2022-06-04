@@ -15,7 +15,7 @@
 .profile-banner .user-image {
     width: 150px;
     height: 150px;
-    margin: 20px 20px 20px 100px;
+    margin: 20px 20px 20px 30px;
 }
 
 .user-profile-picture {
@@ -59,7 +59,7 @@
 }
 
 .owner-profile-link {
-    margin-right: 10rem;
+    margin-right: 30px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;

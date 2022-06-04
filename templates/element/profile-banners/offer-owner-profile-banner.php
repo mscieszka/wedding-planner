@@ -14,7 +14,7 @@
         ?>
 
         <?php if (empty($files)) : ?>
-            <?= $this->Html->image('userProfileImage/brak_zdjecia.png', [
+            <?= $this->Html->image('userProfileImage/no-profile-img.png', [
                 'alt' => 'Zdjęcie profilowe użytkownika',
                 'class' => 'user-profile-picture'
             ]) ?>
