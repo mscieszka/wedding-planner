@@ -58,7 +58,7 @@
 
 .users.view.content .opinion-box-wrapper
 {
-    width: 75%;
+    width: 100%;
 }
 
 .users.view.content .users.view.content_wrapper_box
@@ -106,7 +106,7 @@
 
 .upper-box_provider
 {
-    width: 74%;
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -118,7 +118,7 @@
 
 .opinion-remove
 {
-    width: 15%;
+    width: 13%;
     display: flex;
     justify-content: center;
     align-items: center;
