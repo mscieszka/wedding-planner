@@ -11,6 +11,7 @@
     <div class="column-responsive column-80 " >
         <?= $this->element('profile-banners/user-profile-banner'); ?>
 
+
         <div class="bookmarks_wrapper">
             <?php if($user->account_type_id == 2): ?>
             <div class="current_bookmarks">Oferty użytkownika</div>

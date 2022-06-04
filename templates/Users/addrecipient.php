@@ -9,7 +9,7 @@
 <?= $this->Html->css('addUser') ?>
 <div class="row">
     <div class="column-responsive column-80">
-        <?= $this->Form->create($user) ?>
+        <?= $this->Form->create($user, ['type' => 'file']) ?>
         <fieldset>
             <div class="legend_container">
                 <legend class="legend_second legend_second_recipient_mobile_border" id="uslugodawca"><?= $this->Html->link("USŁUGODAWCA", ['action' => 'add', 2]) ?></legend>
@@ -33,6 +33,13 @@
                         <label>
                             <input type="password" name="" placeholder=" Potwierdź hasło" class="require_data">
                         </label>
+
+                        <fieldset>
+                            <legend><?= __('Zdjecie profilowe') ?></legend>
+                            <?php
+                            echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
+                            ?>
+                        </fieldset>
                     </div>
                 </div>
                 <div class="form_end_content">
