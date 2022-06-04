@@ -185,9 +185,9 @@ input[type="email"] {
     box-sizing: border-box;
     border: 0;
     border-bottom: 1px solid gray;
-    height: 4em;
+    height: 4rem;
     outline: none;
-    margin-top: 2em;
+    margin-bottom: 2rem;
     transition: all 0.2s ease-out;
 }
 
