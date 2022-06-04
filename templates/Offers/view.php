@@ -24,11 +24,21 @@
             </div>
         </div>
         <div class="offer-gallery-img">
+            <?php if (!empty($files)) : ?>
             <?php foreach($files as $file): ?>
                 <?php $filePath = 'offerImages/'.(int)$offer->get('id').'/'.$file; ?>
                 <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
             <?php endforeach; ?>
+            <?php endif; ?>
+
+            <?php if (empty($files)) : ?>
+                <div class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offer-img']) ?></div>
+            <?php endif; ?>
         </div>
+
+
+
+
     </div>
 
     <div class="offer-details">
