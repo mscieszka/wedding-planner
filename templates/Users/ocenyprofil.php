@@ -6,6 +6,9 @@
  * @var \App\Model\Entity\Offer $offer
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
+
+use Cake\Filesystem\Folder;
+
 ?>
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider', 'profile-banner']) ?>
 <div class="row">
@@ -54,7 +57,36 @@
 
                                 <div class="opinion-box_provider">
                                     <a class="user-img_provider">
-                                        <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
+
+                                        <?php
+                                        $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $rating->user->id;
+                                        if(!file_exists($path)) {
+                                            $path = new Folder($path, true, 777);
+                                        } else {
+                                            $path = new Folder($path);
+                                        }
+                                        $files = $path->find();
+                                        ?>
+
+                                        <?php if (empty($files)) : ?>
+                                            <?= $this->Html->image('userProfileImage/brak_zdjecia.png', [
+                                                'alt' => 'User profile image',
+                                                'class' => 'userimg'
+                                            ]) ?>
+                                        <?php endif; ?>
+
+
+                                        <?php if (!empty($files)) : ?>
+                                            <?php foreach($files as $file): ?>
+                                                <?php $filePath = 'userProfileImage/'.(int)$rating->user->get('id').'/'.$file; ?>
+                                                <?= $this->Html->image($filePath, [
+                                                    'alt' => 'User profile image',
+                                                    'class' => 'userimg'
+                                                ]) ?>
+                                                <?php break; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+
                                     </a>
                                     <div class="upper-box_provider">
                                         <span style="width: 18%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>

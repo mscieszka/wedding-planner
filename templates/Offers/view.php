@@ -6,6 +6,9 @@
  * @var \Cake\Collection\CollectionInterface|string[] $users
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
+
+use Cake\Filesystem\Folder;
+
 ?>
 <?= $this->Html->css('viewOffer') ?>
 <?= $this->Html->css('calendar') ?>
@@ -139,7 +142,38 @@
                 <?php foreach ($ratings as $rating) : ?>
                     <div class="opinion-box">
                         <a class="user-img">
-                            <?= $this->Html->image('userProfileImage/userProfileImage1.jpg', ['alt' => 'User profile image', 'class' => 'userimg'])  ?>
+
+                            <?php
+                            $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $rating->user->id;
+                            if(!file_exists($path)) {
+                                $path = new Folder($path, true, 777);
+                            } else {
+                                $path = new Folder($path);
+                            }
+                            $files = $path->find();
+                            ?>
+
+                            <?php if (empty($files)) : ?>
+                                <?= $this->Html->image('userProfileImage/brak_zdjecia.png', [
+                                    'alt' => 'User profile image',
+                                    'class' => 'userimg'
+                                ]) ?>
+                            <?php endif; ?>
+
+
+                            <?php if (!empty($files)) : ?>
+                                <?php foreach($files as $file): ?>
+                                    <?php $filePath = 'userProfileImage/'.(int)$rating->user->get('id').'/'.$file; ?>
+                                    <?= $this->Html->image($filePath, [
+                                        'alt' => 'User profile image',
+                                        'class' => 'userimg'
+                                    ]) ?>
+                                    <?php break; ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+
+
+                            
                         </a>
                         <div class="rest-of-opinion">
                             <div class="upper-box">
