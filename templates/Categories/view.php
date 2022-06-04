@@ -156,8 +156,18 @@ use Cake\Filesystem\Folder;
                                                 <?= $this->Html->link(__($this->Html->image('heart-icon2.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id], ['escape' => false]) ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
-                                        <h4>232 ocen</h4>
+
+
+                                        <?php foreach($averages as $average): ?>  <!-- tutaj 1 rekord po 3 wartosc -->
+                                            <h3><?php if($average['offer_id'] == $offers->id) : ?></h3>
+                                                <h3>Średnia ocena : <?= $average['avg']?></h3>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+
+
+                                        <!-- <h4>232 ocen</h4> -->
                                     </div>
+
                                 </div>
                             <?php endforeach; ?>
                         </table>
