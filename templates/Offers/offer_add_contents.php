@@ -1,6 +1,15 @@
 <fieldset>
     <h3><?= __('Parametry oferty') ?></h3>
     <div class="grid-add-offers">
+        <div class="add-offers-photos">
+            <label><?= __('Zdjęcia') ?></label>
+            <?= $this->Form->control('attachment[]', [
+                'type' => 'file',
+                'multiple'=>true,
+                'label' => false,
+                'required' => false
+            ]); ?>
+        </div>
         <div class="add-offers-type">
             <?php echo $this->Form->hidden('category_id', ['options' => $categories, 'disabled' => true]); ?>
             <?php echo $this->Form->hidden('category_id'); ?>

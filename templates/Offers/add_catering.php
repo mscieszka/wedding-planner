@@ -14,15 +14,6 @@
     <?= $this->Form->create($offer, ['type' => 'file']) ?>
 
     <fieldset>
-        <h3><?= __('Zdjęcia') ?></h3>
-        <?= $this->Form->control('attachment[]', [
-            'type' => 'file',
-            'multiple'=>true,
-            'label' => false
-        ]); ?>
-    </fieldset>
-
-    <fieldset>
         <h3><?= __('Rodzaj kuchni') ?></h3>
         <?php
         echo $this->Form->control('catering_filter.polish', [
