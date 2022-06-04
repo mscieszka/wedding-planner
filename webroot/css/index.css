@@ -70,10 +70,9 @@ legend {
     color: #1f1f1f;
 }
 
-.input input,
-.input select,
-.input textarea {
-    border-radius: 25px;
+label {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
 }
 
 /* widoki */
@@ -180,7 +179,8 @@ a {
 
 /*.form_container form fieldset .content_wrapper .form_column input*/
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     width: 100%;
     box-sizing: border-box;
     border: 0;

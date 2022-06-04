@@ -120,11 +120,12 @@ fieldset legend:hover {
     padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .form_column label {
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 input {
