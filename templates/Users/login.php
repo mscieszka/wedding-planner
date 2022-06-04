@@ -1,7 +1,7 @@
 <?= $this->Html->css('loginUser') ?>
 <div class="users form flex-col">
     <?= $this->Flash->render() ?>
-    <?= $this->Form->create() ?>
+    <?= $this->Form->create(null, ['class' => 'flex-col']) ?>
     <fieldset>
         <?= $this->Form->control('email', ['required' => true, 'placeholder' => 'Wpisz adres e-mail']) ?>
         <?= $this->Form->control('password', ['required' => true, 'placeholder' => 'Wpisz hasło']) ?>
