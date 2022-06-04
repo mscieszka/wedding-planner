@@ -34,20 +34,50 @@ use Cake\Filesystem\Folder;
 
         </div>
 
+
+        <?php if ($user->account_type_id == 2) : ?>
+        <?php
+        $wynik = 0.0;
+        $licznik = -1;
+
+        foreach ($averages as $average)
+        {
+             if (in_array($average['offer_id'], $his_offers))
+             {
+                 $wynik = $wynik + $average['avg'];
+                 $licznik = 1 + $licznik;
+             }
+        }
+        $wynik2 = $wynik / $licznik;
+        ?>
+<?php endif; ?>
+
+
         <div class="users view content">
+
+
+
             <div class="users view content_header">
+                <?php if ($user->account_type_id == 2) : ?>
                 <div class="users view content_header_first">Ocena</div>
+                <?php endif; ?>
                 <div class="users view content_header_second" style="width: 75%; padding-left: 1em;">Opinie</div>
             </div>
+
+
+            <?php if ($user->account_type_id == 2) : ?>
             <div class="container_box">
                 <div class="users view content_wrapper" style="display: flex; justify-content: space-around">
                     <div class="users view content_wrapper_box">
                         <div>
-                            <div style="color: #000; font-size: 2em; height: 50%;">5.0</div>
+                            <div style="color: #000; font-size: 2em; height: 50%;"><?= ($wynik2) ?> </div>
                             <div style="color: gold; font-size: 2em; height: 50%;">*****</div>
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+
+
                 <div class="opinion-box-wrapper">
                     <?php if ($user->account_type_id == 2) : ?>
                         <?php if (!empty($ratings)) : ?>
