@@ -103,8 +103,6 @@ class OffersController extends AppController
             $this->Flash->error(__('The rating could not be saved. Please, try again.'));
         }
 
-
-
         $users = $this->Offers->Ratings->Users->find('list', ['limit' => 200])->all();
         $offers = $this->Offers->Ratings->Offers->find('list', ['limit' => 200])->all();
 
@@ -165,8 +163,6 @@ class OffersController extends AppController
         $averages = $connection
             ->execute('SELECT * FROM average_ratings_offers')
             ->fetchAll('assoc');
-
-
 
 
         $this->set(compact(
@@ -268,7 +264,6 @@ class OffersController extends AppController
 
                 $this->Offers->saveOrFail($offer);
                 $offer_id = $offer->get('id');
-
 
 
                 $offer_active_days = $this->Offers->OfferActiveDays->newEntity($this->request->getData('offer_active_day'));

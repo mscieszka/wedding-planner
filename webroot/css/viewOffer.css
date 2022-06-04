@@ -17,7 +17,6 @@
     align-content: center;
 }
 
-
 .offer-container p {
     font-family: 'Poppins';
     font-style: normal;
@@ -361,8 +360,6 @@ h1{
     font-weight: 400;
     font-size: 20px;
 }
-
-
 
 .offer-advance-payment, .offer-website {
     display: flex;

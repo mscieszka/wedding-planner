@@ -55,7 +55,6 @@ class CategoriesController extends AppController
         $saved_user_offers = (new Collection($saved_user_offers))->extract('offer_id')->toList();
 
 
-
         $connection = ConnectionManager::get('default');
 
         $averages = $connection

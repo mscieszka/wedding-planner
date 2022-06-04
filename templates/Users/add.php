@@ -11,8 +11,6 @@
     <div class="column-responsive column-80">
         <?= $this->Form->create($user,  ['type' => 'file']) ?>
 
-
-
         <fieldset>
             <div class="legend_container">
                 <legend class="legend_first background_mobile_checked" id="uslugodawca">USŁUGODAWCA</legend>
@@ -42,9 +40,13 @@
                         ?>
 
                         <fieldset>
-                            <legend><?= __('Zdjecie profilowe') ?></legend>
+                            <legend><?= __('Zdjęcie profilowe') ?></legend>
                             <?php
-                            echo $this->Form->control('attachment[]', ['required' => false, 'type' => 'file','multiple'=>true, 'label' => '']);
+                            echo $this->Form->control('attachment[]', [
+                                'required' => false,
+                                'type' => 'file',
+                                'multiple' => true,
+                                'label' => false]);
                             ?>
                         </fieldset>
                     </div>

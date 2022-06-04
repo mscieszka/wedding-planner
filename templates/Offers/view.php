@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Offer $offer
@@ -37,8 +38,8 @@ use Cake\Filesystem\Folder;
         </div>
         <div class="offer-gallery-img">
             <?php if (!empty($files)) : ?>
-                <?php foreach($files as $file): ?>
-                    <?php $filePath = 'offerImages/'.(int)$offer->get('id').'/'.$file; ?>
+                <?php foreach ($files as $file) : ?>
+                    <?php $filePath = 'offerImages/' . (int)$offer->get('id') . '/' . $file; ?>
                     <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
                 <?php endforeach; ?>
             <?php endif; ?>
@@ -80,17 +81,17 @@ use Cake\Filesystem\Folder;
                 </div>
             </div>
             <div class="offer-website">
-                <div class="offer-description-bold"><h5>Nasza strona: </h5></div>
+                <div class="offer-description-bold">
+                    <h5>Nasza strona: </h5>
+                </div>
                 <div class="offer-website-address">
-                    <?=($offer->website) ?>
+                    <?= ($offer->website) ?>
                 </div>
             </div>
             <div class="offer-address">
                 <?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?>
             </div>
         </div>
-
-
     </div>
 
     <div class="offer-reservation">
@@ -158,20 +159,18 @@ use Cake\Filesystem\Folder;
     <div class="offer-opinions">
         <div class="rating">
             <h4>Ocena</h4>
-
             <div class="rate-box">
-                <?php foreach($averages as $average): ?>  <!-- tutaj 1 rekord po 3 wartosc -->
-                    <?php if($average['offer_id'] == $offer->id) : ?>
-                        <h1><?= $average['avg']?></h1>
+                <?php foreach ($averages as $average) : ?>
+                    <!-- tutaj 1 rekord po 3 wartosc -->
+                    <?php if ($average['offer_id'] == $offer->id) : ?>
+                        <h1><?= $average['avg'] ?></h1>
                     <?php endif; ?>
                 <?php endforeach; ?>
-
             </div>
         </div>
         <div class="opinions">
             <h4>Opinie</h4>
             <div class="white-box">
-
                 <?php if ($account_type_id == 1) : ?>
                 <div class="input-button-box">
                     <div>
@@ -186,18 +185,15 @@ use Cake\Filesystem\Folder;
                         <?= $this->Form->button(__('Dodaj opinię'), ['type' => 'submit']) ?>
                         <?= $this->Form->end() ?>
                     </div>
-
                     <?php endif; ?>
-
                 </div>
 
                 <?php foreach ($ratings as $rating) : ?>
                     <div class="opinion-box">
                         <a class="user-img">
-
                             <?php
-                            $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $rating->user->id;
-                            if(!file_exists($path)) {
+                            $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $rating->user->id;
+                            if (!file_exists($path)) {
                                 $path = new Folder($path, true, 777);
                             } else {
                                 $path = new Folder($path);
@@ -212,10 +208,9 @@ use Cake\Filesystem\Folder;
                                 ]) ?>
                             <?php endif; ?>
 
-
                             <?php if (!empty($files)) : ?>
-                                <?php foreach($files as $file): ?>
-                                    <?php $filePath = 'userProfileImage/'.(int)$rating->user->get('id').'/'.$file; ?>
+                                <?php foreach ($files as $file) : ?>
+                                    <?php $filePath = 'userProfileImage/' . (int)$rating->user->get('id') . '/' . $file; ?>
                                     <?= $this->Html->image($filePath, [
                                         'alt' => 'User profile image',
                                         'class' => 'userimg'
@@ -223,9 +218,6 @@ use Cake\Filesystem\Folder;
                                     <?php break; ?>
                                 <?php endforeach; ?>
                             <?php endif; ?>
-
-
-
                         </a>
                         <div class="rest-of-opinion">
                             <div class="upper-box">

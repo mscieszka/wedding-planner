@@ -59,8 +59,8 @@ use Cake\Filesystem\Folder;
                                     <a class="user-img_provider">
 
                                         <?php
-                                        $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $rating->user_id;
-                                        if(!file_exists($path)) {
+                                        $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $rating->user_id;
+                                        if (!file_exists($path)) {
                                             $path = new Folder($path, true, 777);
                                         } else {
                                             $path = new Folder($path);
@@ -75,10 +75,9 @@ use Cake\Filesystem\Folder;
                                             ]) ?>
                                         <?php endif; ?>
 
-
                                         <?php if (!empty($files)) : ?>
-                                            <?php foreach($files as $file): ?>
-                                                <?php $filePath = 'userProfileImage/'.(int)$rating->get('user_id').'/'.$file; ?>
+                                            <?php foreach ($files as $file) : ?>
+                                                <?php $filePath = 'userProfileImage/' . (int)$rating->get('user_id') . '/' . $file; ?>
                                                 <?= $this->Html->image($filePath, [
                                                     'alt' => 'User profile image',
                                                     'class' => 'userimg'
@@ -115,30 +114,29 @@ use Cake\Filesystem\Folder;
                                     <div class="opinion-box_provider">
                                         <!--<a class="user-img_provider">
                                             <?php
-                                            $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $rating->user_id;
-                                            if(!file_exists($path)) {
-                                                $path = new Folder($path, true, 777);
-                                            } else {
-                                                $path = new Folder($path);
-                                            }
-                                            $files = $path->find();
-                                            ?>
+                                        $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $rating->user_id;
+                                        if (!file_exists($path)) {
+                                            $path = new Folder($path, true, 777);
+                                        } else {
+                                            $path = new Folder($path);
+                                        }
+                                        $files = $path->find();
+                                        ?>
 
                                             <?php if (empty($files)) : ?>
                                                 <?= $this->Html->image('userProfileImage/brak_zdjecia.png', [
-                                                    'alt' => 'User profile image',
-                                                    'class' => 'userimg'
-                                                ]) ?>
+                                            'alt' => 'User profile image',
+                                            'class' => 'userimg'
+                                        ]) ?>
                                             <?php endif; ?>
 
-
                                             <?php if (!empty($files)) : ?>
-                                                <?php foreach($files as $file): ?>
-                                                    <?php $filePath = 'userProfileImage/'.(int)$rating->get('user_id').'/'.$file; ?>
+                                                <?php foreach ($files as $file) : ?>
+                                                    <?php $filePath = 'userProfileImage/' . (int)$rating->get('user_id') . '/' . $file; ?>
                                                     <?= $this->Html->image($filePath, [
-                                                        'alt' => 'User profile image',
-                                                        'class' => 'userimg'
-                                                    ]) ?>
+                                            'alt' => 'User profile image',
+                                            'class' => 'userimg'
+                                        ]) ?>
                                                     <?php break; ?>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
@@ -147,7 +145,7 @@ use Cake\Filesystem\Folder;
                                             <span style="width: 13%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>
                                             <p style="width: 5%">do</p>
                                             <span style="width: 15%"><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></span>
-<!--Tutaj trzeba przesłać ocenę jaka została przyznana, cyfra 5 zawsze zostaje--><span style="width: 6%">4/5</span>
+                                            <!--Tutaj trzeba przesłać ocenę jaka została przyznana, cyfra 5 zawsze zostaje--><span style="width: 6%">4/5</span>
                                             <blockquote style="width: 59%">
                                                 <?= $this->Text->autoParagraph(h($rating->description)); ?>
                                             </blockquote>

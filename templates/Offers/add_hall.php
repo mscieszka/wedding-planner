@@ -54,8 +54,6 @@
             'label' => __('Rodzaj lokalu')
         ]);
 
-
-
         echo $this->Form->control('hall_filter.number_beds', [
             'type' => 'number',
             'label' => __('Miejsc noclegowych'),

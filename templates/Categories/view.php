@@ -26,15 +26,12 @@ use Cake\Filesystem\Folder;
     <?php endif; ?>
     <div class="column-responsive column-80">
         <div class="categories-view-content">
-
-
-
             <div class="related">
                 <?php if (!empty($category->offers)) : ?>
                     <div class="table-responsive">
                         <table>
                             <?php foreach ($category->offers as $offers) : ?>
-                            <?php
+                                <?php
                                 $search_param = '';
                                 if ($category->id == 1) {
                                     if ($offers['hall_filter']->air_conditioning) {
@@ -112,36 +109,35 @@ use Cake\Filesystem\Folder;
                                     }
                                     $search_param .= ' info = "' . $offers->name . '" ';
                                 }
-                            ?>
+                                ?>
                                 <div class="offer" <?= $search_param ?>>
 
 
                                     <div class="offer-img">
 
                                         <?php
-                                        $path = WWW_ROOT.'img'.DS.'offerImages'.DS. $offers->id;
-                                        if(!file_exists($path)) {
-                                        $path = new Folder($path, true, 777);
+                                        $path = WWW_ROOT . 'img' . DS . 'offerImages' . DS . $offers->id;
+                                        if (!file_exists($path)) {
+                                            $path = new Folder($path, true, 777);
                                         } else {
-                                        $path = new Folder($path);
+                                            $path = new Folder($path);
                                         }
                                         $files = $path->find();
                                         ?>
 
                                         <?php if (empty($files)) : ?>
                                             <div class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offer-img']) ?></div>
-                                            <?php endif; ?>
+                                        <?php endif; ?>
 
-                                                <?php if (!empty($files)) : ?>
-                                        <?php foreach($files as $file): ?>
-                                            <?php $filePath = 'offerImages/'.(int)$offers->get('id').'/'.$file; ?>
-                                            <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
-                                                        <?php  break; ?>
-                                        <?php endforeach; ?>
-                                                <?php endif; ?>
+                                        <?php if (!empty($files)) : ?>
+                                            <?php foreach ($files as $file) : ?>
+                                                <?php $filePath = 'offerImages/' . (int)$offers->get('id') . '/' . $file; ?>
+                                                <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
+                                                <?php break; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
 
                                     </div>
-
 
                                     <div class="offer-desc">
                                         <h1><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></h1>
@@ -149,18 +145,18 @@ use Cake\Filesystem\Folder;
                                         <h4>Kraków, Małopolska</h4>
                                     </div>
                                     <div class="offer-fav">
-                                        <?php if($account_type_id == 1): ?>
-                                            <?php if(in_array($offers->id, $saved_user_offers)): ?>
-                                                <?= $this->Form->postLink(__($this->Html->image('heart-icon.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offers->id],['escape' => false]) ?>
-                                            <?php else: ?>
+                                        <?php if ($account_type_id == 1) : ?>
+                                            <?php if (in_array($offers->id, $saved_user_offers)) : ?>
+                                                <?= $this->Form->postLink(__($this->Html->image('heart-icon.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offers->id], ['escape' => false]) ?>
+                                            <?php else : ?>
                                                 <?= $this->Html->link(__($this->Html->image('heart-icon2.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id], ['escape' => false]) ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
 
-
-                                        <?php foreach($averages as $average): ?>  <!-- tutaj 1 rekord po 3 wartosc -->
-                                            <h3><?php if($average['offer_id'] == $offers->id) : ?></h3>
-                                                <h3>Ocena : <?= $average['avg']?></h3>
+                                        <?php foreach ($averages as $average) : ?>
+                                            <!-- tutaj 1 rekord po 3 wartosc -->
+                                            <h3><?php if ($average['offer_id'] == $offers->id) : ?></h3>
+                                                <h3>Ocena : <?= $average['avg'] ?></h3>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
 
@@ -177,5 +173,3 @@ use Cake\Filesystem\Folder;
         </div>
     </div>
 </div>
-
-

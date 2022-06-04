@@ -182,11 +182,6 @@ class UsersController extends AppController
         }
         */
 
-
-
-
-
-
         $this->render($layout);
     }
 
@@ -217,45 +212,31 @@ class UsersController extends AppController
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
 
-
                 $conn->commit();
 
                 /*Attachments*/
-                $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $user->id;
-                if(!file_exists($path)) {
+                $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $user->id;
+                if (!file_exists($path)) {
                     $folder = new Folder($path, true, 777);
                 }
 
                 $attachment = $this->request->getData('attachment');
 
-
                 if ($attachment != null) {
                     foreach ($attachment as $file) {
-                        if($file->getClientFilename() != null){
+                        if ($file->getClientFilename() != null) {
                             $name = $file->getClientFilename();
                             $p = $path . DS . $name;
                             $file->moveTo($p);
                         }
-
                     }
                 }
-
-
-
-
-
 
                 $this->Flash->success(__('The user has been saved.'));
 
                 return $this->redirect(['action' => 'login']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
-
-
-
-
-
-
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'accountTypes'));
@@ -281,8 +262,8 @@ class UsersController extends AppController
 
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-            $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $user->id;
-            if(!file_exists($path)) {
+            $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $user->id;
+            if (!file_exists($path)) {
                 $folder = new Folder($path, true, 777);
             }
 
@@ -291,12 +272,11 @@ class UsersController extends AppController
 
             if ($attachment != null) {
                 foreach ($attachment as $file) {
-                    if($file->getClientFilename() != null){
+                    if ($file->getClientFilename() != null) {
                         $name = $file->getClientFilename();
                         $p = $path . DS . $name;
                         $file->moveTo($p);
                     }
-
                 }
             }
 

@@ -1,13 +1,12 @@
 <div class="users-profile-banner">
     <div class="profile-banner">
         <a class="user-image">
-
-
-
             <?php
+
             use Cake\Filesystem\Folder;
-            $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $user->id;
-            if(!file_exists($path)) {
+
+            $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $user->id;
+            if (!file_exists($path)) {
                 $path = new Folder($path, true, 777);
             } else {
                 $path = new Folder($path);
@@ -22,10 +21,9 @@
                 ]) ?>
             <?php endif; ?>
 
-
             <?php if (!empty($files)) : ?>
-                <?php foreach($files as $file): ?>
-                    <?php $filePath = 'userProfileImage/'.(int)$user->get('id').'/'.$file; ?>
+                <?php foreach ($files as $file) : ?>
+                    <?php $filePath = 'userProfileImage/' . (int)$user->get('id') . '/' . $file; ?>
                     <?= $this->Html->image($filePath, [
                         'alt' => 'Zdjęcie profilowe użytkownika',
                         'class' => 'user-profile-picture'
@@ -33,10 +31,6 @@
                     <?php break; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
-
-
-
-
 
         </a>
         <div class="user-details">

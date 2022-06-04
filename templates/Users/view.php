@@ -55,7 +55,6 @@
                 </div>
             <?php endif; ?>
 
-
             <!--            <h3><?= h($user->name) ?> To jest strona usługodawcy</h3>
             <table>
                 <tr>
@@ -167,7 +166,6 @@
                 </div>
                 <?php endif; ?>
             </div>
-
 
             <div class="related">
                 <h4><?= __('Related Ratings') ?></h4>
