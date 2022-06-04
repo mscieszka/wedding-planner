@@ -40,6 +40,7 @@ use Authorization\AuthorizationServiceInterface;
 use Authorization\AuthorizationServiceProviderInterface;
 use Authorization\Middleware\AuthorizationMiddleware;
 use Authorization\Policy\OrmResolver;
+use Authorization\Exception\ForbiddenException;
 /**
  * Application setup class.
  *
@@ -98,7 +99,20 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             ->add(new RoutingMiddleware($this))
             ->add(new AuthenticationMiddleware($this))
             // Handle plugin/theme assets like CakePHP normally does.
-            ->add(new AuthorizationMiddleware($this))
+            ->add(new AuthorizationMiddleware($this, [
+                'unauthorizedHandler' => [
+                    'className' => 'Authorization.CakeRedirect',
+                    'url' => [
+                        'controller' => 'Pages',
+                        'action' => 'display',
+                        'home'
+                    ],
+                    'queryParam' => 'redirectUrl',
+                    'exceptions' => [
+                        ForbiddenException::class
+                    ],
+                ],
+            ]))
 
             // Add routing middleware.
             // If you have a large number of routes connected, turning on routes
