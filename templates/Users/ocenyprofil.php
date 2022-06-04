@@ -36,18 +36,18 @@ use Cake\Filesystem\Folder;
 
         <div class="users view content">
             <div class="users view content_header">
-                <!--<div class="users view content_header_first">Ocena</div>-->
+                <div class="users view content_header_first">Ocena</div>
                 <div class="users view content_header_second" style="width: 75%; padding-left: 1em;">Opinie</div>
             </div>
             <div class="container_box">
-                <!--<div class="users view content_wrapper" style="display: flex; justify-content: space-around">
+                <div class="users view content_wrapper" style="display: flex; justify-content: space-around">
                     <div class="users view content_wrapper_box">
                         <div>
                             <div style="color: #000; font-size: 2em; height: 50%;">5.0</div>
                             <div style="color: gold; font-size: 2em; height: 50%;">*****</div>
                         </div>
                     </div>
-                </div>-->
+                </div>
                 <div class="opinion-box-wrapper">
                     <?php if ($user->account_type_id == 2) : ?>
                         <?php if (!empty($ratings)) : ?>
@@ -59,8 +59,8 @@ use Cake\Filesystem\Folder;
                                     <a class="user-img_provider">
 
                                         <?php
-                                        $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $rating->user_id;
-                                        if (!file_exists($path)) {
+                                        $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $rating->user_id;
+                                        if(!file_exists($path)) {
                                             $path = new Folder($path, true, 777);
                                         } else {
                                             $path = new Folder($path);
@@ -75,9 +75,10 @@ use Cake\Filesystem\Folder;
                                             ]) ?>
                                         <?php endif; ?>
 
+
                                         <?php if (!empty($files)) : ?>
-                                            <?php foreach ($files as $file) : ?>
-                                                <?php $filePath = 'userProfileImage/' . (int)$rating->get('user_id') . '/' . $file; ?>
+                                            <?php foreach($files as $file): ?>
+                                                <?php $filePath = 'userProfileImage/'.(int)$rating->get('user_id').'/'.$file; ?>
                                                 <?= $this->Html->image($filePath, [
                                                     'alt' => 'User profile image',
                                                     'class' => 'userimg'
@@ -91,8 +92,7 @@ use Cake\Filesystem\Folder;
                                         <span style="width: 18%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>
                                         <p style="width: 5%">do</p>
                                         <span style="width: 15%"><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></span>
-                                        <!--Tutaj trzeba przesłać ocenę jaka została przyznana, cyfra 5 zawsze zostaje--><span style="width: 6%">4/5</span>
-                                        <blockquote style="width: 55%">
+                                        <blockquote style="width: 50%">
                                             <?= $this->Text->autoParagraph(h($rating->description)); ?>
                                         </blockquote>
                                         <?= h($rating->opinion_date) ?>
@@ -112,41 +112,41 @@ use Cake\Filesystem\Folder;
                             <?php foreach ($ratings as $rating) : ?>
                                 <?php if ($rating->user_id == $user->id) :  ?>
                                     <div class="opinion-box_provider">
-                                        <!--<a class="user-img_provider">
+                                        <a class="user-img_provider">
                                             <?php
-                                        $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $rating->user_id;
-                                        if (!file_exists($path)) {
-                                            $path = new Folder($path, true, 777);
-                                        } else {
-                                            $path = new Folder($path);
-                                        }
-                                        $files = $path->find();
-                                        ?>
+                                            $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $rating->user_id;
+                                            if(!file_exists($path)) {
+                                                $path = new Folder($path, true, 777);
+                                            } else {
+                                                $path = new Folder($path);
+                                            }
+                                            $files = $path->find();
+                                            ?>
 
                                             <?php if (empty($files)) : ?>
                                                 <?= $this->Html->image('userProfileImage/brak_zdjecia.png', [
-                                            'alt' => 'User profile image',
-                                            'class' => 'userimg'
-                                        ]) ?>
+                                                    'alt' => 'User profile image',
+                                                    'class' => 'userimg'
+                                                ]) ?>
                                             <?php endif; ?>
 
+
                                             <?php if (!empty($files)) : ?>
-                                                <?php foreach ($files as $file) : ?>
-                                                    <?php $filePath = 'userProfileImage/' . (int)$rating->get('user_id') . '/' . $file; ?>
+                                                <?php foreach($files as $file): ?>
+                                                    <?php $filePath = 'userProfileImage/'.(int)$rating->get('user_id').'/'.$file; ?>
                                                     <?= $this->Html->image($filePath, [
-                                            'alt' => 'User profile image',
-                                            'class' => 'userimg'
-                                        ]) ?>
+                                                        'alt' => 'User profile image',
+                                                        'class' => 'userimg'
+                                                    ]) ?>
                                                     <?php break; ?>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
-                                        </a>-->
+                                        </a>
                                         <div class="upper-box_provider">
-                                            <span style="width: 13%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>
+                                            <span style="width: 18%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>
                                             <p style="width: 5%">do</p>
                                             <span style="width: 15%"><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></span>
-                                            <!--Tutaj trzeba przesłać ocenę jaka została przyznana, cyfra 5 zawsze zostaje--><span style="width: 6%">4/5</span>
-                                            <blockquote style="width: 59%">
+                                            <blockquote style="width: 50%">
                                                 <?= $this->Text->autoParagraph(h($rating->description)); ?>
                                             </blockquote>
                                             <?= h($rating->opinion_date) ?>

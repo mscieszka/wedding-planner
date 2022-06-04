@@ -51,7 +51,7 @@ use Cake\Filesystem\Folder;
                         <?php if (!empty($user->offers)) : ?>
                             <?php foreach ($user->offers as $offers) : ?>
                                 <div class="offer_container_wrapper">
-                                    <div class="offer_container_wrapper_image">
+                                    <div class="offer_container_wrapper-img">
 
                                         <?php
                                         $path = WWW_ROOT . 'img' . DS . 'offerImages' . DS . $offers->id;
@@ -65,7 +65,8 @@ use Cake\Filesystem\Folder;
 
                                         <?php if (empty($files)) : ?>
                                             <?= $this->Html->image('offerImages/cat1_1.jpg', [
-                                                'alt' => 'Owner profile image'
+                                                'alt' => 'Owner profile image',
+                                                'class' => 'offer-img'
                                             ]) ?>
                                         <?php endif; ?>
 
@@ -73,7 +74,8 @@ use Cake\Filesystem\Folder;
                                             <?php foreach ($files as $file) : ?>
                                                 <?php $filePath = 'offerImages/' . (int)$offers->get('id') . '/' . $file; ?>
                                                 <?= $this->Html->image($filePath, [
-                                                    'alt' => 'Owner profile image'
+                                                    'alt' => 'Owner profile image',
+                                                    'class' => 'offer-img'
                                                 ]) ?>
                                                 <?php break; ?>
                                             <?php endforeach; ?>
@@ -102,6 +104,13 @@ use Cake\Filesystem\Folder;
                 </div>
             <?php endif; ?>
 
+
+
+
+
+
+
+
             <?php if ($user->account_type_id == 1) : ?>
                 <div class="offer_container">
                     <div class="offer_container_header">
@@ -116,6 +125,8 @@ use Cake\Filesystem\Folder;
                                 <?php endif; ?>
 
                                 <div class="offer_container_wrapper">
+                                    <div class="offer_container_wrapper-img">
+
                                     <?php
                                     $path = WWW_ROOT . 'img' . DS . 'offerImages' . DS . $offer->id;
                                     if (!file_exists($path)) {
@@ -142,6 +153,7 @@ use Cake\Filesystem\Folder;
                                             <?php break; ?>
                                         <?php endforeach; ?>
                                     <?php endif; ?>
+                                    </div>
                                     <div class="offer_container_wrapper_description">
                                         <div class="offer_container_wrapper_title">
                                             <?= $this->Html->link(__(h($offer->name)), ['controller' => 'Offers', 'action' => 'view', $offer->id]) ?>
@@ -161,4 +173,5 @@ use Cake\Filesystem\Folder;
                     </div>
                 </div>
             <?php endif; ?>
+
         </div>
