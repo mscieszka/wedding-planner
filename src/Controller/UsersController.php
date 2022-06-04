@@ -154,7 +154,15 @@ class UsersController extends AppController
             //dla bookingu niepotrzebne
         }
 
-        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'ratings', 'saved_user_offers', 'his_offers', 'saved_user_bookings', 'bookings'));
+        $connection = ConnectionManager::get('default');
+
+        $averages = $connection
+            ->execute('SELECT * FROM average_ratings_offers')
+            ->fetchAll('assoc');
+
+
+
+        $this->set(compact('user', 'account_type_id', 'id_user_log', 'offers', 'ratings', 'saved_user_offers', 'his_offers', 'saved_user_bookings', 'bookings', 'averages'));
 
         $layout = '';
 

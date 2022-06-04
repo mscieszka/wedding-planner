@@ -87,7 +87,18 @@ use Cake\Filesystem\Folder;
                                         <div class="offer_container_wrapper_title">
                                             <?= $this->Html->link(__(h($offers->name)), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?>
                                         </div>
-                                        <div class="offer_container_wrapper_stars">*****</div>
+
+                                        <div class="offer_container_wrapper_stars">
+
+                                            <?php foreach ($averages as $average) : ?>
+                                                <!-- tutaj 1 rekord po 3 wartosc -->
+                                                <?php if ($average['offer_id'] == $offers->id) : ?>
+                                                    <h1><?= $average['avg'] ?></h1>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+
+                                        </div>
+
                                         <div class="offer_container_wrapper_description"><?= h($offers->description) ?></div>
                                     </div>
                                     <div class="offer_container_edit_button">
