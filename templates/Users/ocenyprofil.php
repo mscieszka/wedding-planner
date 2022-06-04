@@ -89,6 +89,7 @@ use Cake\Filesystem\Folder;
 
                                     </a>
                                     <div class="upper-box_provider">
+                                        <span style="width: 18%">Ocena: <?= $rating->rating?></span>
                                         <span style="width: 18%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>
                                         <p style="width: 5%">do</p>
                                         <span style="width: 15%"><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></span>
@@ -143,6 +144,7 @@ use Cake\Filesystem\Folder;
                                             <?php endif; ?>
                                         </a>
                                         <div class="upper-box_provider">
+                                            <span style="width: 18%">Ocena: <?= $rating->rating?></span>
                                             <span style="width: 18%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>
                                             <p style="width: 5%">do</p>
                                             <span style="width: 15%"><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></span>
