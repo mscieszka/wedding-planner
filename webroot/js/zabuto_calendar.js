@@ -6,7 +6,7 @@
  * - Twitter Bootstrap (3.0.2)
  */
 
- if (typeof jQuery == 'undefined') {
+if (typeof jQuery == 'undefined') {
     throw new Error('jQuery is not loaded');
 }
 
@@ -52,7 +52,7 @@ $.fn.zabuto_calendar = function (options) {
 
             var tableClassHtml = ($calendarElement.data('cellBorder') === true) ? ' table-bordered' : '';
 
-            var $tableObj = $('<table class="table' + tableClassHtml + '"></table>');
+            var $tableObj = $('<div class="calendar-div' + tableClassHtml + '"></div>');
             $tableObj = drawTable($calendarElement, $tableObj, dateInitObj.getFullYear(), dateInitObj.getMonth());
 
             var $legendObj = drawLegend($calendarElement);
@@ -206,8 +206,8 @@ $.fn.zabuto_calendar = function (options) {
 
             var monthLabels = $calendarElement.data('monthLabels');
 
-            var $prevMonthCell = $('<td></td>').append($prevMonthNav);
-            var $nextMonthCell = $('<td></td>').append($nextMonthNav);
+            var $prevMonthCell = $('<div class="prev-button"></div>').append($prevMonthNav);
+            var $nextMonthCell = $('<div class="next-button"></div>').append($nextMonthNav);
 
             var $currMonthLabel = $('<span>' + monthLabels[month] + ' ' + year + '</span>');
             $currMonthLabel.dblclick(function () {
@@ -215,10 +215,10 @@ $.fn.zabuto_calendar = function (options) {
                 drawTable($calendarElement, $tableObj, dateInitObj.getFullYear(), dateInitObj.getMonth());
             });
 
-            var $currMonthCell = $('<td colspan="5"></td>');
+            var $currMonthCell = $('<div class="month-box" colspan="5"></div>');
             $currMonthCell.append($currMonthLabel);
 
-            var $monthHeaderRow = $('<tr class="calendar-month-header"></tr>');
+            var $monthHeaderRow = $('<div class="calendar-month-header"></div>');
             $monthHeaderRow.append($prevMonthCell, $currMonthCell, $nextMonthCell);
 
             $tableObj.append($monthHeaderRow);
@@ -235,9 +235,9 @@ $.fn.zabuto_calendar = function (options) {
                     dowLabels = sunArray.concat(dowFull);
                 }
 
-                var $dowHeaderRow = $('<tr class="calendar-dow-header"></tr>');
+                var $dowHeaderRow = $('<div class="calendar-dow-header"></div>');
                 $(dowLabels).each(function (index, value) {
-                    $dowHeaderRow.append('<th>' + value + '</th>');
+                    $dowHeaderRow.append('<div>' + value + '</div>');
                 });
                 $tableObj.append($dowHeaderRow);
             }
@@ -267,10 +267,10 @@ $.fn.zabuto_calendar = function (options) {
             }
 
             for (var wk = 0; wk < weeksInMonth; wk++) {
-                var $dowRow = $('<tr class="calendar-dow"></tr>');
+                var $dowRow = $('<div class="calendar-dow"></div>');
                 for (var dow = 0; dow < 7; dow++) {
                     if (dow < firstDow || currDayOfMonth > lastDayinMonth) {
-                        $dowRow.append('<td></td>');
+                        $dowRow.append('<div></div>');
                     } else {
                         var dateId = $calendarElement.attr('id') + '_' + dateAsString(year, month, currDayOfMonth);
                         var dayId = dateId + '_day';
@@ -285,7 +285,7 @@ $.fn.zabuto_calendar = function (options) {
                             }
                         }
 
-                        var $dowElement = $('<td id="' + dateId + '"></td>');
+                        var $dowElement = $('<div id="' + dateId + '"></div>');
                         $dowElement.append($dayElement);
 
                         $dowElement.data('date', dateAsString(year, month, currDayOfMonth));

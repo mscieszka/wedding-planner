@@ -28,10 +28,10 @@ use Cake\Filesystem\Folder;
         </div>
         <div class="offer-gallery-img">
             <?php if (!empty($files)) : ?>
-            <?php foreach($files as $file): ?>
-                <?php $filePath = 'offerImages/'.(int)$offer->get('id').'/'.$file; ?>
-                <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
-            <?php endforeach; ?>
+                <?php foreach($files as $file): ?>
+                    <?php $filePath = 'offerImages/'.(int)$offer->get('id').'/'.$file; ?>
+                    <?= $this->Html->image($filePath, ['alt' => 'Offer image', 'class' => 'offer-pic']) ?>
+                <?php endforeach; ?>
             <?php endif; ?>
 
             <?php if (empty($files)) : ?>
@@ -96,12 +96,52 @@ use Cake\Filesystem\Folder;
         <?= $this->Form->create($booking, ['url' => ['controller' => 'Bookings', 'action' => 'add']]) ?>
         <fieldset>
             <div class="make-reservation">
-                <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'label' => 'Dokonaj rezerwacji', 'empty' => 'Wybierz datę rezerwacji', 'required' => true]); ?>
-                <?= $this->Form->hidden('offer_id'); ?>
-                <div>
-                    <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
+                <div class="calendar-main-div">
+                    <div id="my-calendar"></div>
                 </div>
-            </div>
+
+                <script type="application/javascript">
+                    $(document).ready(function() {
+                        $("#my-calendar").zabuto_calendar({
+                            year: 2022,
+                            month: 5,
+                            show_previous: false,
+                            show_next: 12,
+                            language: "pl",
+                            data: <?php echo json_encode($calendar_data) ?>,
+                            today: true,
+                            show_days: true,
+                            cell_border: true,
+                            nav_icon: {
+                                prev: 'PREV',
+                                next: 'NEXT'
+                            },
+
+                            action: function() {
+                                myDateFunction(this.id);
+                            }
+                        });
+
+                        function myDateFunction(id) {
+                            var e = $("#" + id).children('div').hasClass('free');
+                            var date = $("#" + id).data("date");
+                            //var hasEvent = $("#" + id).data("hasEvent");
+                            // console.log(e);
+                            // console.log(date);
+                            // console.log(hasEvent);
+                            if (e) {
+                                $("#booking-date").val(date);
+                            }
+                        }
+                    });
+                </script>
+                <div class="reservation-input-and-button">
+                    <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'label' => 'Dokonaj rezerwacji', 'empty' => 'Wybierz datę rezerwacji', 'required' => true]); ?>
+                    <?= $this->Form->hidden('offer_id'); ?>
+                    <div>
+                        <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
+                    </div>
+                </div>
 
         </fieldset>
         <?= $this->Form->end() ?>
@@ -173,7 +213,7 @@ use Cake\Filesystem\Folder;
                             <?php endif; ?>
 
 
-                            
+
                         </a>
                         <div class="rest-of-opinion">
                             <div class="upper-box">
@@ -200,43 +240,5 @@ use Cake\Filesystem\Folder;
     <div>
         <?= $this->Html->link(__('Wróć'), ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
     </div>
-    <div class="">
-        <div id="my-calendar"></div>
-    </div>
 
-    <script type="application/javascript">
-        $(document).ready(function() {
-            $("#my-calendar").zabuto_calendar({
-                year: 2022,
-                month: 5,
-                show_previous: false,
-                show_next: 12,
-                language: "pl",
-                data: <?php echo json_encode($calendar_data) ?>,
-                today: true,
-                show_days: true,
-                cell_border: true,
-                nav_icon: {
-                    prev: 'PREV',
-                    next: 'NEXT'
-                },
-
-                action: function() {
-                    myDateFunction(this.id);
-                }
-            });
-
-            function myDateFunction(id) {
-                var e = $("#" + id).children('div').hasClass('free');
-                var date = $("#" + id).data("date");
-                //var hasEvent = $("#" + id).data("hasEvent");
-                // console.log(e);
-                // console.log(date);
-                // console.log(hasEvent);
-                if (e) {
-                    $("#booking-date").val(date);
-                }
-            }
-        });
-    </script>
 </div>
