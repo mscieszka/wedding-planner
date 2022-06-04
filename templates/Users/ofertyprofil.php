@@ -5,6 +5,9 @@
  * @var \App\Model\Entity\Offer $offer
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
+
+use Cake\Filesystem\Folder;
+
 ?>
 <?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider', 'profile-banner']) ?>
 <div class="row">
@@ -49,7 +52,38 @@
                             <?php foreach ($user->offers as $offers) : ?>
                             <div class="offer_container_wrapper">
                                 <div class="offer_container_wrapper_image">
-                                    <?= $this->Html->image('offerImages/hall2_1.jpg', ['alt' => 'Owner profile image']) ?>
+
+                                    <?php
+                                    $path = WWW_ROOT.'img'.DS.'offerImages'.DS. $offers->id;
+                                    if(!file_exists($path)) {
+                                        $path = new Folder($path, true, 777);
+                                    } else {
+                                        $path = new Folder($path);
+                                    }
+                                    $files = $path->find();
+                                    ?>
+
+                                    <?php if (empty($files)) : ?>
+                                        <?= $this->Html->image('offerImages/cat1_1.jpg', [
+                                            'alt' => 'Owner profile image'
+                                        ]) ?>
+                                    <?php endif; ?>
+
+
+                                    <?php if (!empty($files)) : ?>
+                                        <?php foreach($files as $file): ?>
+                                            <?php $filePath = 'offerImages/'.(int)$offers->get('id').'/'.$file; ?>
+                                            <?= $this->Html->image($filePath, [
+                                                'alt' => 'Owner profile image'
+                                            ]) ?>
+                                            <?php break; ?>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+
+
+
+
+
                                 </div>
                                 <div class="offer_container_wrapper_description">
                                     <div class="offer_container_wrapper_title">
