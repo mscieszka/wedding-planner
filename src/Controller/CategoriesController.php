@@ -62,6 +62,7 @@ class CategoriesController extends AppController
             ->fetchAll('assoc');
 
 
+
         $this->set(compact('category', 'id_user_log', 'account_type_id', 'saved_user_offers', 'averages'));
     }
 
