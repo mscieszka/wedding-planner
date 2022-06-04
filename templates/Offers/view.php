@@ -31,9 +31,9 @@ use Cake\Filesystem\Folder;
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="offer-location">
+            <h5 class="offer-location">
                 <?= h($offer->address->city) ?>
-            </div>
+            </h5>
         </div>
         <div class="offer-gallery-img">
             <?php if (!empty($files)) : ?>
