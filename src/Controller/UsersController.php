@@ -281,6 +281,25 @@ class UsersController extends AppController
 
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
+            $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $user->id;
+            if(!file_exists($path)) {
+                $folder = new Folder($path, true, 777);
+            }
+
+            $attachment = $this->request->getData('attachment');
+
+
+            if ($attachment != null) {
+                foreach ($attachment as $file) {
+                    if($file->getClientFilename() != null){
+                        $name = $file->getClientFilename();
+                        $p = $path . DS . $name;
+                        $file->moveTo($p);
+                    }
+
+                }
+            }
+
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('Edycja profilu zakończona sukcesem'));
 
