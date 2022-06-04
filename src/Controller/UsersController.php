@@ -6,6 +6,8 @@ namespace App\Controller;
 
 use Authentication\PasswordHasher\DefaultPasswordHasher;
 use Cake\Collection\Collection;
+use Cake\Datasource\ConnectionManager;
+use Cake\Filesystem\Folder;
 
 /**
  * Users Controller
@@ -198,14 +200,47 @@ class UsersController extends AppController
         //        $this->Authorization->skipAuthorization();
         $user = $this->Users->newEmptyEntity();
         $user->account_type_id = $account_type;
+
+
         if ($this->request->is('post')) {
+
+
+            $conn = ConnectionManager::get('default');
+            $conn->begin();
+
+
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
+
+
+                $conn->commit();
+                /*Attachments*/
+                $path = WWW_ROOT.'img'.DS.'userProfileImage'.DS. $user->id;
+                if(!file_exists($path)) {
+                    $folder = new Folder($path, true, 777);
+                }
+                $attachment = $this->request->getData('attachment');
+
+                foreach($attachment as $file) {
+                    $name = $file->getClientFilename();
+                    $p = $path.DS.$name;
+                    $file->moveTo($p);
+                }
+
+
+
+
                 $this->Flash->success(__('The user has been saved.'));
 
                 return $this->redirect(['action' => 'login']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
+
+
+
+
+
+
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'accountTypes'));

@@ -9,7 +9,10 @@
 <?= $this->Html->css('addUser') ?>
 <div class="row">
     <div class="column-responsive column-80">
-        <?= $this->Form->create($user) ?>
+        <?= $this->Form->create($user, ['type' => 'file']) ?>
+
+
+
         <fieldset>
             <div class="legend_container">
                 <legend class="legend_first background_mobile_checked" id="uslugodawca">USŁUGODAWCA</legend>
@@ -37,7 +40,15 @@
                         echo $this->Form->control('nip', ['required' => true, 'placeholder' => ' NIP', 'class' => 'require_data']);
                         echo $this->Form->control('regon', ['required' => false, 'placeholder' => ' REGON (opcjonalnie)']);
                         ?>
+
+                        <fieldset>
+                            <legend><?= __('Zdjecie profilowe') ?></legend>
+                            <?php
+                            echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
+                            ?>
+                        </fieldset>
                     </div>
+
                 </div>
                 <div class="form_end_content">
                     <label style="color: #FF7A7A;"><input type="checkbox" name="">Akceptuję regulamin</label>
