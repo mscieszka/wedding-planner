@@ -386,7 +386,7 @@ class OffersController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
+        $this->request->allowMethod(['post', 'delete', 'get']);
         $offer = $this->Offers->get($id);
         $this->Authorization->authorize($offer);
         if ($this->Offers->delete($offer)) {
