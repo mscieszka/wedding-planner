@@ -73,7 +73,7 @@ legend {
 .input input,
 .input select,
 .input textarea {
-    border-radius: 1rem;
+    border-radius: 25px;
 }
 
 /* widoki */

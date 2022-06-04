@@ -21,6 +21,15 @@ use Cake\Filesystem\Folder;
         <div class="title-location">
             <div class="offer-title">
                 <h3><?= h($offer->name) ?></h3>
+                <div class="offer-view-fav-button">
+                    <?php if ($account_type_id == 1) : ?>
+                        <?php if (in_array($offer->id, $saved_user_offers)) : ?>
+                            <?= $this->Form->postLink(__($this->Html->image('heart-icon.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy napewno chcesz usunac te oferte z ulubionych?'), 'escape' => false]) ?>
+                        <?php else : ?>
+                            <?= $this->Html->link(__($this->Html->image('heart-icon2.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'add', $offer->id], ['escape' => false]) ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
             </div>
             <div class="offer-location">
                 <?= h($offer->address->city) ?>
@@ -35,13 +44,9 @@ use Cake\Filesystem\Folder;
             <?php endif; ?>
 
             <?php if (empty($files)) : ?>
-                <div class="offer-img"><?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offer-img']) ?></div>
+                <?= $this->Html->image('offerImages/dj1_1.jpg', ['alt' => 'Offer Image', 'class' => 'offer-img']) ?>
             <?php endif; ?>
         </div>
-
-
-
-
     </div>
 
     <div class="offer-details">
@@ -51,45 +56,41 @@ use Cake\Filesystem\Folder;
             </div>
             <?= $this->Text->autoParagraph(h($offer->description)); ?>
         </div>
-        <div class="offer-address">
-            <?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?>
-        </div>
-        <div class="offer-website">
-            <h5>
-                <?= "Nasza strona: " . h($offer->website) ?>
-            </h5>
-        </div>
-        <div class="offer-price">
-            <div class="offer-description-bold">
-                <?php if ($offer->category_id == 2) : ?>
-                    <!-- DJ -->
-                    <h5>Cena za godzinę: </h5>
-                <?php else : ?>
-                    <h5>Cena za osobę: </h5>
-                <?php endif; ?>
+        <div class="rest-offer-details">
+            <div class="offer-price">
+                <div class="offer-description-bold">
+                    <?php if ($offer->category_id == 2) : ?>
+                        <!-- DJ -->
+                        <h5>Cena za godzinę: </h5>
+                    <?php else : ?>
+                        <h5>Cena za osobę: </h5>
+                    <?php endif; ?>
+                </div>
+                <div class="offer-price-amount">
+                    <?= $this->Number->format($offer->price) . " zł" ?>
+                </div>
             </div>
-            <div class="offer-price-amount">
-                <?= $this->Number->format($offer->price) . " zł" ?>
+
+            <div class="offer-advance-payment">
+                <div class="offer-description-bold">
+                    <h5>Wysokość zaliczki: </h5>
+                </div>
+                <div class="offer-advance-payment-price">
+                    <?= $this->Number->format($offer->advance_payment) . " %" ?>
+                </div>
+            </div>
+            <div class="offer-website">
+                <div class="offer-description-bold"><h5>Nasza strona: </h5></div>
+                <div class="offer-website-address">
+                    <?=($offer->website) ?>
+                </div>
+            </div>
+            <div class="offer-address">
+                <?= $offer->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offer->address->id]) : '' ?>
             </div>
         </div>
 
-        <div class="offer-advance-payment">
-            <div class="offer-description-bold">
-                <h5>Wysokość zaliczki: </h5>
-            </div>
-            <div class="offer-advance-payment-price">
-                <?= $this->Number->format($offer->advance_payment) . " %" ?>
-            </div>
-        </div>
-        <div>
-            <?php if ($account_type_id == 1) : ?>
-                <?php if (in_array($offer->id, $saved_user_offers)) : ?>
-                    <?= $this->Form->postLink(__('Usun z ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'delete', $offer->id], ['confirm' => __('Czy napewno chcesz usunac te oferte z ulubionych?'), 'class' => 'button',]) ?>
-                <?php else : ?>
-                    <?= $this->Html->link(__('Dodaj do ulubionych'), ['controller' => 'SavedUserOffers', 'action' => 'add', $offer->id], ['class' => 'button']) ?>
-                <?php endif; ?>
-            <?php endif; ?>
-        </div>
+
     </div>
 
     <div class="offer-reservation">
@@ -97,6 +98,9 @@ use Cake\Filesystem\Folder;
         <fieldset>
             <div class="make-reservation">
                 <div class="calendar-main-div">
+                    <div class="offer-description-main">
+                        <h4>Kalendarz</h4>
+                    </div>
                     <div id="my-calendar"></div>
                 </div>
 
@@ -113,8 +117,8 @@ use Cake\Filesystem\Folder;
                             show_days: true,
                             cell_border: true,
                             nav_icon: {
-                                prev: 'PREV',
-                                next: 'NEXT'
+                                prev: '<',
+                                next: '>'
                             },
 
                             action: function() {
@@ -136,13 +140,15 @@ use Cake\Filesystem\Folder;
                     });
                 </script>
                 <div class="reservation-input-and-button">
-                    <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'label' => 'Dokonaj rezerwacji', 'empty' => 'Wybierz datę rezerwacji', 'required' => true]); ?>
-                    <?= $this->Form->hidden('offer_id'); ?>
-                    <div>
-                        <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
+                    <div class="reservation-input-and-button-white-box">
+                        <?= $this->Form->control('booking_date', ['options' => $active_offer_days, 'class' => 'reservation-date', 'label' => 'Dokonaj rezerwacji', 'empty' => 'Wybierz datę rezerwacji', 'required' => true]); ?>
+                        <?= $this->Form->hidden('offer_id'); ?>
+                        <div>
+                            <?= $this->Form->button(__('Zarezerwuj'), ['class' => 'button-reserve']) ?>
+                        </div>
                     </div>
                 </div>
-
+            </div>
         </fieldset>
         <?= $this->Form->end() ?>
     </div>

@@ -2,7 +2,7 @@ div.zabuto_calendar{
     margin: 0;
     padding: 0;
     background: white;
-    width: 500px;
+    width: 600px;
     height: 480px;
     display: flex;
     justify-content: center;
@@ -77,4 +77,4 @@ div.zabuto_calendar .badge-today{
     background: #FF7A7A;
     border-radius: 100px;
     color: black;
-
+}
