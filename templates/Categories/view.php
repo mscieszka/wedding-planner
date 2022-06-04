@@ -159,8 +159,18 @@ use Cake\Filesystem\Folder;
                                         <?php endforeach; ?>
 
 
-                                        <!-- <h4>232 ocen</h4> -->
+
                                     </div>
+
+                                    <?php foreach ($offers_all as $oferta) : ?>
+                                        <?php if($oferta->id == $offers->id): ?>
+                                            <?php foreach ($adresy_all as $adres) : ?>
+                                                <?php if($oferta->address_id == $adres->id): ?>
+                                                    <h4><?= h($oferta->address->city) .', '.h($adres->province->name) ?></h4>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
 
                                 </div>
                             <?php endforeach; ?>

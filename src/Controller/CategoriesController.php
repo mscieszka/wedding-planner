@@ -61,9 +61,9 @@ class CategoriesController extends AppController
             ->execute('SELECT * FROM average_ratings_offers')
             ->fetchAll('assoc');
 
-
-
-        $this->set(compact('category', 'id_user_log', 'account_type_id', 'saved_user_offers', 'averages'));
+        $offers_all = $this->Categories->Offers->find('all', ['contain' => ['Addresses']]);
+        $adresy_all = $this->Categories->Offers->Addresses->find('all', ['contain' => ['Provinces']]);
+        $this->set(compact('category', 'id_user_log', 'account_type_id', 'saved_user_offers', 'averages', 'adresy_all', 'offers_all'));
     }
 
     /**
