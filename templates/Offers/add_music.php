@@ -13,25 +13,44 @@
 
     <?= $this->Form->create($offer, ['type' => 'file']) ?>
 
-
     <fieldset>
-        <legend><?= __('Zdjecie') ?></legend>
-        <?php
-        echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
-        ?>
+        <h3><?= __('Zdjęcia') ?></h3>
+        <?= $this->Form->control('attachment[]', [
+            'type' => 'file',
+            'multiple'=>true,
+            'label' => false
+        ]); ?>
     </fieldset>
 
-
     <fieldset>
-        <legend><?= __('Add Music Filter') ?></legend>
-        <?php
-        echo $this->Form->control('music_filter.disco_polo', ['type' => 'checkbox']);
-        echo $this->Form->control('music_filter.pop', ['type' => 'checkbox']);
-        echo $this->Form->control('music_filter.rock', ['type' => 'checkbox']);
-        echo $this->Form->control('music_filter.oldies', ['type' => 'checkbox']);
-        echo $this->Form->control('music_filter.world_music', ['type' => 'checkbox']);
-        echo $this->Form->control('music_filter.running_games', ['type' => 'checkbox']);
-        ?>
+        <label for="filter-music-type"><?= __('Gatunek muzyki') ?></label>
+        <div class="filter-music-type">
+            <?php
+            echo $this->Form->control('music_filter.disco_polo', [
+                'type' => 'checkbox'
+            ]);
+            echo $this->Form->control('music_filter.pop', [
+                'type' => 'checkbox'
+            ]);
+            echo $this->Form->control('music_filter.rock', [
+                'type' => 'checkbox'
+            ]);
+            echo $this->Form->control('music_filter.oldies', [
+                'type' => 'checkbox'
+            ]);
+            echo $this->Form->control('music_filter.world_music', [
+                'type' => 'checkbox',
+                'label' => __('Muzyka światowa')
+            ]); ?>
+        </div>
+        <label for="filter-music-additional-info"><?= __('Dodatkowe informacje') ?></label>
+        <div class="filter-music-additional-info">
+            <?php echo $this->Form->control('music_filter.running_games', [
+                'type' => 'checkbox',
+                'label' => __('Prowadzenie zabaw')
+            ]);
+            ?>
+        </div>
     </fieldset>
     <?php include('offer_add_contents.php') ?>
     <?= $this->Form->end() ?>

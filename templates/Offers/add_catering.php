@@ -13,26 +13,50 @@
 
     <?= $this->Form->create($offer, ['type' => 'file']) ?>
 
-
     <fieldset>
-        <legend><?= __('Zdjecie') ?></legend>
-        <?php
-        echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
-        ?>
+        <h3><?= __('Zdjęcia') ?></h3>
+        <?= $this->Form->control('attachment[]', [
+            'type' => 'file',
+            'multiple'=>true,
+            'label' => false
+        ]); ?>
     </fieldset>
 
-
     <fieldset>
-        <legend><?= __('Add Catering Filter') ?></legend>
+        <h3><?= __('Rodzaj kuchni') ?></h3>
         <?php
-        echo $this->Form->control('catering_filter.polish', ['type' => 'checkbox']);
-        echo $this->Form->control('catering_filter.italian', ['type' => 'checkbox']);
-        echo $this->Form->control('catering_filter.american', ['type' => 'checkbox']);
-        echo $this->Form->control('catering_filter.french', ['type' => 'checkbox']);
-        echo $this->Form->control('catering_filter.asian', ['type' => 'checkbox']);
-        echo $this->Form->control('catering_filter.vegan', ['type' => 'checkbox']);
-        echo $this->Form->control('catering_filter.vegetarian', ['type' => 'checkbox']);
-        echo $this->Form->control('catering_filter.gluten_free', ['type' => 'checkbox']);
+        echo $this->Form->control('catering_filter.polish', [
+            'type' => 'checkbox',
+            'label' => __('polska')
+        ]);
+        echo $this->Form->control('catering_filter.italian', [
+            'type' => 'checkbox',
+            'label' => __('włoska')
+        ]);
+        echo $this->Form->control('catering_filter.american', [
+            'type' => 'checkbox',
+            'label' => __('amerykańska')
+        ]);
+        echo $this->Form->control('catering_filter.french', [
+            'type' => 'checkbox',
+            'label' => __('francuska')
+        ]);
+        echo $this->Form->control('catering_filter.asian', [
+            'type' => 'checkbox',
+            'label' => __('azjatycka')
+        ]);
+        echo $this->Form->control('catering_filter.vegan', [
+            'type' => 'checkbox',
+            'label' => __('wegańska')
+        ]);
+        echo $this->Form->control('catering_filter.vegetarian', [
+            'type' => 'checkbox',
+            'label' => __('wegetariańska')
+        ]);
+        echo $this->Form->control('catering_filter.gluten_free', [
+            'type' => 'checkbox',
+            'label' => __('bezglutenowa')
+        ]);
         ?>
     </fieldset>
     <?php include('offer_add_contents.php') ?>
