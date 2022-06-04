@@ -160,7 +160,7 @@ use Cake\Filesystem\Folder;
 
                                         <?php foreach($averages as $average): ?>  <!-- tutaj 1 rekord po 3 wartosc -->
                                             <h3><?php if($average['offer_id'] == $offers->id) : ?></h3>
-                                                <h3>Średnia ocena : <?= $average['avg']?></h3>
+                                                <h3>Ocena : <?= $average['avg']?></h3>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
 

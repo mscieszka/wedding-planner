@@ -160,6 +160,15 @@ class OffersController extends AppController
 
         $files = $path->find();
 
+        $connection = ConnectionManager::get('default');
+
+        $averages = $connection
+            ->execute('SELECT * FROM average_ratings_offers')
+            ->fetchAll('assoc');
+
+
+
+
         $this->set(compact(
             'offer',
             'account_type_id',
@@ -173,7 +182,8 @@ class OffersController extends AppController
             'offers',
             'saved_user_offers',
             'calendar_data',
-            'files'
+            'files',
+            'averages'
         ));
     }
 

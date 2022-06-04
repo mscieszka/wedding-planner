@@ -152,8 +152,14 @@ use Cake\Filesystem\Folder;
     <div class="offer-opinions">
         <div class="rating">
             <h4>Ocena</h4>
+
             <div class="rate-box">
-                <h1>5,0</h1>
+                <?php foreach($averages as $average): ?>  <!-- tutaj 1 rekord po 3 wartosc -->
+                    <?php if($average['offer_id'] == $offer->id) : ?>
+                        <h1><?= $average['avg']?></h1>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+
             </div>
         </div>
         <div class="opinions">
