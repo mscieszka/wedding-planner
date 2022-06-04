@@ -172,7 +172,7 @@ use Cake\Filesystem\Folder;
                                         <div class="offer_container_wrapper_stars">
                                             <?php foreach ($averages as $average) : ?>
                                                 <!-- tutaj 1 rekord po 3 wartosc -->
-                                                <?php if ($average['offer_id'] == $offers->id) : ?>
+                                                <?php if ($average['offer_id'] == $offer->id) : ?>
                                                     <h1><?= $average['avg'] ?></h1>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
