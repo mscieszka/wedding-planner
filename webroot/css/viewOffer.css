@@ -66,6 +66,7 @@
 
 .offer-gallery ::-webkit-scrollbar {
     width: 10px;
+    height: 8px;
 }
 
 .offer-gallery ::-webkit-scrollbar-track {

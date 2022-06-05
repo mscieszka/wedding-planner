@@ -147,6 +147,7 @@ use Cake\Filesystem\Folder;
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                         </div>
+                                        <h3><?= h($offers->price) . " zł" ?></h3>
                                         <?php foreach ($offers_all as $oferta) : ?>
                                             <?php if($oferta->id == $offers->id): ?>
                                                 <?php foreach ($adresy_all as $adres) : ?>
@@ -156,7 +157,7 @@ use Cake\Filesystem\Folder;
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
-                                        <h3><?= h($offers->price) . " zł" ?></h3>
+
                                     </div>
                                     <div class="offer-fav">
                                         <?php if ($account_type_id == 1) : ?>
