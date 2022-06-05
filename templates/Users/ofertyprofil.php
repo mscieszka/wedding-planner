@@ -10,7 +10,7 @@
 use Cake\Filesystem\Folder;
 
 ?>
-<?= $this->Html->css(['viewUser', 'miligram.min', 'normalize.min', 'viewProvider', 'profile-banner', 'viewOffer']) ?>
+<?= $this->Html->css(['miligram.min', 'normalize.min', 'viewProvider', 'profile-banner', 'viewOffer', 'viewUser']) ?>
 <div class="row">
     <div class="column-responsive column-80 ">
         <?= $this->element('profile-banners/user-profile-banner'); ?>
@@ -80,31 +80,31 @@ use Cake\Filesystem\Folder;
                                                 <?php break; ?>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
-
-
                                     </div>
                                     <div class="offer_container_wrapper_description">
                                         <div class="offer_container_wrapper_title">
-                                            <?= $this->Html->link(__(h($offers->name)), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?>
+                                            <h3><?= $this->Html->link(__(h($offers->name)), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></h3>
                                         </div>
 
                                         <div class="offer_container_wrapper_stars">
-
                                             <?php foreach ($averages as $average) : ?>
-                                                <!-- tutaj 1 rekord po 3 wartosc -->
                                                 <?php if ($average['offer_id'] == $offers->id) : ?>
-                                                    <h1><?= $average['avg'] ?></h1>
+                                                    <?php if ($average['avg'] > 0): ?>
+                                                        <?= $this->Html->image('rating-star.svg') ?>
+                                                        <h4><?= $average['avg'] ?></h4>
+                                                    <?php else: ?>
+                                                        <h4>Brak ocen</h4>
+                                                    <?php endif ?>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
-
                                         </div>
 
                                         <div class="offer_container_wrapper_description"><?= h($offers->description) ?></div>
                                     </div>
                                     <div class="offer_container_edit_button">
                                         <?php if ($user->id == $id_user_log) : ?>
-                                            <?= $this->Html->link(__('Edit Offer'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right override_button']) ?>
-                                            <?= $this->Html->link(__('Delete Offer'), ['controller' => 'Offers', 'action' => 'delete', $offers->id], ['class' => 'button float-right override_button']) ?>
+                                            <?= $this->Html->link(__('Edytuj'), ['controller' => 'Offers', 'action' => 'edit', $offers->id], ['class' => 'button float-right override_button']) ?>
+                                            <?= $this->Html->link(__('Usuń ofertę'), ['controller' => 'Offers', 'action' => 'delete', $offers->id], ['class' => 'button float-right override_button']) ?>
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -114,13 +114,6 @@ use Cake\Filesystem\Folder;
 
                 </div>
             <?php endif; ?>
-
-
-
-
-
-
-
 
             <?php if ($user->account_type_id == 1) : ?>
                 <div class="offer_container">
@@ -167,13 +160,17 @@ use Cake\Filesystem\Folder;
                                     </div>
                                     <div class="offer_container_wrapper_description">
                                         <div class="offer_container_wrapper_title">
-                                            <?= $this->Html->link(__(h($offer->name)), ['controller' => 'Offers', 'action' => 'view', $offer->id]) ?>
+                                            <h3><?= $this->Html->link(__(h($offer->name)), ['controller' => 'Offers', 'action' => 'view', $offer->id]) ?></h3>
                                         </div>
                                         <div class="offer_container_wrapper_stars">
                                             <?php foreach ($averages as $average) : ?>
-                                                <!-- tutaj 1 rekord po 3 wartosc -->
                                                 <?php if ($average['offer_id'] == $offer->id) : ?>
-                                                    <h1><?= $average['avg'] ?></h1>
+                                                    <?php if ($average['avg'] > 0): ?>
+                                                        <?= $this->Html->image('rating-star.svg') ?>
+                                                        <h4><?= $average['avg'] ?></h4>
+                                                    <?php else: ?>
+                                                        <h4>Brak ocen</h4>
+                                                    <?php endif ?>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                         </div>
@@ -185,11 +182,9 @@ use Cake\Filesystem\Folder;
                                         <?php endif; ?>
                                     </div>
                                 </div>
-
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
                 </div>
             <?php endif; ?>
-
         </div>

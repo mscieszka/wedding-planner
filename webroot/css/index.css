@@ -368,6 +368,17 @@ input {
     margin-bottom: 0;
 }
 
+.rating-combo {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rating-combo h4 {
+    margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
     .services {
         flex-direction: column;

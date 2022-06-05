@@ -162,7 +162,10 @@ use Cake\Filesystem\Folder;
             <div class="rate-box">
                 <?php foreach ($averages as $average) : ?>
                     <?php if ($average['offer_id'] == $offer->id and $average['avg'] != 0.0) : ?>
-                        <h1><?= $average['avg'] ?></h1>
+                        <div class="rating-combo">
+                            <?= $this->Html->image('rating-star.svg') ?>
+                            <h4><?= $average['avg'] ?></h4>
+                        </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
@@ -222,7 +225,10 @@ use Cake\Filesystem\Folder;
                             <div class="upper-box">
                                 <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
                                 <h5><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h5>
-                                <h5>Ocena: <?= h($rating->rating) ?></h5>
+                                <div class="rating-combo">
+                                    <?= $this->Html->image('rating-star.svg') ?>
+                                    <h4><?= h($rating->rating) . '/5' ?></h4>
+                                </div>
                                 <h5><?= h($rating->opinion_date) ?></h5>
                             </div>
                             <div class="opinion-content">

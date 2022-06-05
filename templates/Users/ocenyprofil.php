@@ -48,15 +48,15 @@ use Cake\Filesystem\Folder;
                  $licznik = 1 + $licznik;
              }
         }
-        $wynik2 = $wynik / $licznik;
+        if ($licznik != 0) {
+            $wynik2 = $wynik / $licznik;
+        }
+        else {
+            $wynik2 = 0;
+        }
         ?>
 <?php endif; ?>
-
-
         <div class="users view content">
-
-
-
             <div class="users view content_header">
                 <?php if ($user->account_type_id == 2) : ?>
                 <div class="users view content_header_first">Ocena</div>
@@ -69,9 +69,13 @@ use Cake\Filesystem\Folder;
             <div class="container_box">
                 <div class="users view content_wrapper" style="display: flex; justify-content: space-around">
                     <div class="users view content_wrapper_box">
-                        <div>
-                            <div style="color: #000; font-size: 2em; height: 50%;"><?= ($wynik2) ?> </div>
-                            <div style="color: gold; font-size: 2em; height: 50%;">*****</div>
+                        <div class="rating-combo">
+                            <?php if ($wynik2 > 0): ?>
+                                <?= $this->Html->image('rating-star.svg') ?>
+                                <h4><?= $wynik2 ?></h4>
+                            <?php else: ?>
+                                <h4>Brak ocen</h4>
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>
@@ -175,7 +179,11 @@ use Cake\Filesystem\Folder;
                                         </a>
                                         <div class="upper-box_provider">
                                             <span style="width: 18%"><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></span>
-                                            <span style="width: 18%">Ocena: <?= $rating->rating?></span>
+                                            <span style="width: 18%"><div class="rating-combo">
+                                                        <?= $this->Html->image('rating-star.svg') ?>
+                                                        <h4><?= $rating->rating ?></h4>
+                                                    </div></span>
+
                                             <p style="width: 5%">do</p>
                                             <span style="width: 15%"><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></span>
                                             <blockquote style="width: 50%">

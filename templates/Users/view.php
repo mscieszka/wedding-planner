@@ -40,7 +40,6 @@
                                             <div><span style="font-weight: bold;"><?= h($offers->name) ?></span></div>
                                             <?= $offers->has('address') ? $this->Html->link('Kliknij, aby zobaczyć adres', ['controller' => 'Addresses', 'action' => 'view', $offers->address->id]) : '' ?>
                                         </div>
-                                        <div class="offer_container_wrapper_stars">*****</div>
                                         <div class="offer_container_wrapper_description"><?= h($offers->description) ?></div>
                                     </div>
                                     <div class="offer_container_edit_button">
