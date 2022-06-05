@@ -56,7 +56,7 @@ nav {
 }
 
 .bookmarks_wrapper div.current_bookmarks {
-    background-color: #bdd4b9;
+    background-color: #FEF6E7;
     color: #000;
     border-radius: 1.5em 1.5em 0 0;
     height: 3.5em;
@@ -77,7 +77,7 @@ nav {
 }
 
 .users.view.content {
-    background-color: #bdd4b9;
+    background-color: #FEF6E7;
     border-radius: 0 0 2em 2em;
 }
 
@@ -207,6 +207,7 @@ nav {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.2em;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
 }
 
 .offer_container_header {
@@ -217,7 +218,7 @@ nav {
 .offer_container_header div {
     width: 8em;
     height: 2.5em;
-    background-color: #bdd4b9;
+    background-color: #D1E4CD;
     border-radius: 1em;
     display: flex;
     justify-content: center;
@@ -234,7 +235,7 @@ nav {
 }
 
 .offer_container_header div a:hover {
-    background-color: #97bb90;
+    background-color: #FEF6E7;
     width: 8em;
     height: 2.5em;
     display: flex;
