@@ -1,53 +1,53 @@
-# CakePHP Application Skeleton
+![](resources/documentation/1.png)
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+Wedding planner is a web application that allows:
+- creating customer or service provider accounts
+- searching offers based on various categories
+- booking offers
+- adding multiple offers to favorites
+- creating reviews
+- creating offers (service providers)
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 4.x.
-
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
-
-## Installation
-
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
-
-```bash
-composer create-project --prefer-dist cakephp/app
-```
-
-In case you want to use a custom app dir name (e.g. `/myapp/`):
-
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
-
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
-
+## How to run the project locally
+1. Download [Xampp](https://www.apachefriends.org/download.html) 8.1.6 - install Apache and PHP
+2. Download [Composer](https://getcomposer.org/doc/00-intro.md) - choose path to php.exe located within Xampp directory
+3. After installation, go to xampp/php/php.ini and uncomment `extension=pdo_pgsql` and `extension=intl`
+4. You can now open the project (for example, in PhpStorm) and run:
 ```bash
 bin/cake server -p 8765
 ```
+4. Visit `http://localhost:8765` to view the login page
 
-Then visit `http://localhost:8765` to see the welcome page.
 
-## Update
+### Documentaion
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
-
-## Configuration
-
-Read and edit the environment specific `config/app_local.php` and setup the 
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
-
-## Layout
-
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+![](resources/documentation/2.png)
+![](resources/documentation/3.png)
+![](resources/documentation/4.png)
+![](resources/documentation/5.png)
+![](resources/documentation/6.png)
+![](resources/documentation/7.png)
+![](resources/documentation/8.png)
+![](resources/documentation/9.png)
+![](resources/documentation/10.png)
+![](resources/documentation/11.png)
+![](resources/documentation/12.png)
+![](resources/documentation/13.png)
+![](resources/documentation/14.png)
+![](resources/documentation/15.png)
+![](resources/documentation/16.png)
+![](resources/documentation/17.png)
+![](resources/documentation/18.png)
+![](resources/documentation/19.png)
+![](resources/documentation/20.png)
+![](resources/documentation/21.png)
+![](resources/documentation/22.png)
+![](resources/documentation/23.png)
+![](resources/documentation/24.png)
+![](resources/documentation/25.png)
+![](resources/documentation/26.png)
+![](resources/documentation/27.png)
+![](resources/documentation/28.png)
+![](resources/documentation/29.png)
+![](resources/documentation/30.png)
+![](resources/documentation/31.png)
