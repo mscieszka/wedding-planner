@@ -28,6 +28,7 @@
     gap: 10px;
     justify-content: center;
     align-items: flex-start;
+    margin-left: 10px;
 }
 
 .single-province h5{
