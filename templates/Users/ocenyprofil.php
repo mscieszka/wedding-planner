@@ -13,7 +13,7 @@
 
 <?php if ($user->account_type_id == 2) {
     $wynik = 0.0;
-    $licznik = -1;
+    $licznik = 0.0;
 
     foreach ($averages as $average) {
         if (in_array($average['offer_id'], $his_offers)) {

@@ -28,8 +28,6 @@
                     <?php endif; ?>
                 </div>
                 <div class="users view content">
-                    <!--<div style="display: flex; justify-content: space-around">
-                    </div>-->
                     <div class="offer_container">
                         <table class="order_client">
                             <tr>
