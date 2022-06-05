@@ -12,6 +12,6 @@
         <label for="input_search_place">
             <?= $this->Html->image('miejsce.svg', ['alt' => 'Wedding Planner']); ?>
         </label>
-        <input id="input_search_place" placeholder="Cała Polska">
+        <input type="text" id="input_search_place" onkeyup="searchCity()" placeholder="Cała Polska">
     </div>
 </div>
