@@ -8,7 +8,7 @@
     height: 200px;
     background: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -72,8 +72,9 @@
 }
 
 .users-profile-banner .user-details {
-    margin-left: -64px;
+    margin-left: -40px;
 }
+
 .users-profile-banner img {
     max-width: revert;
 }
