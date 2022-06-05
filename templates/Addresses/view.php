@@ -6,17 +6,8 @@
 ?>
 <?= $this->Html->css('addressesView') ?>
 <div class="row">
-    <aside class="column">
-            <?php if($account_type_id == 2 || $account_type_id==1): ?>
-        <div class="side-nav">
-                <?php if($address->user_id == $id_user_log):?>
-                    <h4> <?= $this->Html->link(__('Edytuj adres'), ['action' => 'edit', $address->id], ['class' => 'side-nav-item']) ?></h4>
-                <?php endif; ?>
-        </div>
-            <?php endif; ?>
-
-    </aside>
     <div class="column-responsive column-80">
+
         <div class="addresses-view-content">
                 <div>
                     <h4><?= __('Miejscowość') ?></h4>

@@ -1,6 +1,11 @@
 * {
     background-color: #E4CC9F;
 }
+
+.row {
+    justify-content: center;
+}
+
 .addresses-view-content{
     display: flex;
     justify-content: space-between;
@@ -16,7 +21,6 @@
 .addresses-view-content * {
     background: white;
 }
-
 
 .addresses-view-content h4, h5{
     font-family: 'Segoe UI';
