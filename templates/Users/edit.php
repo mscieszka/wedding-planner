@@ -1,3 +1,4 @@
+<?= $this->Html->css('changePassword') ?>
 <?php
 /**
  * @var \App\View\AppView $this
@@ -12,7 +13,7 @@
         </div>
     </aside>
     <div class="column-responsive column-80">
-        <div class="users form content">
+        <div class="users-form-content">
             <?= $this->Form->create($user,  ['type' => 'file']) ?>
             <fieldset>
                 <?php
