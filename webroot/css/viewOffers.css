@@ -240,6 +240,17 @@ tr {
     padding: 1rem 10px 10px 2rem;
 }
 
+.filters label {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.filters input {
+    margin-bottom: 0;
+}
+
+
+
 .filters h3 {
     margin-top: 1.5rem;
     font-size: 20px;
@@ -267,12 +278,12 @@ tr {
     display: flex;
     gap: 1rem;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .checkbox-pair label {
     font-size: 16px;
     font-weight: 400;
-    padding-top: 0.4rem;
 }
 
 #label_sorting_type {
