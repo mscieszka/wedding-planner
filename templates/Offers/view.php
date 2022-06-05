@@ -161,7 +161,7 @@
             <h4>Ocena</h4>
             <div class="rate-box">
                 <?php foreach ($averages as $average) : ?>
-                    <?php if ($average['offer_id'] == $offer->id and $average['avg'] != 0.0) : ?>
+                    <?php if ($average['offer_id'] == $offer->id) : ?>
                         <div class="rating-combo">
                             <?= $this->Html->image('rating-star.svg') ?>
                             <h4><?= $average['avg'] ?></h4>

@@ -124,12 +124,15 @@ class RatingsController extends AppController
         $rating = $this->Ratings->get($id);
         $this->Authorization->authorize($rating);
         if ($this->Ratings->delete($rating)) {
+
             $this->Flash->success(__('The rating has been deleted.'));
+
         } else {
             $this->Flash->error(__('The rating could not be deleted. Please, try again.'));
         }
 
-        return $this->redirect($this->referer());
+        //return $this->redirect(['action' => 'index']);
+       return $this->redirect($this->referer());
     }
 
     /* ADDITIONAL FUNCTIONS */
