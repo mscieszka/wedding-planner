@@ -9,7 +9,7 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <?= $this->Html->link(__('Wyświetl oferty wg województwa'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Wyświetl oferty według województwa'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -23,7 +23,7 @@
 
             <h3>Województwo <?= h($province->name) ?></h3>
             <div class="related">
-                <h4><?= __('Powiązane oferty z:  województwo') ?> <?= h($province->name) ?></h4>
+                <h4>Powiązane oferty</h4>
                 <?php if (!empty($province->addresses)) : ?>
                     <div class="table-responsive">
 
