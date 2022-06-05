@@ -90,8 +90,10 @@ use Cake\Filesystem\Folder;
                                             <?php foreach ($averages as $average) : ?>
                                                 <?php if ($average['offer_id'] == $offers->id) : ?>
                                                     <?php if ($average['avg'] > 0): ?>
+                                                    <div class="rating-combo">
                                                         <?= $this->Html->image('rating-star.svg') ?>
                                                         <h4><?= $average['avg'] ?></h4>
+                                                    </div>
                                                     <?php else: ?>
                                                         <h4>Brak ocen</h4>
                                                     <?php endif ?>
@@ -166,8 +168,10 @@ use Cake\Filesystem\Folder;
                                             <?php foreach ($averages as $average) : ?>
                                                 <?php if ($average['offer_id'] == $offer->id) : ?>
                                                     <?php if ($average['avg'] > 0): ?>
-                                                        <?= $this->Html->image('rating-star.svg') ?>
-                                                        <h4><?= $average['avg'] ?></h4>
+                                                        <div class="rating-combo">
+                                                            <?= $this->Html->image('rating-star.svg') ?>
+                                                            <h4><?= $average['avg'] ?></h4>
+                                                        </div>
                                                     <?php else: ?>
                                                         <h4>Brak ocen</h4>
                                                     <?php endif ?>
