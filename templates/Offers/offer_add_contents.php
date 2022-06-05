@@ -11,17 +11,15 @@
             ]); ?>
         </div>
         <div class="add-offers-type">
-            <?php echo $this->Form->hidden('category_id', ['options' => $categories, 'disabled' => true]); ?>
-            <?php echo $this->Form->hidden('category_id'); ?>
+            <?= $this->Form->hidden('category_id', ['options' => $categories, 'disabled' => true]); ?>
+            <?= $this->Form->hidden('category_id'); ?>
         </div>
         <div class="add-offers-params">
-            <?php echo $this->Form->control('name', ['label' => __('Tytuł')]); ?>
-
-
+            <?= $this->Form->control('name', ['label' => __('Tytuł')]); ?>
 
             <?php
             $cena_napis = null;
-            if ($offer_type_id == 2) {
+            if ($offer->category_id == 2) {
                 $cena_napis = 'Cena za godzinę:' ;
                 }
                 else {
@@ -29,15 +27,14 @@
                 }
             ?>
 
-
-            <?php echo $this->Form->control('price', [
+            <?= $this->Form->control('price', [
                 'label' => __(       h($cena_napis)),
                 'min' => 1,
                 'max' => 10000,
                 'step' => 1,
                 'required' => true
             ]); ?>
-            <?php echo $this->Form->control('advance_payment', [
+            <?= $this->Form->control('advance_payment', [
                 'label' => __('Wysokość zaliczki (w %)'),
                 'min' => 1,
                 'max' => 50,

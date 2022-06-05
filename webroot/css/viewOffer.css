@@ -25,10 +25,12 @@
     color: black;
     text-align: justify;
 }
+
 .offer-title{
     display: flex;
     align-items: flex-end;
 }
+
 .offer-view-fav-button{
     margin-left: 20px;
 }
