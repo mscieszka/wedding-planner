@@ -35,10 +35,12 @@
                         </label>
 
                         <fieldset>
-                            <legend><?= __('Zdjecie profilowe') ?></legend>
-                            <?php
-                            echo $this->Form->control('attachment[]', ['type' => 'file','multiple'=>true, 'label' => '']);
-                            ?>
+                            <legend><?= __('Zdjęcie profilowe') ?></legend>
+                            <?= $this->Form->control('attachment[]', [
+                                'type' => 'file',
+                                'multiple'=>true,
+                                'label' => false
+                            ]); ?>
                         </fieldset>
                     </div>
                 </div>

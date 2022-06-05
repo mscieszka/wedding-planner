@@ -1,3 +1,10 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .container {
     max-width: none;
     padding: 0 3em;
@@ -21,6 +28,7 @@ nav {
 
 .offer-img {
     width: 55rem;
+    height: 21rem;
 }
 
 .icon_user {
@@ -41,6 +49,7 @@ nav {
 .bookmarks_wrapper {
     display: flex;
     justify-content: space-between;
+    width: 1200px;
 }
 
 .bookmarks_wrapper div {
@@ -79,6 +88,7 @@ nav {
 .users.view.content {
     background-color: #FEF6E7;
     border-radius: 0 0 2em 2em;
+    width: 1200px;
 }
 
 .notification {

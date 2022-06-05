@@ -8,12 +8,12 @@
  * @var \Cake\Collection\CollectionInterface|string[] $offers
  */
 
-use Cake\Filesystem\Folder;
-
 ?>
 <?= $this->Html->css('viewOffer') ?>
 <?= $this->Html->css('calendar') ?>
 <?= $this->Html->css('profile-banner') ?>
+<?= $this->Html->css('ratings') ?>
+
 <div class="go-back-to-parent-category">
     <?= $this->Html->link($offer->category->name, ['controller' => 'categories', 'action' => 'view', $offer->category_id], ['class' => 'side-nav-item button float-right']) ?>
 </div>
@@ -191,58 +191,9 @@ use Cake\Filesystem\Folder;
                 </div>
 
                 <?php foreach ($ratings as $rating) : ?>
-                    <div class="opinion-box">
-                        <a class="user-img">
-                            <?php
-                            $path = WWW_ROOT . 'img' . DS . 'userProfileImage' . DS . $rating->user->id;
-                            if (!file_exists($path)) {
-                                $path = new Folder($path, true, 777);
-                            } else {
-                                $path = new Folder($path);
-                            }
-                            $files = $path->find();
-                            ?>
-
-                            <?php if (empty($files)) : ?>
-                                <?= $this->Html->image('userProfileImage/no-profile-img.png', [
-                                    'alt' => 'User profile image',
-                                    'class' => 'userimg'
-                                ]) ?>
-                            <?php endif; ?>
-
-                            <?php if (!empty($files)) : ?>
-                                <?php foreach ($files as $file) : ?>
-                                    <?php $filePath = 'userProfileImage/' . (int)$rating->user->get('id') . '/' . $file; ?>
-                                    <?= $this->Html->image($filePath, [
-                                        'alt' => 'User profile image',
-                                        'class' => 'userimg'
-                                    ]) ?>
-                                    <?php break; ?>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </a>
-                        <div class="rest-of-opinion">
-                            <div class="upper-box">
-                                <h3><?= $rating->has('user') ? $this->Html->link($rating->user->name, ['controller' => 'Users', 'action' => 'profile', 1, $rating->user->id]) : '' ?></h3>
-                                <h5><?= $rating->has('offer') ? $this->Html->link($rating->offer->name, ['controller' => 'Offers', 'action' => 'view', $rating->offer->id]) : '' ?></h5>
-                                <div class="rating-combo">
-                                    <?= $this->Html->image('rating-star.svg') ?>
-                                    <h4><?= h($rating->rating) . '/5' ?></h4>
-                                </div>
-                                <h5><?= h($rating->opinion_date) ?></h5>
-                            </div>
-                            <div class="opinion-content">
-                                <blockquote>
-                                    <?= $this->Text->autoParagraph(h($rating->description)); ?>
-                                </blockquote>
-
-                                <?php if ($rating->user_id == $id_user_log) : ?>
-                                    <td class="offer-name"><?= $this->Form->postLink(__('Usun komentarz'), ['controller' => 'Ratings', 'action' => 'delete', $rating->id], ['confirm' => __('Are you sure you want to remove this comment?')]) ?></td>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </div>
+                    <?= $this->element('opinions', ['rating' => $rating]) ?>
                 <?php endforeach; ?>
+
             </div>
         </div>
 

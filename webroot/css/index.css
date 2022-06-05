@@ -369,8 +369,13 @@ input {
     align-items: center;
 }
 
+.rate-box .rating-combo {
+   flex-direction: column;
+}
+
 .rating-combo h4 {
     margin: 0;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 768px) {

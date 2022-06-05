@@ -1,5 +1,12 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .provider-container {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #fff;
@@ -23,13 +30,7 @@
 
 /* Otrzymane oceny */
 
-.users.view.content
-{
-
-}
-
-.users.view.content_header
-{
+.users.view.content_header {
     display: flex;
     font-size: 1.3em;
     font-weight: bold;
@@ -37,40 +38,33 @@
     padding: 1em 0;
 }
 
-.users.view.content_header_first
-{
+.users.view.content_header_first {
     width: 25%;
     display: flex;
     justify-content: center;
 }
 
-.container_box
-{
+.container_box {
+    display: flex;
+    gap: 3rem;
+}
+
+.users.view.content .users.view.content_wrapper {
     display: flex;
 }
 
-.users.view.content .users.view.content_wrapper
-{
-    width: 25%;
-    height: 20em;
-    display: flex;
-}
-
-.users.view.content .opinion-box-wrapper
-{
+.users.view.content .opinion-box-wrapper {
     width: 100%;
 }
 
-.users.view.content .users.view.content_wrapper_box
-{
+.users.view.content .users.view.content_wrapper_box {
     background-color: #fff;
-    width: 12em;
-    height: 10em;
-    border-radius: 1em;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 25px;
 }
 
-.users.view.content .users.view.content_wrapper_box div
-{
+.users.view.content .users.view.content_wrapper_box div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,8 +72,7 @@
     height: 100%;
 }
 
-.opinion-box_provider
-{
+.opinion-box_provider {
     background-color: #fff;
     width: 100%;
     min-height: 8em;
@@ -89,43 +82,37 @@
     text-align: center;
 }
 
-.user-img_provider
-{
+.user-img_provider {
     width: 11%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.user-img_provider img
-{
+.user-img_provider img {
     width: 4em;
     height: 4em;
     border-radius: 50%;
 }
 
-.upper-box_provider
-{
+.upper-box_provider {
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.upper-box_provider blockquote
-{
+.upper-box_provider blockquote {
     margin: 0;
 }
 
-.opinion-remove
-{
+.opinion-remove {
     width: 13%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.override_button
-{
+.override_button {
     margin: 0;
     min-width: 6em;
     min-height: 1em;
