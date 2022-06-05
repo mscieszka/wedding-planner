@@ -10,7 +10,7 @@
     grid-column: 2/3;
     margin-inline: 20px;
     padding: 20px;
-    margin-top: 40px;
+    margin-block: 40px;
     width: 800px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
