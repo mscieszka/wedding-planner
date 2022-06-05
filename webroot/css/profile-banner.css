@@ -28,7 +28,6 @@
 .user-details {
     display: flex;
     flex-direction: column;
-    margin-left: -26rem;
 }
 
 .user-name {
@@ -69,10 +68,6 @@
 
 .users-profile-banner .profile-banner {
     width: 1100px;
-}
-
-.users-profile-banner .user-details {
-    margin-left: -40px;
 }
 
 .users-profile-banner img {

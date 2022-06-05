@@ -269,8 +269,12 @@ nav {
     font-size: 0.9em;
 }
 
-.offer_container_edit_button {
+.offer_container_wrapper_stars {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
+.offer_container_edit_button {
     width: 15%;
     display: flex;
     flex-direction: column;
