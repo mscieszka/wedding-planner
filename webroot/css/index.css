@@ -294,11 +294,6 @@ input[type="submit"]:hover {
     align-content: center;
 }
 
-.search-description img,
-.place_search img {
-    margin-top: 1.1rem;
-}
-
 .search-description input {
     margin-bottom: 0;
 }

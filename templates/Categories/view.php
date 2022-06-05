@@ -133,11 +133,29 @@ use Cake\Filesystem\Folder;
                                                 <?php break; ?>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
-
                                     </div>
 
                                     <div class="offer-desc">
-                                        <h1><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></h1>
+                                        <div class="offer-title-rating-combo">
+                                            <h1><?= $this->Html->link(__($offers->name), ['controller' => 'Offers', 'action' => 'view', $offers->id]) ?></h1>
+                                            <?php foreach ($averages as $average) : ?>
+                                                <?php if ($average['offer_id'] == $offers->id and $average['avg'] != 0.0) : ?>
+                                                    <div class="rating-combo">
+                                                        <?= $this->Html->image('rating-star.svg') ?>
+                                                        <h4><?= $average['avg'] ?></h4>
+                                                    </div>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        </div>
+                                        <?php foreach ($offers_all as $oferta) : ?>
+                                            <?php if($oferta->id == $offers->id): ?>
+                                                <?php foreach ($adresy_all as $adres) : ?>
+                                                    <?php if($oferta->address_id == $adres->id): ?>
+                                                        <h4><?= h($oferta->address->city) .', '.h($adres->province->name) ?></h4>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
                                         <h3><?= h($offers->price) . " zł" ?></h3>
                                     </div>
                                     <div class="offer-fav">
@@ -148,23 +166,9 @@ use Cake\Filesystem\Folder;
                                                 <?= $this->Html->link(__($this->Html->image('heart-icon2.svg', ['alt' => 'Heart icon'])), ['controller' => 'SavedUserOffers', 'action' => 'add', $offers->id], ['escape' => false]) ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
-
-                                        <?php foreach ($averages as $average) : ?>
-                                            <?php if ($average['offer_id'] == $offers->id and $average['avg'] != 0.0) : ?>
-                                            <h3>Ocena : <?= $average['avg'] ?></h3>
-                                            <?php endif; ?>
-                                        <?php endforeach; ?>
                                     </div>
 
-                                    <?php foreach ($offers_all as $oferta) : ?>
-                                        <?php if($oferta->id == $offers->id): ?>
-                                            <?php foreach ($adresy_all as $adres) : ?>
-                                                <?php if($oferta->address_id == $adres->id): ?>
-                                                    <h4><?= h($oferta->address->city) .', '.h($adres->province->name) ?></h4>
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
+
                                 </div>
                             <?php endforeach; ?>
                         </table>
