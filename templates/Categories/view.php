@@ -186,7 +186,6 @@ use Cake\Filesystem\Folder;
             td = tr[i].getElementsByClassName("offer-address");
             if (td != null) {
                 offerAddress = td[0].innerHTML;
-                console.log(offerAddress)
                 if (offerAddress.toLowerCase().indexOf(searchValue) !== -1) {
                     tr[i].style.display = "";
                 } else {
@@ -194,6 +193,5 @@ use Cake\Filesystem\Folder;
                 }
             }
         }
-        console.log('\n');
     }
 </script>
