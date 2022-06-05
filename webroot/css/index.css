@@ -147,12 +147,6 @@ a {
     transition: all 0.2s ease-out;
 }
 
-.form_container form fieldset legend:hover {
-    cursor: pointer;
-    background-color: #eee;
-    transition: all 0.2s ease-out;
-}
-
 .form_container form fieldset .content_wrapper {
     background-color: #fff;
     border-top-right-radius: 2em;

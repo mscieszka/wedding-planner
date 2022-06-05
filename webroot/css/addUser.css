@@ -103,12 +103,6 @@ fieldset legend.legend_second {
     transition: all 0.2s ease-out;
 }
 
-fieldset legend:hover {
-    cursor: pointer;
-    background-color: #eee;
-    transition: all 0.2s ease-out;
-}
-
 .inputs_wrapper {
     background-color: #fff;
     border-top-right-radius: 2em;
