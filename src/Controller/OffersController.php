@@ -312,7 +312,7 @@ class OffersController extends AppController
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->where(['id' => $offer_type_id]);
         $provinces = $this->Offers->Addresses->Provinces->find('list', ['limit' => 200])->all();
         $hallTypes = $this->Offers->HallFilters->HallTypes->find('list', ['limit' => 200])->all();
-        $this->set(compact('offer', 'users', 'categories', 'provinces', 'hallTypes', 'account_type_id'));
+        $this->set(compact('offer', 'users', 'categories', 'provinces', 'hallTypes', 'account_type_id', 'offer_type_id'));
 
         if ($offer_type_id == 1) {
             $template = 'add_hall';

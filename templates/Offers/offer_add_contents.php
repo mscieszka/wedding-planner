@@ -16,8 +16,22 @@
         </div>
         <div class="add-offers-params">
             <?php echo $this->Form->control('name', ['label' => __('Tytuł')]); ?>
+
+
+
+            <?php
+            $cena_napis = null;
+            if ($offer_type_id == 2) {
+                $cena_napis = 'Cena za godzinę:' ;
+                }
+                else {
+                    $cena_napis = 'Cena za osobę:' ;
+                }
+            ?>
+
+
             <?php echo $this->Form->control('price', [
-                'label' => __('Cena'),
+                'label' => __(       h($cena_napis)),
                 'min' => 1,
                 'max' => 10000,
                 'step' => 1,
