@@ -5,6 +5,7 @@
  * @var \App\Model\Entity\Province $province
  */
 ?>
+<?= $this->Html->css('provincesView') ?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">

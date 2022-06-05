@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Address $address
  */
 ?>
+<?= $this->Html->css('addressesView') ?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">

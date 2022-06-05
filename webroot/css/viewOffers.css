@@ -328,6 +328,12 @@ tr {
     align-items: flex-start;
     align-self: stretch;
 }
+
+.offer-title-rating-combo {
+    display: flex;
+    gap: 16px;
+}
+
 .offer-desc h1, h3, h4{
     margin: 0;
     font-family: 'Segoe UI';
@@ -357,3 +363,7 @@ tr {
     font-size: 20px;
 }
 
+.rating-combo {
+    display: flex;
+    gap: 10px;
+}
