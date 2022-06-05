@@ -111,10 +111,7 @@ use Cake\Filesystem\Folder;
                                 }
                                 ?>
                                 <div class="offer" <?= $search_param ?>>
-
-
                                     <div class="offer-img">
-
                                         <?php
                                         $path = WWW_ROOT . 'img' . DS . 'offerImages' . DS . $offers->id;
                                         if (!file_exists($path)) {
@@ -153,13 +150,10 @@ use Cake\Filesystem\Folder;
                                         <?php endif; ?>
 
                                         <?php foreach ($averages as $average) : ?>
-                                            <?php if ($average['offer_id'] == $offers->id) : ?>
-                                                <h3>Ocena : <?= $average['avg'] ?></h3>
+                                            <?php if ($average['offer_id'] == $offers->id and $average['avg'] != 0.0) : ?>
+                                            <h3>Ocena : <?= $average['avg'] ?></h3>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
-
-
-
                                     </div>
 
                                     <?php foreach ($offers_all as $oferta) : ?>
@@ -171,7 +165,6 @@ use Cake\Filesystem\Folder;
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
-
                                 </div>
                             <?php endforeach; ?>
                         </table>

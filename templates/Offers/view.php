@@ -160,9 +160,9 @@ use Cake\Filesystem\Folder;
         <div class="rating">
             <h4>Ocena</h4>
             <div class="rate-box">
-                <?php foreach ($averages as $average) : ?>
                     <!-- tutaj 1 rekord po 3 wartosc -->
-                    <?php if ($average['offer_id'] == $offer->id) : ?>
+                <?php foreach ($averages as $average) : ?>
+                    <?php if ($average['offer_id'] == $offer->id and $average['avg'] != 0.0) : ?>
                         <h1><?= $average['avg'] ?></h1>
                     <?php endif; ?>
                 <?php endforeach; ?>
