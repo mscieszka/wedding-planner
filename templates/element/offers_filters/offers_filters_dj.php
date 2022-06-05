@@ -63,8 +63,6 @@
             }
 
             var searchInfo = $('#input_search_description').val();
-            console.log(searchInfo);
-            console.log(elem.attr('info'));
             if (showOffer) {
                 if (searchInfo == '') {
                     elem.show();
@@ -79,7 +77,6 @@
         $('#input_search_description').change(function(){
             var isCategoryChecked = false;
             $('.filter').each(function(index, element) {
-                // console.log(element);
                 if($(this).is(':checked')) {
                     isCategoryChecked = true;
                 }
@@ -121,12 +118,10 @@
 
             var showAll = true;
             $('.filter').each(function(index, element) {
-                // console.log(element);
                 if($(this).is(':checked')) {
                     showAll = false;
                 }
             })
-            console.log(showAll);
             if(showAll) {
                 $('.offer').each(function (index, element) {
                     $(this).show();
@@ -136,7 +131,6 @@
         }
 
         $('.filter').click(function(e){
-            // console.log($(this).attr('id'));
             search();
         })
     })

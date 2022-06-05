@@ -181,7 +181,6 @@ use Cake\Filesystem\Folder;
         const searchValue = searchInput.value.toLowerCase();
         const table = document.getElementById("offers-table");
         const tr = table.getElementsByTagName("tr");
-        console.log("Szukam: " + searchValue);
         for (let i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByClassName("offer-address");
             if (td != null) {

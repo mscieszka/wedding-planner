@@ -131,9 +131,6 @@
                             var e = $("#" + id).children('div').hasClass('free');
                             var date = $("#" + id).data("date");
                             //var hasEvent = $("#" + id).data("hasEvent");
-                            // console.log(e);
-                            // console.log(date);
-                            // console.log(hasEvent);
                             if (e) {
                                 $("#booking-date").val(date);
                             }
