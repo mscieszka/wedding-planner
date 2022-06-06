@@ -15,7 +15,7 @@
 
     <fieldset>
         <label for="filter-music-type"><?= __('Gatunek muzyki') ?></label>
-        <div class="filter-music-type">
+        <div class="filter-music-type offer-filters">
             <?php
             echo $this->Form->control('music_filter.disco_polo', [
                 'type' => 'checkbox'

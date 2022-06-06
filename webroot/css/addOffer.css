@@ -1,3 +1,8 @@
+.offer-filters {
+    display: flex;
+    column-gap: 2.5rem;
+}
+
 .content {
     min-width: 1100px;
 }
@@ -9,16 +14,32 @@
     column-gap: 3rem;
 }
 
+/*.input .checkbox label {*/
+/*    margin-top: 1rem;*/
+/*}*/
+
 .form {
     border-radius: 25px;
     background-color: #fef6e7;
 }
 
 .offers .input input,
-.offers .input select,
-.offers .input textarea {
+.offers .input select {
     max-width: 200px;
+}
+
+.offers .input textarea,
+.offers .input input,
+.offers .input select {
     background-color: white;
+    border-bottom: 1px solid gray;
+}
+
+.offers .input textarea {
+    width: 600px;
+    height: 150px;
+    max-width: 600px;
+    max-height: 400px;
 }
 
 .grid-add-offers {
@@ -38,17 +59,52 @@ label {
     font-weight: 400;
 }
 
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.add-offers-combo {
+    display: flex;
+    gap: 3rem;
+}
+
 .add-offers-type {}
 
-.add-offers-params {}
+.add-offers-params {
+    display: flex;
+    gap: 3rem;
+}
 
-.add-offers-address {}
+.add-offers-address {
+    display: flex;
+    gap: 3rem
+}
 
-.add-offers-description {}
+#address-house-number {
+    width: 8rem;
+}
 
-.add-offers-contact {}
+.add-offers-description textarea {
+    max-width: 400px;
+}
 
-.add-offers-photos {}
+.add-offers-contact {
+    display: flex;
+}
+
+.add-offers-photos {
+}
+
+.add-offers-active-days {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.add-offers-active-days .input.checkbox label {
+    margin-top: 1.5rem;
+}
 
 button[type="submit"] {
     background-color: #46755e;

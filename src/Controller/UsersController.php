@@ -240,11 +240,11 @@ class UsersController extends AppController
                     }
                 }
 
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('Rejestracja zakończona pomyślnie'));
 
                 return $this->redirect(['action' => 'login']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('Podano nieprawidłowe dane. Spróbuj ponownie'));
         }
         $accountTypes = $this->Users->AccountTypes->find('list', ['limit' => 200])->all();
         $this->set(compact('user', 'accountTypes'));
