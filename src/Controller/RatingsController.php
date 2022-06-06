@@ -125,10 +125,10 @@ class RatingsController extends AppController
         $this->Authorization->authorize($rating);
         if ($this->Ratings->delete($rating)) {
 
-            $this->Flash->success(__('The rating has been deleted.'));
+            $this->Flash->success(__('Pomyślnie usunięto opinię'));
 
         } else {
-            $this->Flash->error(__('The rating could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Usuwanie opinii zakończone niepowodzeniem. Spróbuj ponownie'));
         }
 
         //return $this->redirect(['action' => 'index']);

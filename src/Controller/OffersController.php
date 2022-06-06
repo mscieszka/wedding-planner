@@ -265,7 +265,6 @@ class OffersController extends AppController
                 $this->Offers->saveOrFail($offer);
                 $offer_id = $offer->get('id');
 
-
                 $offer_active_days = $this->Offers->OfferActiveDays->newEntity($this->request->getData('offer_active_day'));
                 $offer_active_days->offer_id = $offer_id;
                 $this->Offers->OfferActiveDays->saveOrFail($offer_active_days);
@@ -300,11 +299,11 @@ class OffersController extends AppController
                     $file->moveTo($p);
                 }
 
-                $this->Flash->success(__('The offer has been saved.'));
+                $this->Flash->success(__('Pomyślnie dodano nową ofertę.'));
                 return $this->redirect(['controller' => 'Offers', 'action' => 'index', null]);
             } catch (\Cake\ORM\Exception\PersistanceFailedException $e) {
                 $conn->rollback();
-                $this->Flash->error(__('The address could not be saved. Please, try again.'));
+                $this->Flash->error(__('Dodawanie oferty niepowodzeniem. Spróbuj ponownie.'));
             }
         }
 
@@ -385,9 +384,9 @@ class OffersController extends AppController
         $offer = $this->Offers->get($id);
         $this->Authorization->authorize($offer);
         if ($this->Offers->delete($offer)) {
-            $this->Flash->success(__('The offer has been deleted.'));
+            $this->Flash->success(__('Oferta została pomyślnie usunięta'));
         } else {
-            $this->Flash->error(__('The offer could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Usuwanie oferty zakończone niepowodzeniem. Spróbuj ponownie'));
         }
         return $this->redirect($this->referer());
         //return $this->redirect(['action' => 'index']);

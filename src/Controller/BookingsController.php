@@ -78,7 +78,7 @@ class BookingsController extends AppController
 
             //            debug($booking); exit;
             if ($this->Bookings->save($booking)) {
-                $this->Flash->success(__('The booking has been saved.'));
+                $this->Flash->success(__('Pomyślnie dodano ofertę do zarezerwowanych'));
 
                 return $this->redirect($this->referer());
             }
@@ -107,7 +107,7 @@ class BookingsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $booking = $this->Bookings->patchEntity($booking, $this->request->getData());
             if ($this->Bookings->save($booking)) {
-                $this->Flash->success(__('The booking has been saved.'));
+                $this->Flash->success(__('Pomyślnie dodano ofertę do zarezerwowanych'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -132,9 +132,9 @@ class BookingsController extends AppController
         $booking = $this->Bookings->get($id);
         $this->Authorization->authorize($booking);
         if ($this->Bookings->delete($booking)) {
-            $this->Flash->success(__('The booking has been deleted.'));
+            $this->Flash->success(__('Pomyślnie anulowano rezerwację'));
         } else {
-            $this->Flash->error(__('The booking could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Anulowanie rezerwacji zakończone niepowodzeniem. Spróbuj ponownie'));
         }
 
         return $this->redirect($this->referer());
