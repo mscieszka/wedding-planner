@@ -24,14 +24,14 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'] {
     all: unset;
-    min-width: 120px;
-    min-height: 45px;
+    min-width: 140px;
+    min-height: 40px;
     width: min-content;
     height: fit-content;
     background-color: #46755E;
     color: #fff;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
     display: flex;
     align-items: center;
