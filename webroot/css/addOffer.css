@@ -3,12 +3,10 @@
 }
 
 .serv {
-    margin-top: 2rem;
     margin-bottom: 2rem;
-}
-
-.btn-category-active {
-    background-color: #CEE5D0;
+    margin-top: 0;
+    gap: 1rem;
+    column-gap: 3rem;
 }
 
 .form {

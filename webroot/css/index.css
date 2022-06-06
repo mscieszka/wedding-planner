@@ -171,6 +171,12 @@ a {
     color: #000000;
 }
 
+input {
+    background-color: white;
+    border: none white;
+    align-self: center;
+}
+
 /*.form_container form fieldset .content_wrapper .form_column input*/
 input[type="text"],
 input[type="password"],
@@ -307,51 +313,24 @@ input[type="submit"]:hover {
 
 .serv {
     width: 100%;
-    margin: 0 20vw;
     display: flex;
-    justify-content: space-around;
-    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
 }
 
 .service-type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    gap: 3rem;
-    min-width: 330px;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    margin: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.service-type>img {
-    padding-left: 1vw;
-    height: 6vh;
-    margin-bottom: 0;
-}
-
-.service-type a:hover {
-    color: black;
-}
-
-.service-type>p {
-    padding-right: 1vw;
-}
-
-input {
-    background-color: white;
-    border: none white;
-    align-self: center;
-}
-
-.service-type:hover {
-    cursor: pointer;
-    background-color: #CEE5D0;
+/*.service-type a:hover*/
+.service-type img:hover
+/*.service-type:hover*/
+{
     transition: all 0.2s ease-out;
+    transform: scale(1.03);
 }
+
 
 .place_search>img {
     margin-bottom: 0;

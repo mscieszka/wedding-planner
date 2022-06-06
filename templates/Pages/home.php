@@ -79,16 +79,22 @@ endif;
     <div class="categories-nav services">
         <div class="serv">
             <div class="service-type">
-                <?php echo $this->Html->image('sale.svg', ['alt' => 'Wedding Planner']); ?>
-                <?= $this->Html->link(__('Sale'), ['controller' => 'Categories', 'action' => 'view', 1], ['class' => 'btn-category']) ?>
+                <?php echo $this->Html->image('buttons/button-sale.svg', [
+                    'alt' => 'Wedding Planner',
+                    'url' => ['controller' => 'Categories', 'action' => 'view', 1]
+                ]); ?>
             </div>
             <div class="service-type">
-                <?php echo $this->Html->image('dj.svg', ['alt' => 'Wedding Planner']); ?>
-                <?= $this->Html->link(__('Zespół muzyczny / DJ'), ['controller' => 'Categories', 'action' => 'view', 2], ['class' => 'btn-category']) ?>
+                <?php echo $this->Html->image('buttons/button-dj.svg', [
+                    'alt' => 'Wedding Planner',
+                    'url' => ['controller' => 'Categories', 'action' => 'view', 2]
+                ]); ?>
             </div>
             <div class="service-type">
-                <?php echo $this->Html->image('catering.svg', ['alt' => 'Wedding Planner', 'class' => 'catering-img']); ?>
-                <?= $this->Html->link(__('Catering'), ['controller' => 'Categories', 'action' => 'view', 3], ['class' => 'btn-category']) ?>
+                <?php echo $this->Html->image('buttons/button-catering.svg', [
+                    'alt' => 'Wedding Planner',
+                    'url' => ['controller' => 'Categories', 'action' => 'view', 3]
+                ]); ?>
             </div>
         </div>
     </div>
