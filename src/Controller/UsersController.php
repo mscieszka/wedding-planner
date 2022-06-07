@@ -376,8 +376,7 @@ class UsersController extends AppController
                         'controller' => 'pages',
                         'action' => 'index',
                     ]);
-
-                    return $this->redirect(['controller' => 'pages', 'action' => 'index',]);
+                    return $this->redirect(['controller' => 'Users', 'action' => 'profile']);
                 }
             }
 
