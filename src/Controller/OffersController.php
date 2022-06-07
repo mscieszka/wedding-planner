@@ -348,11 +348,11 @@ class OffersController extends AppController
             $offer = $this->Offers->patchEntity($offer, $this->request->getData());
             if ($this->Offers->save($offer)) {
 
-                $this->Flash->success(__('The offer has been saved.'));
+                $this->Flash->success(__('Oferta została prawidłowo zedytowana.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Users', 'action' => 'profile']);
             }
-            $this->Flash->error(__('The offer could not be saved. Please, try again.'));
+            $this->Flash->error(__('Oferta nie mogła zostać zedytowana..'));
         }
         $users = $this->Offers->Users->find('list', ['limit' => 200])->all();
         $categories = $this->Offers->Categories->find('list', ['limit' => 200])->all();
@@ -369,6 +369,7 @@ class OffersController extends AppController
             $template = 'add_catering';
         }
         $this->render($template);
+
     }
 
     /**

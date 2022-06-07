@@ -124,4 +124,4 @@
         </div>
     </div>
 </fieldset>
-<?= $this->Form->button(__('Dodaj ofertę')) ?>
+<?= $this->Form->button(__('Zaakceptuj ofertę')) ?>
