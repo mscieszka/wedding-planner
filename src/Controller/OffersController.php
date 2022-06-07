@@ -300,7 +300,7 @@ class OffersController extends AppController
                 }
 
                 $this->Flash->success(__('Pomyślnie dodano nową ofertę.'));
-                return $this->redirect(['controller' => 'Offers', 'action' => 'index', null]);
+                return $this->redirect(['controller' => 'Users', 'action' => 'profile']);
             } catch (\Cake\ORM\Exception\PersistanceFailedException $e) {
                 $conn->rollback();
                 $this->Flash->error(__('Dodawanie oferty niepowodzeniem. Spróbuj ponownie.'));
